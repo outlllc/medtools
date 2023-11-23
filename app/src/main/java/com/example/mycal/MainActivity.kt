@@ -66,7 +66,7 @@ class MainActivity : AppCompatActivity() {
 
         edittext.setText(numButtonClicked)
     }
-
+//test
     fun operatorEvent(view: View) {
         isFirstInput=true
         val editT: EditText = findViewById(R.id.edittext)
