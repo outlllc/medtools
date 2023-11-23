@@ -31,18 +31,19 @@ class MainActivity : AppCompatActivity() {
     var year:Int=0
     var month:Int=0
     var day:Int=0
-    var firstDateInput=""
+    var firstDateInput0=""
     var modelSel="WEEK"
     var format="yyyy/MM/dd"
+    var lineCount=0
     @SuppressLint("SimpleDateFormat")
     var simpleDateFormat=SimpleDateFormat(format)
 
     fun numberEvent(view: View) {
         val edittext: EditText = findViewById(R.id.edittext)
         if (isFirstInput){
-//            var append=edittext.text.toString()
-            edittext.setText(blank)
-//            edittext.setText("${append}\n")
+            var append=edittext.text.toString()
+//            edittext.setText(blank)
+            edittext.setText("${append}\n")
             isFirstInput=false
         }
 
@@ -69,7 +70,8 @@ class MainActivity : AppCompatActivity() {
     fun operatorEvent(view: View) {
         isFirstInput=true
         val editT: EditText = findViewById(R.id.edittext)
-        firstDateInput=editT.text.toString()
+        firstDateInput0=editT.text.toString()
+        lineCount=editT.lineCount
         val operatorSelected=view as Button
         when(operatorSelected.id){
             R.id.buttondivide -> oprator="/"
@@ -81,14 +83,27 @@ class MainActivity : AppCompatActivity() {
 
     @SuppressLint("SetTextI18n")
     fun equalEvent(view: View) {
-        if (firstDateInput != "") {
+        if (firstDateInput0 != "") {
+            var firstDateInput=""
             val editT: EditText = findViewById(R.id.edittext)
-//            var AA=editT.text.toString()
-//            var i=editT.lineCount
-//            var BB=AA.split("\n")
-//            var secondInputDate=BB[i-1]
-//            Log.e("tag",secondInputDate)
-            val secondInputDate: String = editT.text.toString()
+            var AA=editT.text.toString()
+            var secondInputDate=""
+            if(firstDateInput0.contains("\n")){
+                var BB=firstDateInput0.split("\n")
+                firstDateInput=BB[lineCount-1].trim()
+            }else{
+                firstDateInput=firstDateInput0
+            }
+            if(AA.contains("\n")){
+                var i=editT.lineCount
+                var BB=AA.split("\n")
+                secondInputDate=BB[i-1].trim()
+                Log.e("tag",secondInputDate.toString())
+            }else{
+                secondInputDate=editT.text.toString()
+            }
+
+//            val secondInputDate: String = editT.text.toString()
             var answerDAYs: Long = 0
             when (modelSel) {
                 "DATE" -> {
