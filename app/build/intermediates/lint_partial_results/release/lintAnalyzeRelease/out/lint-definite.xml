@@ -1,0 +1,3020 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.3.0-alpha14" type="incidents">
+
+    <incident
+        id="Instantiatable"
+        severity="fatal"
+        message="`Datecalculator` must extend android.app.Activity">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*manifest*0}"
+            line="16"
+            column="27"
+            startOffset="668"
+            endLine="16"
+            endColumn="42"
+            endOffset="683"/>
+    </incident>
+
+    <incident
+        id="InefficientWeight"
+        severity="warning"
+        message="Use a `layout_height` of `0dp` instead of `match_parent` for better performance">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="14"
+            column="9"
+            startOffset="535"
+            endLine="14"
+            endColumn="45"
+            endOffset="571"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;计算器&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="41"
+            column="17"
+            startOffset="1657"
+            endLine="41"
+            endColumn="35"
+            endOffset="1675"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;体重计&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="56"
+            column="17"
+            startOffset="2273"
+            endLine="56"
+            endColumn="35"
+            endOffset="2291"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;预习&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="72"
+            column="17"
+            startOffset="2937"
+            endLine="72"
+            endColumn="34"
+            endOffset="2954"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;我的&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="88"
+            column="17"
+            startOffset="3599"
+            endLine="88"
+            endColumn="34"
+            endOffset="3616"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;腹围值（mm）&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/activity_query_value.xml"
+            line="17"
+            column="13"
+            startOffset="696"
+            endLine="17"
+            endColumn="35"
+            endOffset="718"/>
+    </incident>
+
+    <incident
+        id="Autofill"
+        severity="warning"
+        message="Missing `autofillHints` attribute">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set autofillHints"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="autofillHints"
+                value=""
+                dot="0"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAutofill=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAutofill"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/activity_query_value.xml"
+            line="19"
+            column="10"
+            startOffset="769"
+            endLine="19"
+            endColumn="18"
+            endOffset="777"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;腹围(155-400mm)&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/activity_query_value.xml"
+            line="24"
+            column="13"
+            startOffset="971"
+            endLine="24"
+            endColumn="41"
+            endOffset="999"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;股骨值（mm）&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/activity_query_value.xml"
+            line="33"
+            column="13"
+            startOffset="1310"
+            endLine="33"
+            endColumn="35"
+            endOffset="1332"/>
+    </incident>
+
+    <incident
+        id="Autofill"
+        severity="warning"
+        message="Missing `autofillHints` attribute">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set autofillHints"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="autofillHints"
+                value=""
+                dot="0"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAutofill=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAutofill"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/activity_query_value.xml"
+            line="35"
+            column="10"
+            startOffset="1383"
+            endLine="35"
+            endColumn="18"
+            endOffset="1391"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;股骨(40-83mm)&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/activity_query_value.xml"
+            line="40"
+            column="13"
+            startOffset="1585"
+            endLine="40"
+            endColumn="39"
+            endOffset="1611"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;双顶径（mm）&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/activity_query_value.xml"
+            line="49"
+            column="13"
+            startOffset="1922"
+            endLine="49"
+            endColumn="35"
+            endOffset="1944"/>
+    </incident>
+
+    <incident
+        id="Autofill"
+        severity="warning"
+        message="Missing `autofillHints` attribute">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set autofillHints"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="autofillHints"
+                value=""
+                dot="0"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAutofill=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAutofill"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/activity_query_value.xml"
+            line="51"
+            column="10"
+            startOffset="1995"
+            endLine="51"
+            endColumn="18"
+            endOffset="2003"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;双顶径(31-100mm)&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/activity_query_value.xml"
+            line="56"
+            column="13"
+            startOffset="2199"
+            endLine="56"
+            endColumn="41"
+            endOffset="2227"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;综合查询&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/activity_query_value.xml"
+            line="63"
+            column="9"
+            startOffset="2405"
+            endLine="63"
+            endColumn="28"
+            endOffset="2424"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;预测体重\n单位（g）&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/activity_query_value.xml"
+            line="75"
+            column="13"
+            startOffset="2867"
+            endLine="75"
+            endColumn="39"
+            endOffset="2893"/>
+    </incident>
+
+    <incident
+        id="Autofill"
+        severity="warning"
+        message="Missing `autofillHints` attribute">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set autofillHints"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="autofillHints"
+                value=""
+                dot="0"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAutofill=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAutofill"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/grid_layout.xml"
+            line="21"
+            column="10"
+            startOffset="785"
+            endLine="21"
+            endColumn="18"
+            endOffset="793"/>
+    </incident>
+
+    <incident
+        id="TextFields"
+        severity="warning"
+        message="This text field does not specify an `inputType`">
+        <fix-attribute
+            description="Set inputType"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="inputType"
+            value="TODO"
+            dot="4"
+            mark="0"/>
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/grid_layout.xml"
+            line="21"
+            column="10"
+            startOffset="785"
+            endLine="21"
+            endColumn="18"
+            endOffset="793"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;0&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/grid_layout.xml"
+            line="25"
+            column="13"
+            startOffset="945"
+            endLine="25"
+            endColumn="29"
+            endOffset="961"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;YEAR&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/grid_layout.xml"
+            line="59"
+            column="21"
+            startOffset="2474"
+            endLine="59"
+            endColumn="40"
+            endOffset="2493"/>
+    </incident>
+
+    <incident
+        id="SmallSp"
+        severity="warning"
+        message="Avoid using sizes smaller than `11sp`: `10sp`">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/grid_layout.xml"
+            line="61"
+            column="21"
+            startOffset="2566"
+            endLine="61"
+            endColumn="44"
+            endOffset="2589"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;MON&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/grid_layout.xml"
+            line="77"
+            column="21"
+            startOffset="3316"
+            endLine="77"
+            endColumn="39"
+            endOffset="3334"/>
+    </incident>
+
+    <incident
+        id="SmallSp"
+        severity="warning"
+        message="Avoid using sizes smaller than `11sp`: `10sp`">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/grid_layout.xml"
+            line="79"
+            column="21"
+            startOffset="3407"
+            endLine="79"
+            endColumn="44"
+            endOffset="3430"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;DAY&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/grid_layout.xml"
+            line="95"
+            column="21"
+            startOffset="4176"
+            endLine="95"
+            endColumn="39"
+            endOffset="4194"/>
+    </incident>
+
+    <incident
+        id="SmallSp"
+        severity="warning"
+        message="Avoid using sizes smaller than `11sp`: `10sp`">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/grid_layout.xml"
+            line="97"
+            column="21"
+            startOffset="4267"
+            endLine="97"
+            endColumn="44"
+            endOffset="4290"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;WEEK&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/grid_layout.xml"
+            line="114"
+            column="21"
+            startOffset="5080"
+            endLine="114"
+            endColumn="40"
+            endOffset="5099"/>
+    </incident>
+
+    <incident
+        id="SmallSp"
+        severity="warning"
+        message="Avoid using sizes smaller than `11sp`: `10sp`">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/grid_layout.xml"
+            line="116"
+            column="21"
+            startOffset="5172"
+            endLine="116"
+            endColumn="44"
+            endOffset="5195"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;DATE&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/grid_layout.xml"
+            line="131"
+            column="21"
+            startOffset="5937"
+            endLine="131"
+            endColumn="40"
+            endOffset="5956"/>
+    </incident>
+
+    <incident
+        id="SmallSp"
+        severity="warning"
+        message="Avoid using sizes smaller than `11sp`: `10sp`">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/grid_layout.xml"
+            line="133"
+            column="21"
+            startOffset="6029"
+            endLine="133"
+            endColumn="44"
+            endOffset="6052"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;AC&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/grid_layout.xml"
+            line="161"
+            column="13"
+            startOffset="7118"
+            endLine="161"
+            endColumn="30"
+            endOffset="7135"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;-+&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/grid_layout.xml"
+            line="177"
+            column="13"
+            startOffset="7748"
+            endLine="177"
+            endColumn="30"
+            endOffset="7765"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;÷&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/grid_layout.xml"
+            line="192"
+            column="13"
+            startOffset="8331"
+            endLine="192"
+            endColumn="29"
+            endOffset="8347"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;*&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/grid_layout.xml"
+            line="207"
+            column="13"
+            startOffset="8914"
+            endLine="207"
+            endColumn="29"
+            endOffset="8930"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;7&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/grid_layout.xml"
+            line="222"
+            column="13"
+            startOffset="9528"
+            endLine="222"
+            endColumn="29"
+            endOffset="9544"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;8&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/grid_layout.xml"
+            line="238"
+            column="13"
+            startOffset="10151"
+            endLine="238"
+            endColumn="29"
+            endOffset="10167"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;9&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/grid_layout.xml"
+            line="253"
+            column="13"
+            startOffset="10728"
+            endLine="253"
+            endColumn="29"
+            endOffset="10744"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;←&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/grid_layout.xml"
+            line="268"
+            column="13"
+            startOffset="11310"
+            endLine="268"
+            endColumn="29"
+            endOffset="11326"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;4&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/grid_layout.xml"
+            line="285"
+            column="13"
+            startOffset="12008"
+            endLine="285"
+            endColumn="29"
+            endOffset="12024"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;5&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/grid_layout.xml"
+            line="302"
+            column="13"
+            startOffset="12670"
+            endLine="302"
+            endColumn="29"
+            endOffset="12686"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;6&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/grid_layout.xml"
+            line="318"
+            column="13"
+            startOffset="13286"
+            endLine="318"
+            endColumn="29"
+            endOffset="13302"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;-&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/grid_layout.xml"
+            line="334"
+            column="13"
+            startOffset="13907"
+            endLine="334"
+            endColumn="29"
+            endOffset="13923"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;1&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/grid_layout.xml"
+            line="350"
+            column="13"
+            startOffset="14529"
+            endLine="350"
+            endColumn="29"
+            endOffset="14545"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;2&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/grid_layout.xml"
+            line="368"
+            column="13"
+            startOffset="15232"
+            endLine="368"
+            endColumn="29"
+            endOffset="15248"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;3&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/grid_layout.xml"
+            line="384"
+            column="13"
+            startOffset="15848"
+            endLine="384"
+            endColumn="29"
+            endOffset="15864"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;+&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/grid_layout.xml"
+            line="395"
+            column="13"
+            startOffset="16221"
+            endLine="395"
+            endColumn="29"
+            endOffset="16237"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;0&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/grid_layout.xml"
+            line="416"
+            column="13"
+            startOffset="17089"
+            endLine="416"
+            endColumn="29"
+            endOffset="17105"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;.&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/grid_layout.xml"
+            line="434"
+            column="13"
+            startOffset="17794"
+            endLine="434"
+            endColumn="29"
+            endOffset="17810"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;=&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/grid_layout.xml"
+            line="446"
+            column="13"
+            startOffset="18208"
+            endLine="446"
+            endColumn="29"
+            endOffset="18224"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;/&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/grid_layout.xml"
+            line="467"
+            column="13"
+            startOffset="19073"
+            endLine="467"
+            endColumn="29"
+            endOffset="19089"/>
+    </incident>
+
+    <incident
+        id="Autofill"
+        severity="warning"
+        message="Missing `autofillHints` attribute">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set autofillHints"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="autofillHints"
+                value=""
+                dot="0"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAutofill=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAutofill"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_addvalue.xml"
+            line="7"
+            column="6"
+            startOffset="241"
+            endLine="7"
+            endColumn="14"
+            endOffset="249"/>
+    </incident>
+
+    <incident
+        id="TextFields"
+        severity="warning"
+        message="This text field does not specify an `inputType`">
+        <fix-attribute
+            description="Set inputType"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="inputType"
+            value="TODO"
+            dot="4"
+            mark="0"/>
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_addvalue.xml"
+            line="7"
+            column="6"
+            startOffset="241"
+            endLine="7"
+            endColumn="14"
+            endOffset="249"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;第一个值&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_addvalue.xml"
+            line="11"
+            column="9"
+            startOffset="379"
+            endLine="11"
+            endColumn="28"
+            endOffset="398"/>
+    </incident>
+
+    <incident
+        id="Autofill"
+        severity="warning"
+        message="Missing `autofillHints` attribute">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set autofillHints"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="autofillHints"
+                value=""
+                dot="0"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAutofill=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAutofill"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_addvalue.xml"
+            line="13"
+            column="6"
+            startOffset="410"
+            endLine="13"
+            endColumn="14"
+            endOffset="418"/>
+    </incident>
+
+    <incident
+        id="TextFields"
+        severity="warning"
+        message="This text field does not specify an `inputType`">
+        <fix-attribute
+            description="Set inputType"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="inputType"
+            value="TODO"
+            dot="4"
+            mark="0"/>
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_addvalue.xml"
+            line="13"
+            column="6"
+            startOffset="410"
+            endLine="13"
+            endColumn="14"
+            endOffset="418"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;第二个值&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_addvalue.xml"
+            line="17"
+            column="9"
+            startOffset="549"
+            endLine="17"
+            endColumn="28"
+            endOffset="568"/>
+    </incident>
+
+    <incident
+        id="Autofill"
+        severity="warning"
+        message="Missing `autofillHints` attribute">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set autofillHints"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="autofillHints"
+                value=""
+                dot="0"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAutofill=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAutofill"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_addvalue.xml"
+            line="19"
+            column="6"
+            startOffset="580"
+            endLine="19"
+            endColumn="14"
+            endOffset="588"/>
+    </incident>
+
+    <incident
+        id="TextFields"
+        severity="warning"
+        message="This text field does not specify an `inputType`">
+        <fix-attribute
+            description="Set inputType"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="inputType"
+            value="TODO"
+            dot="4"
+            mark="0"/>
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_addvalue.xml"
+            line="19"
+            column="6"
+            startOffset="580"
+            endLine="19"
+            endColumn="14"
+            endOffset="588"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;第三个值&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_addvalue.xml"
+            line="23"
+            column="9"
+            startOffset="719"
+            endLine="23"
+            endColumn="28"
+            endOffset="738"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;提交&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_addvalue.xml"
+            line="30"
+            column="9"
+            startOffset="927"
+            endLine="30"
+            endColumn="26"
+            endOffset="944"/>
+    </incident>
+
+    <incident
+        id="Autofill"
+        severity="warning"
+        message="Missing `autofillHints` attribute">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set autofillHints"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="autofillHints"
+                value=""
+                dot="0"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAutofill=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAutofill"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="10"
+            column="6"
+            startOffset="377"
+            endLine="10"
+            endColumn="14"
+            endOffset="385"/>
+    </incident>
+
+    <incident
+        id="TextFields"
+        severity="warning"
+        message="This text field does not specify an `inputType`">
+        <fix-attribute
+            description="Set inputType"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="inputType"
+            value="TODO"
+            dot="4"
+            mark="0"/>
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="10"
+            column="6"
+            startOffset="377"
+            endLine="10"
+            endColumn="14"
+            endOffset="385"/>
+    </incident>
+
+    <incident
+        id="Autofill"
+        severity="warning"
+        message="Missing `autofillHints` attribute">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set autofillHints"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="autofillHints"
+                value=""
+                dot="0"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAutofill=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAutofill"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="22"
+            column="10"
+            startOffset="793"
+            endLine="22"
+            endColumn="18"
+            endOffset="801"/>
+    </incident>
+
+    <incident
+        id="TextFields"
+        severity="warning"
+        message="This text field does not specify an `inputType`">
+        <fix-attribute
+            description="Set inputType"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="inputType"
+            value="TODO"
+            dot="4"
+            mark="0"/>
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="22"
+            column="10"
+            startOffset="793"
+            endLine="22"
+            endColumn="18"
+            endOffset="801"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;0&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="26"
+            column="13"
+            startOffset="947"
+            endLine="26"
+            endColumn="29"
+            endOffset="963"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;YEAR&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="52"
+            column="21"
+            startOffset="2197"
+            endLine="52"
+            endColumn="40"
+            endOffset="2216"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;MON&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="67"
+            column="21"
+            startOffset="2879"
+            endLine="67"
+            endColumn="39"
+            endOffset="2897"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;DAY&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="83"
+            column="21"
+            startOffset="3621"
+            endLine="83"
+            endColumn="39"
+            endOffset="3639"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;WEEK&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="99"
+            column="21"
+            startOffset="4364"
+            endLine="99"
+            endColumn="40"
+            endOffset="4383"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;DATE&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="114"
+            column="21"
+            startOffset="5108"
+            endLine="114"
+            endColumn="40"
+            endOffset="5127"/>
+    </incident>
+
+    <incident
+        id="ButtonStyle"
+        severity="warning"
+        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)">
+        <fix-composite
+            description="Make borderless">
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="5655"
+                    endOffset="7354"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="5792"
+                    endOffset="6183"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="6203"
+                    endOffset="6603"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="6623"
+                    endOffset="6964"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="6984"
+                    endOffset="7329"/>
+            </fix-attribute>
+        </fix-composite>
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="133"
+            column="18"
+            startOffset="5793"
+            endLine="133"
+            endColumn="24"
+            endOffset="5799"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;AC&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="140"
+            column="21"
+            startOffset="6119"
+            endLine="140"
+            endColumn="38"
+            endOffset="6136"/>
+    </incident>
+
+    <incident
+        id="ButtonStyle"
+        severity="warning"
+        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)">
+        <fix-composite
+            description="Make borderless">
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="5655"
+                    endOffset="7354"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="5792"
+                    endOffset="6183"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="6203"
+                    endOffset="6603"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="6623"
+                    endOffset="6964"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="6984"
+                    endOffset="7329"/>
+            </fix-attribute>
+        </fix-composite>
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="143"
+            column="18"
+            startOffset="6204"
+            endLine="143"
+            endColumn="24"
+            endOffset="6210"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;-+&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="149"
+            column="21"
+            startOffset="6480"
+            endLine="149"
+            endColumn="38"
+            endOffset="6497"/>
+    </incident>
+
+    <incident
+        id="ButtonStyle"
+        severity="warning"
+        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)">
+        <fix-composite
+            description="Make borderless">
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="5655"
+                    endOffset="7354"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="5792"
+                    endOffset="6183"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="6203"
+                    endOffset="6603"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="6623"
+                    endOffset="6964"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="6984"
+                    endOffset="7329"/>
+            </fix-attribute>
+        </fix-composite>
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="153"
+            column="18"
+            startOffset="6624"
+            endLine="153"
+            endColumn="24"
+            endOffset="6630"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;/&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="158"
+            column="21"
+            startOffset="6850"
+            endLine="158"
+            endColumn="37"
+            endOffset="6866"/>
+    </incident>
+
+    <incident
+        id="ButtonStyle"
+        severity="warning"
+        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)">
+        <fix-composite
+            description="Make borderless">
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="5655"
+                    endOffset="7354"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="5792"
+                    endOffset="6183"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="6203"
+                    endOffset="6603"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="6623"
+                    endOffset="6964"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="6984"
+                    endOffset="7329"/>
+            </fix-attribute>
+        </fix-composite>
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="162"
+            column="18"
+            startOffset="6985"
+            endLine="162"
+            endColumn="24"
+            endOffset="6991"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;*&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="167"
+            column="21"
+            startOffset="7213"
+            endLine="167"
+            endColumn="37"
+            endOffset="7229"/>
+    </incident>
+
+    <incident
+        id="ButtonStyle"
+        severity="warning"
+        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)">
+        <fix-composite
+            description="Make borderless">
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="7370"
+                    endOffset="9047"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="7507"
+                    endOffset="7897"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="7917"
+                    endOffset="8307"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="8327"
+                    endOffset="8663"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="8683"
+                    endOffset="9022"/>
+            </fix-attribute>
+        </fix-composite>
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="176"
+            column="18"
+            startOffset="7508"
+            endLine="176"
+            endColumn="24"
+            endOffset="7514"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;7&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="182"
+            column="21"
+            startOffset="7783"
+            endLine="182"
+            endColumn="37"
+            endOffset="7799"/>
+    </incident>
+
+    <incident
+        id="ButtonStyle"
+        severity="warning"
+        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)">
+        <fix-composite
+            description="Make borderless">
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="7370"
+                    endOffset="9047"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="7507"
+                    endOffset="7897"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="7917"
+                    endOffset="8307"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="8327"
+                    endOffset="8663"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="8683"
+                    endOffset="9022"/>
+            </fix-attribute>
+        </fix-composite>
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="186"
+            column="18"
+            startOffset="7918"
+            endLine="186"
+            endColumn="24"
+            endOffset="7924"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;8&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="192"
+            column="21"
+            startOffset="8193"
+            endLine="192"
+            endColumn="37"
+            endOffset="8209"/>
+    </incident>
+
+    <incident
+        id="ButtonStyle"
+        severity="warning"
+        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)">
+        <fix-composite
+            description="Make borderless">
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="7370"
+                    endOffset="9047"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="7507"
+                    endOffset="7897"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="7917"
+                    endOffset="8307"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="8327"
+                    endOffset="8663"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="8683"
+                    endOffset="9022"/>
+            </fix-attribute>
+        </fix-composite>
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="196"
+            column="18"
+            startOffset="8328"
+            endLine="196"
+            endColumn="24"
+            endOffset="8334"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;9&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="201"
+            column="21"
+            startOffset="8549"
+            endLine="201"
+            endColumn="37"
+            endOffset="8565"/>
+    </incident>
+
+    <incident
+        id="ButtonStyle"
+        severity="warning"
+        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)">
+        <fix-composite
+            description="Make borderless">
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="7370"
+                    endOffset="9047"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="7507"
+                    endOffset="7897"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="7917"
+                    endOffset="8307"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="8327"
+                    endOffset="8663"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="8683"
+                    endOffset="9022"/>
+            </fix-attribute>
+        </fix-composite>
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="205"
+            column="18"
+            startOffset="8684"
+            endLine="205"
+            endColumn="24"
+            endOffset="8690"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;%&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="210"
+            column="21"
+            startOffset="8907"
+            endLine="210"
+            endColumn="37"
+            endOffset="8923"/>
+    </incident>
+
+    <incident
+        id="ButtonStyle"
+        severity="warning"
+        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)">
+        <fix-composite
+            description="Make borderless">
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="9063"
+                    endOffset="10740"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="9200"
+                    endOffset="9590"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="9610"
+                    endOffset="10000"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="10020"
+                    endOffset="10356"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="10376"
+                    endOffset="10715"/>
+            </fix-attribute>
+        </fix-composite>
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="219"
+            column="18"
+            startOffset="9201"
+            endLine="219"
+            endColumn="24"
+            endOffset="9207"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;4&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="225"
+            column="21"
+            startOffset="9476"
+            endLine="225"
+            endColumn="37"
+            endOffset="9492"/>
+    </incident>
+
+    <incident
+        id="ButtonStyle"
+        severity="warning"
+        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)">
+        <fix-composite
+            description="Make borderless">
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="9063"
+                    endOffset="10740"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="9200"
+                    endOffset="9590"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="9610"
+                    endOffset="10000"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="10020"
+                    endOffset="10356"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="10376"
+                    endOffset="10715"/>
+            </fix-attribute>
+        </fix-composite>
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="229"
+            column="18"
+            startOffset="9611"
+            endLine="229"
+            endColumn="24"
+            endOffset="9617"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;5&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="235"
+            column="21"
+            startOffset="9886"
+            endLine="235"
+            endColumn="37"
+            endOffset="9902"/>
+    </incident>
+
+    <incident
+        id="ButtonStyle"
+        severity="warning"
+        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)">
+        <fix-composite
+            description="Make borderless">
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="9063"
+                    endOffset="10740"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="9200"
+                    endOffset="9590"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="9610"
+                    endOffset="10000"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="10020"
+                    endOffset="10356"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="10376"
+                    endOffset="10715"/>
+            </fix-attribute>
+        </fix-composite>
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="239"
+            column="18"
+            startOffset="10021"
+            endLine="239"
+            endColumn="24"
+            endOffset="10027"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;6&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="244"
+            column="21"
+            startOffset="10242"
+            endLine="244"
+            endColumn="37"
+            endOffset="10258"/>
+    </incident>
+
+    <incident
+        id="ButtonStyle"
+        severity="warning"
+        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)">
+        <fix-composite
+            description="Make borderless">
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="9063"
+                    endOffset="10740"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="9200"
+                    endOffset="9590"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="9610"
+                    endOffset="10000"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="10020"
+                    endOffset="10356"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="10376"
+                    endOffset="10715"/>
+            </fix-attribute>
+        </fix-composite>
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="248"
+            column="18"
+            startOffset="10377"
+            endLine="248"
+            endColumn="24"
+            endOffset="10383"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;-&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="253"
+            column="21"
+            startOffset="10599"
+            endLine="253"
+            endColumn="37"
+            endOffset="10615"/>
+    </incident>
+
+    <incident
+        id="ButtonStyle"
+        severity="warning"
+        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)">
+        <fix-composite
+            description="Make borderless">
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="10756"
+                    endOffset="12435"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="10893"
+                    endOffset="11283"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="11303"
+                    endOffset="11693"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="11713"
+                    endOffset="12049"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="12069"
+                    endOffset="12410"/>
+            </fix-attribute>
+        </fix-composite>
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="262"
+            column="18"
+            startOffset="10894"
+            endLine="262"
+            endColumn="24"
+            endOffset="10900"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;1&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="268"
+            column="21"
+            startOffset="11169"
+            endLine="268"
+            endColumn="37"
+            endOffset="11185"/>
+    </incident>
+
+    <incident
+        id="ButtonStyle"
+        severity="warning"
+        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)">
+        <fix-composite
+            description="Make borderless">
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="10756"
+                    endOffset="12435"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="10893"
+                    endOffset="11283"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="11303"
+                    endOffset="11693"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="11713"
+                    endOffset="12049"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="12069"
+                    endOffset="12410"/>
+            </fix-attribute>
+        </fix-composite>
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="272"
+            column="18"
+            startOffset="11304"
+            endLine="272"
+            endColumn="24"
+            endOffset="11310"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;2&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="278"
+            column="21"
+            startOffset="11579"
+            endLine="278"
+            endColumn="37"
+            endOffset="11595"/>
+    </incident>
+
+    <incident
+        id="ButtonStyle"
+        severity="warning"
+        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)">
+        <fix-composite
+            description="Make borderless">
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="10756"
+                    endOffset="12435"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="10893"
+                    endOffset="11283"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="11303"
+                    endOffset="11693"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="11713"
+                    endOffset="12049"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="12069"
+                    endOffset="12410"/>
+            </fix-attribute>
+        </fix-composite>
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="282"
+            column="18"
+            startOffset="11714"
+            endLine="282"
+            endColumn="24"
+            endOffset="11720"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;3&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="287"
+            column="21"
+            startOffset="11935"
+            endLine="287"
+            endColumn="37"
+            endOffset="11951"/>
+    </incident>
+
+    <incident
+        id="ButtonStyle"
+        severity="warning"
+        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)">
+        <fix-composite
+            description="Make borderless">
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="10756"
+                    endOffset="12435"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="10893"
+                    endOffset="11283"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="11303"
+                    endOffset="11693"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="11713"
+                    endOffset="12049"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="12069"
+                    endOffset="12410"/>
+            </fix-attribute>
+        </fix-composite>
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="291"
+            column="18"
+            startOffset="12070"
+            endLine="291"
+            endColumn="24"
+            endOffset="12076"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;+&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="296"
+            column="21"
+            startOffset="12294"
+            endLine="296"
+            endColumn="37"
+            endOffset="12310"/>
+    </incident>
+
+    <incident
+        id="ButtonStyle"
+        severity="warning"
+        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)">
+        <fix-composite
+            description="Make borderless">
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="12451"
+                    endOffset="13731"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="12588"
+                    endOffset="12983"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="13003"
+                    endOffset="13346"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="13366"
+                    endOffset="13706"/>
+            </fix-attribute>
+        </fix-composite>
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="305"
+            column="18"
+            startOffset="12589"
+            endLine="305"
+            endColumn="24"
+            endOffset="12595"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;0&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="311"
+            column="21"
+            startOffset="12869"
+            endLine="311"
+            endColumn="37"
+            endOffset="12885"/>
+    </incident>
+
+    <incident
+        id="ButtonStyle"
+        severity="warning"
+        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)">
+        <fix-composite
+            description="Make borderless">
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="12451"
+                    endOffset="13731"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="12588"
+                    endOffset="12983"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="13003"
+                    endOffset="13346"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="13366"
+                    endOffset="13706"/>
+            </fix-attribute>
+        </fix-composite>
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="315"
+            column="18"
+            startOffset="13004"
+            endLine="315"
+            endColumn="24"
+            endOffset="13010"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;.&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="321"
+            column="21"
+            startOffset="13283"
+            endLine="321"
+            endColumn="37"
+            endOffset="13299"/>
+    </incident>
+
+    <incident
+        id="ButtonStyle"
+        severity="warning"
+        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)">
+        <fix-composite
+            description="Make borderless">
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="12451"
+                    endOffset="13731"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="12588"
+                    endOffset="12983"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="13003"
+                    endOffset="13346"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+                    startOffset="13366"
+                    endOffset="13706"/>
+            </fix-attribute>
+        </fix-composite>
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="324"
+            column="18"
+            startOffset="13367"
+            endLine="324"
+            endColumn="24"
+            endOffset="13373"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;=&quot;, should use `@string` resource">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="331"
+            column="21"
+            startOffset="13687"
+            endLine="331"
+            endColumn="37"
+            endOffset="13703"/>
+    </incident>
+
+    <incident
+        id="UselessLeaf"
+        severity="warning"
+        message="This `LinearLayout` view is unnecessary (no children, no `background`, no `id`, no `style`)">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="337"
+            column="10"
+            startOffset="13772"
+            endLine="337"
+            endColumn="22"
+            endOffset="13784"/>
+    </incident>
+
+    <incident
+        id="ObsoleteSdkInt"
+        severity="warning"
+        message="This folder configuration (`v23`) is unnecessary; `minSdkVersion` is 24. Merge all the resources in this folder into `values`.">
+        <fix-data file="${:app*release*MAIN*sourceProvider*0*resDir*0}/values-v23" folderName="values" requiresApi="24"/>
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/values-v23"/>
+    </incident>
+
+    <incident
+        id="Recycle"
+        severity="warning"
+        message="This `Cursor` should be freed up after use with `#close()`">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*javaDir*0}/com/example/recycle/DataBaseHelper.kt"
+            line="56"
+            column="22"
+            startOffset="3114"
+            endLine="56"
+            endColumn="30"
+            endOffset="3122"/>
+    </incident>
+
+    <incident
+        id="SimpleDateFormat"
+        severity="warning"
+        message="To get local formatting use `getDateInstance()`, `getDateTimeInstance()`, or `getTimeInstance()`, or use `new SimpleDateFormat(String template, Locale locale)` with for example `Locale.US` for ASCII dates.">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*javaDir*0}/com/example/recycle/Datecalculator.kt"
+            line="64"
+            column="27"
+            startOffset="2045"
+            endLine="64"
+            endColumn="55"
+            endOffset="2073"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*javaDir*0}/com/example/recycle/Datecalculator.kt"
+            line="138"
+            column="64"
+            startOffset="5620"
+            endLine="138"
+            endColumn="128"
+            endOffset="5684"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*javaDir*0}/com/example/recycle/Datecalculator.kt"
+            line="225"
+            column="36"
+            startOffset="8353"
+            endLine="225"
+            endColumn="58"
+            endOffset="8375"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*javaDir*0}/com/example/recycle/Datecalculator.kt"
+            line="259"
+            column="36"
+            startOffset="9433"
+            endLine="259"
+            endColumn="61"
+            endOffset="9458"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*javaDir*0}/com/example/recycle/Datecalculator.kt"
+            line="270"
+            column="28"
+            startOffset="9786"
+            endLine="270"
+            endColumn="53"
+            endOffset="9811"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*javaDir*0}/com/example/recycle/QueryValue.kt"
+            line="111"
+            column="33"
+            startOffset="4621"
+            endLine="111"
+            endColumn="81"
+            endOffset="4669"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*javaDir*0}/com/example/recycle/QueryValue.kt"
+            line="111"
+            column="34"
+            startOffset="4622"
+            endLine="111"
+            endColumn="50"
+            endOffset="4638"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*javaDir*0}/com/example/recycle/QueryValue.kt"
+            line="111"
+            column="52"
+            startOffset="4640"
+            endLine="111"
+            endColumn="65"
+            endOffset="4653"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*javaDir*0}/com/example/recycle/QueryValue.kt"
+            line="111"
+            column="67"
+            startOffset="4655"
+            endLine="111"
+            endColumn="80"
+            endOffset="4668"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*javaDir*0}/com/example/recycle/QueryValue.kt"
+            line="116"
+            column="37"
+            startOffset="4987"
+            endLine="116"
+            endColumn="64"
+            endOffset="5014"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*javaDir*0}/com/example/recycle/QueryValue.kt"
+            line="122"
+            column="37"
+            startOffset="5332"
+            endLine="122"
+            endColumn="66"
+            endOffset="5361"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*javaDir*0}/com/example/recycle/QueryValue.kt"
+            line="134"
+            column="37"
+            startOffset="5987"
+            endLine="134"
+            endColumn="95"
+            endOffset="6045"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*javaDir*0}/com/example/recycle/QueryValue.kt"
+            line="137"
+            column="37"
+            startOffset="6261"
+            endLine="137"
+            endColumn="72"
+            endOffset="6296"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*javaDir*0}/com/example/recycle/QueryValue.kt"
+            line="139"
+            column="37"
+            startOffset="6355"
+            endLine="139"
+            endColumn="85"
+            endOffset="6403"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*javaDir*0}/com/example/recycle/QueryValue.kt"
+            line="139"
+            column="38"
+            startOffset="6356"
+            endLine="139"
+            endColumn="54"
+            endOffset="6372"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*javaDir*0}/com/example/recycle/QueryValue.kt"
+            line="139"
+            column="56"
+            startOffset="6374"
+            endLine="139"
+            endColumn="69"
+            endOffset="6387"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*javaDir*0}/com/example/recycle/QueryValue.kt"
+            line="139"
+            column="71"
+            startOffset="6389"
+            endLine="139"
+            endColumn="84"
+            endOffset="6402"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.activity:activity than 1.8.0 is available: 1.8.1">
+        <fix-replace
+            description="Change to 1.8.1"
+            family="Update versions"
+            oldString="1.8.0"
+            replacement="1.8.1"/>
+        <location
+            file="$HOME/AndroidStudioProjects/Recycle/gradle/libs.versions.toml"
+            line="10"
+            column="12"
+            startOffset="183"
+            endLine="10"
+            endColumn="19"
+            endOffset="190"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.navigation:navigation-fragment-ktx than 2.6.0 is available: 2.7.5">
+        <fix-replace
+            description="Change to 2.7.5"
+            family="Update versions"
+            oldString="2.6.0"
+            replacement="2.7.5"/>
+        <location
+            file="$HOME/AndroidStudioProjects/Recycle/gradle/libs.versions.toml"
+            line="12"
+            column="25"
+            startOffset="242"
+            endLine="12"
+            endColumn="32"
+            endOffset="249"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.navigation:navigation-ui-ktx than 2.6.0 is available: 2.7.5">
+        <fix-replace
+            description="Change to 2.7.5"
+            family="Update versions"
+            oldString="2.6.0"
+            replacement="2.7.5"/>
+        <location
+            file="$HOME/AndroidStudioProjects/Recycle/gradle/libs.versions.toml"
+            line="13"
+            column="19"
+            startOffset="268"
+            endLine="13"
+            endColumn="26"
+            endOffset="275"/>
+    </incident>
+
+    <incident
+        id="AndroidGradlePluginVersion"
+        severity="warning"
+        message="A newer version of com.android.application than 8.3.0-alpha14 is available: 8.3.0-alpha16">
+        <fix-replace
+            description="Change to 8.3.0-alpha16"
+            family="Update versions"
+            robot="true"
+            independent="true"
+            oldString="8.3.0-alpha14"
+            replacement="8.3.0-alpha16"/>
+        <location
+            file="$HOME/AndroidStudioProjects/Recycle/gradle/libs.versions.toml"
+            line="2"
+            column="7"
+            startOffset="17"
+            endLine="2"
+            endColumn="22"
+            endOffset="32"/>
+    </incident>
+
+    <incident
+        id="OnClick"
+        severity="error"
+        message="Corresponding method handler &apos;`public void clearEvent(android.view.View)`&apos; not found">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="139"
+            column="21"
+            startOffset="6069"
+            endLine="139"
+            endColumn="49"
+            endOffset="6097"/>
+    </incident>
+
+    <incident
+        id="OnClick"
+        severity="error"
+        message="Corresponding method handler &apos;`public void equalEvent(android.view.View)`&apos; not found">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="330"
+            column="21"
+            startOffset="13637"
+            endLine="330"
+            endColumn="49"
+            endOffset="13665"/>
+    </incident>
+
+    <incident
+        id="OnClick"
+        severity="error"
+        message="Corresponding method handler &apos;`public void numberEvent(android.view.View)`&apos; not found">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="312"
+            column="21"
+            startOffset="12907"
+            endLine="312"
+            endColumn="50"
+            endOffset="12936"/>
+    </incident>
+
+    <incident
+        id="OnClick"
+        severity="error"
+        message="Corresponding method handler &apos;`public void operatorEvent(android.view.View)`&apos; not found">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="297"
+            column="21"
+            startOffset="12332"
+            endLine="297"
+            endColumn="52"
+            endOffset="12363"/>
+    </incident>
+
+    <incident
+        id="OnClick"
+        severity="error"
+        message="Corresponding method handler &apos;`public void percentEvent(android.view.View)`&apos; not found">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="211"
+            column="21"
+            startOffset="8945"
+            endLine="211"
+            endColumn="51"
+            endOffset="8975"/>
+    </incident>
+
+    <incident
+        id="OnClick"
+        severity="error"
+        message="Corresponding method handler &apos;`public void postiveNagtiveEvent(android.view.View)`&apos; not found">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="150"
+            column="21"
+            startOffset="6519"
+            endLine="150"
+            endColumn="58"
+            endOffset="6556"/>
+    </incident>
+
+    <incident
+        id="Overdraw"
+        severity="warning"
+        message="Possible overdraw: Root element paints background `#DD9292` with a theme that also paints a background (inferred theme is `@style/Theme.MaterialComponents.Light.NoActionBar`)">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/materialbuttontangoo.xml"
+            line="8"
+            column="5"
+            startOffset="346"
+            endLine="8"
+            endColumn="33"
+            endOffset="374"/>
+    </incident>
+
+</incidents>

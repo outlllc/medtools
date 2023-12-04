@@ -1,0 +1,6 @@
+com.example.recycle.test.app-annotation-experimental-1.3.0-0 C:\Users\zfx\.gradle\caches\transforms-3\33e1b0a554d8bbff8363d8d3a8d8d176\transformed\annotation-experimental-1.3.0\res
+com.example.recycle.test.app-core-1.5.0-1 C:\Users\zfx\.gradle\caches\transforms-3\599cf2f0c16e6fa186d292bb1a15d6cd\transformed\core-1.5.0\res
+com.example.recycle.test.app-androidTest-2 C:\Users\zfx\AndroidStudioProjects\Recycle\app\build\generated\res\resValues\androidTest\debug
+com.example.recycle.test.app-mergeDebugAndroidTestResources-3 C:\Users\zfx\AndroidStudioProjects\Recycle\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.example.recycle.test.app-mergeDebugAndroidTestResources-4 C:\Users\zfx\AndroidStudioProjects\Recycle\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.example.recycle.test.app-debugAndroidTest-5 C:\Users\zfx\AndroidStudioProjects\Recycle\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources

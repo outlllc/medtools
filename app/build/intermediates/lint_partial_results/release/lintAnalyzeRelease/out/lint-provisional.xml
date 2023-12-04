@@ -1,0 +1,798 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.3.0-alpha14" type="conditional_incidents">
+
+    <incident
+        id="ObsoleteSdkInt"
+        severity="warning"
+        message="Unnecessary; SDK_INT is always >= 31">
+        <fix-replace
+            description="Delete tools:targetApi"
+            replacement="">
+            <range
+                file="${:app*release*MAIN*sourceProvider*0*manifest*0}"
+                startOffset="600"
+                endOffset="620"/>
+        </fix-replace>
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*manifest*0}"
+            line="14"
+            column="9"
+            startOffset="600"
+            endLine="14"
+            endColumn="29"
+            endOffset="620"/>
+        <map>
+            <condition minGE="ffffffffc0000000"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlSymmetry"
+        severity="warning"
+        message="When you define `paddingLeft` you should probably also define `paddingRight` for right-to-left symmetry">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/activity_query_value.xml"
+            line="18"
+            column="13"
+            startOffset="731"
+            endLine="18"
+            endColumn="32"
+            endOffset="750"/>
+        <map>
+            <entry
+                name="applies"
+                int="2"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlHardcoded"
+        severity="warning"
+        message="Consider replacing `android:paddingLeft` with `android:paddingStart=&quot;10dp&quot;` to better support right-to-left layouts">
+        <fix-replace
+            description="Replace with android:paddingStart=&quot;10dp&quot;"
+            oldString="paddingLeft"
+            replacement="paddingStart"/>
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/activity_query_value.xml"
+            line="18"
+            column="13"
+            startOffset="731"
+            endLine="18"
+            endColumn="32"
+            endOffset="750"/>
+        <map>
+            <entry
+                name="applies"
+                int="10"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlSymmetry"
+        severity="warning"
+        message="When you define `paddingLeft` you should probably also define `paddingRight` for right-to-left symmetry">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/activity_query_value.xml"
+            line="34"
+            column="13"
+            startOffset="1345"
+            endLine="34"
+            endColumn="32"
+            endOffset="1364"/>
+        <map>
+            <entry
+                name="applies"
+                int="2"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlHardcoded"
+        severity="warning"
+        message="Consider replacing `android:paddingLeft` with `android:paddingStart=&quot;10dp&quot;` to better support right-to-left layouts">
+        <fix-replace
+            description="Replace with android:paddingStart=&quot;10dp&quot;"
+            oldString="paddingLeft"
+            replacement="paddingStart"/>
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/activity_query_value.xml"
+            line="34"
+            column="13"
+            startOffset="1345"
+            endLine="34"
+            endColumn="32"
+            endOffset="1364"/>
+        <map>
+            <entry
+                name="applies"
+                int="10"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlSymmetry"
+        severity="warning"
+        message="When you define `paddingLeft` you should probably also define `paddingRight` for right-to-left symmetry">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/activity_query_value.xml"
+            line="50"
+            column="13"
+            startOffset="1957"
+            endLine="50"
+            endColumn="32"
+            endOffset="1976"/>
+        <map>
+            <entry
+                name="applies"
+                int="2"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlHardcoded"
+        severity="warning"
+        message="Consider replacing `android:paddingLeft` with `android:paddingStart=&quot;10dp&quot;` to better support right-to-left layouts">
+        <fix-replace
+            description="Replace with android:paddingStart=&quot;10dp&quot;"
+            oldString="paddingLeft"
+            replacement="paddingStart"/>
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/activity_query_value.xml"
+            line="50"
+            column="13"
+            startOffset="1957"
+            endLine="50"
+            endColumn="32"
+            endOffset="1976"/>
+        <map>
+            <entry
+                name="applies"
+                int="10"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UsingOnClickInXml"
+        severity="warning"
+        message="Use databinding or explicit wiring of click listener in code">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/activity_query_value.xml"
+            line="66"
+            column="9"
+            startOffset="2513"
+            endLine="66"
+            endColumn="38"
+            endOffset="2542"/>
+        <map>
+            <condition minLT="ffffffffffc00000"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlSymmetry"
+        severity="warning"
+        message="When you define `paddingLeft` you should probably also define `paddingRight` for right-to-left symmetry">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/activity_query_value.xml"
+            line="77"
+            column="13"
+            startOffset="2942"
+            endLine="77"
+            endColumn="32"
+            endOffset="2961"/>
+        <map>
+            <entry
+                name="applies"
+                int="2"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlHardcoded"
+        severity="warning"
+        message="Consider replacing `android:paddingLeft` with `android:paddingStart=&quot;10dp&quot;` to better support right-to-left layouts">
+        <fix-replace
+            description="Replace with android:paddingStart=&quot;10dp&quot;"
+            oldString="paddingLeft"
+            replacement="paddingStart"/>
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/activity_query_value.xml"
+            line="77"
+            column="13"
+            startOffset="2942"
+            endLine="77"
+            endColumn="32"
+            endOffset="2961"/>
+        <map>
+            <entry
+                name="applies"
+                int="10"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlHardcoded"
+        severity="warning"
+        message="Consider replacing `android:layout_marginRight` with `android:layout_marginEnd=&quot;2dp&quot;` to better support right-to-left layouts">
+        <fix-replace
+            description="Replace with android:layout_marginEnd=&quot;2dp&quot;"
+            oldString="layout_marginRight"
+            replacement="layout_marginEnd"/>
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/activity_query_value.xml"
+            line="80"
+            column="13"
+            startOffset="3049"
+            endLine="80"
+            endColumn="39"
+            endOffset="3075"/>
+        <map>
+            <entry
+                name="applies"
+                int="10"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlHardcoded"
+        severity="warning"
+        message="Use &quot;`end`&quot; instead of &quot;`right`&quot; to ensure correct behavior in right-to-left locales">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/grid_layout.xml"
+            line="27"
+            column="30"
+            startOffset="1031"
+            endLine="27"
+            endColumn="42"
+            endOffset="1043"/>
+        <map>
+            <entry
+                name="applies"
+                int="2"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlHardcoded"
+        severity="warning"
+        message="Consider replacing `android:layout_marginRight` with `android:layout_marginEnd=&quot;4dp&quot;` to better support right-to-left layouts">
+        <fix-replace
+            description="Replace with android:layout_marginEnd=&quot;4dp&quot;"
+            oldString="layout_marginRight"
+            replacement="layout_marginEnd"/>
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/grid_layout.xml"
+            line="54"
+            column="21"
+            startOffset="2236"
+            endLine="54"
+            endColumn="47"
+            endOffset="2262"/>
+        <map>
+            <entry
+                name="applies"
+                int="10"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlHardcoded"
+        severity="warning"
+        message="Consider replacing `android:layout_marginRight` with `android:layout_marginEnd=&quot;4dp&quot;` to better support right-to-left layouts">
+        <fix-replace
+            description="Replace with android:layout_marginEnd=&quot;4dp&quot;"
+            oldString="layout_marginRight"
+            replacement="layout_marginEnd"/>
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/grid_layout.xml"
+            line="71"
+            column="21"
+            startOffset="3023"
+            endLine="71"
+            endColumn="47"
+            endOffset="3049"/>
+        <map>
+            <entry
+                name="applies"
+                int="10"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlHardcoded"
+        severity="warning"
+        message="Consider replacing `android:layout_marginRight` with `android:layout_marginEnd=&quot;4dp&quot;` to better support right-to-left layouts">
+        <fix-replace
+            description="Replace with android:layout_marginEnd=&quot;4dp&quot;"
+            oldString="layout_marginRight"
+            replacement="layout_marginEnd"/>
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/grid_layout.xml"
+            line="89"
+            column="21"
+            startOffset="3883"
+            endLine="89"
+            endColumn="47"
+            endOffset="3909"/>
+        <map>
+            <entry
+                name="applies"
+                int="10"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlHardcoded"
+        severity="warning"
+        message="Consider replacing `android:layout_marginRight` with `android:layout_marginEnd=&quot;4dp&quot;` to better support right-to-left layouts">
+        <fix-replace
+            description="Replace with android:layout_marginEnd=&quot;4dp&quot;"
+            oldString="layout_marginRight"
+            replacement="layout_marginEnd"/>
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/grid_layout.xml"
+            line="108"
+            column="21"
+            startOffset="4787"
+            endLine="108"
+            endColumn="47"
+            endOffset="4813"/>
+        <map>
+            <entry
+                name="applies"
+                int="10"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlHardcoded"
+        severity="warning"
+        message="Consider replacing `android:layout_marginRight` with `android:layout_marginEnd=&quot;4dp&quot;` to better support right-to-left layouts">
+        <fix-replace
+            description="Replace with android:layout_marginEnd=&quot;4dp&quot;"
+            oldString="layout_marginRight"
+            replacement="layout_marginEnd"/>
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/grid_layout.xml"
+            line="451"
+            column="13"
+            startOffset="18430"
+            endLine="451"
+            endColumn="39"
+            endOffset="18456"/>
+        <map>
+            <entry
+                name="applies"
+                int="10"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlSymmetry"
+        severity="warning"
+        message="When you define `paddingStart` you should probably also define `paddingEnd` for right-to-left symmetry">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/grid_layout.xml"
+            line="485"
+            column="13"
+            startOffset="19781"
+            endLine="485"
+            endColumn="33"
+            endOffset="19801"/>
+        <map>
+            <entry
+                name="applies"
+                int="2"/>
+        </map>
+    </incident>
+
+    <incident
+        id="LabelFor"
+        severity="warning"
+        message="">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/grid_layout.xml"
+            line="21"
+            column="10"
+            startOffset="785"
+            endLine="21"
+            endColumn="18"
+            endOffset="793"/>
+        <map>
+            <entry
+                name="hint"
+                boolean="false"/>
+            <entry
+                name="label"
+                boolean="false"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UsingOnClickInXml"
+        severity="warning"
+        message="Use databinding or explicit wiring of click listener in code">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_addvalue.xml"
+            line="29"
+            column="9"
+            startOffset="891"
+            endLine="29"
+            endColumn="35"
+            endOffset="917"/>
+        <map>
+            <condition minLT="ffffffffffc00000"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlHardcoded"
+        severity="warning"
+        message="Use &quot;`end`&quot; instead of &quot;`right`&quot; to ensure correct behavior in right-to-left locales">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="27"
+            column="30"
+            startOffset="994"
+            endLine="27"
+            endColumn="42"
+            endOffset="1006"/>
+        <map>
+            <entry
+                name="applies"
+                int="2"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UsingOnClickInXml"
+        severity="warning"
+        message="Use databinding or explicit wiring of click listener in code">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="139"
+            column="21"
+            startOffset="6069"
+            endLine="139"
+            endColumn="49"
+            endOffset="6097"/>
+        <map>
+            <condition minLT="ffffffffffc00000"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UsingOnClickInXml"
+        severity="warning"
+        message="Use databinding or explicit wiring of click listener in code">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="150"
+            column="21"
+            startOffset="6519"
+            endLine="150"
+            endColumn="58"
+            endOffset="6556"/>
+        <map>
+            <condition minLT="ffffffffffc00000"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UsingOnClickInXml"
+        severity="warning"
+        message="Use databinding or explicit wiring of click listener in code">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="159"
+            column="21"
+            startOffset="6888"
+            endLine="159"
+            endColumn="50"
+            endOffset="6917"/>
+        <map>
+            <condition minLT="ffffffffffc00000"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UsingOnClickInXml"
+        severity="warning"
+        message="Use databinding or explicit wiring of click listener in code">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="168"
+            column="21"
+            startOffset="7251"
+            endLine="168"
+            endColumn="52"
+            endOffset="7282"/>
+        <map>
+            <condition minLT="ffffffffffc00000"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UsingOnClickInXml"
+        severity="warning"
+        message="Use databinding or explicit wiring of click listener in code">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="183"
+            column="21"
+            startOffset="7821"
+            endLine="183"
+            endColumn="50"
+            endOffset="7850"/>
+        <map>
+            <condition minLT="ffffffffffc00000"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UsingOnClickInXml"
+        severity="warning"
+        message="Use databinding or explicit wiring of click listener in code">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="193"
+            column="21"
+            startOffset="8231"
+            endLine="193"
+            endColumn="50"
+            endOffset="8260"/>
+        <map>
+            <condition minLT="ffffffffffc00000"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UsingOnClickInXml"
+        severity="warning"
+        message="Use databinding or explicit wiring of click listener in code">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="202"
+            column="21"
+            startOffset="8587"
+            endLine="202"
+            endColumn="50"
+            endOffset="8616"/>
+        <map>
+            <condition minLT="ffffffffffc00000"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UsingOnClickInXml"
+        severity="warning"
+        message="Use databinding or explicit wiring of click listener in code">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="211"
+            column="21"
+            startOffset="8945"
+            endLine="211"
+            endColumn="51"
+            endOffset="8975"/>
+        <map>
+            <condition minLT="ffffffffffc00000"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UsingOnClickInXml"
+        severity="warning"
+        message="Use databinding or explicit wiring of click listener in code">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="226"
+            column="21"
+            startOffset="9514"
+            endLine="226"
+            endColumn="50"
+            endOffset="9543"/>
+        <map>
+            <condition minLT="ffffffffffc00000"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UsingOnClickInXml"
+        severity="warning"
+        message="Use databinding or explicit wiring of click listener in code">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="236"
+            column="21"
+            startOffset="9924"
+            endLine="236"
+            endColumn="50"
+            endOffset="9953"/>
+        <map>
+            <condition minLT="ffffffffffc00000"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UsingOnClickInXml"
+        severity="warning"
+        message="Use databinding or explicit wiring of click listener in code">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="245"
+            column="21"
+            startOffset="10280"
+            endLine="245"
+            endColumn="50"
+            endOffset="10309"/>
+        <map>
+            <condition minLT="ffffffffffc00000"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UsingOnClickInXml"
+        severity="warning"
+        message="Use databinding or explicit wiring of click listener in code">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="254"
+            column="21"
+            startOffset="10637"
+            endLine="254"
+            endColumn="52"
+            endOffset="10668"/>
+        <map>
+            <condition minLT="ffffffffffc00000"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UsingOnClickInXml"
+        severity="warning"
+        message="Use databinding or explicit wiring of click listener in code">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="269"
+            column="21"
+            startOffset="11207"
+            endLine="269"
+            endColumn="50"
+            endOffset="11236"/>
+        <map>
+            <condition minLT="ffffffffffc00000"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UsingOnClickInXml"
+        severity="warning"
+        message="Use databinding or explicit wiring of click listener in code">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="279"
+            column="21"
+            startOffset="11617"
+            endLine="279"
+            endColumn="50"
+            endOffset="11646"/>
+        <map>
+            <condition minLT="ffffffffffc00000"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UsingOnClickInXml"
+        severity="warning"
+        message="Use databinding or explicit wiring of click listener in code">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="288"
+            column="21"
+            startOffset="11973"
+            endLine="288"
+            endColumn="50"
+            endOffset="12002"/>
+        <map>
+            <condition minLT="ffffffffffc00000"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UsingOnClickInXml"
+        severity="warning"
+        message="Use databinding or explicit wiring of click listener in code">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="297"
+            column="21"
+            startOffset="12332"
+            endLine="297"
+            endColumn="52"
+            endOffset="12363"/>
+        <map>
+            <condition minLT="ffffffffffc00000"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UsingOnClickInXml"
+        severity="warning"
+        message="Use databinding or explicit wiring of click listener in code">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="312"
+            column="21"
+            startOffset="12907"
+            endLine="312"
+            endColumn="50"
+            endOffset="12936"/>
+        <map>
+            <condition minLT="ffffffffffc00000"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UsingOnClickInXml"
+        severity="warning"
+        message="Use databinding or explicit wiring of click listener in code">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="330"
+            column="21"
+            startOffset="13637"
+            endLine="330"
+            endColumn="49"
+            endOffset="13665"/>
+        <map>
+            <condition minLT="ffffffffffc00000"/>
+        </map>
+    </incident>
+
+    <incident
+        id="LabelFor"
+        severity="warning"
+        message="">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="10"
+            column="6"
+            startOffset="377"
+            endLine="10"
+            endColumn="14"
+            endOffset="385"/>
+        <map>
+            <entry
+                name="hint"
+                boolean="false"/>
+            <entry
+                name="label"
+                boolean="false"/>
+        </map>
+    </incident>
+
+    <incident
+        id="LabelFor"
+        severity="warning"
+        message="">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/layout/layout_datecalculate.xml"
+            line="22"
+            column="10"
+            startOffset="793"
+            endLine="22"
+            endColumn="18"
+            endOffset="801"/>
+        <map>
+            <entry
+                name="hint"
+                boolean="false"/>
+            <entry
+                name="label"
+                boolean="false"/>
+        </map>
+    </incident>
+
+</incidents>

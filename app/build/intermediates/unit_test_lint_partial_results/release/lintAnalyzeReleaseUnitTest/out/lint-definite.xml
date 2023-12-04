@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.3.0-alpha14" type="incidents">
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.activity:activity than 1.8.0 is available: 1.8.1">
+        <fix-replace
+            description="Change to 1.8.1"
+            family="Update versions"
+            oldString="1.8.0"
+            replacement="1.8.1"/>
+        <location
+            file="$HOME/AndroidStudioProjects/Recycle/gradle/libs.versions.toml"
+            line="10"
+            column="12"
+            startOffset="183"
+            endLine="10"
+            endColumn="19"
+            endOffset="190"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.navigation:navigation-fragment-ktx than 2.6.0 is available: 2.7.5">
+        <fix-replace
+            description="Change to 2.7.5"
+            family="Update versions"
+            oldString="2.6.0"
+            replacement="2.7.5"/>
+        <location
+            file="$HOME/AndroidStudioProjects/Recycle/gradle/libs.versions.toml"
+            line="12"
+            column="25"
+            startOffset="242"
+            endLine="12"
+            endColumn="32"
+            endOffset="249"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.navigation:navigation-ui-ktx than 2.6.0 is available: 2.7.5">
+        <fix-replace
+            description="Change to 2.7.5"
+            family="Update versions"
+            oldString="2.6.0"
+            replacement="2.7.5"/>
+        <location
+            file="$HOME/AndroidStudioProjects/Recycle/gradle/libs.versions.toml"
+            line="13"
+            column="19"
+            startOffset="268"
+            endLine="13"
+            endColumn="26"
+            endOffset="275"/>
+    </incident>
+
+    <incident
+        id="AndroidGradlePluginVersion"
+        severity="warning"
+        message="A newer version of com.android.application than 8.3.0-alpha14 is available: 8.3.0-alpha16">
+        <fix-replace
+            description="Change to 8.3.0-alpha16"
+            family="Update versions"
+            robot="true"
+            independent="true"
+            oldString="8.3.0-alpha14"
+            replacement="8.3.0-alpha16"/>
+        <location
+            file="$HOME/AndroidStudioProjects/Recycle/gradle/libs.versions.toml"
+            line="2"
+            column="7"
+            startOffset="17"
+            endLine="2"
+            endColumn="22"
+            endOffset="32"/>
+    </incident>
+
+</incidents>

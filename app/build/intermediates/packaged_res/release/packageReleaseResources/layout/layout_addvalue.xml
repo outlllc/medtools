@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/textView"
+        android:layout_width="155dp"
+        android:layout_height="wrap_content"
+        android:hint="第一个值" />
+
+    <EditText
+        android:id="@+id/textView2"
+        android:layout_width="156dp"
+        android:layout_height="wrap_content"
+        android:hint="第二个值" />
+
+    <EditText
+        android:id="@+id/textView3"
+        android:layout_width="155dp"
+        android:layout_height="wrap_content"
+        android:hint="第三个值" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="addValue"
+        android:text="提交" />
+</LinearLayout>

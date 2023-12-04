@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "EXTRACTED_SDK_APKS",
+    "kind": "Directory"
+  },
+  "applicationId": "com.example.recycle",
+  "variantName": "",
+  "elements": []
+}
