@@ -19,7 +19,7 @@
         android:layout_height="60dp"
         android:orientation="horizontal"
         android:layout_marginTop="0dp"
-        android:background="@color/backgroud">
+        android:background="@color/green">
 
         <com.google.android.material.button.MaterialButtonToggleGroup
             android:id="@+id/study_button_toggle_group"
@@ -39,11 +39,12 @@
                 android:insetTop="0dp"
                 android:insetBottom="0dp"
                 android:text="计算器"
-                android:textColor="#B51717"
+                android:textColor="#F0FFFF"
+                android:textStyle="bold"
                 android:textSize="15sp"
                 app:backgroundTint="@color/green"
                 app:cornerRadius="20dp"
-                app:strokeColor="#0022FF"
+                app:strokeColor="@color/green"
                 app:strokeWidth="2dp" />
 
             <com.google.android.material.button.MaterialButton
@@ -56,9 +57,10 @@
                 android:text="体重计"
                 android:textColor="#3A2F2F"
                 android:textSize="15sp"
+                android:textStyle="bold"
                 app:backgroundTint="@color/green"
                 app:cornerRadius="20dp"
-                app:strokeColor="#0022FF"
+                app:strokeColor="@color/green"
                 app:strokeWidth="2dp" />
 
             <com.google.android.material.button.MaterialButton
@@ -72,9 +74,10 @@
                 android:text="预习"
                 android:textColor="#3A2F2F"
                 android:textSize="15sp"
+                android:textStyle="bold"
                 app:backgroundTint="@color/green"
                 app:cornerRadius="20dp"
-                app:strokeColor="#0022FF"
+                app:strokeColor="@color/green"
                 app:strokeWidth="2dp" />
 
             <com.google.android.material.button.MaterialButton
@@ -88,9 +91,10 @@
                 android:text="我的"
                 android:textColor="#3A2F2F"
                 android:textSize="15sp"
+                android:textStyle="bold"
                 app:backgroundTint="@color/green"
                 app:cornerRadius="20dp"
-                app:strokeColor="#0022FF"
+                app:strokeColor="@color/green"
                 app:strokeWidth="2dp" />
 
         </com.google.android.material.button.MaterialButtonToggleGroup>

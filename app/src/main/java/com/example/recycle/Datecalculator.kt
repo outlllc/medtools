@@ -1,6 +1,7 @@
 package com.example.recycle
 
 import android.annotation.SuppressLint
+import android.app.Activity
 import android.graphics.Color
 import android.graphics.Typeface
 import android.os.Bundle
@@ -49,6 +50,7 @@ class Datecalculator : Fragment(), View.OnClickListener {
     var localDate: Button? =null
     var buttonPosNeg:Button? =null
     lateinit var selecToggleGroup:MaterialButtonToggleGroup
+    lateinit var buttonDot:Button
 
     var operator = ""
     var first = ""
@@ -100,6 +102,7 @@ class Datecalculator : Fragment(), View.OnClickListener {
         buttonDelete=view.findViewById(R.id.buttonDelete)
         localDate=view.findViewById(R.id.localDate)
         selecToggleGroup=view.findViewById(R.id.selecToggleGroup)
+        buttonDot=view.findViewById(R.id.buttonDot)
 
         button1.setOnClickListener { constructNum("1") }
         button2.setOnClickListener { constructNum("2") }
@@ -120,6 +123,12 @@ class Datecalculator : Fragment(), View.OnClickListener {
                 constructNum("/")
             }else{ }
         }
+        buttonDot.setOnClickListener { if(!answerEditText.text.toString().contains(".")
+        ){
+            constructNum(".")
+        } else{}}
+
+
         buttonPlus.setOnClickListener { if(operator!="+") {
             onClickOperator("+")
         } }
@@ -165,7 +174,7 @@ class Datecalculator : Fragment(), View.OnClickListener {
                     child.setBackgroundColor(Color.parseColor("#FF03A9F4"))
                 } else {
                     child.setTextColor(Color.parseColor("#FF000000"))
-                    child.setBackgroundColor(Color.parseColor("#808A87"))
+                    child.setBackgroundColor(Color.parseColor("#FF87C4FF"))
                 }
             }
             when (selctIndex) {
@@ -274,7 +283,11 @@ class Datecalculator : Fragment(), View.OnClickListener {
     fun constructNum(s: String) {
         var text=answerEditText.text.toString()
         if (operator.isBlank()){
-            first = answerEditText.text.toString()
+            if (text.startsWith('0')){
+                first=""
+            }else{
+                first = answerEditText.text.toString()
+            }
             first += s
             answerEditText.setTypeface(Typeface.MONOSPACE, Typeface.NORMAL)
             answerEditText.setText(first)

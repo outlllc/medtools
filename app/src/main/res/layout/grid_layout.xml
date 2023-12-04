@@ -59,7 +59,7 @@
                     android:text="YEAR"
                     android:textColor="#FF000000"
                     android:textSize="10sp"
-                    app:backgroundTint="#808A87"
+                    app:backgroundTint="@color/calnonechecked"
                     app:cornerRadius="2dp"
                     app:strokeColor="#60BFCC"
                     app:strokeWidth="0dp" />
@@ -77,7 +77,7 @@
                     android:text="MON"
                     android:textColor="#FF000000"
                     android:textSize="10sp"
-                    app:backgroundTint="#808A87"
+                    app:backgroundTint="@color/calnonechecked"
                     app:cornerRadius="20dp"
                     app:strokeColor="#60BFCC" />
 
@@ -95,7 +95,7 @@
                     android:text="DAY"
                     android:textColor="#FF000000"
                     android:textSize="10sp"
-                    app:backgroundTint="#808A87"
+                    app:backgroundTint="@color/calnonechecked"
                     app:cornerRadius="20dp"
                     app:strokeColor="#60BFCC"
                     app:strokeWidth="0dp" />
@@ -131,7 +131,7 @@
                     android:text="DATE"
                     android:textColor="#FF000000"
                     android:textSize="10sp"
-                    app:backgroundTint="#808A87"
+                    app:backgroundTint="@color/calnonechecked"
                     app:cornerRadius="2dp"
                     app:strokeColor="#60BFCC"
                     app:strokeWidth="0dp" />

@@ -1,13 +1,13 @@
 package com.example.recycle
 
 import android.annotation.SuppressLint
-import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import android.util.Log
 import androidx.core.content.contentValuesOf
+import androidx.fragment.app.FragmentActivity
 
-class DataBaseHelper(context:Context) :SQLiteOpenHelper(context, "weight.db", null, 1) {
+class DataBaseHelper(context: FragmentActivity?) :SQLiteOpenHelper(context, "weight.db", null, 1) {
     val TABLE_NAME="weight"
     val TABLE_NAMEBPD="bpdac"
     val sqlCreat="create table ${TABLE_NAME} (id integer primary key autoincrement,tw200 TEXT,tw205 TEXT,tw210 TEXT,tw215 TEXT,tw220 TEXT,tw225 TEXT,tw230 TEXT,tw235 TEXT,tw240 TEXT,tw245 TEXT,tw250 TEXT,tw255 TEXT,tw260 TEXT,tw265 TEXT,tw270 TEXT,tw275 TEXT,tw280 TEXT,tw285 TEXT,tw290 TEXT,tw295 TEXT,tw300 TEXT,tw305 TEXT,tw310 TEXT,tw315 TEXT,tw320 TEXT,tw325 TEXT,tw330 TEXT,tw335 TEXT,tw340 TEXT,tw345 TEXT,tw350 TEXT,tw355 TEXT,tw360 TEXT,tw365 TEXT,tw370 TEXT,tw375 TEXT,tw380 TEXT,tw385 TEXT,tw390 TEXT,tw395 TEXT,tw400 TEXT)"

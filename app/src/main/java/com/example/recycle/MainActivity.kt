@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import com.example.recycle.R.color.skywhite
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.button.MaterialButtonToggleGroup
@@ -14,14 +15,19 @@ import com.google.android.material.button.MaterialButtonToggleGroup
 class MainActivity : AppCompatActivity() {
 
     var dateCaculatorFragment:Datecalculator? = null
+    var babyWeightFragment:BabyWeight? = null
+    var fragment: Fragment?=null
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         if (dateCaculatorFragment == null){
-            dateCaculatorFragment= Datecalculator()
+            fragment= Datecalculator()
         }
-        supportFragmentManager.beginTransaction().add(R.id.fragment_, dateCaculatorFragment!!).commit()
+//        if(babyWeightFragment == null){
+//            babyWeightFragment= BabyWeight()
+//        }
+        supportFragmentManager.beginTransaction().add(R.id.fragment_, fragment!!).commit()
 
         val calculation = findViewById<MaterialButtonToggleGroup>(R.id.study_button_toggle_group)
         calculation.addOnButtonCheckedListener{ group: MaterialButtonToggleGroup?, checkedId, isChecked ->
@@ -38,22 +44,30 @@ class MainActivity : AppCompatActivity() {
                     child.setBackgroundColor(Color.parseColor("#00C957"))
                 }
             }
+//            calculation.check(R.id.calculation_button)
             selectFragment(selectIndex)
         }
 
     }
 
     private fun selectFragment(selectIndex:Int) {
+        var fragment1=fragment
         when (selectIndex) {
             0 -> {
                 if (dateCaculatorFragment==null){
-                    dateCaculatorFragment=Datecalculator()
+                    fragment1=Datecalculator()
+                }else {
+                    fragment1 = dateCaculatorFragment
                 }
-                dateCaculatorFragment
             }
 
             1 -> {
-                Intent(this, QueryValue::class.java).run { startActivity(this) }
+                if(babyWeightFragment==null){
+                    fragment1=BabyWeight()
+                } else {
+                    fragment1=babyWeightFragment
+                }
+//                Intent(this, QueryValue::class.java).run { startActivity(this) }
             }
             2 -> Toast.makeText(this, "2", Toast.LENGTH_SHORT).show()
             3 -> Toast.makeText(this, "3", Toast.LENGTH_SHORT).show()
@@ -61,10 +75,14 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "error", Toast.LENGTH_SHORT).show()
         }?:return
         val ft=supportFragmentManager.beginTransaction()
-        if (!this.dateCaculatorFragment!!.isAdded){
-            ft.add(R.id.fragment_, dateCaculatorFragment!!)
+        if (!fragment1!!.isAdded){
+            ft.add(R.id.fragment_, fragment1!!)
         }
-        ft.show(dateCaculatorFragment!!)
+        if (fragment!=null){
+            ft.hide(fragment!!)
+        }
+        fragment=fragment1
+        ft.show(fragment1!!)
         ft.commit()
     }
 
@@ -80,16 +98,6 @@ class MainActivity : AppCompatActivity() {
 //        rvView.layoutManager=GridLayoutManager(this,2)
 //        rvView.adapter=SecrecyAdaptor(list)
 //    }
-
-
-        fun add_(view: View) {
-            Intent(this, AddValue::class.java)
-                .run { startActivity(this) }
-        }
-
-        fun query_ (view: View) {
-            Intent(this, QueryValue::class.java).run { startActivity(this) }
-        }
 
 }
 
