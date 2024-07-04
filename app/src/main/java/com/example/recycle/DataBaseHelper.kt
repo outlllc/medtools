@@ -59,4 +59,5 @@ class DataBaseHelper(context: Context?) :SQLiteOpenHelper(context, "weight.db", 
         }
         return result
     }
+
 }
