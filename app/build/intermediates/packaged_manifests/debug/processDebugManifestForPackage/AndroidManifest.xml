@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.recycle"
+    package="com.duckgo.medtools"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -9,10 +9,10 @@
         android:targetSdkVersion="34" />
 
     <permission
-        android:name="com.example.recycle.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:name="com.duckgo.medtools.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
         android:protectionLevel="signature" />
 
-    <uses-permission android:name="com.example.recycle.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+    <uses-permission android:name="com.duckgo.medtools.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
 
     <application
         android:allowBackup="true"
@@ -28,14 +28,7 @@
         android:testOnly="true"
         android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" >
         <activity
-            android:name="com.example.recycle.Datecalculator"
-            android:exported="true" />
-        <activity
-            android:name="com.example.recycle.QueryValue"
-            android:exported="true"
-            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
-        <activity
-            android:name="com.example.recycle.MainActivity"
+            android:name="com.duckgo.medtools.MainActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -44,12 +37,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.recycle.AddValue"
+            android:name="com.duckgo.medtools.AddValue"
             android:exported="true" />
 
         <provider
             android:name="androidx.startup.InitializationProvider"
-            android:authorities="com.example.recycle.androidx-startup"
+            android:authorities="com.duckgo.medtools.androidx-startup"
             android:exported="false" >
             <meta-data
                 android:name="androidx.emoji2.text.EmojiCompatInitializer"

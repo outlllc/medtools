@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.recycle"
+    namespace = "com.duckgo.medtools"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.recycle"
+        applicationId = "com.duckgo.medtools"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

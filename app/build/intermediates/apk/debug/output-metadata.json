@@ -4,7 +4,7 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.example.recycle",
+  "applicationId": "com.duckgo.medtools",
   "variantName": "debug",
   "elements": [
     {

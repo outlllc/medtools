@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.recycle.app-mergeDebugResources-45:/values-h480dp-land-v13/values-h480dp-land-v13.xml",
+            "outputFile": "com.duckgo.medtools.app-mergeDebugResources-45:/values-h480dp-land-v13/values-h480dp-land-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\zfx\\.gradle\\caches\\transforms-3\\24bdfd9a22564fd510c6eab026533b0c\\transformed\\material-1.10.0\\res\\values-h480dp-land-v13\\values-h480dp-land-v13.xml",
+                    "source": "C:\\Users\\zfx\\.gradle\\caches\\transforms-4\\db079ba6c9efa8db97ecf19fecbd631c\\transformed\\material-1.10.0\\res\\values-h480dp-land-v13\\values-h480dp-land-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",

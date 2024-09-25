@@ -4,10 +4,6 @@
         "source": "C:\\Users\\zfx\\.gradle\\daemon\\8.4\\com.example.recycle.app-main-48:\\layout\\layout_datecalculate.xml"
     },
     {
-        "merged": "com.example.recycle.app-mergeReleaseResources-46:/layout/activity_query_value.xml",
-        "source": "com.example.recycle.app-main-48:/layout/activity_query_value.xml"
-    },
-    {
         "merged": "C:\\Users\\zfx\\.gradle\\daemon\\8.4\\com.example.recycle.app-mergeReleaseResources-46:\\layout\\materialbuttontangoo.xml",
         "source": "C:\\Users\\zfx\\.gradle\\daemon\\8.4\\com.example.recycle.app-main-48:\\layout\\materialbuttontangoo.xml"
     },
@@ -16,24 +12,20 @@
         "source": "com.example.recycle.app-main-48:/layout/fragment_baby_weight.xml"
     },
     {
-        "merged": "com.example.recycle.app-mergeReleaseResources-46:/layout/grid_layout.xml",
-        "source": "com.example.recycle.app-main-48:/layout/grid_layout.xml"
-    },
-    {
-        "merged": "C:\\Users\\zfx\\.gradle\\daemon\\8.4\\com.example.recycle.app-mergeReleaseResources-46:\\layout\\grid_layout.xml",
-        "source": "C:\\Users\\zfx\\.gradle\\daemon\\8.4\\com.example.recycle.app-main-48:\\layout\\grid_layout.xml"
+        "merged": "C:\\Users\\zfx\\.gradle\\daemon\\8.4\\com.example.recycle.app-mergeReleaseResources-46:\\layout\\fragment_baby_weight.xml",
+        "source": "C:\\Users\\zfx\\.gradle\\daemon\\8.4\\com.example.recycle.app-main-48:\\layout\\fragment_baby_weight.xml"
     },
     {
         "merged": "C:\\Users\\zfx\\.gradle\\daemon\\8.4\\com.example.recycle.app-mergeReleaseResources-46:\\layout\\activity_query_value.xml",
         "source": "C:\\Users\\zfx\\.gradle\\daemon\\8.4\\com.example.recycle.app-main-48:\\layout\\activity_query_value.xml"
     },
     {
-        "merged": "C:\\Users\\zfx\\.gradle\\daemon\\8.4\\com.example.recycle.app-mergeReleaseResources-46:\\layout\\activity_main.xml",
-        "source": "C:\\Users\\zfx\\.gradle\\daemon\\8.4\\com.example.recycle.app-main-48:\\layout\\activity_main.xml"
+        "merged": "C:\\Users\\zfx\\.gradle\\daemon\\8.4\\com.example.recycle.app-mergeReleaseResources-46:\\layout\\grid_layout.xml",
+        "source": "C:\\Users\\zfx\\.gradle\\daemon\\8.4\\com.example.recycle.app-main-48:\\layout\\grid_layout.xml"
     },
     {
-        "merged": "com.example.recycle.app-mergeReleaseResources-46:/layout/activity_main.xml",
-        "source": "com.example.recycle.app-main-48:/layout/activity_main.xml"
+        "merged": "C:\\Users\\zfx\\.gradle\\daemon\\8.4\\com.example.recycle.app-mergeReleaseResources-46:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\zfx\\.gradle\\daemon\\8.4\\com.example.recycle.app-main-48:\\layout\\activity_main.xml"
     },
     {
         "merged": "C:\\Users\\zfx\\.gradle\\daemon\\8.4\\com.example.recycle.app-mergeReleaseResources-46:\\layout\\layout_addvalue.xml",

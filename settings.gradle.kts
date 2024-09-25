@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Recycle"
+rootProject.name = "medtools"
 include(":app")
