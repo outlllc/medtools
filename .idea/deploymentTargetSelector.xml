@@ -5,6 +5,7 @@
       <SelectionState runConfigName="app">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
+<<<<<<< HEAD
       <SelectionState runConfigName="Datecalculator">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
@@ -14,6 +15,8 @@
       <SelectionState runConfigName="medtool.app">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
+=======
+>>>>>>> bb44a98dc0cbeb0bc744995df4949e15d7f4d172
     </selectionStates>
   </component>
 </project>
