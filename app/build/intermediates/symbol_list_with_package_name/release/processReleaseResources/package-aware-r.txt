@@ -1,4 +1,4 @@
-com.example.recycle
+com.duckgo.medtools
 anim abc_fade_in
 anim abc_fade_out
 anim abc_grow_fade_in_from_bottom
@@ -3226,17 +3226,21 @@ id button6
 id button7
 id button8
 id button9
+id buttonAdd
 id buttonClear
 id buttonDeduct
 id buttonDelete
 id buttonDivide
 id buttonDot
 id buttonEqual
+id buttonMultiply
 id buttonMutiply
+id buttonPN
 id buttonPanel
 id buttonPlus
 id buttonPosNeg
 id buttonSplitDate
+id buttonSubtract
 id buttonweek
 id cache_measures
 id calculation_button
@@ -3352,6 +3356,7 @@ id header_title
 id hide_ime_id
 id hideable
 id hintEditText
+id hintTextView
 id home
 id homeAsUp
 id honorRequest
@@ -3795,7 +3800,9 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout fragmen_medical_calculator
 layout fragment_baby_weight
+layout fragment_date_calculator_
 layout grid_layout
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity

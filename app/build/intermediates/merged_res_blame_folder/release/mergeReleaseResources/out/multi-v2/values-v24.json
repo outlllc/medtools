@@ -1,20 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.recycle.app-mergeReleaseResources-45:/values-v24/values-v24.xml",
+            "outputFile": "com.duckgo.medtools.app-mergeReleaseResources-45:/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\zfx\\.gradle\\caches\\transforms-3\\6891199d79b8936b97d151044466f1de\\transformed\\appcompat-1.6.1\\res\\values-v24\\values-v24.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,212",
-                        "endColumns": "156,134",
-                        "endOffsets": "207,342"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\zfx\\.gradle\\caches\\transforms-3\\24bdfd9a22564fd510c6eab026533b0c\\transformed\\material-1.10.0\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\zfx\\.gradle\\caches\\8.9\\transforms\\2ad93e3c30e422f7e4657143e2f2773d\\transformed\\material-1.10.0\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,9,12,15",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -30,6 +20,16 @@
                         "endLines": "4,5,6,7,10,13,16,19",
                         "endColumns": "84,98,86,100,10,10,10,10",
                         "endOffsets": "427,526,613,714,913,1126,1327,1542"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\zfx\\.gradle\\caches\\8.9\\transforms\\e3e36799ef9ad7e1bc51710649d84452\\transformed\\appcompat-1.6.1\\res\\values-v24\\values-v24.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,212",
+                        "endColumns": "156,134",
+                        "endOffsets": "207,342"
                     }
                 }
             ]

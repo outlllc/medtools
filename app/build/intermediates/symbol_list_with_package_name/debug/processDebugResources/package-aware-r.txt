@@ -3226,17 +3226,21 @@ id button6
 id button7
 id button8
 id button9
+id buttonAdd
 id buttonClear
 id buttonDeduct
 id buttonDelete
 id buttonDivide
 id buttonDot
 id buttonEqual
+id buttonMultiply
 id buttonMutiply
+id buttonPN
 id buttonPanel
 id buttonPlus
 id buttonPosNeg
 id buttonSplitDate
+id buttonSubtract
 id buttonweek
 id cache_measures
 id calculation_button
@@ -3352,6 +3356,7 @@ id header_title
 id hide_ime_id
 id hideable
 id hintEditText
+id hintTextView
 id home
 id homeAsUp
 id honorRequest
@@ -3523,6 +3528,7 @@ id right_side
 id rounded
 id row_index_key
 id rtl
+id rv_medical_calculator
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
@@ -3637,6 +3643,7 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id tv_title
 id unchecked
 id uniform
 id unlabeled
@@ -3795,7 +3802,10 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout first_page_m_c
 layout fragment_baby_weight
+layout fragment_date_calculator_
+layout fragment_medical_calculator
 layout grid_layout
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity

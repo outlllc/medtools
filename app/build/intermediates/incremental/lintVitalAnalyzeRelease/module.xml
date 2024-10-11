@@ -1,10 +1,10 @@
 <lint-module
     format="1"
-    dir="C:\Users\zfx\AndroidStudioProjects\Recycle\app"
+    dir="C:\Users\zfx\AndroidStudioProjects\medtools\app"
     name=":app"
     type="APP"
-    maven="Recycle:app:"
-    agpVersion="8.3.0-alpha14"
+    maven="medtools:app:unspecified"
+    agpVersion="8.7.0"
     buildFolder="build"
     bootClassPath="C:\Users\zfx\AppData\Local\Android\Sdk\platforms\android-34\android.jar;C:\Users\zfx\AppData\Local\Android\Sdk\build-tools\34.0.0\core-lambda-stubs.jar"
     javaSourceLevel="1.8"

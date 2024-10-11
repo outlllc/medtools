@@ -1,26 +1,46 @@
 [
     {
-        "merged": "com.duckgo.medtools.app-mergeDebugResources-46:/layout/layout_addvalue.xml",
-        "source": "com.duckgo.medtools.app-main-49:/layout/layout_addvalue.xml"
+        "merged": "C:\\Users\\zfx\\.gradle\\daemon\\8.9\\com.duckgo.medtools.app-mergeDebugResources-46:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\zfx\\.gradle\\daemon\\8.9\\com.duckgo.medtools.app-main-49:\\layout\\activity_main.xml"
     },
     {
-        "merged": "com.duckgo.medtools.app-mergeDebugResources-46:/layout/grid_layout.xml",
-        "source": "com.duckgo.medtools.app-main-49:/layout/grid_layout.xml"
+        "merged": "C:\\Users\\zfx\\.gradle\\daemon\\8.9\\com.duckgo.medtools.app-mergeDebugResources-46:\\layout\\first_page_m_c.xml",
+        "source": "C:\\Users\\zfx\\.gradle\\daemon\\8.9\\com.duckgo.medtools.app-main-49:\\layout\\first_page_m_c.xml"
     },
     {
-        "merged": "com.duckgo.medtools.app-mergeDebugResources-46:/layout/activity_main.xml",
-        "source": "com.duckgo.medtools.app-main-49:/layout/activity_main.xml"
+        "merged": "com.duckgo.medtools.app-mergeDebugResources-46:/layout/first_page_m_c.xml",
+        "source": "com.duckgo.medtools.app-main-49:/layout/first_page_m_c.xml"
     },
     {
-        "merged": "com.duckgo.medtools.app-mergeDebugResources-46:/layout/materialbuttontangoo.xml",
-        "source": "com.duckgo.medtools.app-main-49:/layout/materialbuttontangoo.xml"
+        "merged": "C:\\Users\\zfx\\.gradle\\daemon\\8.9\\com.duckgo.medtools.app-mergeDebugResources-46:\\layout\\fragment_medical_calculator.xml",
+        "source": "C:\\Users\\zfx\\.gradle\\daemon\\8.9\\com.duckgo.medtools.app-main-49:\\layout\\fragment_medical_calculator.xml"
     },
     {
-        "merged": "com.duckgo.medtools.app-mergeDebugResources-46:/layout/activity_query_value.xml",
-        "source": "com.duckgo.medtools.app-main-49:/layout/activity_query_value.xml"
+        "merged": "C:\\Users\\zfx\\.gradle\\daemon\\8.9\\com.duckgo.medtools.app-mergeDebugResources-46:\\layout\\grid_layout.xml",
+        "source": "C:\\Users\\zfx\\.gradle\\daemon\\8.9\\com.duckgo.medtools.app-main-49:\\layout\\grid_layout.xml"
     },
     {
-        "merged": "com.duckgo.medtools.app-mergeDebugResources-46:/layout/fragment_baby_weight.xml",
-        "source": "com.duckgo.medtools.app-main-49:/layout/fragment_baby_weight.xml"
+        "merged": "C:\\Users\\zfx\\.gradle\\daemon\\8.9\\com.duckgo.medtools.app-mergeDebugResources-46:\\layout\\fragment_date_calculator_.xml",
+        "source": "C:\\Users\\zfx\\.gradle\\daemon\\8.9\\com.duckgo.medtools.app-main-49:\\layout\\fragment_date_calculator_.xml"
+    },
+    {
+        "merged": "C:\\Users\\zfx\\.gradle\\daemon\\8.9\\com.duckgo.medtools.app-mergeDebugResources-46:\\layout\\fragmen_medical_calculator.xml",
+        "source": "C:\\Users\\zfx\\.gradle\\daemon\\8.9\\com.duckgo.medtools.app-main-49:\\layout\\fragmen_medical_calculator.xml"
+    },
+    {
+        "merged": "C:\\Users\\zfx\\.gradle\\daemon\\8.9\\com.duckgo.medtools.app-mergeDebugResources-46:\\layout\\activity_query_value.xml",
+        "source": "C:\\Users\\zfx\\.gradle\\daemon\\8.9\\com.duckgo.medtools.app-main-49:\\layout\\activity_query_value.xml"
+    },
+    {
+        "merged": "C:\\Users\\zfx\\.gradle\\daemon\\8.9\\com.duckgo.medtools.app-mergeDebugResources-46:\\layout\\layout_addvalue.xml",
+        "source": "C:\\Users\\zfx\\.gradle\\daemon\\8.9\\com.duckgo.medtools.app-main-49:\\layout\\layout_addvalue.xml"
+    },
+    {
+        "merged": "C:\\Users\\zfx\\.gradle\\daemon\\8.9\\com.duckgo.medtools.app-mergeDebugResources-46:\\layout\\materialbuttontangoo.xml",
+        "source": "C:\\Users\\zfx\\.gradle\\daemon\\8.9\\com.duckgo.medtools.app-main-49:\\layout\\materialbuttontangoo.xml"
+    },
+    {
+        "merged": "C:\\Users\\zfx\\.gradle\\daemon\\8.9\\com.duckgo.medtools.app-mergeDebugResources-46:\\layout\\fragment_baby_weight.xml",
+        "source": "C:\\Users\\zfx\\.gradle\\daemon\\8.9\\com.duckgo.medtools.app-main-49:\\layout\\fragment_baby_weight.xml"
     }
 ]

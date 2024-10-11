@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.recycle.app-mergeReleaseResources-45:/values-small-v4/values-small-v4.xml",
+            "outputFile": "com.duckgo.medtools.app-mergeReleaseResources-45:/values-small-v4/values-small-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\zfx\\.gradle\\caches\\transforms-3\\24bdfd9a22564fd510c6eab026533b0c\\transformed\\material-1.10.0\\res\\values-small-v4\\values-small-v4.xml",
+                    "source": "C:\\Users\\zfx\\.gradle\\caches\\8.9\\transforms\\2ad93e3c30e422f7e4657143e2f2773d\\transformed\\material-1.10.0\\res\\values-small-v4\\values-small-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

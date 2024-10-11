@@ -16,16 +16,17 @@ import java.io.FileOutputStream
 
 class MainActivity : AppCompatActivity() {
 
-    var dateCaculatorFragment:Datecalculator? = null
+    var dateCaculatorFragment:DateCalculator_? = null
     var babyWeightFragment:BabyWeight? = null
     var fragment: Fragment?=null
+    var medicalCalculatorFragment : MedicalCalculator? = null
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         saveIntoFile()
         if (dateCaculatorFragment == null){
-            fragment= Datecalculator()
+            fragment= DateCalculator_()
         }
 //        if(babyWeightFragment == null){
 //            babyWeightFragment= BabyWeight()
@@ -94,15 +95,12 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-
-
-
     private fun selectFragment(selectIndex:Int) {
         var fragment1=fragment
         when (selectIndex) {
             0 -> {
                 if (dateCaculatorFragment==null){
-                    fragment1=Datecalculator()
+                    fragment1=DateCalculator_()
                 }else {
                     fragment1 = dateCaculatorFragment
                 }
@@ -116,7 +114,13 @@ class MainActivity : AppCompatActivity() {
                 }
 //                Intent(this, QueryValue::class.java).run { startActivity(this) }
             }
-            2 -> Toast.makeText(this, "2", Toast.LENGTH_SHORT).show()
+            2 -> {
+                if(medicalCalculatorFragment==null){
+                    fragment1= MedicalCalculator()
+                } else {
+                    fragment1=medicalCalculatorFragment
+                }
+            }
             3 -> Toast.makeText(this, "3", Toast.LENGTH_SHORT).show()
             else ->
                 Toast.makeText(this, "error", Toast.LENGTH_SHORT).show()

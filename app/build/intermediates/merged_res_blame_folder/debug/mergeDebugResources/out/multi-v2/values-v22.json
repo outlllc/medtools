@@ -4,7 +4,7 @@
             "outputFile": "com.duckgo.medtools.app-mergeDebugResources-45:/values-v22/values-v22.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\zfx\\.gradle\\caches\\transforms-4\\49f564c35275217369ebaf419f519c0b\\transformed\\appcompat-1.6.1\\res\\values-v22\\values-v22.xml",
+                    "source": "C:\\Users\\zfx\\.gradle\\caches\\8.9\\transforms\\e3e36799ef9ad7e1bc51710649d84452\\transformed\\appcompat-1.6.1\\res\\values-v22\\values-v22.xml",
                     "from": {
                         "startLines": "2,3,4,9",
                         "startColumns": "4,4,4,4",
