@@ -4,6 +4,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <com.duckgo.medtools.view.ExpandTabView
+        android:id="@+id/expandtab_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="hello world"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/green_kuan"/>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_medical_calculator"
         android:layout_width="match_parent"

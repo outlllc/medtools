@@ -1,7 +1,7 @@
 <variant
     name="release"
     package="com.duckgo.medtools"
-    minSdkVersion="24"
+    minSdkVersion="29"
     targetSdkVersion="34"
     mergedManifest="build\intermediates\merged_manifest\release\processReleaseMainManifest\AndroidManifest.xml"
     manifestMergeReport="build\outputs\logs\manifest-merger-release-report.txt"
@@ -27,6 +27,6 @@
       applicationId="com.duckgo.medtools"
       generatedSourceFolders="build\generated\ap_generated_sources\release\out;build\generated\data_binding_base_class_source_out\release\out"
       generatedResourceFolders="build\generated\res\resValues\release"
-      desugaredMethodsFiles="C:\Users\zfx\.gradle\caches\8.9\transforms\fcad6a30f3d284ab8809b5cc7dccb56e\transformed\D8BackportedDesugaredMethods.txt">
+      desugaredMethodsFiles="C:\Users\zfx\.gradle\caches\8.9\transforms\1db6cb979990efad418a16def3f8afe3\transformed\D8BackportedDesugaredMethods.txt">
   </artifact>
 </variant>

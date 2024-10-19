@@ -2,10 +2,28 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="backgroud">#BBE4EC</color>
+    <color name="lightcyan">#BBE4EC</color>
     <color name="green">#00C957</color>
     <color name="blue">#FF03A9F4</color>
+    <color name="teal_200">#FF03dac5</color>
+    <color name="teal_700">#FF018786</color>
     <color name="skywhite">#F0FFFF</color>
     <color name="green2">#3D9140</color>
     <color name="calnonechecked">#FF87C4FF</color>
+    <color name="green200">#c5e1a5</color>
+    <color name="green500">#8bc34a</color>
+    <color name="green700">#689f38</color>
+    <color name="gray_f3">#f3f3f3</color>
+    <color name="popup_main_background">#b0000000</color>
+    <color name="choose_eara_item_press_color">#f4f4f4</color>
+    <color name="no_color">#00000000</color>
+    <color name="divide_line">#f7f7f7</color>
+    <color name="yellow">#D9D919</color>
+    <color name="gray153">#999999</color>
+    <color name="green_kuan">#109D58</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="light_blue_900">#FF01579B</color>
+    <color name="light_blue_A200">#FF40C4FF</color>
+    <color name="light_blue_A400">#FF00B0FF</color>
+    <color name="black_overlay">#66000000</color>
 </resources>

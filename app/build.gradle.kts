@@ -7,9 +7,13 @@ android {
     namespace = "com.duckgo.medtools"
     compileSdk = 34
 
+//    composeOptions {
+//        kotlinCompilerExtensionVersion = "1.9.0"
+//    }
+
     defaultConfig {
         applicationId = "com.duckgo.medtools"
-        minSdk = 24
+        minSdk = 29
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -32,6 +36,9 @@ android {
     }
     kotlinOptions {
         jvmTarget = "11"
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.2"
     }
     buildFeatures {
         viewBinding = true

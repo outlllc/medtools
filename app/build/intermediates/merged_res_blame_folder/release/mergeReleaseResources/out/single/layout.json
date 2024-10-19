@@ -1,34 +1,202 @@
 [
     {
-        "merged": "com.duckgo.medtools.app-mergeReleaseResources-46:/layout/fragment_date_calculator_.xml",
-        "source": "com.duckgo.medtools.app-main-48:/layout/fragment_date_calculator_.xml"
+        "merged": "C:\\Users\\zfx\\.gradle\\daemon\\8.9\\com.duckgo.medtools.app-mergeReleaseResources-64:\\layout\\grid_layout.xml",
+        "source": "C:\\Users\\zfx\\.gradle\\daemon\\8.9\\com.duckgo.medtools.app-main-66:\\layout\\grid_layout.xml"
     },
     {
-        "merged": "com.duckgo.medtools.app-mergeReleaseResources-46:/layout/activity_query_value.xml",
-        "source": "com.duckgo.medtools.app-main-48:/layout/activity_query_value.xml"
+        "merged": "com.duckgo.medtools.app-mergeReleaseResources-64:/layout/list_modle_3.xml",
+        "source": "com.duckgo.medtools.app-main-66:/layout/list_modle_3.xml"
     },
     {
-        "merged": "com.duckgo.medtools.app-mergeReleaseResources-46:/layout/fragment_baby_weight.xml",
-        "source": "com.duckgo.medtools.app-main-48:/layout/fragment_baby_weight.xml"
+        "merged": "C:\\Users\\zfx\\.gradle\\daemon\\8.9\\com.duckgo.medtools.app-mergeReleaseResources-64:\\layout\\materialbuttontangoo.xml",
+        "source": "C:\\Users\\zfx\\.gradle\\daemon\\8.9\\com.duckgo.medtools.app-main-66:\\layout\\materialbuttontangoo.xml"
     },
     {
-        "merged": "com.duckgo.medtools.app-mergeReleaseResources-46:/layout/fragmen_medical_calculator.xml",
-        "source": "com.duckgo.medtools.app-main-48:/layout/fragmen_medical_calculator.xml"
+        "merged": "C:\\Users\\zfx\\.gradle\\daemon\\8.9\\com.duckgo.medtools.app-mergeReleaseResources-64:\\layout\\layout_addvalue.xml",
+        "source": "C:\\Users\\zfx\\.gradle\\daemon\\8.9\\com.duckgo.medtools.app-main-66:\\layout\\layout_addvalue.xml"
     },
     {
-        "merged": "com.duckgo.medtools.app-mergeReleaseResources-46:/layout/activity_main.xml",
-        "source": "com.duckgo.medtools.app-main-48:/layout/activity_main.xml"
+        "merged": "com.duckgo.medtools.app-mergeReleaseResources-64:/layout/activity_diagnostic_criteria_for_gdm.xml",
+        "source": "com.duckgo.medtools.app-main-66:/layout/activity_diagnostic_criteria_for_gdm.xml"
     },
     {
-        "merged": "com.duckgo.medtools.app-mergeReleaseResources-46:/layout/grid_layout.xml",
-        "source": "com.duckgo.medtools.app-main-48:/layout/grid_layout.xml"
+        "merged": "com.duckgo.medtools.app-mergeReleaseResources-64:/layout/activity_glomerular_filtration_rate_ckd_epi.xml",
+        "source": "com.duckgo.medtools.app-main-66:/layout/activity_glomerular_filtration_rate_ckd_epi.xml"
     },
     {
-        "merged": "com.duckgo.medtools.app-mergeReleaseResources-46:/layout/layout_addvalue.xml",
-        "source": "com.duckgo.medtools.app-main-48:/layout/layout_addvalue.xml"
+        "merged": "com.duckgo.medtools.app-mergeReleaseResources-64:/layout/activity_precocious_puberty_auxiliary_examination.xml",
+        "source": "com.duckgo.medtools.app-main-66:/layout/activity_precocious_puberty_auxiliary_examination.xml"
     },
     {
-        "merged": "com.duckgo.medtools.app-mergeReleaseResources-46:/layout/materialbuttontangoo.xml",
-        "source": "com.duckgo.medtools.app-main-48:/layout/materialbuttontangoo.xml"
+        "merged": "C:\\Users\\zfx\\.gradle\\daemon\\8.9\\com.duckgo.medtools.app-mergeReleaseResources-64:\\layout\\medi_cal_tool.xml",
+        "source": "C:\\Users\\zfx\\.gradle\\daemon\\8.9\\com.duckgo.medtools.app-main-66:\\layout\\medi_cal_tool.xml"
+    },
+    {
+        "merged": "com.duckgo.medtools.app-mergeReleaseResources-64:/layout/activity_edinburgh_postnatal_depression_scale.xml",
+        "source": "com.duckgo.medtools.app-main-66:/layout/activity_edinburgh_postnatal_depression_scale.xml"
+    },
+    {
+        "merged": "com.duckgo.medtools.app-mergeReleaseResources-64:/layout/activity_uterine_height_gestational_age.xml",
+        "source": "com.duckgo.medtools.app-main-66:/layout/activity_uterine_height_gestational_age.xml"
+    },
+    {
+        "merged": "C:\\Users\\zfx\\.gradle\\daemon\\8.9\\com.duckgo.medtools.app-mergeReleaseResources-64:\\layout\\activity_bishop.xml",
+        "source": "C:\\Users\\zfx\\.gradle\\daemon\\8.9\\com.duckgo.medtools.app-main-66:\\layout\\activity_bishop.xml"
+    },
+    {
+        "merged": "com.duckgo.medtools.app-mergeReleaseResources-64:/layout/list_modle_2.xml",
+        "source": "com.duckgo.medtools.app-main-66:/layout/list_modle_2.xml"
+    },
+    {
+        "merged": "C:\\Users\\zfx\\.gradle\\daemon\\8.9\\com.duckgo.medtools.app-mergeReleaseResources-64:\\layout\\fragment_baby_weight.xml",
+        "source": "C:\\Users\\zfx\\.gradle\\daemon\\8.9\\com.duckgo.medtools.app-main-66:\\layout\\fragment_baby_weight.xml"
+    },
+    {
+        "merged": "com.duckgo.medtools.app-mergeReleaseResources-64:/layout/activity_semen_reference_values.xml",
+        "source": "com.duckgo.medtools.app-main-66:/layout/activity_semen_reference_values.xml"
+    },
+    {
+        "merged": "com.duckgo.medtools.app-mergeReleaseResources-64:/layout/activity_thyroid_function_of_pregnancy.xml",
+        "source": "com.duckgo.medtools.app-main-66:/layout/activity_thyroid_function_of_pregnancy.xml"
+    },
+    {
+        "merged": "com.duckgo.medtools.app-mergeReleaseResources-64:/layout/activity_bishop.xml",
+        "source": "com.duckgo.medtools.app-main-66:/layout/activity_bishop.xml"
+    },
+    {
+        "merged": "com.duckgo.medtools.app-mergeReleaseResources-64:/layout/activity_chronic_kidney_disease_staging.xml",
+        "source": "com.duckgo.medtools.app-main-66:/layout/activity_chronic_kidney_disease_staging.xml"
+    },
+    {
+        "merged": "C:\\Users\\zfx\\.gradle\\daemon\\8.9\\com.duckgo.medtools.app-mergeReleaseResources-64:\\layout\\activity_query_value.xml",
+        "source": "C:\\Users\\zfx\\.gradle\\daemon\\8.9\\com.duckgo.medtools.app-main-66:\\layout\\activity_query_value.xml"
+    },
+    {
+        "merged": "com.duckgo.medtools.app-mergeReleaseResources-64:/layout/activity_classification_of_hypertension_during_pregnancy.xml",
+        "source": "com.duckgo.medtools.app-main-66:/layout/activity_classification_of_hypertension_during_pregnancy.xml"
+    },
+    {
+        "merged": "C:\\Users\\zfx\\.gradle\\daemon\\8.9\\com.duckgo.medtools.app-mergeReleaseResources-64:\\layout\\fragment_medical_calculator.xml",
+        "source": "C:\\Users\\zfx\\.gradle\\daemon\\8.9\\com.duckgo.medtools.app-main-66:\\layout\\fragment_medical_calculator.xml"
+    },
+    {
+        "merged": "com.duckgo.medtools.app-mergeReleaseResources-64:/layout/activity_rh_and_abo_hemolysis_comparison.xml",
+        "source": "com.duckgo.medtools.app-main-66:/layout/activity_rh_and_abo_hemolysis_comparison.xml"
+    },
+    {
+        "merged": "com.duckgo.medtools.app-mergeReleaseResources-64:/layout/list_modle_2_1.xml",
+        "source": "com.duckgo.medtools.app-main-66:/layout/list_modle_2_1.xml"
+    },
+    {
+        "merged": "com.duckgo.medtools.app-mergeReleaseResources-64:/layout/activity_manning_score.xml",
+        "source": "com.duckgo.medtools.app-main-66:/layout/activity_manning_score.xml"
+    },
+    {
+        "merged": "com.duckgo.medtools.app-mergeReleaseResources-64:/layout/fragment_medical_calculator.xml",
+        "source": "com.duckgo.medtools.app-main-66:/layout/fragment_medical_calculator.xml"
+    },
+    {
+        "merged": "C:\\Users\\zfx\\.gradle\\daemon\\8.9\\com.duckgo.medtools.app-mergeReleaseResources-64:\\layout\\cal_list.xml",
+        "source": "C:\\Users\\zfx\\.gradle\\daemon\\8.9\\com.duckgo.medtools.app-main-66:\\layout\\cal_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\zfx\\.gradle\\daemon\\8.9\\com.duckgo.medtools.app-mergeReleaseResources-64:\\layout\\activity_body_surface_area.xml",
+        "source": "C:\\Users\\zfx\\.gradle\\daemon\\8.9\\com.duckgo.medtools.app-main-66:\\layout\\activity_body_surface_area.xml"
+    },
+    {
+        "merged": "C:\\Users\\zfx\\.gradle\\daemon\\8.9\\com.duckgo.medtools.app-mergeReleaseResources-64:\\layout\\activity_hb_a1c_values_blood_glucose.xml",
+        "source": "C:\\Users\\zfx\\.gradle\\daemon\\8.9\\com.duckgo.medtools.app-main-66:\\layout\\activity_hb_a1c_values_blood_glucose.xml"
+    },
+    {
+        "merged": "com.duckgo.medtools.app-mergeReleaseResources-64:/layout/activity_diagnosis_postnatal_depression.xml",
+        "source": "com.duckgo.medtools.app-main-66:/layout/activity_diagnosis_postnatal_depression.xml"
+    },
+    {
+        "merged": "com.duckgo.medtools.app-mergeReleaseResources-64:/layout/list_modle_3_2.xml",
+        "source": "com.duckgo.medtools.app-main-66:/layout/list_modle_3_2.xml"
+    },
+    {
+        "merged": "com.duckgo.medtools.app-mergeReleaseResources-64:/layout/first_page_m_c.xml",
+        "source": "com.duckgo.medtools.app-main-66:/layout/first_page_m_c.xml"
+    },
+    {
+        "merged": "com.duckgo.medtools.app-mergeReleaseResources-64:/layout/activity_tanner_stage.xml",
+        "source": "com.duckgo.medtools.app-main-66:/layout/activity_tanner_stage.xml"
+    },
+    {
+        "merged": "com.duckgo.medtools.app-mergeReleaseResources-64:/layout/activity_normal_lochia.xml",
+        "source": "com.duckgo.medtools.app-main-66:/layout/activity_normal_lochia.xml"
+    },
+    {
+        "merged": "com.duckgo.medtools.app-mergeReleaseResources-64:/layout/list_modle_2_2.xml",
+        "source": "com.duckgo.medtools.app-main-66:/layout/list_modle_2_2.xml"
+    },
+    {
+        "merged": "com.duckgo.medtools.app-mergeReleaseResources-64:/layout/activity_creatinine_clearance_cockcroft_gault.xml",
+        "source": "com.duckgo.medtools.app-main-66:/layout/activity_creatinine_clearance_cockcroft_gault.xml"
+    },
+    {
+        "merged": "com.duckgo.medtools.app-mergeReleaseResources-64:/layout/activity_indications_for_pregnancy_termination_of_gestational_hypertension.xml",
+        "source": "com.duckgo.medtools.app-main-66:/layout/activity_indications_for_pregnancy_termination_of_gestational_hypertension.xml"
+    },
+    {
+        "merged": "C:\\Users\\zfx\\.gradle\\daemon\\8.9\\com.duckgo.medtools.app-mergeReleaseResources-64:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\zfx\\.gradle\\daemon\\8.9\\com.duckgo.medtools.app-main-66:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "com.duckgo.medtools.app-mergeReleaseResources-64:/layout/activity_fetal_maturity.xml",
+        "source": "com.duckgo.medtools.app-main-66:/layout/activity_fetal_maturity.xml"
+    },
+    {
+        "merged": "C:\\Users\\zfx\\.gradle\\daemon\\8.9\\com.duckgo.medtools.app-mergeReleaseResources-64:\\layout\\activity_sodium_deficit_in_hyponatremia.xml",
+        "source": "C:\\Users\\zfx\\.gradle\\daemon\\8.9\\com.duckgo.medtools.app-main-66:\\layout\\activity_sodium_deficit_in_hyponatremia.xml"
+    },
+    {
+        "merged": "C:\\Users\\zfx\\.gradle\\daemon\\8.9\\com.duckgo.medtools.app-mergeReleaseResources-64:\\layout\\fragment_date_calculator_.xml",
+        "source": "C:\\Users\\zfx\\.gradle\\daemon\\8.9\\com.duckgo.medtools.app-main-66:\\layout\\fragment_date_calculator_.xml"
+    },
+    {
+        "merged": "com.duckgo.medtools.app-mergeReleaseResources-64:/layout/activity_severe_preeclampsia_diagnosis.xml",
+        "source": "com.duckgo.medtools.app-main-66:/layout/activity_severe_preeclampsia_diagnosis.xml"
+    },
+    {
+        "merged": "com.duckgo.medtools.app-mergeReleaseResources-64:/layout/activity_gdm_grading_and_staging.xml",
+        "source": "com.duckgo.medtools.app-main-66:/layout/activity_gdm_grading_and_staging.xml"
+    },
+    {
+        "merged": "com.duckgo.medtools.app-mergeReleaseResources-64:/layout/list_modle_1.xml",
+        "source": "com.duckgo.medtools.app-main-66:/layout/list_modle_1.xml"
+    },
+    {
+        "merged": "com.duckgo.medtools.app-mergeReleaseResources-64:/layout/list_modle_3_1.xml",
+        "source": "com.duckgo.medtools.app-main-66:/layout/list_modle_3_1.xml"
+    },
+    {
+        "merged": "com.duckgo.medtools.app-mergeReleaseResources-64:/layout/list_modle_4.xml",
+        "source": "com.duckgo.medtools.app-main-66:/layout/list_modle_4.xml"
+    },
+    {
+        "merged": "com.duckgo.medtools.app-mergeReleaseResources-64:/layout/activity_hyperthyroidism_medication_during_pregnancy.xml",
+        "source": "com.duckgo.medtools.app-main-66:/layout/activity_hyperthyroidism_medication_during_pregnancy.xml"
+    },
+    {
+        "merged": "com.duckgo.medtools.app-mergeReleaseResources-64:/layout/activity_drug_to_fetus.xml",
+        "source": "com.duckgo.medtools.app-main-66:/layout/activity_drug_to_fetus.xml"
+    },
+    {
+        "merged": "com.duckgo.medtools.app-mergeReleaseResources-64:/layout/list_modle_7.xml",
+        "source": "com.duckgo.medtools.app-main-66:/layout/list_modle_7.xml"
+    },
+    {
+        "merged": "C:\\Users\\zfx\\.gradle\\daemon\\8.9\\com.duckgo.medtools.app-mergeReleaseResources-64:\\layout\\activity_amount_of_hydration.xml",
+        "source": "C:\\Users\\zfx\\.gradle\\daemon\\8.9\\com.duckgo.medtools.app-main-66:\\layout\\activity_amount_of_hydration.xml"
+    },
+    {
+        "merged": "C:\\Users\\zfx\\.gradle\\daemon\\8.9\\com.duckgo.medtools.app-mergeReleaseResources-64:\\layout\\date_picker.xml",
+        "source": "C:\\Users\\zfx\\.gradle\\daemon\\8.9\\com.duckgo.medtools.app-main-66:\\layout\\date_picker.xml"
+    },
+    {
+        "merged": "C:\\Users\\zfx\\.gradle\\daemon\\8.9\\com.duckgo.medtools.app-mergeReleaseResources-64:\\layout\\first_page_m_c.xml",
+        "source": "C:\\Users\\zfx\\.gradle\\daemon\\8.9\\com.duckgo.medtools.app-main-66:\\layout\\first_page_m_c.xml"
     }
 ]

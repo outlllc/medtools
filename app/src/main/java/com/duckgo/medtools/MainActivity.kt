@@ -1,14 +1,13 @@
 package com.duckgo.medtools
 
-import android.annotation.SuppressLint
 import android.app.Activity
-import android.graphics.Color
 import android.os.Bundle
-import android.os.Environment
-import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import com.duckgo.medtools.babyweight.BabyWeight
+import com.duckgo.medtools.datecalculator.DateCalculator_
+import com.duckgo.medtools.medicaltools.MenuFragment
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.button.MaterialButtonToggleGroup
 import java.io.File
@@ -16,125 +15,86 @@ import java.io.FileOutputStream
 
 class MainActivity : AppCompatActivity() {
 
-    var dateCaculatorFragment:DateCalculator_? = null
-    var babyWeightFragment:BabyWeight? = null
-    var fragment: Fragment?=null
-    var medicalCalculatorFragment : MedicalCalculator? = null
-    @SuppressLint("MissingInflatedId")
+    var dateCaculatorFragment: DateCalculator_? = null
+    var babyWeightFragment: BabyWeight? = null
+    var showFragment: Fragment? = null
+    var medicalCalculatorFragment: MedicalCalculator? = null
+    var menuFragment: MenuFragment? = null
+    lateinit var tg_first_page : MaterialButtonToggleGroup
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         saveIntoFile()
-        if (dateCaculatorFragment == null){
-            fragment= DateCalculator_()
+        if (dateCaculatorFragment == null) {
+            showFragment = DateCalculator_()
         }
-//        if(babyWeightFragment == null){
-//            babyWeightFragment= BabyWeight()
-//        }
-        supportFragmentManager.beginTransaction().add(R.id.fragment_, fragment!!).commit()
+        supportFragmentManager.beginTransaction().add(R.id.fragment_, showFragment!!).commit()
+        initView()
+        changePage()
+    }
 
-        val calculation = findViewById<MaterialButtonToggleGroup>(R.id.study_button_toggle_group)
-        calculation.addOnButtonCheckedListener{ group: MaterialButtonToggleGroup?, checkedId, isChecked ->
+    private fun initView() {
+        tg_first_page = findViewById<MaterialButtonToggleGroup>(R.id.tg_first_page)
+    }
+
+    private fun changePage() {
+        tg_first_page.addOnButtonCheckedListener { group: MaterialButtonToggleGroup?, checkedId, isChecked ->
             val childCount = group?.childCount
             var selectIndex = 0
             for (index in 0 until childCount!!) {
                 val child = group.getChildAt(index) as MaterialButton
                 if (child.id == checkedId) {
                     selectIndex = index
-                    child.setTextColor(Color.parseColor("#F0FFFF"))
-                    child.setBackgroundColor(Color.parseColor("#3D9140"))
+                    child.setTextColor(getColor(R.color.white))
+                    child.setBackgroundColor(getColor(R.color.green_kuan))
                 } else {
-                    child.setTextColor(Color.parseColor("#FF000000"))
-                    child.setBackgroundColor(Color.parseColor("#00C957"))
+                    child.setTextColor(getColor(R.color.black))
+                    child.setBackgroundColor(getColor(R.color.lightcyan))
                 }
             }
-//            calculation.check(R.id.calculation_button)
-            selectFragment(selectIndex)
-        }
-
-
-        val buffersize=1024
-        val databasename="weight"
-        val packagename="com.duckgo.medtools"
-        val DB_PATH=("/data${Environment.getDataDirectory().absolutePath}/$packagename/databases")
-
-
-
-
-        var db=File(DB_PATH)
-        if (!db.exists()){
-            db.mkdir()
-        }
-        val dbpath = "$DB_PATH/${databasename}.db"
-        var dbpath_=File(dbpath)
-        if (!dbpath_.exists()){
-            try {
-
-//            var db1=this.Activity.assets.open("weight.db")
-                val db = resources.assets.open("weight.db")
-                val myFile = File(dbpath)
-
-                var fos = FileOutputStream(dbpath)
-
-                val bufferbyte = ByteArray(buffersize)
-                var count = 0
-                var data = ""
-
-                while ((db.read(bufferbyte).also { count = it }) > 0) {
-                    fos.write(bufferbyte, 0, count)
+            var tem_ShowFragment: Fragment = showFragment!!
+            when(selectIndex){
+                0 -> {
+                    if (dateCaculatorFragment == null) {
+                        tem_ShowFragment = DateCalculator_()
+                    } else {
+                        tem_ShowFragment = dateCaculatorFragment as DateCalculator_
+                    }
                 }
-
-                fos.flush()
-                fos.close()
-                db.close()
-            } catch (e: Exception) {
-                Log.e("error", e.message.toString())
-
+                1 -> {
+                    if (babyWeightFragment == null) {
+                        tem_ShowFragment = BabyWeight()
+                    } else {
+                        tem_ShowFragment = babyWeightFragment as BabyWeight
+                    }
+                }
+                2 -> {
+                    if (medicalCalculatorFragment == null) {
+                        tem_ShowFragment = MedicalCalculator()
+                    } else {
+                        tem_ShowFragment = medicalCalculatorFragment as MedicalCalculator
+                    }
+                }
+                3 -> {
+//                var intent = Intent(this, MenuTest::class.java)
+//                startActivity(intent)
+                    if (menuFragment == null) {
+                        tem_ShowFragment = MenuFragment()
+                    } else {
+                        tem_ShowFragment = menuFragment as MenuFragment
+                    }
+                }
+                else ->
+                    Toast.makeText(this, "error", Toast.LENGTH_SHORT).show()
+            }
+            if (tem_ShowFragment != showFragment) {
+                supportFragmentManager.beginTransaction()
+                .replace(R.id.fragment_, tem_ShowFragment)
+                .commit()
+                showFragment = tem_ShowFragment
             }
         }
-
-    }
-
-    private fun selectFragment(selectIndex:Int) {
-        var fragment1=fragment
-        when (selectIndex) {
-            0 -> {
-                if (dateCaculatorFragment==null){
-                    fragment1=DateCalculator_()
-                }else {
-                    fragment1 = dateCaculatorFragment
-                }
-            }
-
-            1 -> {
-                if(babyWeightFragment==null){
-                    fragment1=BabyWeight()
-                } else {
-                    fragment1=babyWeightFragment
-                }
-//                Intent(this, QueryValue::class.java).run { startActivity(this) }
-            }
-            2 -> {
-                if(medicalCalculatorFragment==null){
-                    fragment1= MedicalCalculator()
-                } else {
-                    fragment1=medicalCalculatorFragment
-                }
-            }
-            3 -> Toast.makeText(this, "3", Toast.LENGTH_SHORT).show()
-            else ->
-                Toast.makeText(this, "error", Toast.LENGTH_SHORT).show()
-        }?:return
-        val ft=supportFragmentManager.beginTransaction()
-        if (!fragment1!!.isAdded){
-            ft.add(R.id.fragment_, fragment1!!)
-        }
-        if (fragment!=null){
-            ft.hide(fragment!!)
-        }
-        fragment=fragment1
-        ft.show(fragment1!!)
-        ft.commit()
     }
 
     fun Activity.saveIntoFile() {
@@ -144,16 +104,11 @@ class MainActivity : AppCompatActivity() {
 //        // 若PATH文件夹权限为root权限，则使用adb shell chown命令修改权限
 //        val src = File(PATH + "/" + "database")
 //        // 判断文件夹是否存在，不存在就进行创建
-//        if (!src.exists()) {
-//            if (!src.mkdirs()){
-//                Log.e("err", "create directory failed.")
-//            }
-//        }
 
         val dst = File("data/data/com.duckgo.medtools/databases")
         if (!dst.exists()) {
             if (!dst.mkdirs()) {
-                Log.e("err", "create directory failed.")
+                Toast.makeText(this, "数据创建失败", Toast.LENGTH_SHORT).show()
             }
         }
         val newFile = File("data/data/com.duckgo.medtools/databases/weight.db")
@@ -169,19 +124,5 @@ class MainActivity : AppCompatActivity() {
             is1.close()
         }
     }
-
-
-
-
-
-
-//    private fun inRecycler(list:List<String>) {
-//        var rvView=findViewById<RecyclerView>(R.id.recyclerviewlayout)
-//        rvView.layoutManager=StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL)
-//        rvView.layoutManager=LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false)
-//        rvView.layoutManager=GridLayoutManager(this,2)
-//        rvView.adapter=SecrecyAdaptor(list)
-//    }
-
 }
 

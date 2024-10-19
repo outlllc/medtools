@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.duckgo.medtools.app-mergeDebugResources-45:/values-h720dp-v13/values-h720dp-v13.xml",
+            "outputFile": "com.duckgo.medtools.app-mergeDebugResources-67:/values-h720dp-v13/values-h720dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\zfx\\.gradle\\caches\\8.9\\transforms\\e3e36799ef9ad7e1bc51710649d84452\\transformed\\appcompat-1.6.1\\res\\values-h720dp-v13\\values-h720dp-v13.xml",
+                    "source": "C:\\Users\\zfx\\.gradle\\caches\\8.9\\transforms\\886699d093b5da7b479b817083bd5060\\transformed\\appcompat-1.6.1\\res\\values-h720dp-v13\\values-h720dp-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

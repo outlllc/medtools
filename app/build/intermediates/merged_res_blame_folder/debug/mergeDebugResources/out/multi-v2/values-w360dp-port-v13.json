@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.duckgo.medtools.app-mergeDebugResources-45:/values-w360dp-port-v13/values-w360dp-port-v13.xml",
+            "outputFile": "com.duckgo.medtools.app-mergeDebugResources-67:/values-w360dp-port-v13/values-w360dp-port-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\zfx\\.gradle\\caches\\8.9\\transforms\\2ad93e3c30e422f7e4657143e2f2773d\\transformed\\material-1.10.0\\res\\values-w360dp-port-v13\\values-w360dp-port-v13.xml",
+                    "source": "C:\\Users\\zfx\\.gradle\\caches\\8.9\\transforms\\f67063e2729de2ad3eec05ae6bc21e74\\transformed\\material-1.10.0\\res\\values-w360dp-port-v13\\values-w360dp-port-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",

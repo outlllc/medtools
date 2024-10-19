@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="24"
+        android:minSdkVersion="29"
         android:targetSdkVersion="34" />
 
     <permission
@@ -28,6 +28,86 @@
         android:testOnly="true"
         android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" >
         <activity
+            android:name="com.duckgo.medtools.test.MenuTest"
+            android:exported="false" />
+        <activity
+            android:name="com.duckgo.medtools.medicaltools.Other.Reproductive_Medicine.Precocious_Puberty_Auxiliary_Examination"
+            android:exported="false" />
+        <activity
+            android:name="com.duckgo.medtools.medicaltools.Other.Reproductive_Medicine.Tanner_Stage"
+            android:exported="false" />
+        <activity
+            android:name="com.duckgo.medtools.medicaltools.Other.Reproductive_Medicine.Semen_reference_values"
+            android:exported="false" />
+        <activity
+            android:name="com.duckgo.medtools.medicaltools.Internal_Medicine.Nephrology.Chronic_Kidney_Disease_Staging"
+            android:exported="false" />
+        <activity
+            android:name="com.duckgo.medtools.medicaltools.Internal_Medicine.Nephrology.Glomerular_Filtration_Rate_CKD_EPI"
+            android:exported="false" />
+        <activity
+            android:name="com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Diagnosis_Postnatal_Depression"
+            android:exported="false" />
+        <activity
+            android:name="com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Edinburgh_Postnatal_Depression_Scale"
+            android:exported="false" />
+        <activity
+            android:name="com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Hyperthyroidism_Medication_During_Pregnancy"
+            android:exported="false" />
+        <activity
+            android:name="com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.RH_And_ABO_Hemolysis_Comparison"
+            android:exported="false" />
+        <activity
+            android:name="com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Thyroid_Function_Of_Pregnancy"
+            android:exported="false" />
+        <activity
+            android:name="com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.GDM_Grading_And_Staging"
+            android:exported="false" />
+        <activity
+            android:name="com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Manning_Score"
+            android:exported="false" />
+        <activity
+            android:name="com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Indications_For_Pregnancy_Termination_Of_Gestational_Hypertension"
+            android:exported="false" />
+        <activity
+            android:name="com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Severe_Preeclampsia_Diagnosis"
+            android:exported="false" />
+        <activity
+            android:name="com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Diagnostic_Criteria_For_GDM"
+            android:exported="false" />
+        <activity
+            android:name="com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Classification_Of_Hypertension_During_Pregnancy"
+            android:exported="false" />
+        <activity
+            android:name="com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Fetal_Maturity"
+            android:exported="false" />
+        <activity
+            android:name="com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Uterine_Height_Gestational_Age"
+            android:exported="false" />
+        <activity
+            android:name="com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.DrugToFetus"
+            android:exported="false" />
+        <activity
+            android:name="com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Normal_Lochia"
+            android:exported="false" />
+        <activity
+            android:name="com.duckgo.medtools.medicaltools.Internal_Medicine.Endocrinology.HbA1cValuesBloodGlucose"
+            android:exported="false" />
+        <activity
+            android:name="com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Bishop"
+            android:exported="false" />
+        <activity
+            android:name="com.duckgo.medtools.medicaltools.Internal_Medicine.Nephrology.SodiumDeficitInHyponatremia"
+            android:exported="false" />
+        <activity
+            android:name="com.duckgo.medtools.medicaltools.Internal_Medicine.Nephrology.AmountOfHydration"
+            android:exported="false" />
+        <activity
+            android:name="com.duckgo.medtools.medicaltools.Internal_Medicine.Nephrology.Creatinine_Clearance_Cockcroft_Gault"
+            android:exported="false"
+            android:label="@string/title_activity_medi_cal_tool"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
+        <activity
             android:name="com.duckgo.medtools.MainActivity"
             android:exported="true" >
             <intent-filter>
@@ -37,7 +117,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.duckgo.medtools.AddValue"
+            android:name="com.duckgo.medtools.babyweight.AddValue"
+            android:exported="true" />
+        <activity
+            android:name="androidx.compose.ui.tooling.PreviewActivity"
+            android:exported="true" />
+        <activity
+            android:name="androidx.activity.ComponentActivity"
             android:exported="true" />
 
         <provider
