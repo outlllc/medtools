@@ -19,7 +19,7 @@ import com.duckgo.medtools.my_adapter.MedCalListAdapter
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-class Unit_Conversion : Fragment() {
+class Unit_Conversion_fm : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
@@ -63,7 +63,7 @@ class Unit_Conversion : Fragment() {
     companion object {
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            Unit_Conversion().apply {
+            Unit_Conversion_fm().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

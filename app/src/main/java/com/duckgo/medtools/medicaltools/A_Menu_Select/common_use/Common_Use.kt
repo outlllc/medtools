@@ -1,7 +1,6 @@
 package com.duckgo.medtools.medicaltools.A_Menu_Select.common_use
 
 import android.content.Context
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,10 +10,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.duckgo.medtools.R
 import com.duckgo.medtools.medicaltools.A_Menu_Select.adapter.MenuSelectAdapter
-import com.duckgo.medtools.medicaltools.Internal_Medicine.Nephrology.Creatinine_Clearance_Cockcroft_Gault
 import com.duckgo.medtools.medicaltools.comprehensive.BodySurfaceArea_fm
-import com.duckgo.medtools.medicaltools.comprehensive.Postpartum_Hemorrhage_Estimation_By_Shock_Index
-import com.duckgo.medtools.medicaltools.comprehensive.Unit_Conversion
+import com.duckgo.medtools.medicaltools.comprehensive.Postpartum_Hemorrhage_Estimation_By_Shock_Index_fm
+import com.duckgo.medtools.medicaltools.comprehensive.Unit_Conversion_fm
 
 class Common_Use: Fragment(), MenuSelectAdapter.OnItemClickListener {
 
@@ -67,15 +65,14 @@ class Common_Use: Fragment(), MenuSelectAdapter.OnItemClickListener {
             }
             1 -> {
                 //体重指数
-                val intent = Intent(activity, Creatinine_Clearance_Cockcroft_Gault::class.java)
-                startActivity(intent)
+
             }
             2 -> {
                 //标准体重
             }
             3 -> {
                 //常用单位换算
-                val fragment = Unit_Conversion()
+                val fragment = Unit_Conversion_fm()
                 inflateFragment(fragment)
             }
             4 -> {
@@ -113,7 +110,7 @@ class Common_Use: Fragment(), MenuSelectAdapter.OnItemClickListener {
             }
             15 -> {
                 //产后出血量估计与休克指数
-                val fragment = Postpartum_Hemorrhage_Estimation_By_Shock_Index()
+                val fragment = Postpartum_Hemorrhage_Estimation_By_Shock_Index_fm()
                 inflateFragment(fragment)
             }
             16 -> {

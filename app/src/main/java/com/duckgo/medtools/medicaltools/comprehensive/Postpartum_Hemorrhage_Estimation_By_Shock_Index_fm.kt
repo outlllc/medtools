@@ -12,7 +12,7 @@ import com.duckgo.medtools.my_adapter.MedCalListAdapter
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-class Postpartum_Hemorrhage_Estimation_By_Shock_Index : Fragment() {
+class Postpartum_Hemorrhage_Estimation_By_Shock_Index_fm : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
@@ -35,7 +35,7 @@ class Postpartum_Hemorrhage_Estimation_By_Shock_Index : Fragment() {
     companion object {
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            Postpartum_Hemorrhage_Estimation_By_Shock_Index().apply {
+            Postpartum_Hemorrhage_Estimation_By_Shock_Index_fm().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)
@@ -57,15 +57,15 @@ class Postpartum_Hemorrhage_Estimation_By_Shock_Index : Fragment() {
         if (HR != null && SBP != null) {
             val result = HR / SBP
             if (result <= 0.5 && result > 0.0){
-                binding.tvShowResult.text = "休克指数: $result , 血容量正常"
+                binding.tvShowResult.text = "休克指数: ${String.format("%.2f" , result)} , 血容量正常"
             } else if (result > 0.5 && result <= 1) {
-                binding.tvShowResult.text = "休克指数: ${result} , SI=1时估计失血量500ml~1500ml(<10%~30%)"
+                binding.tvShowResult.text = "休克指数: ${String.format("%.2f" , result)} , SI=1时估计失血量500ml~1500ml(<10%~30%)"
             }else if (result > 1 && result <= 1.5) {
-                binding.tvShowResult.text = "休克指数: ${result} , SI=1.5时估计失血量1500-2500ml(30-50%)"
+                binding.tvShowResult.text = "休克指数: ${String.format("%.2f" , result)} , SI=1.5时估计失血量1500-2500ml(30-50%)"
             }else if (result > 1.5 && result <= 2.0) {
-                binding.tvShowResult.text = "休克指数: ${result} , SI=2.0时估计失血量2500-3500ml(50-70%)"
+                binding.tvShowResult.text = "休克指数: ${String.format("%.2f" , result)} , SI=2.0时估计失血量2500-3500ml(50-70%)"
             }else if (result >= 2) {
-                binding.tvShowResult.text = "休克指数: ${result}"
+                binding.tvShowResult.text = "休克指数: ${String.format("%.2f" , result)}"
             }else {
                 binding.tvShowResult.text = "请输入正确的数值"
             }

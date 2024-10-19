@@ -11,22 +11,22 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.duckgo.medtools.R
 import com.duckgo.medtools.medicaltools.A_Menu_Select.adapter.MenuSelectAdapter
-import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Bishop
-import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Classification_Of_Hypertension_During_Pregnancy
-import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Diagnosis_Postnatal_Depression
-import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Diagnostic_Criteria_For_GDM
-import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.DrugToFetus
-import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Edinburgh_Postnatal_Depression_Scale
-import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Fetal_Maturity
-import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.GDM_Grading_And_Staging
-import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Hyperthyroidism_Medication_During_Pregnancy
-import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Indications_For_Pregnancy_Termination_Of_Gestational_Hypertension
-import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Manning_Score
-import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Normal_Lochia
-import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.RH_And_ABO_Hemolysis_Comparison
-import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Severe_Preeclampsia_Diagnosis
-import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Thyroid_Function_Of_Pregnancy
-import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Uterine_Height_Gestational_Age
+import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Bishop_fm
+import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Classification_Of_Hypertension_During_Pregnancy_fm
+import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Diagnosis_Postnatal_Depression_fm
+import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Diagnostic_Criteria_For_GDM_fm
+import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.DrugToFetus_fm
+import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Edinburgh_Postnatal_Depression_Scale_fm
+import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Fetal_Maturity_fm
+import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.GDM_Grading_And_Staging_fm
+import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Hyperthyroidism_Medication_During_Pregnancy_fm
+import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Indications_For_Pregnancy_Termination_Of_Gestational_Hypertension_fm
+import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Manning_Score_fm
+import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Normal_Lochia_fm
+import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.RH_And_ABO_Hemolysis_Comparison_fm
+import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Severe_Preeclampsia_Diagnosis_fm
+import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Thyroid_Function_Of_Pregnancy_fm
+import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Uterine_Height_Gestational_Age_fm
 import com.duckgo.medtools.medicaltools.Other.Reproductive_Medicine.Precocious_Puberty_Auxiliary_Examination
 import com.duckgo.medtools.medicaltools.Other.Reproductive_Medicine.Semen_reference_values
 import com.duckgo.medtools.medicaltools.Other.Reproductive_Medicine.Tanner_Stage
@@ -75,83 +75,83 @@ class Obstetrics_and_Gynecology_Menu: Fragment(), MenuSelectAdapter.OnItemClickL
         when(position) {
             0 -> {
                 //bishop评分
-                val intent = Intent(activity, Bishop::class.java)
-                startActivity(intent)
+                val fragment = Bishop_fm()
+                inflateFragment(fragment)
             }
             1 -> {
                 //妊娠期高血压分类
-                val intent = Intent(activity, Classification_Of_Hypertension_During_Pregnancy::class.java)
-                startActivity(intent)
+                val fragment = Classification_Of_Hypertension_During_Pregnancy_fm()
+                inflateFragment(fragment)
             }
             2 -> {
                 //重度子痫前期诊断
-                val intent = Intent(activity, Severe_Preeclampsia_Diagnosis::class.java)
-                startActivity(intent)
+                val fragment = Severe_Preeclampsia_Diagnosis_fm()
+                inflateFragment(fragment)
             }
             3 -> {
                 //妊娠期糖尿病分级分期
-                val intent = Intent(activity, GDM_Grading_And_Staging::class.java)
-                startActivity(intent)
+                val fragment = GDM_Grading_And_Staging_fm()
+                inflateFragment(fragment)
             }
             4 -> {
                 //妊娠期甲状腺功能实验室检查
-                val intent = Intent(activity, Thyroid_Function_Of_Pregnancy::class.java)
-                startActivity(intent)
+                val fragment = Thyroid_Function_Of_Pregnancy_fm()
+                inflateFragment(fragment)
             }
             5 -> {
                 //妊娠期高血糖诊断标准（GDM）
-                val intent = Intent(activity, Diagnostic_Criteria_For_GDM::class.java)
-                startActivity(intent)
+                val fragment = Diagnostic_Criteria_For_GDM_fm()
+                inflateFragment(fragment)
             }
             6 -> {
                 //妊娠高血压终止妊娠的指征
-                val intent = Intent(activity, Indications_For_Pregnancy_Termination_Of_Gestational_Hypertension::class.java)
-                startActivity(intent)
+                val fragment = Indications_For_Pregnancy_Termination_Of_Gestational_Hypertension_fm()
+                inflateFragment(fragment)
             }
             7 -> {
                 //Rh 和 ABO 溶血病的比较
-                val intent = Intent(activity, RH_And_ABO_Hemolysis_Comparison::class.java)
-                startActivity(intent)
+                val fragment = RH_And_ABO_Hemolysis_Comparison_fm()
+                inflateFragment(fragment)
             }
             8 -> {
                 //胎儿生物物理监测Manning评分
-                val intent = Intent(activity, Manning_Score::class.java)
-                startActivity(intent)
+                val fragment = Manning_Score_fm()
+                inflateFragment(fragment)
             }
             9 -> {
                 //妊娠期甲亢程度和用药剂量间的关系
-                val intent = Intent(activity, Hyperthyroidism_Medication_During_Pregnancy::class.java)
-                startActivity(intent)
+                val fragment = Hyperthyroidism_Medication_During_Pregnancy_fm()
+                inflateFragment(fragment)
             }
             10 -> {
                 //正常恶露性状
-                val intent = Intent(activity, Normal_Lochia::class.java)
-                startActivity(intent)
+                val fragment = Normal_Lochia_fm()
+                inflateFragment(fragment)
             }
             11 -> {
                 //EPDS（爱丁堡产后抑郁量表）
-                val intent = Intent(activity, Edinburgh_Postnatal_Depression_Scale::class.java)
-                startActivity(intent)
+                val fragment = Edinburgh_Postnatal_Depression_Scale_fm()
+                inflateFragment(fragment)
             }
             12 -> {
                 //孕期用药对胎儿的影响
-                val intent = Intent(activity, DrugToFetus::class.java)
-                startActivity(intent)
+                val fragment = DrugToFetus_fm()
+                inflateFragment(fragment)
             }
             13 -> {
                 //不同妊娠周数的宫底高度及子宫长度
-                val intent = Intent(activity, Uterine_Height_Gestational_Age::class.java)
-                startActivity(intent)
+                val fragment = Uterine_Height_Gestational_Age_fm()
+                inflateFragment(fragment)
             }
             14 -> {
                 //胎儿成熟度监测
-                val intent = Intent(activity, Fetal_Maturity::class.java)
-                startActivity(intent)
+                val fragment = Fetal_Maturity_fm()
+                inflateFragment(fragment)
             }
             15 -> {
                 //产褥期抑郁症诊断标准
-                val intent = Intent(activity, Diagnosis_Postnatal_Depression::class.java)
-                startActivity(intent)
+                val fragment = Diagnosis_Postnatal_Depression_fm()
+                inflateFragment(fragment)
             }
             16 -> {
                 //人类精液变量参考值(WHO, 2011)
@@ -172,5 +172,11 @@ class Obstetrics_and_Gynecology_Menu: Fragment(), MenuSelectAdapter.OnItemClickL
 
             }
         }
+    }
+    private fun inflateFragment(fragment: Fragment){
+        val transaction = activity?.supportFragmentManager?.beginTransaction()
+        transaction?.replace(R.id.fragment_, fragment)
+        transaction?.addToBackStack(null)
+        transaction?.commit()
     }
 }

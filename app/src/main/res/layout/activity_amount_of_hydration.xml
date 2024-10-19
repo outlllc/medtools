@@ -28,7 +28,7 @@
         <EditText
             android:id="@+id/et_sodium"
             android:layout_width="80dp"
-            android:background="@drawable/edit_border"
+            android:background="@drawable/edittext_border_frame"
             android:layout_height="wrap_content" />
     </LinearLayout>
     <LinearLayout
@@ -44,7 +44,7 @@
             android:id="@+id/et_body_weight"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
-            android:background="@drawable/edit_border" />
+            android:background="@drawable/edittext_border_frame" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"

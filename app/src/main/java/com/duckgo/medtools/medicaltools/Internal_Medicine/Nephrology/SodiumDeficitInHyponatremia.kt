@@ -38,12 +38,17 @@ class SodiumDeficitInHyponatremia : AppCompatActivity() {
         val sodium = et_sodium.text.toString().toDoubleOrNull()
         val weight = et_weight.text.toString().toDoubleOrNull()
         val gender = if (rb_man.isChecked) "man" else "woman"
-        var result = if((weight != null) and (sodium != null)){
-            ( 142 - sodium!! ) * weight!! * 0.035
-        }else if ((weight != null) and (sodium != null)){
-            ( 142 - sodium!! ) * weight!! * 0.03
-        } else{
-            0.0
+        var result = 0.0
+        if((weight != null) and (sodium != null)) {
+            when(gender){
+                "man" ->
+                    result = (142 - sodium!!) * weight!! * 0.035
+                "woman" ->
+                    result = (142 - sodium!!) * weight!! * 0.03
+                else -> 0.0
+            }
+        }else{
+            result = 0.0
         }
         return result
     }

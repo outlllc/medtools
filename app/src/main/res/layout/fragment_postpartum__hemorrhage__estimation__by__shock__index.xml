@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".medicaltools.comprehensive.Postpartum_Hemorrhage_Estimation_By_Shock_Index">
+    tools:context=".medicaltools.comprehensive.Postpartum_Hemorrhage_Estimation_By_Shock_Index_fm">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,6 +19,8 @@
         <EditText
             android:layout_width="100dp"
             android:layout_height="wrap_content"
+            android:background="@drawable/edittext_border_frame"
+            android:inputType="number"
             android:id="@+id/et_HR"/>
         <TextView
             android:layout_width="wrap_content"
@@ -39,6 +41,8 @@
         <EditText
             android:layout_width="100dp"
             android:layout_height="wrap_content"
+            android:background="@drawable/edittext_border_frame"
+            android:inputType="number"
             android:id="@+id/et_SBP"/>
         <TextView
             android:layout_width="wrap_content"
