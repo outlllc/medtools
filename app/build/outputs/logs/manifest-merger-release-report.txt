@@ -134,157 +134,157 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\zf
 		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:13:9-74
 	android:dataExtractionRules
 		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:7:9-65
-activity#com.duckgo.medtools.medicaltoo.Other.Reproductive_Medicine.Precocious_Puberty_Auxiliary_Examination
+activity#com.duckgo.medtools.test.MenuTest
 ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:15:9-17:40
 	android:exported
 		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:17:13-37
 	android:name
-		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:16:13-108
-activity#com.duckgo.medtools.medicaltoo.Other.Reproductive_Medicine.Tanner_Stage
+		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:16:13-42
+activity#com.duckgo.medtools.medicaltools.Other.Reproductive_Medicine.Precocious_Puberty_Auxiliary_Examination
 ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:18:9-20:40
 	android:exported
 		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:20:13-37
 	android:name
-		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:19:13-80
-activity#com.duckgo.medtools.medicaltoo.Other.Reproductive_Medicine.Semen_reference_values
+		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:19:13-110
+activity#com.duckgo.medtools.medicaltools.Other.Reproductive_Medicine.Tanner_Stage
 ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:21:9-23:40
 	android:exported
 		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:23:13-37
 	android:name
-		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:22:13-90
-activity#com.duckgo.medtools.medicaltoo.Internal_Medicine.Nephrology.Chronic_Kidney_Disease_Staging
+		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:22:13-82
+activity#com.duckgo.medtools.medicaltools.Other.Reproductive_Medicine.Semen_reference_values
 ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:24:9-26:40
 	android:exported
 		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:26:13-37
 	android:name
-		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:25:13-99
-activity#com.duckgo.medtools.medicaltoo.Internal_Medicine.Nephrology.Glomerular_Filtration_Rate_CKD_EPI
+		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:25:13-92
+activity#com.duckgo.medtools.medicaltools.Internal_Medicine.Nephrology.Chronic_Kidney_Disease_Staging
 ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:27:9-29:40
 	android:exported
 		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:29:13-37
 	android:name
-		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:28:13-103
-activity#com.duckgo.medtools.medicaltoo.Obstetrics_and_Gynecology.Diagnosis_Postnatal_Depression
+		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:28:13-101
+activity#com.duckgo.medtools.medicaltools.Internal_Medicine.Nephrology.Glomerular_Filtration_Rate_CKD_EPI
 ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:30:9-32:40
 	android:exported
 		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:32:13-37
 	android:name
-		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:31:13-96
-activity#com.duckgo.medtools.medicaltoo.Obstetrics_and_Gynecology.Edinburgh_Postnatal_Depression_Scale
+		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:31:13-105
+activity#com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Diagnosis_Postnatal_Depression
 ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:33:9-35:40
 	android:exported
 		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:35:13-37
 	android:name
-		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:34:13-102
-activity#com.duckgo.medtools.medicaltoo.Obstetrics_and_Gynecology.Hyperthyroidism_Medication_During_Pregnancy
+		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:34:13-98
+activity#com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Edinburgh_Postnatal_Depression_Scale
 ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:36:9-38:40
 	android:exported
 		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:38:13-37
 	android:name
-		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:37:13-109
-activity#com.duckgo.medtools.medicaltoo.Obstetrics_and_Gynecology.RH_And_ABO_Hemolysis_Comparison
+		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:37:13-104
+activity#com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Hyperthyroidism_Medication_During_Pregnancy
 ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:39:9-41:40
 	android:exported
 		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:41:13-37
 	android:name
-		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:40:13-97
-activity#com.duckgo.medtools.medicaltoo.Obstetrics_and_Gynecology.Thyroid_Function_Of_Pregnancy
+		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:40:13-111
+activity#com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.RH_And_ABO_Hemolysis_Comparison
 ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:42:9-44:40
 	android:exported
 		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:44:13-37
 	android:name
-		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:43:13-95
-activity#com.duckgo.medtools.medicaltoo.Obstetrics_and_Gynecology.GDM_Grading_And_Staging
+		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:43:13-99
+activity#com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Thyroid_Function_Of_Pregnancy
 ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:45:9-47:40
 	android:exported
 		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:47:13-37
 	android:name
-		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:46:13-89
-activity#com.duckgo.medtools.medicaltoo.Obstetrics_and_Gynecology.Manning_Score
+		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:46:13-97
+activity#com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.GDM_Grading_And_Staging
 ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:48:9-50:40
 	android:exported
 		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:50:13-37
 	android:name
-		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:49:13-79
-activity#com.duckgo.medtools.medicaltoo.Obstetrics_and_Gynecology.Indications_For_Pregnancy_Termination_Of_Gestational_Hypertension
+		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:49:13-91
+activity#com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Manning_Score
 ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:51:9-53:40
 	android:exported
 		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:53:13-37
 	android:name
-		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:52:13-131
-activity#com.duckgo.medtools.medicaltoo.Obstetrics_and_Gynecology.Severe_Preeclampsia_Diagnosis
+		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:52:13-81
+activity#com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Indications_For_Pregnancy_Termination_Of_Gestational_Hypertension
 ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:54:9-56:40
 	android:exported
 		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:56:13-37
 	android:name
-		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:55:13-95
-activity#com.duckgo.medtools.medicaltoo.Obstetrics_and_Gynecology.Diagnostic_Criteria_For_GDM
+		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:55:13-133
+activity#com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Severe_Preeclampsia_Diagnosis
 ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:57:9-59:40
 	android:exported
 		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:59:13-37
 	android:name
-		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:58:13-93
-activity#com.duckgo.medtools.medicaltoo.Obstetrics_and_Gynecology.Classification_Of_Hypertension_During_Pregnancy
+		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:58:13-97
+activity#com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Diagnostic_Criteria_For_GDM
 ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:60:9-62:40
 	android:exported
 		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:62:13-37
 	android:name
-		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:61:13-113
-activity#com.duckgo.medtools.medicaltoo.Obstetrics_and_Gynecology.Fetal_Maturity
+		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:61:13-95
+activity#com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Classification_Of_Hypertension_During_Pregnancy
 ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:63:9-65:40
 	android:exported
 		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:65:13-37
 	android:name
-		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:64:13-80
-activity#com.duckgo.medtools.medicaltoo.Obstetrics_and_Gynecology.Uterine_Height_Gestational_Age
+		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:64:13-115
+activity#com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Fetal_Maturity
 ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:66:9-68:40
 	android:exported
 		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:68:13-37
 	android:name
-		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:67:13-96
-activity#com.duckgo.medtools.medicaltoo.Obstetrics_and_Gynecology.DrugToFetus
+		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:67:13-82
+activity#com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Uterine_Height_Gestational_Age
 ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:69:9-71:40
 	android:exported
 		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:71:13-37
 	android:name
-		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:70:13-77
-activity#com.duckgo.medtools.medicaltoo.Obstetrics_and_Gynecology.Normal_Lochia
+		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:70:13-98
+activity#com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.DrugToFetus
 ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:72:9-74:40
 	android:exported
 		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:74:13-37
 	android:name
 		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:73:13-79
-activity#com.duckgo.medtools.medicaltoo.Internal_Medicine.Endocrinology.HbA1cValuesBloodGlucose
+activity#com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Normal_Lochia
 ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:75:9-77:40
 	android:exported
 		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:77:13-37
 	android:name
-		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:76:13-95
-activity#com.duckgo.medtools.medicaltoo.Obstetrics_and_Gynecology.Bishop
+		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:76:13-81
+activity#com.duckgo.medtools.medicaltools.Internal_Medicine.Endocrinology.HbA1cValuesBloodGlucose
 ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:78:9-80:40
 	android:exported
 		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:80:13-37
 	android:name
-		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:79:13-72
-activity#com.duckgo.medtools.medicaltoo.Internal_Medicine.Nephrology.SodiumDeficitInHyponatremia
+		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:79:13-97
+activity#com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Bishop
 ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:81:9-83:40
 	android:exported
 		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:83:13-37
 	android:name
-		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:82:13-96
-activity#com.duckgo.medtools.medicaltoo.Internal_Medicine.Nephrology.AmountOfHydration
+		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:82:13-74
+activity#com.duckgo.medtools.medicaltools.Internal_Medicine.Nephrology.SodiumDeficitInHyponatremia
 ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:84:9-86:40
 	android:exported
 		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:86:13-37
 	android:name
-		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:85:13-86
-activity#com.duckgo.medtools.medicaltoo.BodySurfaceArea
+		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:85:13-98
+activity#com.duckgo.medtools.medicaltools.Internal_Medicine.Nephrology.AmountOfHydration
 ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:87:9-89:40
 	android:exported
 		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:89:13-37
 	android:name
-		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:88:13-55
-activity#com.duckgo.medtools.medicaltoo.Internal_Medicine.Nephrology.Creatinine_Clearance_Cockcroft_Gault
+		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:88:13-88
+activity#com.duckgo.medtools.medicaltools.Internal_Medicine.Nephrology.Creatinine_Clearance_Cockcroft_Gault
 ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:90:9-94:81
 	android:label
 		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:93:13-65
@@ -293,7 +293,7 @@ ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManif
 	android:theme
 		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:94:13-78
 	android:name
-		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:91:13-105
+		ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:91:13-107
 activity#com.duckgo.medtools.MainActivity
 ADDED from C:\Users\zfx\AndroidStudioProjects\medtools\app\src\main\AndroidManifest.xml:95:9-103:20
 	android:exported

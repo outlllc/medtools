@@ -6,19 +6,19 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.duckgo.medtools.databinding.FragmentDrugToFetusFmBinding
+import com.duckgo.medtools.databinding.FragmentPrecociousPubertyAuxiliaryExaminationFmBinding
 import com.duckgo.medtools.my_adapter.MedCalListAdapter
 
 class Precocious_Puberty_Auxiliary_Examination_fm : Fragment() {
     lateinit var dataSet: MutableList<Array<String>>
     lateinit var dataSet_appendix: MutableList<Array<String>>
-    lateinit var binding: FragmentDrugToFetusFmBinding
+    lateinit var binding: FragmentPrecociousPubertyAuxiliaryExaminationFmBinding
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentDrugToFetusFmBinding.inflate(layoutInflater)
+        binding = FragmentPrecociousPubertyAuxiliaryExaminationFmBinding.inflate(layoutInflater)
         return binding.root
     }
 

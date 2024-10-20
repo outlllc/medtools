@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.duckgo.medtools.app-mergeDebugResources-67:/values-watch-v21/values-watch-v21.xml",
+            "outputFile": "com.duckgo.medtools.app-mergeDebugResources-70:/values-watch-v21/values-watch-v21.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\zfx\\.gradle\\caches\\8.9\\transforms\\886699d093b5da7b479b817083bd5060\\transformed\\appcompat-1.6.1\\res\\values-watch-v21\\values-watch-v21.xml",
+                    "source": "C:\\Users\\zfx\\.gradle\\caches\\8.10.2\\transforms\\9e233b851689a432061d06169e5e1ea8\\transformed\\appcompat-1.6.1\\res\\values-watch-v21\\values-watch-v21.xml",
                     "from": {
                         "startLines": "2,6,10",
                         "startColumns": "4,4,4",

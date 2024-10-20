@@ -1,7 +1,15 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    id("com.google.devtools.ksp")
+    alias(libs.plugins.compose.compiler)
 }
+//buildscript {
+//    extra["kotlin_version"] = "2.1.0-Beta2"
+//    dependencies {
+//        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version")
+//    }
+//}
 
 android {
     namespace = "com.duckgo.medtools"
@@ -43,13 +51,14 @@ android {
     buildFeatures {
         viewBinding = true
         compose = true
+        dataBinding = true
     }
     lint {
         baseline = file("lint-baseline.xml")
     }
 
 }
-
+//val kotlin_version: String by rootProject.extra
 dependencies {
 
     implementation(libs.androidx.core.ktx)
@@ -73,4 +82,7 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+    ksp(libs.androidx.room.compiler)
+//    implementation("org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version")
+    implementation(kotlin("stdlib-jdk8"))
 }
