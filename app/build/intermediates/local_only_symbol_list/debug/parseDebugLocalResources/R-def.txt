@@ -110,6 +110,7 @@ id et_height
 id et_old
 id et_sodium
 id expandtab_view
+id fm_med_cal_firstpage
 id fragment_
 id fullscreen_content
 id fullscreen_content_controls
@@ -283,6 +284,7 @@ id rv_content
 id rv_content2
 id rv_content_appendix
 id rv_manning_score_appendix
+id rv_med_cal_firstpage
 id rv_medical_calculator
 id rv_normal_lochia
 id rv_normal_lochia2
@@ -391,7 +393,9 @@ layout list_modle_3_2
 layout list_modle_4
 layout list_modle_7
 layout materialbuttontangoo
+layout medcal_firstpage_fagment
 layout medcaltool_menu_page_fragment
+layout test
 layout toggle_button
 layout view_region
 menu med_cal_menu

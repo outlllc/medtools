@@ -8,10 +8,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.duckgo.medtools.MedCal_FirstPage_fagment
 import com.duckgo.medtools.Med_Cal_Fragment_Adaptor
 import com.duckgo.medtools.R
+import com.duckgo.medtools.databinding.FragmentMedicalCalculatorBinding
 import com.duckgo.medtools.medicaltools.A_Menu_Select.Obstetrics_and_Gynecology.Obstetrics_and_Gynecology_Menu
 import com.duckgo.medtools.medicaltools.A_Menu_Select.Other.Reproductive_Medicine.Reproductive_Medicine_Menu
 import com.duckgo.medtools.medicaltools.A_Menu_Select.common_use.Common_Use
@@ -42,6 +45,7 @@ import com.duckgo.medtools.medicaltools.Other.Reproductive_Medicine.Semen_refere
 import com.duckgo.medtools.medicaltools.Other.Reproductive_Medicine.Tanner_Stage_fm
 import com.duckgo.medtools.medicaltools.comprehensive.BodySurfaceArea_fm
 import com.duckgo.medtools.medicaltools.comprehensive.Unit_Conversion_fm
+import com.duckgo.medtools.util.add_hide_fragment
 import com.duckgo.medtools.view.ChildView
 import com.duckgo.medtools.view.ExpandTabView
 
@@ -51,15 +55,18 @@ class MenuFragment: Fragment(), Med_Cal_Fragment_Adaptor.onItemClickListener{
     var mViewArray: ArrayList<View> = ArrayList()
     lateinit var viewLeft: ChildView
     lateinit var rv_medical_calculator : RecyclerView
+    lateinit var mfragmentManager: FragmentManager
+    lateinit var binding:FragmentMedicalCalculatorBinding
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        var view = inflater.inflate(R.layout.fragment_medical_calculator, container, false)
-        initView(view)
-        return view
+        binding = FragmentMedicalCalculatorBinding.inflate(inflater, container, false)
+        var mfragmentManager = childFragmentManager
+        mfragmentManager.beginTransaction().replace(R.id.fm_med_cal_firstpage, MedCal_FirstPage_fagment())
+            .addToBackStack(null)
+            ?.commit()
+        initView(binding.root)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -100,11 +107,11 @@ class MenuFragment: Fragment(), Med_Cal_Fragment_Adaptor.onItemClickListener{
         when(positionTitle){
             "妇产科综合" -> {
                 val fragment = Obstetrics_and_Gynecology_Menu()
-                inflateFragment(fragment)
+                add_hide_fragment(mfragmentManager, fragment)
             }
             "常用计算" -> {
                 val fragment = Common_Use()
-                inflateFragment(fragment)
+                add_hide_fragment(mfragmentManager, fragment)
             }
             // 内科
             "大内科" -> {
@@ -259,7 +266,7 @@ class MenuFragment: Fragment(), Med_Cal_Fragment_Adaptor.onItemClickListener{
             }
             "生殖医学科" -> {
                 val fragment = Reproductive_Medicine_Menu()
-                inflateFragment(fragment)
+                add_hide_fragment(mfragmentManager, fragment)
             }
             "男科" -> {
 
@@ -290,6 +297,7 @@ class MenuFragment: Fragment(), Med_Cal_Fragment_Adaptor.onItemClickListener{
         mTextArray.add("根据科室选择")
         expandTabView.setValue(mTextArray, mViewArray)
         expandTabView.setTitle(viewLeft.showText, 0)
+        mfragmentManager = requireActivity().supportFragmentManager
     }
 
     override fun onItemClick(position: Int) {
@@ -301,140 +309,142 @@ class MenuFragment: Fragment(), Med_Cal_Fragment_Adaptor.onItemClickListener{
             1 -> {
                 //肌酐清除率(Cockcroft-Gault)
                 val fragment = Creatinine_Clearance_Cockcroft_Gault_fm()
-                inflateFragment(fragment)
+                add_hide_fragment(mfragmentManager, fragment)
             }
             2 -> {
                 //体表面积
                 val fragment = BodySurfaceArea_fm()
-                inflateFragment(fragment)
+                add_hide_fragment(mfragmentManager, fragment)
             }
             3 -> {
                 //补水量
                 val fragment = AmountOfHydration_fm()
-                inflateFragment(fragment)
+                add_hide_fragment(mfragmentManager, fragment)
             }
             4 -> {
                 //低钠血症补钠量
                 val fragment = SodiumDeficitInHyponatremia_fm()
-                inflateFragment(fragment)
+                add_hide_fragment(mfragmentManager, fragment)
             }
             5 -> {
                 //肾小球滤过率CKD-EPI
                 val fragment = Glomerular_Filtration_Rate_CKD_EPI_fm()
-                inflateFragment(fragment)
+                add_hide_fragment(mfragmentManager, fragment)
             }
             6 -> {
                 //慢性肾病CKD分期
                 val fragment = Chronic_Kidney_Disease_Staging_fm()
-                inflateFragment(fragment)
+                add_hide_fragment(mfragmentManager, fragment)
             }
             7 -> {
                 //糖化血红蛋白评估平均血糖
                 val fragment = HbA1cValuesBloodGlucose_fm()
-                inflateFragment(fragment)
+                add_hide_fragment(mfragmentManager, fragment)
             }
             8 -> {
                 //BISHOP评分
                 val fragment = Bishop_fm()
-                inflateFragment(fragment)
+                add_hide_fragment(mfragmentManager, fragment)
             }
             9 -> {
                 //妊娠期高血压分类
                 val fragment = Classification_Of_Hypertension_During_Pregnancy_fm()
-                inflateFragment(fragment)
+                add_hide_fragment(mfragmentManager, fragment)
             }
             10 -> {
                 //重度子痫前期诊断
                 val fragment = Severe_Preeclampsia_Diagnosis_fm()
-                inflateFragment(fragment)
+                add_hide_fragment(mfragmentManager, fragment)
             }
             11 -> {
                 //妊娠期高血糖诊断标准（GDM）
                 val fragment = Diagnostic_Criteria_For_GDM_fm()
-                inflateFragment(fragment)
+                add_hide_fragment(mfragmentManager, fragment)
             }
             12 -> {
                 //妊娠期糖尿病分级分期
                 val fragment = GDM_Grading_And_Staging_fm()
-                inflateFragment(fragment)
+                add_hide_fragment(mfragmentManager, fragment)
             }
             13 -> {
                 //妊娠高血压终止妊娠的指征
                 val fragment = Indications_For_Pregnancy_Termination_Of_Gestational_Hypertension_fm()
-                inflateFragment(fragment)
+                add_hide_fragment(mfragmentManager, fragment)
             }
             14 -> {
                 //妊娠期甲状腺功能实验室检查
                 val fragment = Thyroid_Function_Of_Pregnancy_fm()
-                inflateFragment(fragment)
+                add_hide_fragment(mfragmentManager, fragment)
             }
             15 -> {
                 //胎儿生物物理监测Manning评分
                 val fragment = Manning_Score_fm()
-                inflateFragment(fragment)
+                add_hide_fragment(mfragmentManager, fragment)
             }
             16 -> {
                 //正常恶露性状
                 val fragment = Normal_Lochia_fm()
-                inflateFragment(fragment)
+                add_hide_fragment(mfragmentManager, fragment)
             }
             17 -> {
                 //孕期用药对胎儿的影响
                 val fragment = DrugToFetus_fm()
-                inflateFragment(fragment)
+                add_hide_fragment(mfragmentManager, fragment)
             }
             18 -> {
                 //胎儿成熟度监测
                 val fragment = Fetal_Maturity_fm()
-                inflateFragment(fragment)
+                add_hide_fragment(mfragmentManager, fragment)
             }
             19 -> {
                 //Rh 和 ABO 溶血病的比较
                 val fragment = RH_And_ABO_Hemolysis_Comparison_fm()
-                inflateFragment(fragment)
+                add_hide_fragment(mfragmentManager, fragment)
             }
             20 -> {
                 //妊娠期甲亢程度和用药剂量间的关系
                 val fragment = Hyperthyroidism_Medication_During_Pregnancy_fm()
-                inflateFragment(fragment)
+                add_hide_fragment(mfragmentManager, fragment)
             }
             21 -> {
                 //EPDS（爱丁堡产后抑郁量表）
                 val fragment = Edinburgh_Postnatal_Depression_Scale_fm()
-                inflateFragment(fragment)
+                add_hide_fragment(mfragmentManager, fragment)
             }
             22 -> {
                 //不同妊娠周数的宫底高度及子宫长度
                 val fragment = Uterine_Height_Gestational_Age_fm()
-                inflateFragment(fragment)
+                add_hide_fragment(mfragmentManager, fragment)
             }
             23 -> {
                 //产褥期抑郁症诊断标准
                 val fragment = Diagnosis_Postnatal_Depression_fm()
-                inflateFragment(fragment)
+                add_hide_fragment(mfragmentManager, fragment)
             }
             24 -> {
                 //人类精液变量参考值(WHO, 2011)
                 val fragment = Semen_reference_values_fm()
-                inflateFragment(fragment)
+                add_hide_fragment(mfragmentManager, fragment)
             }
             25 -> {
                 //tanner分期（女性性发育）
                 val fragment = Tanner_Stage_fm()
-                inflateFragment(fragment)
+                add_hide_fragment(mfragmentManager, fragment)
             }
             26 -> {
                 //性早熟疾病的辅助检查结果
                 val fragment = Precocious_Puberty_Auxiliary_Examination_fm()
-                inflateFragment(fragment)
+                add_hide_fragment(mfragmentManager, fragment)
             }
             27 -> {
                 val fragment = Unit_Conversion_fm()
-                inflateFragment(fragment)
+//                inflateFragment(fragment)
+//                add_hide_fragment(fragment)
+                add_hide_fragment(mfragmentManager, fragment)
+
             }
         }
     }
-
 
     fun popupMenu(view: View){
         val popupMenu = android.widget.PopupMenu(context, view)

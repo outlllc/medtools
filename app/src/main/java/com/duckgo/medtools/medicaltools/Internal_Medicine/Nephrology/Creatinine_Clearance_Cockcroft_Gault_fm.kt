@@ -82,4 +82,22 @@ class Creatinine_Clearance_Cockcroft_Gault_fm : Fragment() {
         dataSet_appendix.add(subDataSet4)
         dataSet_appendix.add(subDataSet5)
     }
+
+//    override fun onDestroy() {
+//        super.onDestroy()
+//        binding.root.setOnKeyListener { v, keyCode, event ->
+//            if (keyCode == KeyEvent.KEYCODE_BACK) {
+////                activity?.finish()
+//                val mFragmentManager = activity?.supportFragmentManager
+//                if (mFragmentManager?.findFragmentById(R.id.fragment_) != null) {
+//                    mFragmentManager!!.beginTransaction()!!.show(mFragmentManager?.findFragmentById(
+//                        R.id.fragment_)!!).commit()
+//                    return@setOnKeyListener false
+//                }
+//
+//            }
+//            return@setOnKeyListener false
+//        }
+//    }
+
 }

@@ -3403,6 +3403,7 @@ int id fitXY 0x7f0900f8
 int id fixed 0x7f0900f9
 int id flip 0x7f0900fa
 int id floating 0x7f0900fb
+int id fm_med_cal_firstpage 0x7f090304
 int id forever 0x7f0900fc
 int id fragment_ 0x7f0900fd
 int id fragment_container_view_tag 0x7f0900fe
@@ -3758,6 +3759,7 @@ int id rv_content 0x7f09025b
 int id rv_content2 0x7f09025c
 int id rv_content_appendix 0x7f09025d
 int id rv_manning_score_appendix 0x7f09025e
+int id rv_med_cal_firstpage 0x7f090305
 int id rv_medical_calculator 0x7f09025f
 int id rv_normal_lochia 0x7f090260
 int id rv_normal_lochia2 0x7f090261
@@ -4152,6 +4154,7 @@ int layout material_timepicker 0x7f0c008a
 int layout material_timepicker_dialog 0x7f0c008b
 int layout material_timepicker_textinput_display 0x7f0c008c
 int layout materialbuttontangoo 0x7f0c008d
+int layout medcal_firstpage_fagment 0x7f0c00bc
 int layout medcaltool_menu_page_fragment 0x7f0c008e
 int layout mtrl_alert_dialog 0x7f0c008f
 int layout mtrl_alert_dialog_actions 0x7f0c0090
@@ -4195,6 +4198,7 @@ int layout select_dialog_item_material 0x7f0c00b5
 int layout select_dialog_multichoice_material 0x7f0c00b6
 int layout select_dialog_singlechoice_material 0x7f0c00b7
 int layout support_simple_spinner_dropdown_item 0x7f0c00b8
+int layout test 0x7f0c00bb
 int layout toggle_button 0x7f0c00b9
 int layout view_region 0x7f0c00ba
 int menu med_cal_menu 0x7f0e0000
