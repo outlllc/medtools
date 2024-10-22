@@ -91,7 +91,7 @@ class MainActivity : AppCompatActivity() {
             if (tem_ShowFragment != showFragment) {
                 supportFragmentManager.beginTransaction()
                 .replace(R.id.fragment_, tem_ShowFragment)
-//                    .addToBackStack(null)
+                    .addToBackStack(null)
                     .commit()
                 showFragment = tem_ShowFragment
             }

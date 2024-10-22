@@ -4,7 +4,7 @@
             "outputFile": "com.duckgo.medtools.app-mergeDebugResources-70:/values-h320dp-port-v13/values-h320dp-port-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\zfx\\.gradle\\caches\\8.10.2\\transforms\\caafc0f3183f94ab4b0249e45198b297\\transformed\\material-1.10.0\\res\\values-h320dp-port-v13\\values-h320dp-port-v13.xml",
+                    "source": "/home/tms/.gradle/caches/8.10.2/transforms/caafc0f3183f94ab4b0249e45198b297/transformed/material-1.10.0/res/values-h320dp-port-v13/values-h320dp-port-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

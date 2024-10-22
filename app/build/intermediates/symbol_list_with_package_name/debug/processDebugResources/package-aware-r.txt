@@ -3420,6 +3420,12 @@ id graph_wrap
 id group_divider
 id grouping
 id groups
+id guideline
+id guideline2
+id guideline3
+id guideline4
+id guideline5
+id guideline6
 id header_title
 id hide_ime_id
 id hide_in_inspector_tag
@@ -3457,6 +3463,8 @@ id legacy
 id line1
 id line3
 id linear
+id linearLayout
+id linearLayout4
 id listMode
 id listView
 id listView2
@@ -3654,6 +3662,7 @@ id pressed
 id progress_circular
 id progress_horizontal
 id radio
+id radioGroup
 id ratio
 id rb_10_0
 id rb_10_1
@@ -3850,8 +3859,15 @@ id textSpacerNoTitle
 id textStart
 id textTop
 id textView
+id textView10
 id textView2
 id textView3
+id textView4
+id textView5
+id textView6
+id textView7
+id textView8
+id textView9
 id textWatcher
 id text_input_end_icon
 id text_input_error_icon

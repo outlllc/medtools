@@ -4,13 +4,13 @@
             "outputFile": "com.duckgo.medtools.app-mergeDebugResources-70:/values-w600dp-v13/values-w600dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\zfx\\AndroidStudioProjects\\medtools\\app\\src\\main\\res\\values-w600dp\\dimens.xml",
+                    "source": "/home/tms/androidstudio projects/medtools/app/src/main/res/values-w600dp/dimens.xml",
                     "from": {
                         "startLines": "1",
                         "startColumns": "4",
-                        "startOffsets": "17",
+                        "startOffsets": "16",
                         "endColumns": "41",
-                        "endOffsets": "54"
+                        "endOffsets": "53"
                     },
                     "to": {
                         "startLines": "2",
