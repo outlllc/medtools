@@ -1,75 +1,81 @@
 com.duckgo.medtools.app-fragment-1.6.0-0 /home/tms/.gradle/caches/8.10.2/transforms/026d8d857baf68687c3ff5561973bb40/transformed/fragment-1.6.0/res
 com.duckgo.medtools.app-navigation-ui-2.6.0-1 /home/tms/.gradle/caches/8.10.2/transforms/06abcc51da5a025df374e015220b5cfa/transformed/navigation-ui-2.6.0/res
 com.duckgo.medtools.app-constraintlayout-2.1.4-2 /home/tms/.gradle/caches/8.10.2/transforms/07c17a6968aa5404e11cc359b68d7651/transformed/constraintlayout-2.1.4/res
-com.duckgo.medtools.app-lifecycle-viewmodel-ktx-2.6.1-3 /home/tms/.gradle/caches/8.10.2/transforms/07f4420166304b0c9641dcb289ba2f3d/transformed/lifecycle-viewmodel-ktx-2.6.1/res
-com.duckgo.medtools.app-lifecycle-process-2.6.1-4 /home/tms/.gradle/caches/8.10.2/transforms/08fb7ce882223189aab551d9c3ac75ee/transformed/lifecycle-process-2.6.1/res
-com.duckgo.medtools.app-drawerlayout-1.1.1-5 /home/tms/.gradle/caches/8.10.2/transforms/095d9f72b3ab3e5c8ba55546290cf658/transformed/drawerlayout-1.1.1/res
-com.duckgo.medtools.app-cardview-1.0.0-6 /home/tms/.gradle/caches/8.10.2/transforms/0bd457be3b525c1bbfeecc86ec448e9b/transformed/cardview-1.0.0/res
-com.duckgo.medtools.app-lifecycle-viewmodel-savedstate-2.6.1-7 /home/tms/.gradle/caches/8.10.2/transforms/0c28d5b81ed2028c70480d03e67a358a/transformed/lifecycle-viewmodel-savedstate-2.6.1/res
-com.duckgo.medtools.app-startup-runtime-1.1.1-8 /home/tms/.gradle/caches/8.10.2/transforms/0f252a76c28d5a5746ac837a55b7b245/transformed/startup-runtime-1.1.1/res
-com.duckgo.medtools.app-activity-compose-1.8.0-9 /home/tms/.gradle/caches/8.10.2/transforms/0f294b91f4fc978f07ef48cc94bf80a0/transformed/activity-compose-1.8.0/res
-com.duckgo.medtools.app-navigation-runtime-2.6.0-10 /home/tms/.gradle/caches/8.10.2/transforms/10280693e1f8782a4fa13eee51e3520d/transformed/navigation-runtime-2.6.0/res
-com.duckgo.medtools.app-core-runtime-2.2.0-11 /home/tms/.gradle/caches/8.10.2/transforms/1b87516a38c9cab83e73b05155394354/transformed/core-runtime-2.2.0/res
-com.duckgo.medtools.app-activity-ktx-1.8.0-12 /home/tms/.gradle/caches/8.10.2/transforms/1d04a0234a9929b7b3957a2d43b1f975/transformed/activity-ktx-1.8.0/res
-com.duckgo.medtools.app-foundation-release-13 /home/tms/.gradle/caches/8.10.2/transforms/28edaffc7bf71daf4dc0a3a476ef412f/transformed/foundation-release/res
-com.duckgo.medtools.app-emoji2-1.3.0-14 /home/tms/.gradle/caches/8.10.2/transforms/29001319c9339bb70d20bd4ba9d9de11/transformed/emoji2-1.3.0/res
-com.duckgo.medtools.app-animation-core-release-15 /home/tms/.gradle/caches/8.10.2/transforms/298ca22bd1de82f9e7e82b02847f4e53/transformed/animation-core-release/res
-com.duckgo.medtools.app-core-ktx-1.12.0-16 /home/tms/.gradle/caches/8.10.2/transforms/2ad3946d90e606dbf468b47121b8f3aa/transformed/core-ktx-1.12.0/res
-com.duckgo.medtools.app-animation-release-17 /home/tms/.gradle/caches/8.10.2/transforms/2c6dd6d3b716a5b717d1d003bf8ca82d/transformed/animation-release/res
-com.duckgo.medtools.app-navigation-fragment-ktx-2.6.0-18 /home/tms/.gradle/caches/8.10.2/transforms/2e1a79d15a5c9505fb4679a3f21ff415/transformed/navigation-fragment-ktx-2.6.0/res
-com.duckgo.medtools.app-savedstate-1.2.1-19 /home/tms/.gradle/caches/8.10.2/transforms/33fcba78ac478a44712a0fe160503f2d/transformed/savedstate-1.2.1/res
+com.duckgo.medtools.app-drawerlayout-1.1.1-3 /home/tms/.gradle/caches/8.10.2/transforms/095d9f72b3ab3e5c8ba55546290cf658/transformed/drawerlayout-1.1.1/res
+com.duckgo.medtools.app-cardview-1.0.0-4 /home/tms/.gradle/caches/8.10.2/transforms/0bd457be3b525c1bbfeecc86ec448e9b/transformed/cardview-1.0.0/res
+com.duckgo.medtools.app-startup-runtime-1.1.1-5 /home/tms/.gradle/caches/8.10.2/transforms/0f252a76c28d5a5746ac837a55b7b245/transformed/startup-runtime-1.1.1/res
+com.duckgo.medtools.app-activity-compose-1.8.0-6 /home/tms/.gradle/caches/8.10.2/transforms/0f294b91f4fc978f07ef48cc94bf80a0/transformed/activity-compose-1.8.0/res
+com.duckgo.medtools.app-navigation-runtime-2.6.0-7 /home/tms/.gradle/caches/8.10.2/transforms/10280693e1f8782a4fa13eee51e3520d/transformed/navigation-runtime-2.6.0/res
+com.duckgo.medtools.app-core-runtime-2.2.0-8 /home/tms/.gradle/caches/8.10.2/transforms/1b87516a38c9cab83e73b05155394354/transformed/core-runtime-2.2.0/res
+com.duckgo.medtools.app-activity-ktx-1.8.0-9 /home/tms/.gradle/caches/8.10.2/transforms/1d04a0234a9929b7b3957a2d43b1f975/transformed/activity-ktx-1.8.0/res
+com.duckgo.medtools.app-lifecycle-viewmodel-savedstate-2.8.6-10 /home/tms/.gradle/caches/8.10.2/transforms/28da3144178f400561268c56bb340263/transformed/lifecycle-viewmodel-savedstate-2.8.6/res
+com.duckgo.medtools.app-foundation-release-11 /home/tms/.gradle/caches/8.10.2/transforms/28edaffc7bf71daf4dc0a3a476ef412f/transformed/foundation-release/res
+com.duckgo.medtools.app-emoji2-1.3.0-12 /home/tms/.gradle/caches/8.10.2/transforms/29001319c9339bb70d20bd4ba9d9de11/transformed/emoji2-1.3.0/res
+com.duckgo.medtools.app-animation-core-release-13 /home/tms/.gradle/caches/8.10.2/transforms/298ca22bd1de82f9e7e82b02847f4e53/transformed/animation-core-release/res
+com.duckgo.medtools.app-core-ktx-1.12.0-14 /home/tms/.gradle/caches/8.10.2/transforms/2ad3946d90e606dbf468b47121b8f3aa/transformed/core-ktx-1.12.0/res
+com.duckgo.medtools.app-lifecycle-viewmodel-ktx-2.8.6-15 /home/tms/.gradle/caches/8.10.2/transforms/2bc2f5d99bb862e41085d71ccd2cfd70/transformed/lifecycle-viewmodel-ktx-2.8.6/res
+com.duckgo.medtools.app-animation-release-16 /home/tms/.gradle/caches/8.10.2/transforms/2c6dd6d3b716a5b717d1d003bf8ca82d/transformed/animation-release/res
+com.duckgo.medtools.app-navigation-fragment-ktx-2.6.0-17 /home/tms/.gradle/caches/8.10.2/transforms/2e1a79d15a5c9505fb4679a3f21ff415/transformed/navigation-fragment-ktx-2.6.0/res
+com.duckgo.medtools.app-savedstate-1.2.1-18 /home/tms/.gradle/caches/8.10.2/transforms/33fcba78ac478a44712a0fe160503f2d/transformed/savedstate-1.2.1/res
+com.duckgo.medtools.app-profileinstaller-1.3.1-19 /home/tms/.gradle/caches/8.10.2/transforms/342f79d733ce09df21d22d95bcb579b2/transformed/profileinstaller-1.3.1/res
 com.duckgo.medtools.app-ui-tooling-preview-release-20 /home/tms/.gradle/caches/8.10.2/transforms/37074945a63076def4fc35f77322ba24/transformed/ui-tooling-preview-release/res
-com.duckgo.medtools.app-emoji2-views-helper-1.3.0-21 /home/tms/.gradle/caches/8.10.2/transforms/380c26c8297f12ffe6c0b391f7c5af82/transformed/emoji2-views-helper-1.3.0/res
-com.duckgo.medtools.app-lifecycle-runtime-2.6.1-22 /home/tms/.gradle/caches/8.10.2/transforms/39c1a31a2918188ea8885d5b1f90ff66/transformed/lifecycle-runtime-2.6.1/res
-com.duckgo.medtools.app-material-ripple-release-23 /home/tms/.gradle/caches/8.10.2/transforms/3fad6565ea3b76e39c068190f7e92483/transformed/material-ripple-release/res
-com.duckgo.medtools.app-navigation-fragment-2.6.0-24 /home/tms/.gradle/caches/8.10.2/transforms/41ebb18e07f785d3d7434c205dfd3b39/transformed/navigation-fragment-2.6.0/res
-com.duckgo.medtools.app-core-1.12.0-25 /home/tms/.gradle/caches/8.10.2/transforms/4b16959ae6035f01b4187740f166fbbc/transformed/core-1.12.0/res
-com.duckgo.medtools.app-lifecycle-viewmodel-2.6.1-26 /home/tms/.gradle/caches/8.10.2/transforms/4d6a2462a0b4a8a17b82ac3df16a0a7d/transformed/lifecycle-viewmodel-2.6.1/res
-com.duckgo.medtools.app-coordinatorlayout-1.1.0-27 /home/tms/.gradle/caches/8.10.2/transforms/4f3e5bd0ecbeeef2b07b83b9bfb03a94/transformed/coordinatorlayout-1.1.0/res
-com.duckgo.medtools.app-navigation-common-2.6.0-28 /home/tms/.gradle/caches/8.10.2/transforms/4f72e4481fc85765f6f866dc939db737/transformed/navigation-common-2.6.0/res
-com.duckgo.medtools.app-ui-text-release-29 /home/tms/.gradle/caches/8.10.2/transforms/4f84385ce698b5c90edf615625049784/transformed/ui-text-release/res
-com.duckgo.medtools.app-ui-release-30 /home/tms/.gradle/caches/8.10.2/transforms/52a7a85f8653ab51364a6c2097bc7f6a/transformed/ui-release/res
-com.duckgo.medtools.app-ui-util-release-31 /home/tms/.gradle/caches/8.10.2/transforms/5c9399d88ad843344680632f8477a76e/transformed/ui-util-release/res
-com.duckgo.medtools.app-ui-test-manifest-1.6.6-32 /home/tms/.gradle/caches/8.10.2/transforms/5dc79be054970f3671668fb576a23f1d/transformed/ui-test-manifest-1.6.6/res
-com.duckgo.medtools.app-ui-unit-release-33 /home/tms/.gradle/caches/8.10.2/transforms/6842697ea315df228f5a44d099be8664/transformed/ui-unit-release/res
-com.duckgo.medtools.app-recyclerview-1.1.0-34 /home/tms/.gradle/caches/8.10.2/transforms/686419165c7406407f26e56aa0d393cb/transformed/recyclerview-1.1.0/res
-com.duckgo.medtools.app-customview-poolingcontainer-1.0.0-35 /home/tms/.gradle/caches/8.10.2/transforms/690c6d30df96946f072e63f6826fe744/transformed/customview-poolingcontainer-1.0.0/res
-com.duckgo.medtools.app-lifecycle-livedata-2.6.1-36 /home/tms/.gradle/caches/8.10.2/transforms/6a91ec7bee3913c37110d866772cfdb6/transformed/lifecycle-livedata-2.6.1/res
-com.duckgo.medtools.app-navigation-runtime-ktx-2.6.0-37 /home/tms/.gradle/caches/8.10.2/transforms/74395aa19b329b3b3662307c6c22b859/transformed/navigation-runtime-ktx-2.6.0/res
-com.duckgo.medtools.app-viewpager2-1.0.0-38 /home/tms/.gradle/caches/8.10.2/transforms/745be38681d75c80c587d73d8db49eb3/transformed/viewpager2-1.0.0/res
-com.duckgo.medtools.app-runtime-release-39 /home/tms/.gradle/caches/8.10.2/transforms/74cf0c25de40934b06971be2b614f3c1/transformed/runtime-release/res
-com.duckgo.medtools.app-runtime-saveable-release-40 /home/tms/.gradle/caches/8.10.2/transforms/7cbc94c8d8ec80bf9fa5d38818e9f0f4/transformed/runtime-saveable-release/res
-com.duckgo.medtools.app-databinding-runtime-8.7.1-41 /home/tms/.gradle/caches/8.10.2/transforms/81b5ea7a3ce26678bd120be16d444327/transformed/databinding-runtime-8.7.1/res
-com.duckgo.medtools.app-foundation-layout-release-42 /home/tms/.gradle/caches/8.10.2/transforms/841eee1dec638e9574524c4999802b99/transformed/foundation-layout-release/res
-com.duckgo.medtools.app-fragment-ktx-1.6.0-43 /home/tms/.gradle/caches/8.10.2/transforms/84f4baad68ecd84818038400e71a8da8/transformed/fragment-ktx-1.6.0/res
-com.duckgo.medtools.app-navigation-ui-ktx-2.6.0-44 /home/tms/.gradle/caches/8.10.2/transforms/89357d0fcc16b632e950c5e44274cae3/transformed/navigation-ui-ktx-2.6.0/res
-com.duckgo.medtools.app-ui-tooling-release-45 /home/tms/.gradle/caches/8.10.2/transforms/8c5fe761ca9a92eaf711e6d17797b839/transformed/ui-tooling-release/res
-com.duckgo.medtools.app-annotation-experimental-1.4.0-46 /home/tms/.gradle/caches/8.10.2/transforms/8e0f71e0ee2757691e055ea626c4c8d9/transformed/annotation-experimental-1.4.0/res
-com.duckgo.medtools.app-databinding-adapters-8.7.1-47 /home/tms/.gradle/caches/8.10.2/transforms/8ec30d7f3c0eb47174f4ab4be746d5ba/transformed/databinding-adapters-8.7.1/res
-com.duckgo.medtools.app-slidingpanelayout-1.2.0-48 /home/tms/.gradle/caches/8.10.2/transforms/8edc9e2385160fec4d02997ad5139d50/transformed/slidingpanelayout-1.2.0/res
-com.duckgo.medtools.app-lifecycle-runtime-ktx-2.6.1-49 /home/tms/.gradle/caches/8.10.2/transforms/90133a8d7d1d82a6a6092fa6a654badb/transformed/lifecycle-runtime-ktx-2.6.1/res
-com.duckgo.medtools.app-transition-1.4.1-50 /home/tms/.gradle/caches/8.10.2/transforms/966f361fd334588a9520974224f54db8/transformed/transition-1.4.1/res
-com.duckgo.medtools.app-appcompat-1.6.1-51 /home/tms/.gradle/caches/8.10.2/transforms/9e233b851689a432061d06169e5e1ea8/transformed/appcompat-1.6.1/res
-com.duckgo.medtools.app-lifecycle-livedata-core-2.6.1-52 /home/tms/.gradle/caches/8.10.2/transforms/a05b2007b06a8d0e8f0eb645b32d9d45/transformed/lifecycle-livedata-core-2.6.1/res
-com.duckgo.medtools.app-material-1.10.0-53 /home/tms/.gradle/caches/8.10.2/transforms/caafc0f3183f94ab4b0249e45198b297/transformed/material-1.10.0/res
-com.duckgo.medtools.app-material-release-54 /home/tms/.gradle/caches/8.10.2/transforms/caf92161c25371005710f2fd545430c8/transformed/material-release/res
-com.duckgo.medtools.app-savedstate-ktx-1.2.1-55 /home/tms/.gradle/caches/8.10.2/transforms/cb19e64a9524868d31d0ec372079d5e7/transformed/savedstate-ktx-1.2.1/res
-com.duckgo.medtools.app-ui-tooling-data-release-56 /home/tms/.gradle/caches/8.10.2/transforms/cd17971e08c112119ae59bcfe8388ce1/transformed/ui-tooling-data-release/res
-com.duckgo.medtools.app-profileinstaller-1.3.0-57 /home/tms/.gradle/caches/8.10.2/transforms/cfef9f3284f4e75d1b23f05f7360b600/transformed/profileinstaller-1.3.0/res
-com.duckgo.medtools.app-navigation-common-ktx-2.6.0-58 /home/tms/.gradle/caches/8.10.2/transforms/d14be54f10791be5511b2e658c5974e0/transformed/navigation-common-ktx-2.6.0/res
-com.duckgo.medtools.app-material-icons-core-release-59 /home/tms/.gradle/caches/8.10.2/transforms/d180a511242436520e141998e03be2ec/transformed/material-icons-core-release/res
-com.duckgo.medtools.app-ui-graphics-release-60 /home/tms/.gradle/caches/8.10.2/transforms/d2d2026fcb7c127c58120be30eeb2f23/transformed/ui-graphics-release/res
-com.duckgo.medtools.app-lifecycle-livedata-core-ktx-2.6.1-61 /home/tms/.gradle/caches/8.10.2/transforms/d3dcae491b400523e9a19df19e19a516/transformed/lifecycle-livedata-core-ktx-2.6.1/res
-com.duckgo.medtools.app-appcompat-resources-1.6.1-62 /home/tms/.gradle/caches/8.10.2/transforms/d40eac43d4de659c84b25498906c89b9/transformed/appcompat-resources-1.6.1/res
-com.duckgo.medtools.app-window-1.0.0-63 /home/tms/.gradle/caches/8.10.2/transforms/df6975273c535ae71f2daab1e9dc3c07/transformed/window-1.0.0/res
-com.duckgo.medtools.app-ui-geometry-release-64 /home/tms/.gradle/caches/8.10.2/transforms/e78cf8177f10fe3f80f9b9f0b91c2ac0/transformed/ui-geometry-release/res
-com.duckgo.medtools.app-lifecycle-service-2.6.1-65 /home/tms/.gradle/caches/8.10.2/transforms/ee820f7a977cbca48b47b594b0ce84a5/transformed/lifecycle-service-2.6.1/res
-com.duckgo.medtools.app-material3-release-66 /home/tms/.gradle/caches/8.10.2/transforms/f71009ec4b7c569cb64483d042ef75f6/transformed/material3-release/res
-com.duckgo.medtools.app-activity-1.8.0-67 /home/tms/.gradle/caches/8.10.2/transforms/f95029911294e747d5eae5ff00f5071a/transformed/activity-1.8.0/res
-com.duckgo.medtools.app-pngs-68 /home/tms/androidstudio projects/medtools/app/build/generated/res/pngs/debug
-com.duckgo.medtools.app-resValues-69 /home/tms/androidstudio projects/medtools/app/build/generated/res/resValues/debug
-com.duckgo.medtools.app-packageDebugResources-70 /home/tms/androidstudio projects/medtools/app/build/intermediates/incremental/debug/packageDebugResources/merged.dir
-com.duckgo.medtools.app-packageDebugResources-71 /home/tms/androidstudio projects/medtools/app/build/intermediates/incremental/debug/packageDebugResources/stripped.dir
-com.duckgo.medtools.app-debug-72 /home/tms/androidstudio projects/medtools/app/build/intermediates/merged_res/debug/mergeDebugResources
-com.duckgo.medtools.app-debug-73 /home/tms/androidstudio projects/medtools/app/src/debug/res
-com.duckgo.medtools.app-main-74 /home/tms/androidstudio projects/medtools/app/src/main/res
+com.duckgo.medtools.app-lifecycle-livedata-core-2.8.6-21 /home/tms/.gradle/caches/8.10.2/transforms/37349bf9a6d04b8af2c3598bd802361b/transformed/lifecycle-livedata-core-2.8.6/res
+com.duckgo.medtools.app-emoji2-views-helper-1.3.0-22 /home/tms/.gradle/caches/8.10.2/transforms/380c26c8297f12ffe6c0b391f7c5af82/transformed/emoji2-views-helper-1.3.0/res
+com.duckgo.medtools.app-lifecycle-runtime-compose-release-23 /home/tms/.gradle/caches/8.10.2/transforms/38d3184fb3a8712600e03ed1b220ed31/transformed/lifecycle-runtime-compose-release/res
+com.duckgo.medtools.app-material-ripple-release-24 /home/tms/.gradle/caches/8.10.2/transforms/3fad6565ea3b76e39c068190f7e92483/transformed/material-ripple-release/res
+com.duckgo.medtools.app-lifecycle-runtime-ktx-release-25 /home/tms/.gradle/caches/8.10.2/transforms/3ff4c6cf7c26b71da2d6706743510576/transformed/lifecycle-runtime-ktx-release/res
+com.duckgo.medtools.app-navigation-fragment-2.6.0-26 /home/tms/.gradle/caches/8.10.2/transforms/41ebb18e07f785d3d7434c205dfd3b39/transformed/navigation-fragment-2.6.0/res
+com.duckgo.medtools.app-core-1.12.0-27 /home/tms/.gradle/caches/8.10.2/transforms/4b16959ae6035f01b4187740f166fbbc/transformed/core-1.12.0/res
+com.duckgo.medtools.app-lifecycle-viewmodel-release-28 /home/tms/.gradle/caches/8.10.2/transforms/4b197f81d8609c79ce9d5ec12682827d/transformed/lifecycle-viewmodel-release/res
+com.duckgo.medtools.app-coordinatorlayout-1.1.0-29 /home/tms/.gradle/caches/8.10.2/transforms/4f3e5bd0ecbeeef2b07b83b9bfb03a94/transformed/coordinatorlayout-1.1.0/res
+com.duckgo.medtools.app-navigation-common-2.6.0-30 /home/tms/.gradle/caches/8.10.2/transforms/4f72e4481fc85765f6f866dc939db737/transformed/navigation-common-2.6.0/res
+com.duckgo.medtools.app-ui-text-release-31 /home/tms/.gradle/caches/8.10.2/transforms/4f84385ce698b5c90edf615625049784/transformed/ui-text-release/res
+com.duckgo.medtools.app-ui-release-32 /home/tms/.gradle/caches/8.10.2/transforms/52a7a85f8653ab51364a6c2097bc7f6a/transformed/ui-release/res
+com.duckgo.medtools.app-lifecycle-viewmodel-compose-release-33 /home/tms/.gradle/caches/8.10.2/transforms/5c2ede484e0641c138edcc616240553b/transformed/lifecycle-viewmodel-compose-release/res
+com.duckgo.medtools.app-ui-util-release-34 /home/tms/.gradle/caches/8.10.2/transforms/5c9399d88ad843344680632f8477a76e/transformed/ui-util-release/res
+com.duckgo.medtools.app-ui-test-manifest-1.6.6-35 /home/tms/.gradle/caches/8.10.2/transforms/5dc79be054970f3671668fb576a23f1d/transformed/ui-test-manifest-1.6.6/res
+com.duckgo.medtools.app-lifecycle-process-2.8.6-36 /home/tms/.gradle/caches/8.10.2/transforms/62d2c58283de6d87a7c2bd24ee17b412/transformed/lifecycle-process-2.8.6/res
+com.duckgo.medtools.app-ui-unit-release-37 /home/tms/.gradle/caches/8.10.2/transforms/6842697ea315df228f5a44d099be8664/transformed/ui-unit-release/res
+com.duckgo.medtools.app-recyclerview-1.1.0-38 /home/tms/.gradle/caches/8.10.2/transforms/686419165c7406407f26e56aa0d393cb/transformed/recyclerview-1.1.0/res
+com.duckgo.medtools.app-customview-poolingcontainer-1.0.0-39 /home/tms/.gradle/caches/8.10.2/transforms/690c6d30df96946f072e63f6826fe744/transformed/customview-poolingcontainer-1.0.0/res
+com.duckgo.medtools.app-navigation-runtime-ktx-2.6.0-40 /home/tms/.gradle/caches/8.10.2/transforms/74395aa19b329b3b3662307c6c22b859/transformed/navigation-runtime-ktx-2.6.0/res
+com.duckgo.medtools.app-viewpager2-1.0.0-41 /home/tms/.gradle/caches/8.10.2/transforms/745be38681d75c80c587d73d8db49eb3/transformed/viewpager2-1.0.0/res
+com.duckgo.medtools.app-lifecycle-livedata-ktx-2.8.6-42 /home/tms/.gradle/caches/8.10.2/transforms/7b57bfc1041f8a6defcd9187c6e92452/transformed/lifecycle-livedata-ktx-2.8.6/res
+com.duckgo.medtools.app-lifecycle-livedata-core-ktx-2.8.6-43 /home/tms/.gradle/caches/8.10.2/transforms/7be699596dd72f7800b6e6e76034146b/transformed/lifecycle-livedata-core-ktx-2.8.6/res
+com.duckgo.medtools.app-databinding-runtime-8.7.1-44 /home/tms/.gradle/caches/8.10.2/transforms/81b5ea7a3ce26678bd120be16d444327/transformed/databinding-runtime-8.7.1/res
+com.duckgo.medtools.app-foundation-layout-release-45 /home/tms/.gradle/caches/8.10.2/transforms/841eee1dec638e9574524c4999802b99/transformed/foundation-layout-release/res
+com.duckgo.medtools.app-fragment-ktx-1.6.0-46 /home/tms/.gradle/caches/8.10.2/transforms/84f4baad68ecd84818038400e71a8da8/transformed/fragment-ktx-1.6.0/res
+com.duckgo.medtools.app-navigation-ui-ktx-2.6.0-47 /home/tms/.gradle/caches/8.10.2/transforms/89357d0fcc16b632e950c5e44274cae3/transformed/navigation-ui-ktx-2.6.0/res
+com.duckgo.medtools.app-lifecycle-service-2.8.6-48 /home/tms/.gradle/caches/8.10.2/transforms/8b681a14219cffce66dc5ae5680136b6/transformed/lifecycle-service-2.8.6/res
+com.duckgo.medtools.app-ui-tooling-release-49 /home/tms/.gradle/caches/8.10.2/transforms/8c5fe761ca9a92eaf711e6d17797b839/transformed/ui-tooling-release/res
+com.duckgo.medtools.app-databinding-adapters-8.7.1-50 /home/tms/.gradle/caches/8.10.2/transforms/8ec30d7f3c0eb47174f4ab4be746d5ba/transformed/databinding-adapters-8.7.1/res
+com.duckgo.medtools.app-slidingpanelayout-1.2.0-51 /home/tms/.gradle/caches/8.10.2/transforms/8edc9e2385160fec4d02997ad5139d50/transformed/slidingpanelayout-1.2.0/res
+com.duckgo.medtools.app-transition-1.4.1-52 /home/tms/.gradle/caches/8.10.2/transforms/966f361fd334588a9520974224f54db8/transformed/transition-1.4.1/res
+com.duckgo.medtools.app-appcompat-1.6.1-53 /home/tms/.gradle/caches/8.10.2/transforms/9e233b851689a432061d06169e5e1ea8/transformed/appcompat-1.6.1/res
+com.duckgo.medtools.app-runtime-release-54 /home/tms/.gradle/caches/8.10.2/transforms/a665c182a07cf63125a3e5f19483ef3f/transformed/runtime-release/res
+com.duckgo.medtools.app-annotation-experimental-1.4.1-55 /home/tms/.gradle/caches/8.10.2/transforms/a78e6343895d46cfe2cf158eb2897932/transformed/annotation-experimental-1.4.1/res
+com.duckgo.medtools.app-lifecycle-runtime-release-56 /home/tms/.gradle/caches/8.10.2/transforms/c12b34c125edf75fce7c230964692e4c/transformed/lifecycle-runtime-release/res
+com.duckgo.medtools.app-material-1.10.0-57 /home/tms/.gradle/caches/8.10.2/transforms/caafc0f3183f94ab4b0249e45198b297/transformed/material-1.10.0/res
+com.duckgo.medtools.app-material-release-58 /home/tms/.gradle/caches/8.10.2/transforms/caf92161c25371005710f2fd545430c8/transformed/material-release/res
+com.duckgo.medtools.app-savedstate-ktx-1.2.1-59 /home/tms/.gradle/caches/8.10.2/transforms/cb19e64a9524868d31d0ec372079d5e7/transformed/savedstate-ktx-1.2.1/res
+com.duckgo.medtools.app-sqlite-framework-2.4.0-60 /home/tms/.gradle/caches/8.10.2/transforms/cba64118dd3c83386e6616b8b999691a/transformed/sqlite-framework-2.4.0/res
+com.duckgo.medtools.app-ui-tooling-data-release-61 /home/tms/.gradle/caches/8.10.2/transforms/cd17971e08c112119ae59bcfe8388ce1/transformed/ui-tooling-data-release/res
+com.duckgo.medtools.app-navigation-common-ktx-2.6.0-62 /home/tms/.gradle/caches/8.10.2/transforms/d14be54f10791be5511b2e658c5974e0/transformed/navigation-common-ktx-2.6.0/res
+com.duckgo.medtools.app-material-icons-core-release-63 /home/tms/.gradle/caches/8.10.2/transforms/d180a511242436520e141998e03be2ec/transformed/material-icons-core-release/res
+com.duckgo.medtools.app-ui-graphics-release-64 /home/tms/.gradle/caches/8.10.2/transforms/d2d2026fcb7c127c58120be30eeb2f23/transformed/ui-graphics-release/res
+com.duckgo.medtools.app-appcompat-resources-1.6.1-65 /home/tms/.gradle/caches/8.10.2/transforms/d40eac43d4de659c84b25498906c89b9/transformed/appcompat-resources-1.6.1/res
+com.duckgo.medtools.app-runtime-saveable-release-66 /home/tms/.gradle/caches/8.10.2/transforms/dd65b127d5b5bbfad75cabe017319471/transformed/runtime-saveable-release/res
+com.duckgo.medtools.app-window-1.0.0-67 /home/tms/.gradle/caches/8.10.2/transforms/df6975273c535ae71f2daab1e9dc3c07/transformed/window-1.0.0/res
+com.duckgo.medtools.app-lifecycle-livedata-2.8.6-68 /home/tms/.gradle/caches/8.10.2/transforms/e7226e3105c9dbee9f3df2bb6d26074a/transformed/lifecycle-livedata-2.8.6/res
+com.duckgo.medtools.app-ui-geometry-release-69 /home/tms/.gradle/caches/8.10.2/transforms/e78cf8177f10fe3f80f9b9f0b91c2ac0/transformed/ui-geometry-release/res
+com.duckgo.medtools.app-sqlite-2.4.0-70 /home/tms/.gradle/caches/8.10.2/transforms/e9ba3d6d659811b37f333a2d9d983e8d/transformed/sqlite-2.4.0/res
+com.duckgo.medtools.app-room-runtime-2.6.1-71 /home/tms/.gradle/caches/8.10.2/transforms/f34613ab33d8764e45dc273c9d27f8a6/transformed/room-runtime-2.6.1/res
+com.duckgo.medtools.app-material3-release-72 /home/tms/.gradle/caches/8.10.2/transforms/f71009ec4b7c569cb64483d042ef75f6/transformed/material3-release/res
+com.duckgo.medtools.app-activity-1.8.0-73 /home/tms/.gradle/caches/8.10.2/transforms/f95029911294e747d5eae5ff00f5071a/transformed/activity-1.8.0/res
+com.duckgo.medtools.app-pngs-74 /home/tms/androidstudio projects/medtools/app/build/generated/res/pngs/debug
+com.duckgo.medtools.app-resValues-75 /home/tms/androidstudio projects/medtools/app/build/generated/res/resValues/debug
+com.duckgo.medtools.app-packageDebugResources-76 /home/tms/androidstudio projects/medtools/app/build/intermediates/incremental/debug/packageDebugResources/merged.dir
+com.duckgo.medtools.app-packageDebugResources-77 /home/tms/androidstudio projects/medtools/app/build/intermediates/incremental/debug/packageDebugResources/stripped.dir
+com.duckgo.medtools.app-debug-78 /home/tms/androidstudio projects/medtools/app/build/intermediates/merged_res/debug/mergeDebugResources
+com.duckgo.medtools.app-debug-79 /home/tms/androidstudio projects/medtools/app/src/debug/res
+com.duckgo.medtools.app-main-80 /home/tms/androidstudio projects/medtools/app/src/main/res

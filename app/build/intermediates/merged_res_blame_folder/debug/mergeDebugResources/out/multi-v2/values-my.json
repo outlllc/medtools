@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.duckgo.medtools.app-mergeDebugResources-70:/values-my/values-my.xml",
+            "outputFile": "com.duckgo.medtools.app-mergeDebugResources-76:/values-my/values-my.xml",
             "map": [
                 {
                     "source": "/home/tms/.gradle/caches/8.10.2/transforms/9e233b851689a432061d06169e5e1ea8/transformed/appcompat-1.6.1/res/values-my/values-my.xml",

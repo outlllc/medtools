@@ -44,9 +44,7 @@ class DrugToFetus_fm : Fragment() {
                 "受精15日到妊娠3个月左右该期是经典的致畸期。在这段时间内，首先是心脏、脑开始分化发育，继而是眼、四肢、性腺与生殖器官等。由于各种器官、躯干、四肢在短时间内迅速分化，所以极易受到包括药物毒性在内的各种致畸因素影响。一旦正在分化器官受到影响，就可能形成畸形，这段期间内，药物毒性作用越早，发生畸形可能越严重。" +
                 "妊娠3个月至分娩这段期间药物致畸可能性大大下降，但有些药物仍可能影响胎儿正常发育。")
         var subDataSet2 = arrayOf("参考来源", "丰有吉沈铿主编.《妇产科学》（八年制）[M]. 人民卫生出版社.2010年")
-        dataSet_appendix= ArrayList()
-        dataSet_appendix.add(subDataSet1)
-        dataSet_appendix.add(subDataSet2)
+        dataSet_appendix = mutableListOf(subDataSet1, subDataSet2)
     }
 
     private fun initData() {
@@ -74,30 +72,9 @@ class DrugToFetus_fm : Fragment() {
         var subDataSet22 = arrayOf("华法林", "早期", "小头畸形、大脑发育不良、先天性失明")
         var subDataSet23 = arrayOf("氯喹", "妊娠期", "耳聋、脑积水、肾畸形、死胎")
         var subDataSet24 = arrayOf("链霉素", "妊娠期", "耳聋")
-        dataSet= ArrayList()
-        dataSet.add(subDataSet1)
-        dataSet.add(subDataSet2)
-        dataSet.add(subDataSet3)
-        dataSet.add(subDataSet4)
-        dataSet.add(subDataSet5)
-        dataSet.add(subDataSet6)
-        dataSet.add(subDataSet7)
-        dataSet.add(subDataSet8)
-        dataSet.add(subDataSet9)
-        dataSet.add(subDataSet10)
-        dataSet.add(subDataSet11)
-        dataSet.add(subDataSet12)
-        dataSet.add(subDataSet13)
-        dataSet.add(subDataSet14)
-        dataSet.add(subDataSet15)
-        dataSet.add(subDataSet16)
-        dataSet.add(subDataSet17)
-        dataSet.add(subDataSet18)
-        dataSet.add(subDataSet19)
-        dataSet.add(subDataSet20)
-        dataSet.add(subDataSet21)
-        dataSet.add(subDataSet22)
-        dataSet.add(subDataSet23)
-        dataSet.add(subDataSet24)
+        dataSet= mutableListOf( subDataSet1, subDataSet2, subDataSet3, subDataSet4, subDataSet5, subDataSet6,
+            subDataSet7, subDataSet8, subDataSet9, subDataSet10, subDataSet11, subDataSet12, subDataSet13, subDataSet14,
+            subDataSet15, subDataSet16, subDataSet17, subDataSet18, subDataSet19, subDataSet20, subDataSet21, subDataSet22,
+            subDataSet23, subDataSet24)
     }
 }

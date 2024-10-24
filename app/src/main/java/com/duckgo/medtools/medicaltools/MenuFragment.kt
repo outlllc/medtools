@@ -15,9 +15,57 @@ import com.duckgo.medtools.MedCal_FirstPage_fagment
 import com.duckgo.medtools.Med_Cal_Fragment_Adaptor
 import com.duckgo.medtools.R
 import com.duckgo.medtools.databinding.FragmentMedicalCalculatorBinding
+import com.duckgo.medtools.medicaltools.A_Menu_Select.Anesthesia_Department.Anesthesia_Department_Menu
+import com.duckgo.medtools.medicaltools.A_Menu_Select.Auxiliary_departments.Interventional_Department.Interventional_Department_Menu
+import com.duckgo.medtools.medicaltools.A_Menu_Select.Auxiliary_departments.Laboratory_department.Laboratory_department_Menu
+import com.duckgo.medtools.medicaltools.A_Menu_Select.Auxiliary_departments.Medical_Imaging_Department.Medical_Imaging_Department_Menu
+import com.duckgo.medtools.medicaltools.A_Menu_Select.Auxiliary_departments.Nuclear_Medicine.Nuclear_Medicine_Menu
+import com.duckgo.medtools.medicaltools.A_Menu_Select.Auxiliary_departments.Pathology_Department.Pathology_Department_Menu
+import com.duckgo.medtools.medicaltools.A_Menu_Select.Auxiliary_departments.Pharmacy_Department.Pharmacy_Department_Menu
+import com.duckgo.medtools.medicaltools.A_Menu_Select.Auxiliary_departments.Ultrasound_Department.Ultrasound_Department_Menu
+import com.duckgo.medtools.medicaltools.A_Menu_Select.Department_of_Critical_Care_Medicine.Department_of_Critical_Care_Medicine_Menu
+import com.duckgo.medtools.medicaltools.A_Menu_Select.Department_of_Psychiatry.Department_of_Psychiatry_Menu
+import com.duckgo.medtools.medicaltools.A_Menu_Select.Dermatology_and_Venereology.Dermatology_and_Venereology_Menu
+import com.duckgo.medtools.medicaltools.A_Menu_Select.Internal_Medicine.Cardiovascular_Medicine.Cardiovascular_Medicine_Menu
+import com.duckgo.medtools.medicaltools.A_Menu_Select.Internal_Medicine.Endocrinology.Endocrinology_Menu
+import com.duckgo.medtools.medicaltools.A_Menu_Select.Internal_Medicine.Gastroenterology.Gastroenterology_Menu
+import com.duckgo.medtools.medicaltools.A_Menu_Select.Internal_Medicine.General_Internal_Medicine.General_Internal_Medicine_Menu
+import com.duckgo.medtools.medicaltools.A_Menu_Select.Internal_Medicine.Geriatric_Medicine.Geriatric_Medicine_Menu
+import com.duckgo.medtools.medicaltools.A_Menu_Select.Internal_Medicine.Hematology.Hematology_Menu
+import com.duckgo.medtools.medicaltools.A_Menu_Select.Internal_Medicine.Nephrology.Nephrology_Menu
+import com.duckgo.medtools.medicaltools.A_Menu_Select.Internal_Medicine.Neurology.Neurology_Menu
+import com.duckgo.medtools.medicaltools.A_Menu_Select.Internal_Medicine.Respiratory_medicine.Respiratory_medicine_Menu
+import com.duckgo.medtools.medicaltools.A_Menu_Select.Internal_Medicine.Rheumatology_and_Immunology.Rheumatology_and_Immunology_Menu
+import com.duckgo.medtools.medicaltools.A_Menu_Select.Obstetrics_and_Gynecology.Gynecology_Menu
+import com.duckgo.medtools.medicaltools.A_Menu_Select.Obstetrics_and_Gynecology.Obstetrics_Menu
 import com.duckgo.medtools.medicaltools.A_Menu_Select.Obstetrics_and_Gynecology.Obstetrics_and_Gynecology_Menu
+import com.duckgo.medtools.medicaltools.A_Menu_Select.Oncology.Oncology_Menu
+import com.duckgo.medtools.medicaltools.A_Menu_Select.Other.Andrology.Andrology_Menu
+import com.duckgo.medtools.medicaltools.A_Menu_Select.Other.Department_of_Nutrition.Department_of_Nutrition_Menu
+import com.duckgo.medtools.medicaltools.A_Menu_Select.Other.Rehabilitation_Department.Rehabilitation_Department_Menu
 import com.duckgo.medtools.medicaltools.A_Menu_Select.Other.Reproductive_Medicine.Reproductive_Medicine_Menu
+import com.duckgo.medtools.medicaltools.A_Menu_Select.Otolaryngology.Otolaryngology_Menu
+import com.duckgo.medtools.medicaltools.A_Menu_Select.Pediatrics.General_Pediatric_Internal_Medicine.General_Pediatric_Internal_Medicine_Menu
+import com.duckgo.medtools.medicaltools.A_Menu_Select.Pediatrics.General_Pediatric_Surgery.General_Pediatric_Surgery_Menu
+import com.duckgo.medtools.medicaltools.A_Menu_Select.Pediatrics.Neonatology.Neonatology_Menu
+import com.duckgo.medtools.medicaltools.A_Menu_Select.Pediatrics.Pediatric_Cardiovascular_Medicine_Menu
+import com.duckgo.medtools.medicaltools.A_Menu_Select.Pediatrics.Pediatric_Emergency_Department.Pediatric_Emergency_Department_Menu
+import com.duckgo.medtools.medicaltools.A_Menu_Select.Pediatrics.Pediatric_Endocrinology.Pediatric_Endocrinology_Menu
+import com.duckgo.medtools.medicaltools.A_Menu_Select.Pediatrics.Pediatric_Health_Department.Pediatric_Health_Department_Menu
+import com.duckgo.medtools.medicaltools.A_Menu_Select.Pediatrics.Pediatric_Immunology_Department.Pediatric_Immunology_Department_Menu
+import com.duckgo.medtools.medicaltools.A_Menu_Select.Pediatrics.Pediatric_Orthopedics.Pediatric_Orthopedics_Menu
 import com.duckgo.medtools.medicaltools.A_Menu_Select.common_use.Common_Use
+import com.duckgo.medtools.medicaltools.A_Menu_Select.emergency_department.Emergency_department_Menu
+import com.duckgo.medtools.medicaltools.A_Menu_Select.ophthalmology.ophthalmology_Menu
+import com.duckgo.medtools.medicaltools.A_Menu_Select.surgical.Anorectal_surgery.Anorectal_surgery_Menu
+import com.duckgo.medtools.medicaltools.A_Menu_Select.surgical.Burn_Department.Burn_Department_Menu
+import com.duckgo.medtools.medicaltools.A_Menu_Select.surgical.Hepatobiliary_Surgery.Hepatobiliary_Surgery_Menu
+import com.duckgo.medtools.medicaltools.A_Menu_Select.surgical.Thoracic_Surgery.Thoracic_Surgery_Menu
+import com.duckgo.medtools.medicaltools.A_Menu_Select.surgical.Urology.Urology_Menu
+import com.duckgo.medtools.medicaltools.A_Menu_Select.surgical.Vascular_Surgery.Vascular_Surgery_Menu
+import com.duckgo.medtools.medicaltools.A_Menu_Select.surgical.general_surgery.general_surgery_Menu
+import com.duckgo.medtools.medicaltools.A_Menu_Select.surgical.neurosurgery.neurosurgery_Menu
+import com.duckgo.medtools.medicaltools.A_Menu_Select.surgical.orthopedics.orthopedics_Menu
 import com.duckgo.medtools.medicaltools.Internal_Medicine.Endocrinology.HbA1cValuesBloodGlucose_fm
 import com.duckgo.medtools.medicaltools.Internal_Medicine.Nephrology.AmountOfHydration_fm
 import com.duckgo.medtools.medicaltools.Internal_Medicine.Nephrology.Chronic_Kidney_Disease_Staging_fm
@@ -48,6 +96,7 @@ import com.duckgo.medtools.medicaltools.comprehensive.Unit_Conversion_fm
 import com.duckgo.medtools.util.add_hide_fragment
 import com.duckgo.medtools.view.ChildView
 import com.duckgo.medtools.view.ExpandTabView
+
 
 class MenuFragment: Fragment(), Med_Cal_Fragment_Adaptor.onItemClickListener{
 
@@ -109,167 +158,220 @@ class MenuFragment: Fragment(), Med_Cal_Fragment_Adaptor.onItemClickListener{
                 val fragment = Obstetrics_and_Gynecology_Menu()
                 add_hide_fragment(mfragmentManager, fragment)
             }
+            "妇科" -> {
+                val fragment = Gynecology_Menu()
+                add_hide_fragment(mfragmentManager, fragment)
+            }
+            "产科" -> {
+                val fragment = Obstetrics_Menu()
+                add_hide_fragment(mfragmentManager, fragment)
+            }
             "常用计算" -> {
                 val fragment = Common_Use()
                 add_hide_fragment(mfragmentManager, fragment)
             }
             // 内科
             "大内科" -> {
-
+                val fragment = General_Internal_Medicine_Menu()
+                add_hide_fragment(mfragmentManager, fragment)
             }
             "呼吸内科" -> {
-
+                val fragment = Respiratory_medicine_Menu()
+                add_hide_fragment(mfragmentManager, fragment)
             }
             "心血管内科" -> {
-
+                val fragment = Cardiovascular_Medicine_Menu()
+                add_hide_fragment(mfragmentManager, fragment)
             }
             "消化内科" -> {
-
+                val fragment = Gastroenterology_Menu()
+                add_hide_fragment(mfragmentManager, fragment)
             }
             "血液内科" -> {
-
+                val fragment = Hematology_Menu()
+                add_hide_fragment(mfragmentManager, fragment)
             }
             "肾内科" -> {
-
+                val fragment = Nephrology_Menu()
+                add_hide_fragment(mfragmentManager, fragment)
             }
             "内分泌科" -> {
-
+                val fragment = Endocrinology_Menu()
+                add_hide_fragment(mfragmentManager, fragment)
             }
             "风湿免疫科" -> {
-
+                val fragment = Rheumatology_and_Immunology_Menu()
+                add_hide_fragment(mfragmentManager, fragment)
             }
             "老年医学科" -> {
-
+                val fragment = Geriatric_Medicine_Menu()
+                add_hide_fragment(mfragmentManager, fragment)
             }
             "神经内科" -> {
-
+                val fragment = Neurology_Menu()
+                add_hide_fragment(mfragmentManager, fragment)
             }
             //  外科
             "大外科" -> {
 
             }
             "普通外科" -> {
-
+                val fragment = general_surgery_Menu()
+                add_hide_fragment(mfragmentManager, fragment)
             }
             "骨科" -> {
-
+                val fragment = orthopedics_Menu()
+                add_hide_fragment(mfragmentManager, fragment)
             }
             "泌尿外科" -> {
-
+                val fragment = Urology_Menu()
+                add_hide_fragment(mfragmentManager, fragment)
             }
             "胸外科" -> {
-
+                val fragment = Thoracic_Surgery_Menu()
+                add_hide_fragment(mfragmentManager, fragment)
             }
             "神经外科" -> {
-
+                val fragment = neurosurgery_Menu()
+                add_hide_fragment(mfragmentManager, fragment)
             }
             "血管外科" -> {
-
+                val fragment = Vascular_Surgery_Menu()
+                add_hide_fragment(mfragmentManager, fragment)
             }
             "烧伤科" -> {
-
+                val fragment = Burn_Department_Menu()
+                add_hide_fragment(mfragmentManager, fragment)
             }
             "肝胆外科" -> {
-
+                val fragment = Hepatobiliary_Surgery_Menu()
+                add_hide_fragment(mfragmentManager, fragment)
             }
             "肛肠外科" -> {
-
+                val fragment = Anorectal_surgery_Menu()
+                add_hide_fragment(mfragmentManager, fragment)
             }
             // 儿科
             "小儿综合内科" -> {
-
+                val fragment = General_Pediatric_Internal_Medicine_Menu()
+                add_hide_fragment(mfragmentManager, fragment)
             }
             "小儿综合外科" -> {
-
+                val fragment = General_Pediatric_Surgery_Menu()
+                add_hide_fragment(mfragmentManager, fragment)
             }
             "新生儿科" -> {
-
+                val fragment = Neonatology_Menu()
+                add_hide_fragment(mfragmentManager, fragment)
             }
             "小儿心内科" -> {
 
             }
             "小儿内分泌科" -> {
-
+                val fragment = Pediatric_Endocrinology_Menu()
+                add_hide_fragment(mfragmentManager, fragment)
             }
             "小儿免疫科" -> {
-
+                val fragment = Pediatric_Immunology_Department_Menu()
+                add_hide_fragment(mfragmentManager, fragment)
             }
             "小儿骨科" -> {
-
+                val fragment = Pediatric_Orthopedics_Menu()
+                add_hide_fragment(mfragmentManager, fragment)
             }
             "小儿急诊科" -> {
-
+                val fragment = Pediatric_Emergency_Department_Menu()
+                add_hide_fragment(mfragmentManager, fragment)
             }
             "儿童保健科" -> {
-
+                val fragment = Pediatric_Health_Department_Menu()
+                add_hide_fragment(mfragmentManager, fragment)
             }
             //肿瘤科
             "肿瘤科" -> {
-
+                val fragment = Oncology_Menu()
+                add_hide_fragment(mfragmentManager, fragment)
             }
             //眼科
             "眼科" -> {
-
+                val fragment = ophthalmology_Menu()
+                add_hide_fragment(mfragmentManager, fragment)
             }
             //急诊科
             "急诊科" -> {
-
+                val fragment = Emergency_department_Menu()
+                add_hide_fragment(mfragmentManager, fragment)
             }
             //麻醉疼痛科
             "麻醉疼痛科" -> {
-
+                val fragment = Anesthesia_Department_Menu()
+                add_hide_fragment(mfragmentManager, fragment)
             }
             //重症医学科
             "重症医学科" -> {
-
+                val fragment = Department_of_Critical_Care_Medicine_Menu()
+                add_hide_fragment(mfragmentManager, fragment)
             }
             //皮肤性病科
             "皮肤性病科" -> {
-
+                val fragment = Dermatology_and_Venereology_Menu()
+                add_hide_fragment(mfragmentManager, fragment)
             }
             //耳鼻喉头颈科
             "耳鼻喉头颈科" -> {
-
+                val fragment = Otolaryngology_Menu()
+                add_hide_fragment(mfragmentManager, fragment)
             }
             //精神心理科
             "精神心理科" -> {
-
+                val fragment = Department_of_Psychiatry_Menu()
+                add_hide_fragment(mfragmentManager, fragment)
             }
             //辅助科室
             "检验科" -> {
-
+                val fragment = Laboratory_department_Menu()
+                add_hide_fragment(mfragmentManager, fragment)
             }
             "病理科" -> {
-
+                val fragment = Pathology_Department_Menu()
+                add_hide_fragment(mfragmentManager, fragment)
             }
             "药剂科" -> {
-
+                val fragment = Pharmacy_Department_Menu()
+                add_hide_fragment(mfragmentManager, fragment)
             }
             "医学影像科" -> {
-
+                val fragment = Medical_Imaging_Department_Menu()
+                add_hide_fragment(mfragmentManager, fragment)
             }
             "核医学科" -> {
-
+                val fragment = Nuclear_Medicine_Menu()
+                add_hide_fragment(mfragmentManager, fragment)
             }
             "超声科" -> {
-
+                val fragment = Ultrasound_Department_Menu()
+                add_hide_fragment(mfragmentManager, fragment)
             }
             "介入科" -> {
-
+                val fragment = Interventional_Department_Menu()
+                add_hide_fragment(mfragmentManager, fragment)
             }
             //其他科室
             "康复科" -> {
-
+                val fragment = Rehabilitation_Department_Menu()
+                add_hide_fragment(mfragmentManager, fragment)
             }
             "营养科" -> {
-
+                val fragment = Department_of_Nutrition_Menu()
+                add_hide_fragment(mfragmentManager, fragment)
             }
             "生殖医学科" -> {
                 val fragment = Reproductive_Medicine_Menu()
                 add_hide_fragment(mfragmentManager, fragment)
             }
             "男科" -> {
-
+                val fragment = Andrology_Menu()
+                add_hide_fragment(mfragmentManager, fragment)
             }
 
         }

@@ -6,8 +6,9 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.duckgo.medtools.babyweight.BabyWeight
-import com.duckgo.medtools.datecalculator.DateCalculator_
+import com.duckgo.medtools.datecalculator.DateCalculator
 import com.duckgo.medtools.medicaltools.MenuFragment
+import com.duckgo.medtools.mine.MinePage
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.button.MaterialButtonToggleGroup
 import java.io.File
@@ -15,19 +16,20 @@ import java.io.FileOutputStream
 
 class MainActivity : AppCompatActivity() {
 
-    var dateCaculatorFragment: DateCalculator_? = null
+    var dateCaculatorFragment: DateCalculator? = null
     var babyWeightFragment: BabyWeight? = null
     var showFragment: Fragment? = null
     var medicalCalculatorFragment: MedicalCalculator? = null
     var menuFragment: MenuFragment? = null
-    lateinit var tg_first_page : MaterialButtonToggleGroup
+    var minePage: MinePage ? = null
+    lateinit var tg_first_page: MaterialButtonToggleGroup
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         saveIntoFile()
         if (dateCaculatorFragment == null) {
-            showFragment = DateCalculator_()
+            showFragment = DateCalculator()
         }
         supportFragmentManager.beginTransaction().add(R.id.fragment_, showFragment!!).commit()
         initView()
@@ -54,14 +56,15 @@ class MainActivity : AppCompatActivity() {
                 }
             }
             var tem_ShowFragment: Fragment = showFragment!!
-            when(selectIndex){
+            when (selectIndex) {
                 0 -> {
                     if (dateCaculatorFragment == null) {
-                        tem_ShowFragment = DateCalculator_()
+                        tem_ShowFragment = DateCalculator()
                     } else {
-                        tem_ShowFragment = dateCaculatorFragment as DateCalculator_
+                        tem_ShowFragment = dateCaculatorFragment as DateCalculator
                     }
                 }
+
                 1 -> {
                     if (babyWeightFragment == null) {
                         tem_ShowFragment = BabyWeight()
@@ -70,19 +73,17 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
                 2 -> {
-                    if (medicalCalculatorFragment == null) {
-                        tem_ShowFragment = MedicalCalculator()
-                    } else {
-                        tem_ShowFragment = medicalCalculatorFragment as MedicalCalculator
-                    }
-                }
-                3 -> {
-//                var intent = Intent(this, MenuTest::class.java)
-//                startActivity(intent)
                     if (menuFragment == null) {
                         tem_ShowFragment = MenuFragment()
                     } else {
                         tem_ShowFragment = menuFragment as MenuFragment
+                    }
+                }
+                3 -> {
+                    if (minePage == null) {
+                        tem_ShowFragment = MinePage()
+                    } else {
+                        tem_ShowFragment = minePage as MinePage
                     }
                 }
                 else ->
@@ -90,7 +91,7 @@ class MainActivity : AppCompatActivity() {
             }
             if (tem_ShowFragment != showFragment) {
                 supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment_, tem_ShowFragment)
+                    .replace(R.id.fragment_, tem_ShowFragment)
                     .addToBackStack(null)
                     .commit()
                 showFragment = tem_ShowFragment

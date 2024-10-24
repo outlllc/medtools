@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.duckgo.medtools.app-mergeDebugResources-70:/values-v23/values-v23.xml",
+            "outputFile": "com.duckgo.medtools.app-mergeDebugResources-76:/values-v23/values-v23.xml",
             "map": [
                 {
                     "source": "/home/tms/androidstudio projects/medtools/app/src/main/res/values-v23/themes.xml",

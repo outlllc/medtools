@@ -1,6 +1,6 @@
-#Sat Oct 19 14:10:57 CST 2024
-base.0=C\:\\Users\\zfx\\AndroidStudioProjects\\medtools\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes.dex
-base.1=C\:\\Users\\zfx\\AndroidStudioProjects\\medtools\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes2.dex
+#Thu Oct 24 14:03:11 CST 2024
+base.0=/home/tms/androidstudio projects/medtools/app/build/intermediates/dex/release/mergeDexRelease/classes.dex
+base.1=/home/tms/androidstudio projects/medtools/app/build/intermediates/dex/release/mergeDexRelease/classes2.dex
 path.0=classes.dex
 path.1=classes2.dex
 renamed.0=classes.dex

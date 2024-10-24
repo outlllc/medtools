@@ -37,6 +37,7 @@ import com.duckgo.medtools.medicaltools.Other.Reproductive_Medicine.Semen_refere
 import com.duckgo.medtools.medicaltools.Other.Reproductive_Medicine.Tanner_Stage_fm
 import com.duckgo.medtools.medicaltools.comprehensive.BodySurfaceArea_fm
 import com.duckgo.medtools.medicaltools.comprehensive.Unit_Conversion_fm
+import com.duckgo.medtools.test.TestBaseFragment
 import com.duckgo.medtools.util.add_hide_fragment
 
 class MedCal_FirstPage_fagment: Fragment(), Med_Cal_Fragment_Adaptor.onItemClickListener {
@@ -49,6 +50,7 @@ class MedCal_FirstPage_fagment: Fragment(), Med_Cal_Fragment_Adaptor.onItemClick
         savedInstanceState: Bundle?
     ): View? {
         binding = MedcalFirstpageFagmentBinding.inflate(layoutInflater)
+
         return binding.root
     }
 
@@ -70,6 +72,8 @@ class MedCal_FirstPage_fagment: Fragment(), Med_Cal_Fragment_Adaptor.onItemClick
         when(position) {
             0 -> {
                 //综合
+                val fragment = TestBaseFragment()
+                add_hide_fragment(mfragmentManager, fragment)
             }
 
             1 -> {

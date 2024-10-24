@@ -1,10 +1,14 @@
-#Tue Oct 22 15:36:27 CST 2024
+#Thu Oct 24 15:23:05 CST 2024
 base.0=/home/tms/androidstudio projects/medtools/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
 base.1=/home/tms/androidstudio projects/medtools/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
 base.10=/home/tms/androidstudio projects/medtools/app/build/intermediates/dex/debug/mergeProjectDexDebug/6/classes.dex
 base.11=/home/tms/androidstudio projects/medtools/app/build/intermediates/dex/debug/mergeProjectDexDebug/8/classes.dex
 base.12=/home/tms/androidstudio projects/medtools/app/build/intermediates/dex/debug/mergeProjectDexDebug/9/classes.dex
 base.13=/home/tms/androidstudio projects/medtools/app/build/intermediates/dex/debug/mergeExtDexDebug/classes2.dex
+base.14=/home/tms/androidstudio projects/medtools/app/build/intermediates/dex/debug/mergeProjectDexDebug/10/classes.dex
+base.15=/home/tms/androidstudio projects/medtools/app/build/intermediates/dex/debug/mergeProjectDexDebug/15/classes.dex
+base.16=/home/tms/androidstudio projects/medtools/app/build/intermediates/dex/debug/mergeProjectDexDebug/7/classes.dex
+base.17=/home/tms/androidstudio projects/medtools/app/build/intermediates/dex/debug/mergeProjectDexDebug/3/classes.dex
 base.2=/home/tms/androidstudio projects/medtools/app/build/intermediates/dex/debug/mergeProjectDexDebug/1/classes.dex
 base.3=/home/tms/androidstudio projects/medtools/app/build/intermediates/dex/debug/mergeProjectDexDebug/11/classes.dex
 base.4=/home/tms/androidstudio projects/medtools/app/build/intermediates/dex/debug/mergeProjectDexDebug/12/classes.dex
@@ -19,6 +23,10 @@ path.10=6/classes.dex
 path.11=8/classes.dex
 path.12=9/classes.dex
 path.13=classes2.dex
+path.14=10/classes.dex
+path.15=15/classes.dex
+path.16=7/classes.dex
+path.17=3/classes.dex
 path.2=1/classes.dex
 path.3=11/classes.dex
 path.4=12/classes.dex
@@ -33,6 +41,10 @@ renamed.10=classes11.dex
 renamed.11=classes12.dex
 renamed.12=classes13.dex
 renamed.13=classes14.dex
+renamed.14=classes15.dex
+renamed.15=classes16.dex
+renamed.16=classes17.dex
+renamed.17=classes18.dex
 renamed.2=classes3.dex
 renamed.3=classes4.dex
 renamed.4=classes5.dex

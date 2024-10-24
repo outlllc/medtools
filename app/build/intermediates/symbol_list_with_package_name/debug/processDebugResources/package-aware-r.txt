@@ -3408,6 +3408,7 @@ id fm_med_cal_firstpage
 id forever
 id fragment_
 id fragment_container_view_tag
+id frameLayout
 id frost
 id fullscreen_content
 id fullscreen_content_controls
@@ -4127,6 +4128,7 @@ layout fragment_hyperthyroidism_medication_during_pregnancy_fm
 layout fragment_indications_for_pregnancy_termination_of_gestational_hypertension_fm
 layout fragment_manning_score_fm
 layout fragment_medical_calculator
+layout fragment_mine_page
 layout fragment_normal_lochia_fm
 layout fragment_postpartum__hemorrhage__estimation__by__shock__index
 layout fragment_precocious_puberty_auxiliary_examination_fm
