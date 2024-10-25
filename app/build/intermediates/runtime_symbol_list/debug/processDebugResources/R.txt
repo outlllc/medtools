@@ -3294,6 +3294,7 @@ int id cache_measures 0x7f09008b
 int id calculation_button 0x7f09008c
 int id callMeasure 0x7f09008d
 int id cancel_button 0x7f09008e
+int id cardView 0x7f090317
 int id carryVelocity 0x7f09008f
 int id center 0x7f090090
 int id centerCrop 0x7f090091
@@ -3837,6 +3838,7 @@ int id stretch 0x7f0902a9
 int id submenuarrow 0x7f0902aa
 int id submit_area 0x7f0902ab
 int id supportScrollUp 0x7f0902ac
+int id tabLayout 0x7f090318
 int id tabMode 0x7f0902ad
 int id tag_accessibility_actions 0x7f0902ae
 int id tag_accessibility_clickable_spans 0x7f0902af
@@ -3922,6 +3924,7 @@ int id unlabeled 0x7f0902fe
 int id up 0x7f0902ff
 int id useLogo 0x7f090300
 int id vertical_only 0x7f090301
+int id viewPager 0x7f090319
 int id view_offset_helper 0x7f090302
 int id view_transition 0x7f090303
 int id view_tree_lifecycle_owner 0x7f090304
@@ -4029,6 +4032,7 @@ int interpolator mtrl_fast_out_linear_in 0x7f0b000e
 int interpolator mtrl_fast_out_slow_in 0x7f0b000f
 int interpolator mtrl_linear 0x7f0b0010
 int interpolator mtrl_linear_out_slow_in 0x7f0b0011
+int layout aa 0x7f0c00bd
 int layout abc_action_bar_title_item 0x7f0c0000
 int layout abc_action_bar_up_container 0x7f0c0001
 int layout abc_action_menu_item_layout 0x7f0c0002

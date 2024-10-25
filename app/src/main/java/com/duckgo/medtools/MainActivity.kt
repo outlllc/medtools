@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
     var menuFragment: MenuFragment? = null
     var minePage: MinePage ? = null
     lateinit var tg_first_page: MaterialButtonToggleGroup
+    var selectIndex = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,7 +44,7 @@ class MainActivity : AppCompatActivity() {
     private fun changePage() {
         tg_first_page.addOnButtonCheckedListener { group: MaterialButtonToggleGroup?, checkedId, isChecked ->
             val childCount = group?.childCount
-            var selectIndex = 0
+//            var selectIndex = 0
             for (index in 0 until childCount!!) {
                 val child = group.getChildAt(index) as MaterialButton
                 if (child.id == checkedId) {
@@ -89,13 +90,13 @@ class MainActivity : AppCompatActivity() {
                 else ->
                     Toast.makeText(this, "error", Toast.LENGTH_SHORT).show()
             }
-            if (tem_ShowFragment != showFragment) {
+//            if (tem_ShowFragment != showFragment) {
                 supportFragmentManager.beginTransaction()
                     .replace(R.id.fragment_, tem_ShowFragment)
                     .addToBackStack(null)
                     .commit()
                 showFragment = tem_ShowFragment
-            }
+//            }
         }
     }
 

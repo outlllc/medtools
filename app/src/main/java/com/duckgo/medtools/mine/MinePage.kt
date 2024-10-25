@@ -42,4 +42,9 @@ class MinePage : Fragment() {
                 }
             }
     }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.tabLayout.addTab(binding.tabLayout.newTab().setText("Tab 1"))
+    }
 }

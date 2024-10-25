@@ -97,6 +97,7 @@ id buttonSplitDate
 id buttonSubtract
 id buttonweek
 id calculation_button
+id cardView
 id datePicker
 id dummy_button
 id et_HR
@@ -299,6 +300,7 @@ id rv_medical_calculator
 id rv_normal_lochia
 id rv_normal_lochia2
 id selecToggleGroup
+id tabLayout
 id textView
 id textView10
 id textView2
@@ -331,8 +333,10 @@ id tv_si_result1
 id tv_title
 id tv_total_score
 id tv_universal
+id viewPager
 id weightC_button
 id yuxi
+layout aa
 layout activity_amount_of_hydration
 layout activity_bishop
 layout activity_body_surface_area

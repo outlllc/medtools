@@ -68,6 +68,10 @@
         "source": "com.duckgo.medtools.app-main-80:/layout/fragment_mine_page.xml"
     },
     {
+        "merged": "com.duckgo.medtools.app-mergeDebugResources-77:/layout/aa.xml",
+        "source": "com.duckgo.medtools.app-main-80:/layout/aa.xml"
+    },
+    {
         "merged": "/home/tms/.gradle/daemon/8.10.2/com.duckgo.medtools.app-mergeDebugResources-77:/layout/activity_diagnosis_postnatal_depression.xml",
         "source": "/home/tms/.gradle/daemon/8.10.2/com.duckgo.medtools.app-main-80:/layout/activity_diagnosis_postnatal_depression.xml"
     },
@@ -122,6 +126,10 @@
     {
         "merged": "/home/tms/.gradle/daemon/8.10.2/com.duckgo.medtools.app-mergeDebugResources-77:/layout/view_region.xml",
         "source": "/home/tms/.gradle/daemon/8.10.2/com.duckgo.medtools.app-main-80:/layout/view_region.xml"
+    },
+    {
+        "merged": "/home/tms/.gradle/daemon/8.10.2/com.duckgo.medtools.app-mergeDebugResources-77:/layout/fragment_mine_page.xml",
+        "source": "/home/tms/.gradle/daemon/8.10.2/com.duckgo.medtools.app-main-80:/layout/fragment_mine_page.xml"
     },
     {
         "merged": "/home/tms/.gradle/daemon/8.10.2/com.duckgo.medtools.app-mergeDebugResources-77:/layout/list_modle_1.xml",
