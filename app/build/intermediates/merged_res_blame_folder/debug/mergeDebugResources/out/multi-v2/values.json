@@ -4,7 +4,41 @@
             "outputFile": "com.duckgo.medtools.app-mergeDebugResources-76:/values/values.xml",
             "map": [
                 {
-                    "source": "/home/tms/androidstudio projects/medtools/app/src/main/res/values/cal_creatine.xml",
+                    "source": "/home/tms/AndroidStudioProjects/medtools/app/src/main/res/values/colors.xml",
+                    "from": {
+                        "startLines": "2,27,6,11,17,19,21,15,5,10,12,13,14,22,23,24,25,26,4,18,16,9,7,8,3,20",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,1206,223,438,718,826,913,618,183,397,489,532,575,955,1000,1051,1102,1154,139,781,660,354,264,309,97,872",
+                        "endColumns": "41,49,40,50,62,45,41,41,39,40,42,42,42,44,50,50,51,51,43,44,57,42,44,44,41,40",
+                        "endOffsets": "92,1251,259,484,776,867,950,655,218,433,527,570,613,995,1046,1097,1149,1201,178,821,713,392,304,349,134,908"
+                    },
+                    "to": {
+                        "startLines": "655,656,657,668,673,713,718,719,720,721,722,723,724,725,728,729,730,731,732,970,973,988,993,994,997,998",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "33331,33373,33423,34236,34536,37302,37614,37656,37698,37738,37779,37822,37865,37908,38088,38139,38190,38242,38294,56311,56488,57545,57874,57919,58085,58127",
+                        "endColumns": "41,49,40,50,62,45,41,41,39,40,42,42,42,44,50,50,51,51,43,44,57,42,44,44,41,40",
+                        "endOffsets": "33368,33418,33459,34282,34594,37343,37651,37693,37733,37774,37817,37860,37903,37948,38134,38185,38237,38289,38333,56351,56541,57583,57914,57959,58122,58163"
+                    }
+                },
+                {
+                    "source": "/home/tms/AndroidStudioProjects/medtools/app/src/main/res/values/dimens.xml",
+                    "from": {
+                        "startLines": "2,4,3,1,5",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "58,160,106,16,213",
+                        "endColumns": "47,52,53,41,46",
+                        "endOffsets": "101,208,155,53,255"
+                    },
+                    "to": {
+                        "startLines": "1081,1144,1145,1146,1150",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "63682,67768,67821,67875,68080",
+                        "endColumns": "47,52,53,41,46",
+                        "endOffsets": "63725,67816,67870,67912,68122"
+                    }
+                },
+                {
+                    "source": "/home/tms/AndroidStudioProjects/medtools/app/src/main/res/values/cal_creatine.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -90,25 +124,6 @@
                         "startOffsets": "126361",
                         "endColumns": "49",
                         "endOffsets": "126406"
-                    }
-                },
-                {
-                    "source": "/home/tms/androidstudio projects/medtools/app/src/main/res/values/themes.xml",
-                    "from": {
-                        "startLines": "9,2,14,7,16",
-                        "startColumns": "4,4,4,4,4",
-                        "startOffsets": "422,100,673,322,795",
-                        "endLines": "12,5,14,7,19",
-                        "endColumns": "12,12,120,62,12",
-                        "endOffsets": "667,316,789,380,1020"
-                    },
-                    "to": {
-                        "startLines": "2742,2746,6718,6731,7284",
-                        "startColumns": "4,4,4,4,4",
-                        "startOffsets": "191538,191682,470208,470904,511754",
-                        "endLines": "2745,2749,6718,6731,7287",
-                        "endColumns": "12,12,119,61,12",
-                        "endOffsets": "191677,191792,470323,470961,511979"
                     }
                 },
                 {
@@ -207,25 +222,6 @@
                     }
                 },
                 {
-                    "source": "/home/tms/androidstudio projects/medtools/app/src/main/res/values/styles.xml",
-                    "from": {
-                        "startLines": "6,15,19,24",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "186,510,671,878",
-                        "endLines": "12,17,22,27",
-                        "endColumns": "12,12,12,12",
-                        "endOffsets": "472,665,872,1134"
-                    },
-                    "to": {
-                        "startLines": "2336,2339,5997,9363",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "165127,165210,420124,648623",
-                        "endLines": "2338,2341,6000,9366",
-                        "endColumns": "12,12,12,12",
-                        "endOffsets": "165205,165277,420325,648879"
-                    }
-                },
-                {
                     "source": "/home/tms/.gradle/caches/8.10.2/transforms/026d8d857baf68687c3ff5561973bb40/transformed/fragment-1.6.0/res/values/values.xml",
                     "from": {
                         "startLines": "2,3,4,5,10",
@@ -302,6 +298,25 @@
                     }
                 },
                 {
+                    "source": "/home/tms/AndroidStudioProjects/medtools/app/src/main/res/values/themes.xml",
+                    "from": {
+                        "startLines": "9,2,14,7,16",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "422,100,673,322,795",
+                        "endLines": "12,5,14,7,19",
+                        "endColumns": "12,12,120,62,12",
+                        "endOffsets": "667,316,789,380,1020"
+                    },
+                    "to": {
+                        "startLines": "2742,2746,6718,6731,7284",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "191538,191682,470208,470904,511754",
+                        "endLines": "2745,2749,6718,6731,7287",
+                        "endColumns": "12,12,119,61,12",
+                        "endOffsets": "191677,191792,470323,470961,511979"
+                    }
+                },
+                {
                     "source": "/home/tms/.gradle/caches/8.10.2/transforms/52a7a85f8653ab51364a6c2097bc7f6a/transformed/ui-release/res/values/values.xml",
                     "from": {
                         "startLines": "34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,60,63",
@@ -374,23 +389,6 @@
                     }
                 },
                 {
-                    "source": "/home/tms/androidstudio projects/medtools/app/src/main/res/values/colors.xml",
-                    "from": {
-                        "startLines": "2,27,6,11,17,19,21,15,5,10,12,13,14,22,23,24,25,26,4,18,16,9,7,8,3,20",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,1206,223,438,718,826,913,618,183,397,489,532,575,955,1000,1051,1102,1154,139,781,660,354,264,309,97,872",
-                        "endColumns": "41,49,40,50,62,45,41,41,39,40,42,42,42,44,50,50,51,51,43,44,57,42,44,44,41,40",
-                        "endOffsets": "92,1251,259,484,776,867,950,655,218,433,527,570,613,995,1046,1097,1149,1201,178,821,713,392,304,349,134,908"
-                    },
-                    "to": {
-                        "startLines": "655,656,657,668,673,713,718,719,720,721,722,723,724,725,728,729,730,731,732,970,973,988,993,994,997,998",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "33331,33373,33423,34236,34536,37302,37614,37656,37698,37738,37779,37822,37865,37908,38088,38139,38190,38242,38294,56311,56488,57545,57874,57919,58085,58127",
-                        "endColumns": "41,49,40,50,62,45,41,41,39,40,42,42,42,44,50,50,51,51,43,44,57,42,44,44,41,40",
-                        "endOffsets": "33368,33418,33459,34282,34594,37343,37651,37693,37733,37774,37817,37860,37903,37948,38134,38185,38237,38289,38333,56351,56541,57583,57914,57959,58122,58163"
-                    }
-                },
-                {
                     "source": "/home/tms/.gradle/caches/8.10.2/transforms/df6975273c535ae71f2daab1e9dc3c07/transformed/window-1.0.0/res/values/values.xml",
                     "from": {
                         "startLines": "2,7,8,9,10,11,19,23,34,51",
@@ -407,25 +405,6 @@
                         "endLines": "539,540,541,542,1844,9476,9487,13105,13117,13125",
                         "endColumns": "11,59,51,44,59,24,24,24,24,24",
                         "endOffsets": "27197,27257,27309,27354,122064,652597,653032,786667,787107,787416"
-                    }
-                },
-                {
-                    "source": "/home/tms/androidstudio projects/medtools/app/src/main/res/values/attrs.xml",
-                    "from": {
-                        "startLines": "1",
-                        "startColumns": "4",
-                        "startOffsets": "16",
-                        "endLines": "4",
-                        "endColumns": "24",
-                        "endOffsets": "207"
-                    },
-                    "to": {
-                        "startLines": "11625",
-                        "startColumns": "4",
-                        "startOffsets": "732207",
-                        "endLines": "11628",
-                        "endColumns": "24",
-                        "endOffsets": "732396"
                     }
                 },
                 {
@@ -501,20 +480,22 @@
                     }
                 },
                 {
-                    "source": "/home/tms/androidstudio projects/medtools/app/src/main/res/values/dimens.xml",
+                    "source": "/home/tms/AndroidStudioProjects/medtools/app/src/main/res/values/strings.xml",
                     "from": {
-                        "startLines": "2,4,3,1,5",
-                        "startColumns": "4,4,4,4,4",
-                        "startOffsets": "58,160,106,16,213",
-                        "endColumns": "47,52,53,41,46",
-                        "endOffsets": "101,208,155,53,255"
+                        "startLines": "10,11,1,52,53,6,50,13,2,3,8,4,9,7,51",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "481,534,16,3929,3983,267,3790,587,59,113,397,164,435,331,3860",
+                        "endLines": "10,11,1,52,53,6,50,48,2,3,8,4,9,7,51",
+                        "endColumns": "52,51,42,53,56,63,69,13,53,50,37,47,45,65,68",
+                        "endOffsets": "529,581,54,3978,4035,326,3855,3727,108,159,430,207,476,392,3924"
                     },
                     "to": {
-                        "startLines": "1081,1144,1145,1146,1150",
-                        "startColumns": "4,4,4,4,4",
-                        "startOffsets": "63682,67768,67821,67875,68080",
-                        "endColumns": "47,52,53,41,46",
-                        "endOffsets": "63725,67816,67870,67912,68122"
+                        "startLines": "1800,1801,2032,2057,2058,2066,2067,2073,2185,2208,2280,2281,2290,2299,2307",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "119225,119278,133366,135937,135991,136676,136740,137288,146717,149903,160659,160697,161671,162382,163086",
+                        "endLines": "1800,1801,2032,2057,2058,2066,2067,2108,2185,2208,2280,2281,2290,2299,2307",
+                        "endColumns": "52,51,42,53,56,63,69,13,53,50,37,47,45,65,68",
+                        "endOffsets": "119273,119325,133404,135986,136043,136735,136805,140428,146766,149949,160692,160740,161712,162443,163150"
                     }
                 },
                 {
@@ -571,6 +552,25 @@
                     }
                 },
                 {
+                    "source": "/home/tms/AndroidStudioProjects/medtools/app/src/main/res/values/styles.xml",
+                    "from": {
+                        "startLines": "6,15,19,24",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "186,510,671,878",
+                        "endLines": "12,17,22,27",
+                        "endColumns": "12,12,12,12",
+                        "endOffsets": "472,665,872,1134"
+                    },
+                    "to": {
+                        "startLines": "2336,2339,5997,9363",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "165127,165210,420124,648623",
+                        "endLines": "2338,2341,6000,9366",
+                        "endColumns": "12,12,12,12",
+                        "endOffsets": "165205,165277,420325,648879"
+                    }
+                },
+                {
                     "source": "/home/tms/.gradle/caches/8.10.2/transforms/33fcba78ac478a44712a0fe160503f2d/transformed/savedstate-1.2.1/res/values/values.xml",
                     "from": {
                         "startLines": "2",
@@ -607,25 +607,6 @@
                     }
                 },
                 {
-                    "source": "/home/tms/androidstudio projects/medtools/app/src/main/res/values/strings.xml",
-                    "from": {
-                        "startLines": "10,11,1,52,53,6,50,13,2,3,8,4,9,7,51",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "481,534,16,3929,3983,267,3790,587,59,113,397,164,435,331,3860",
-                        "endLines": "10,11,1,52,53,6,50,48,2,3,8,4,9,7,51",
-                        "endColumns": "52,51,42,53,56,63,69,13,53,50,37,47,45,65,68",
-                        "endOffsets": "529,581,54,3978,4035,326,3855,3727,108,159,430,207,476,392,3924"
-                    },
-                    "to": {
-                        "startLines": "1800,1801,2032,2057,2058,2066,2067,2073,2185,2208,2280,2281,2290,2299,2307",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "119225,119278,133366,135937,135991,136676,136740,137288,146717,149903,160659,160697,161671,162382,163086",
-                        "endLines": "1800,1801,2032,2057,2058,2066,2067,2108,2185,2208,2280,2281,2290,2299,2307",
-                        "endColumns": "52,51,42,53,56,63,69,13,53,50,37,47,45,65,68",
-                        "endOffsets": "119273,119325,133404,135986,136043,136735,136805,140428,146766,149949,160692,160740,161712,162443,163150"
-                    }
-                },
-                {
                     "source": "/home/tms/.gradle/caches/8.10.2/transforms/81b5ea7a3ce26678bd120be16d444327/transformed/databinding-runtime-8.7.1/res/values/values.xml",
                     "from": {
                         "startLines": "2",
@@ -640,6 +621,25 @@
                         "startOffsets": "122182",
                         "endColumns": "40",
                         "endOffsets": "122218"
+                    }
+                },
+                {
+                    "source": "/home/tms/AndroidStudioProjects/medtools/app/src/main/res/values/attrs.xml",
+                    "from": {
+                        "startLines": "1",
+                        "startColumns": "4",
+                        "startOffsets": "16",
+                        "endLines": "4",
+                        "endColumns": "24",
+                        "endOffsets": "207"
+                    },
+                    "to": {
+                        "startLines": "11625",
+                        "startColumns": "4",
+                        "startOffsets": "732207",
+                        "endLines": "11628",
+                        "endColumns": "24",
+                        "endOffsets": "732396"
                     }
                 }
             ]

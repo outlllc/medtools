@@ -72,10 +72,10 @@ com.duckgo.medtools.app-sqlite-2.4.0-70 /home/tms/.gradle/caches/8.10.2/transfor
 com.duckgo.medtools.app-room-runtime-2.6.1-71 /home/tms/.gradle/caches/8.10.2/transforms/f34613ab33d8764e45dc273c9d27f8a6/transformed/room-runtime-2.6.1/res
 com.duckgo.medtools.app-material3-release-72 /home/tms/.gradle/caches/8.10.2/transforms/f71009ec4b7c569cb64483d042ef75f6/transformed/material3-release/res
 com.duckgo.medtools.app-activity-1.8.0-73 /home/tms/.gradle/caches/8.10.2/transforms/f95029911294e747d5eae5ff00f5071a/transformed/activity-1.8.0/res
-com.duckgo.medtools.app-pngs-74 /home/tms/androidstudio projects/medtools/app/build/generated/res/pngs/debug
-com.duckgo.medtools.app-resValues-75 /home/tms/androidstudio projects/medtools/app/build/generated/res/resValues/debug
-com.duckgo.medtools.app-packageDebugResources-76 /home/tms/androidstudio projects/medtools/app/build/intermediates/incremental/debug/packageDebugResources/merged.dir
-com.duckgo.medtools.app-packageDebugResources-77 /home/tms/androidstudio projects/medtools/app/build/intermediates/incremental/debug/packageDebugResources/stripped.dir
-com.duckgo.medtools.app-debug-78 /home/tms/androidstudio projects/medtools/app/build/intermediates/merged_res/debug/mergeDebugResources
-com.duckgo.medtools.app-debug-79 /home/tms/androidstudio projects/medtools/app/src/debug/res
-com.duckgo.medtools.app-main-80 /home/tms/androidstudio projects/medtools/app/src/main/res
+com.duckgo.medtools.app-pngs-74 /home/tms/AndroidStudioProjects/medtools/app/build/generated/res/pngs/debug
+com.duckgo.medtools.app-resValues-75 /home/tms/AndroidStudioProjects/medtools/app/build/generated/res/resValues/debug
+com.duckgo.medtools.app-packageDebugResources-76 /home/tms/AndroidStudioProjects/medtools/app/build/intermediates/incremental/debug/packageDebugResources/merged.dir
+com.duckgo.medtools.app-packageDebugResources-77 /home/tms/AndroidStudioProjects/medtools/app/build/intermediates/incremental/debug/packageDebugResources/stripped.dir
+com.duckgo.medtools.app-debug-78 /home/tms/AndroidStudioProjects/medtools/app/build/intermediates/merged_res/debug/mergeDebugResources
+com.duckgo.medtools.app-debug-79 /home/tms/AndroidStudioProjects/medtools/app/src/debug/res
+com.duckgo.medtools.app-main-80 /home/tms/AndroidStudioProjects/medtools/app/src/main/res

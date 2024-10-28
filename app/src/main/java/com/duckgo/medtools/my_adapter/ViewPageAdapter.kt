@@ -5,7 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.viewpager.widget.PagerAdapter
 
-class ViewPageAdapter( var mContext: Context, var dataSet: MutableList<String>): PagerAdapter() {
+class ViewPageAdapter( var mContext: Context, var dataSet: MutableList<View>): PagerAdapter() {
     override fun getCount(): Int {
         return dataSet.size
     }
@@ -15,13 +15,16 @@ class ViewPageAdapter( var mContext: Context, var dataSet: MutableList<String>):
     }
 
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
-        container.addView(View(mContext))
-        return super.instantiateItem(container, position)
+        var view = dataSet[position]
+        container.addView(view)
+        return view
     }
 
     override fun destroyItem(container: ViewGroup, position: Int, `object`: Any) {
-        super.destroyItem(container, position, `object`)
-//        container.removeView(view)
+        container.removeView(dataSet[position])
     }
     //addonpagechangelistener
+    override fun getPageTitle(position: Int): CharSequence? {
+        return super.getPageTitle(position)
+    }
 }

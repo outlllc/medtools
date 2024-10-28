@@ -334,6 +334,7 @@ id tv_title
 id tv_total_score
 id tv_universal
 id viewPager
+id viewPager2
 id weightC_button
 id yuxi
 layout aa
