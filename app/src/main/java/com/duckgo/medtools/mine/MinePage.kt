@@ -55,10 +55,9 @@ class MinePage : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.tabLayout.addTab(binding.tabLayout.newTab().setText("Tab 1"))
-        binding.tabLayout.setupWithViewPager(binding.viewPager)
+        binding.tabLayout1.addTab(binding.tabLayout1.newTab().setText("Tab 1"))
 
-        binding.tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
+        binding.tabLayout1.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab?) {
                 // Do something when tab is selected
             }
@@ -72,16 +71,18 @@ class MinePage : Fragment() {
             }
         })
         var dataSet =mutableListOf<String>("1", "2", "3")
-        var dataSet2 =mutableListOf<View>(LayoutInflater.from(requireContext()).inflate(R.layout.aa,null,false), LayoutInflater.from(requireContext()).inflate(R.layout.activity_amount_of_hydration,null,false), LayoutInflater.from(requireContext()).inflate(R.layout.activity_bishop,null,false), LayoutInflater.from(requireContext()).inflate(R.layout.activity_classification_of_hypertension_during_pregnancy,null,false))
+        var dataSet2 =mutableListOf<View>(LayoutInflater.from(requireContext()).inflate(R.layout.activity_drug_to_fetus,null,false), LayoutInflater.from(requireContext()).inflate(R.layout.activity_amount_of_hydration,null,false), LayoutInflater.from(requireContext()).inflate(R.layout.activity_bishop,null,false), LayoutInflater.from(requireContext()).inflate(R.layout.activity_classification_of_hypertension_during_pregnancy,null,false))
         binding.viewPager.adapter = ViewPageAdapter(requireContext(), dataSet2)
-        binding.viewPager.addOnPageChangeListener( TabLayout.TabLayoutOnPageChangeListener(binding.tabLayout))
+        binding.viewPager.addOnPageChangeListener( TabLayout.TabLayoutOnPageChangeListener(binding.tabLayout1))
         binding.viewPager.addOnPageChangeListener(PageChangeListener())
+        binding.tabLayout1.setupWithViewPager(binding.viewPager)
+
 
         binding.viewPager2.registerOnPageChangeCallback(PageChangeCallBack())
 //        binding.viewPager2.setPageTransformer()   设置动画效果，同样需要实现相应的class
         binding.viewPager2.adapter = Pager2Adapter(requireContext(), dataSet)
         TabLayoutMediator(binding.tabLayout, binding.viewPager2) { tab, position ->
-            tab.text = "Tab $position"
+            tab.text = "S标签 ${position + 1}"
         }.attach()
 
         //pager2+fragment

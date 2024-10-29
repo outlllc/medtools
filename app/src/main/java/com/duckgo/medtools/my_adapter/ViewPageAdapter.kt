@@ -25,6 +25,7 @@ class ViewPageAdapter( var mContext: Context, var dataSet: MutableList<View>): P
     }
     //addonpagechangelistener
     override fun getPageTitle(position: Int): CharSequence? {
-        return super.getPageTitle(position)
+//        return super.getPageTitle(position)
+        return "标签${position + 1}"
     }
 }

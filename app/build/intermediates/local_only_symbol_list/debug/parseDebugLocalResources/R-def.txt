@@ -301,6 +301,7 @@ id rv_normal_lochia
 id rv_normal_lochia2
 id selecToggleGroup
 id tabLayout
+id tabLayout1
 id textView
 id textView10
 id textView2

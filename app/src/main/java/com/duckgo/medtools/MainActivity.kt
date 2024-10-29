@@ -42,10 +42,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun changePage() {
-        tg_first_page.addOnButtonCheckedListener { group: MaterialButtonToggleGroup?, checkedId, isChecked ->
-            val childCount = group?.childCount
-//            var selectIndex = 0
-            for (index in 0 until childCount!!) {
+        tg_first_page.addOnButtonCheckedListener { group: MaterialButtonToggleGroup, checkedId, isChecked ->
+            val childCount = group.childCount
+            var selectIndex = 0
+            for (index in 0 until childCount) {
                 val child = group.getChildAt(index) as MaterialButton
                 if (child.id == checkedId) {
                     selectIndex = index
@@ -56,48 +56,50 @@ class MainActivity : AppCompatActivity() {
                     child.setBackgroundColor(getColor(R.color.lightcyan))
                 }
             }
-            var tem_ShowFragment: Fragment = showFragment!!
-            when (selectIndex) {
+//            var tem_ShowFragment: Fragment = showFragment!!
+            val fragment = when (selectIndex) {
                 0 -> {
                     if (dateCaculatorFragment == null) {
-                        tem_ShowFragment = DateCalculator()
+                        DateCalculator()
                     } else {
-                        tem_ShowFragment = dateCaculatorFragment as DateCalculator
+                        dateCaculatorFragment as DateCalculator
                     }
                 }
 
                 1 -> {
                     if (babyWeightFragment == null) {
-                        tem_ShowFragment = BabyWeight()
+                        BabyWeight()
                     } else {
-                        tem_ShowFragment = babyWeightFragment as BabyWeight
+                        babyWeightFragment as BabyWeight
                     }
                 }
                 2 -> {
                     if (menuFragment == null) {
-                        tem_ShowFragment = MenuFragment()
+                        MenuFragment()
                     } else {
-                        tem_ShowFragment = menuFragment as MenuFragment
+                        menuFragment as MenuFragment
                     }
                 }
                 3 -> {
                     if (minePage == null) {
-                        tem_ShowFragment = MinePage()
+                        MinePage()
                     } else {
-                        tem_ShowFragment = minePage as MinePage
+                        minePage as MinePage
                     }
                 }
                 else ->
                     Toast.makeText(this, "error", Toast.LENGTH_SHORT).show()
-            }
+            }?:return@addOnButtonCheckedListener
 //            if (tem_ShowFragment != showFragment) {
                 supportFragmentManager.beginTransaction()
-                    .replace(R.id.fragment_, tem_ShowFragment)
+                    .replace(R.id.fragment_, fragment as Fragment)
                     .addToBackStack(null)
-                    .commit()
-                showFragment = tem_ShowFragment
+                    .commitAllowingStateLoss()
+
+//                showFragment = tem_ShowFragment
 //            }
         }
+//        tg_first_page.check(R.id.calculation_button)
     }
 
     fun Activity.saveIntoFile() {
