@@ -3295,6 +3295,7 @@ id cache_measures
 id calculation_button
 id callMeasure
 id cancel_button
+id cardView
 id carryVelocity
 id center
 id centerCrop
@@ -3838,6 +3839,8 @@ id stretch
 id submenuarrow
 id submit_area
 id supportScrollUp
+id tabLayout
+id tabLayout1
 id tabMode
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
@@ -3923,6 +3926,8 @@ id unlabeled
 id up
 id useLogo
 id vertical_only
+id viewPager
+id viewPager2
 id view_offset_helper
 id view_transition
 id view_tree_lifecycle_owner
@@ -4129,6 +4134,7 @@ layout fragment_hyperthyroidism_medication_during_pregnancy_fm
 layout fragment_indications_for_pregnancy_termination_of_gestational_hypertension_fm
 layout fragment_manning_score_fm
 layout fragment_medical_calculator
+layout fragment_mine_page
 layout fragment_normal_lochia_fm
 layout fragment_postpartum__hemorrhage__estimation__by__shock__index
 layout fragment_precocious_puberty_auxiliary_examination_fm

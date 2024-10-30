@@ -24,6 +24,7 @@ import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.DrugToFetus_fm
 import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Edinburgh_Postnatal_Depression_Scale_fm
 import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Fetal_Maturity_fm
 import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.GDM_Grading_And_Staging_fm
+import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Gynecology.POPQStage
 import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Hyperthyroidism_Medication_During_Pregnancy_fm
 import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Indications_For_Pregnancy_Termination_Of_Gestational_Hypertension_fm
 import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Manning_Score_fm
@@ -62,7 +63,7 @@ class MedCal_FirstPage_fagment: Fragment(), Med_Cal_Fragment_Adaptor.onItemClick
             "重度子痫前期诊断", "妊娠期高血糖诊断标准（GDM）", "妊娠期糖尿病分级分期", "妊娠高血压终止妊娠的指征", "妊娠期甲状腺功能实验室检查",
             "胎儿生物物理监测Manning评分","正常恶露性状", "孕期用药对胎儿的影响","胎儿成熟度监测", "Rh 和 ABO 溶血病的比较",
             "妊娠期甲亢程度和用药剂量间的关系", "EPDS（爱丁堡产后抑郁量表）","不同妊娠周数的宫底高度及子宫长度", "产褥期抑郁症诊断标准", "人类精液变量参考值",
-            "tanner分期（女性性发育）", "性早熟疾病的辅助检查结果", "常用单位换算")
+            "tanner分期（女性性发育）", "性早熟疾病的辅助检查结果", "常用单位换算", "盆腔器官脱垂分期（POP-Q分期法）")
         binding.rvMedCalFirstpage.layoutManager= LinearLayoutManager(context , LinearLayoutManager.VERTICAL, false)
         binding.rvMedCalFirstpage.adapter = Med_Cal_Fragment_Adaptor(activity as Context, this, dataset)
         mfragmentManager = requireActivity().supportFragmentManager
@@ -231,6 +232,13 @@ class MedCal_FirstPage_fagment: Fragment(), Med_Cal_Fragment_Adaptor.onItemClick
             }
             27 -> {
                 val fragment = Unit_Conversion_fm()
+//                inflateFragment(fragment)
+//                add_hide_fragment(fragment)
+                add_hide_fragment(mfragmentManager, fragment)
+
+            }
+            28 -> {
+                val fragment = POPQStage()
 //                inflateFragment(fragment)
 //                add_hide_fragment(fragment)
                 add_hide_fragment(mfragmentManager, fragment)

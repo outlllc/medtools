@@ -53,11 +53,16 @@ class Creatinine_Clearance_Cockcroft_Gault_fm : Fragment() {
         val weight = binding.etBodyWeight.text.toString().toDoubleOrNull()
         val cr = binding.etCr.text.toString().toDoubleOrNull()
         val gender = if (binding.rbMan.isChecked) "man" else "woman"
-        var result = if( (gender == "man") and (age != null) and (weight != null) and (cr != null)){
+        val unit = if (binding.rbCommon.isChecked) "common" else "universal"
+        var result = if( (gender == "man") and (unit == "universal") and (age != null) and (weight != null) and (cr != null)){
             (140 - age!!) * weight!! * 1.23 / cr!!
-        }else if ((gender == "woman") and (age != null) and (weight != null) and (cr != null)){
+        }else if ((gender == "man") and (unit == "common") and (age != null) and (weight != null) and (cr != null)){
+            (140-age!!)*weight!!*1.23/(cr!!*88.402)
+        } else if ((gender == "woman") and (unit == "universal") and (age != null) and (weight != null) and (cr != null)){
             0.85*(140 - age!!) * weight!! * 1.23 / cr!!
-        } else{
+        } else if ((gender == "woman") and (unit == "common") and (age != null) and (weight != null) and (cr != null)){
+            0.85*(140 - age!!) * weight!! * 1.23 / (cr!! * 88.402)
+        }else{
             0.0
         }
         return result

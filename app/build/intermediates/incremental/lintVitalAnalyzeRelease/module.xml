@@ -1,6 +1,6 @@
 <lint-module
     format="1"
-    dir="/home/tms/androidstudio projects/medtools/app"
+    dir="/home/tms/AndroidStudioProjects/medtools/app"
     name=":app"
     type="APP"
     maven="medtools:app:unspecified"

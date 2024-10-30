@@ -97,6 +97,7 @@ id buttonSplitDate
 id buttonSubtract
 id buttonweek
 id calculation_button
+id cardView
 id datePicker
 id dummy_button
 id et_HR
@@ -299,6 +300,8 @@ id rv_medical_calculator
 id rv_normal_lochia
 id rv_normal_lochia2
 id selecToggleGroup
+id tabLayout
+id tabLayout1
 id textView
 id textView10
 id textView2
@@ -331,6 +334,8 @@ id tv_si_result1
 id tv_title
 id tv_total_score
 id tv_universal
+id viewPager
+id viewPager2
 id weightC_button
 id yuxi
 layout aa
@@ -388,6 +393,7 @@ layout fragment_hyperthyroidism_medication_during_pregnancy_fm
 layout fragment_indications_for_pregnancy_termination_of_gestational_hypertension_fm
 layout fragment_manning_score_fm
 layout fragment_medical_calculator
+layout fragment_mine_page
 layout fragment_normal_lochia_fm
 layout fragment_postpartum__hemorrhage__estimation__by__shock__index
 layout fragment_precocious_puberty_auxiliary_examination_fm

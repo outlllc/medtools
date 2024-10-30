@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.duckgo.medtools.databean.MedCalDataBean
 import com.duckgo.medtools.databinding.FragmentBishopFmBinding
 import com.duckgo.medtools.my_adapter.MedCalListAdapter
 
