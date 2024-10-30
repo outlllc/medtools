@@ -54,6 +54,7 @@
             android:id="@+id/et_sodium"
             android:layout_width="80dp"
             android:background="@drawable/edittext_border_frame"
+            android:inputType="numberDecimal"
             android:layout_height="wrap_content" />
     </LinearLayout>
     <LinearLayout
@@ -69,6 +70,7 @@
             android:id="@+id/et_body_weight"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
             android:background="@drawable/edittext_border_frame" />
     </LinearLayout>
     <LinearLayout

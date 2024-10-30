@@ -37,6 +37,7 @@
         android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:background="@drawable/edittext_border_frame"
+        android:inputType="numberDecimal"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toTopOf="@+id/guideline2" />
 
@@ -53,6 +54,7 @@
         android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:background="@drawable/edittext_border_frame"
+        android:inputType="numberDecimal"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toTopOf="@+id/guideline5" />
 

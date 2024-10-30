@@ -30,7 +30,8 @@
         <EditText
             android:id="@+id/et_hba1c"
             android:layout_width="80dp"
-            android:background="@drawable/edit_border"
+            android:inputType="numberDecimal"
+            android:background="@drawable/edittext_border_frame"
             android:layout_height="wrap_content" />
     </LinearLayout>
     <LinearLayout

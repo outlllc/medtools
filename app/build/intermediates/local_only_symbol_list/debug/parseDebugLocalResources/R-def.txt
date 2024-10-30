@@ -115,6 +115,8 @@ id calculation_button
 id cardView
 id datePicker
 id dummy_button
+id et1
+id et2
 id et_HR
 id et_SBP
 id et_SI
@@ -411,7 +413,9 @@ id selecToggleGroup
 id tabLayout
 id tabLayout1
 id textView
+id textView1
 id textView10
+id textView14
 id textView2
 id textView3
 id textView4
@@ -533,6 +537,7 @@ layout fragment_diagnostic_criteria_for_gdm_fm
 layout fragment_drug_to_fetus_fm
 layout fragment_edinburgh_postnatal_depression_scale_fm
 layout fragment_emergency__contraceptive__pill__dosage_fm
+layout fragment_fetal_developmental_index_fm
 layout fragment_fetal_maturity_fm
 layout fragment_fullscreen
 layout fragment_gdm_grading_and_staging
@@ -552,6 +557,7 @@ layout fragment_precocious_puberty_auxiliary_examination_fm
 layout fragment_rh_and_abo_hemolysis_comparison_fm
 layout fragment_semen_reference_values_fm
 layout fragment_severe_preeclampsia_diagnosis_fm
+layout fragment_simple_gestational_age_assessment_scale_fm
 layout fragment_sodium_deficit_in_hyponatremia_fm
 layout fragment_staging_of_endometriosis_r_a_f_s_staging_fm
 layout fragment_tanner_stage_fm
@@ -559,7 +565,10 @@ layout fragment_thyroid_function_of_pregnancy_fm
 layout fragment_two_recycleview_model_fm
 layout fragment_unit__conversion
 layout fragment_uterine_height_gestational_age_fm
+layout fragment_vulvar_squamous_intraepithelial_neoplasia__classification_characteristics_fm
+layout fragment_vvc__scoring__criteria_fm
 layout grid_layout
+layout insler_cervical_estrogen_effect_scale_fm
 layout layout_addvalue
 layout list_modle_1
 layout list_modle_1_databinding
@@ -584,8 +593,11 @@ layout list_modle_7_databinding
 layout materialbuttontangoo
 layout medcal_firstpage_fagment
 layout medcaltool_menu_page_fragment
+layout nugent_scoring_criteria_fm
+layout reid_colposcopy_scoring_criteria_fm
 layout test
 layout toggle_button
+layout trophoblastic_tumors_figo_modified_prognostic_scoring_system_fm
 layout view_region
 menu med_cal_menu
 mipmap calcu_icon

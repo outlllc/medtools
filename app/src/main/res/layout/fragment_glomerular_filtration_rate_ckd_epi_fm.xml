@@ -74,6 +74,7 @@
             android:id="@+id/et_age"
             android:layout_width="80dp"
             android:background="@drawable/edittext_border_frame"
+            android:inputType="numberDecimal"
             android:layout_height="wrap_content" />
     </LinearLayout>
     <LinearLayout
@@ -93,6 +94,7 @@
         <EditText
             android:layout_width="80dp"
             android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
             android:background="@drawable/edittext_border_frame"
             android:id="@+id/et_cr"/>
     </LinearLayout>

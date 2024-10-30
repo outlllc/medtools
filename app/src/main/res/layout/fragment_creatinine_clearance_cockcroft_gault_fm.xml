@@ -73,6 +73,7 @@
         <EditText
             android:id="@+id/et_age"
             android:layout_width="80dp"
+            android:inputType="numberDecimal"
             android:background="@drawable/edittext_border_frame"
             android:layout_height="wrap_content" />
     </LinearLayout>
@@ -87,6 +88,7 @@
         <EditText
             android:layout_width="80dp"
             android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
             android:background="@drawable/edittext_border_frame"
             android:id="@+id/et_body_weight"/>
     </LinearLayout>
@@ -103,6 +105,7 @@
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:background="@drawable/edittext_border_frame"
+            android:inputType="numberDecimal"
             android:id="@+id/et_cr"/>
     </LinearLayout>
     <LinearLayout
