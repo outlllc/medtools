@@ -11,8 +11,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.duckgo.medtools.R
 import com.duckgo.medtools.medicaltools.A_Menu_Select.adapter.MenuSelectAdapter
 import com.duckgo.medtools.medicaltools.comprehensive.BodySurfaceArea_fm
+import com.duckgo.medtools.medicaltools.comprehensive.Body_Index_fm
 import com.duckgo.medtools.medicaltools.comprehensive.Postpartum_Hemorrhage_Estimation_By_Shock_Index_fm
 import com.duckgo.medtools.medicaltools.comprehensive.Unit_Conversion_fm
+import com.duckgo.medtools.medicaltools.comprehensive.standard_weight_fm
 
 class Common_Use: Fragment(), MenuSelectAdapter.OnItemClickListener {
 
@@ -65,10 +67,13 @@ class Common_Use: Fragment(), MenuSelectAdapter.OnItemClickListener {
             }
             1 -> {
                 //体重指数
-
+                val fragment = Body_Index_fm()
+                inflateFragment(fragment)
             }
             2 -> {
                 //标准体重
+                val fragment = standard_weight_fm()
+                inflateFragment(fragment)
             }
             3 -> {
                 //常用单位换算

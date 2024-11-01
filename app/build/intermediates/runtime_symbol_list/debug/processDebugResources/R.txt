@@ -3500,6 +3500,7 @@ int id ltr 0x7f090142
 int id m3_side_sheet 0x7f090143
 int id main 0x7f090144
 int id main1 0x7f090145
+int id man 0x7f0903b6
 int id marquee 0x7f090146
 int id masked 0x7f090147
 int id match_constraint 0x7f090148
@@ -4090,6 +4091,7 @@ int id west 0x7f09030f
 int id withText 0x7f090310
 int id with_icon 0x7f090311
 int id withinBounds 0x7f090312
+int id woman 0x7f0903b7
 int id wrap 0x7f090313
 int id wrap_content 0x7f090314
 int id wrap_content_constrained 0x7f090315
@@ -4266,6 +4268,7 @@ int layout first_page_m_c 0x7f0c004e
 int layout fragment_amount_of_hydration_fm 0x7f0c004f
 int layout fragment_baby_weight 0x7f0c0050
 int layout fragment_bishop_fm 0x7f0c0051
+int layout fragment_body__index_fm 0x7f0c00da
 int layout fragment_cervical_cancer_stage_figo2014_fm 0x7f0c00cb
 int layout fragment_cervical_cancer_t_n_m_stage_fm 0x7f0c00c9
 int layout fragment_chronic_kidney_disease_staging_fm 0x7f0c0052
@@ -4300,6 +4303,7 @@ int layout fragment_severe_preeclampsia_diagnosis_fm 0x7f0c0069
 int layout fragment_simple_gestational_age_assessment_scale_fm 0x7f0c00d9
 int layout fragment_sodium_deficit_in_hyponatremia_fm 0x7f0c006a
 int layout fragment_staging_of_endometriosis_r_a_f_s_staging_fm 0x7f0c00d1
+int layout fragment_standard_weight_fm 0x7f0c00db
 int layout fragment_tanner_stage_fm 0x7f0c006b
 int layout fragment_thyroid_function_of_pregnancy_fm 0x7f0c006c
 int layout fragment_two_recycleview_model_fm 0x7f0c00ce

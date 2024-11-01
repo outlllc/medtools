@@ -156,6 +156,7 @@ id list_view
 id localDate
 id main
 id main1
+id man
 id med_cal_menu
 id med_cal_menu1
 id med_cal_menu10
@@ -487,6 +488,7 @@ id v2
 id viewPager
 id viewPager2
 id weightC_button
+id woman
 id yuxi
 layout aa
 layout activity_amount_of_hydration
@@ -526,6 +528,7 @@ layout first_page_m_c
 layout fragment_amount_of_hydration_fm
 layout fragment_baby_weight
 layout fragment_bishop_fm
+layout fragment_body__index_fm
 layout fragment_cervical_cancer_stage_figo2014_fm
 layout fragment_cervical_cancer_t_n_m_stage_fm
 layout fragment_chronic_kidney_disease_staging_fm
@@ -560,6 +563,7 @@ layout fragment_severe_preeclampsia_diagnosis_fm
 layout fragment_simple_gestational_age_assessment_scale_fm
 layout fragment_sodium_deficit_in_hyponatremia_fm
 layout fragment_staging_of_endometriosis_r_a_f_s_staging_fm
+layout fragment_standard_weight_fm
 layout fragment_tanner_stage_fm
 layout fragment_thyroid_function_of_pregnancy_fm
 layout fragment_two_recycleview_model_fm
