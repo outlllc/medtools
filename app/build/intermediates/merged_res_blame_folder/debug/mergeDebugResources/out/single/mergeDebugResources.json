@@ -292,10 +292,6 @@
         "source": "/home/tms/.gradle/daemon/8.10.2/com.duckgo.medtools.app-main-80:/layout/first_page_m_c.xml"
     },
     {
-        "merged": "com.duckgo.medtools.app-debug-78:/layout_fragment_standard_weight_fm.xml.flat",
-        "source": "com.duckgo.medtools.app-main-80:/layout/fragment_standard_weight_fm.xml"
-    },
-    {
         "merged": "/home/tms/.gradle/daemon/8.10.2/com.duckgo.medtools.app-debug-78:/layout_layout_addvalue.xml.flat",
         "source": "/home/tms/.gradle/daemon/8.10.2/com.duckgo.medtools.app-main-80:/layout/layout_addvalue.xml"
     },
@@ -476,6 +472,10 @@
         "source": "/home/tms/.gradle/daemon/8.10.2/com.duckgo.medtools.app-main-80:/layout/fragment_popqstage.xml"
     },
     {
+        "merged": "com.duckgo.medtools.app-debug-78:/layout_fragment_date_calculator_3.xml.flat",
+        "source": "com.duckgo.medtools.app-main-80:/layout/fragment_date_calculator_3.xml"
+    },
+    {
         "merged": "/home/tms/.gradle/daemon/8.10.2/com.duckgo.medtools.app-debug-78:/layout_fragment_simple_gestational_age_assessment_scale_fm.xml.flat",
         "source": "/home/tms/.gradle/daemon/8.10.2/com.duckgo.medtools.app-main-80:/layout/fragment_simple_gestational_age_assessment_scale_fm.xml"
     },
@@ -614,6 +614,10 @@
     {
         "merged": "/home/tms/.gradle/daemon/8.10.2/com.duckgo.medtools.app-debug-78:/layout_fragment_cervical_cancer_t_n_m_stage_fm.xml.flat",
         "source": "/home/tms/.gradle/daemon/8.10.2/com.duckgo.medtools.app-main-80:/layout/fragment_cervical_cancer_t_n_m_stage_fm.xml"
+    },
+    {
+        "merged": "/home/tms/.gradle/daemon/8.10.2/com.duckgo.medtools.app-debug-78:/layout_fragment_date_calculator_3.xml.flat",
+        "source": "/home/tms/.gradle/daemon/8.10.2/com.duckgo.medtools.app-main-80:/layout/fragment_date_calculator_3.xml"
     },
     {
         "merged": "/home/tms/.gradle/daemon/8.10.2/com.duckgo.medtools.app-debug-78:/layout_fragment_mine_page.xml.flat",

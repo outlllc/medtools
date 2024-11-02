@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -32,30 +31,47 @@
                 android:id="@+id/main1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#FFFFFF"
+                android:background="@color/white"
                 android:orientation="vertical">
 
-                <EditText
-                    android:id="@+id/answerEditText"
+                <TextView
+                    android:id="@+id/tv_input"
                     android:layout_width="match_parent"
-                    android:layout_height="200dp"
+                    android:layout_height="130dp"
                     android:layout_marginEnd="10dp"
-                    android:background="@null"
-                    android:ems="10"
-                    android:focusable="false"
-                    android:gravity="right|center"
+                    android:paddingEnd="10dp"
+                    android:gravity="end|center"
                     android:text="0"
-                    android:textSize="40sp" />
+                    android:textSize="30sp" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/gray153"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:gravity="end"
+                    android:paddingEnd="10dp"
+                    android:id="@+id/tv_result"
+                    android:textSize="30sp"/>
             </LinearLayout>
         </FrameLayout>
 
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/green_kuan"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/frameLayout"
+            android:layout_marginBottom="4dp"/>
         <com.google.android.material.button.MaterialButtonToggleGroup
             android:id="@+id/selecToggleGroup"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_marginStart="3dp"
             android:layout_marginEnd="3dp"
+            android:layout_marginTop="3dp"
             android:background="@color/green_kuan"
             app:checkedButton="@+id/buttonweek"
             app:layout_constraintEnd_toEndOf="parent"
@@ -71,9 +87,9 @@
                 android:insetTop="0dp"
                 android:insetRight="4dp"
                 android:insetBottom="0dp"
-                android:text=""
+                android:text="年"
                 android:textColor="#FF000000"
-                android:textSize="10sp"
+                android:textSize="14sp"
                 app:backgroundTint="@color/calnonechecked"
                 app:cornerRadius="2dp"
                 app:strokeColor="#60BFCC"
@@ -88,9 +104,9 @@
                 android:insetTop="0dp"
                 android:insetRight="4dp"
                 android:insetBottom="0dp"
-                android:text="MON"
+                android:text="月"
                 android:textColor="#FF000000"
-                android:textSize="10sp"
+                android:textSize="14sp"
                 app:backgroundTint="@color/calnonechecked"
                 app:cornerRadius="20dp"
                 app:strokeColor="#60BFCC" />
@@ -106,9 +122,9 @@
                 android:insetTop="0dp"
                 android:insetRight="4dp"
                 android:insetBottom="0dp"
-                android:text="DAY"
+                android:text="日"
                 android:textColor="#FF000000"
-                android:textSize="10sp"
+                android:textSize="14sp"
                 app:backgroundTint="@color/calnonechecked"
                 app:cornerRadius="20dp"
                 app:strokeColor="#60BFCC"
@@ -124,9 +140,9 @@
                 android:insetTop="0dp"
                 android:insetRight="4dp"
                 android:insetBottom="0dp"
-                android:text="WEEK"
+                android:text="周"
                 android:textColor="@color/black"
-                android:textSize="10sp"
+                android:textSize="14sp"
                 app:backgroundTint="#FF03A9F4"
                 app:cornerRadius="20dp"
                 app:strokeColor="#60BFCC"
@@ -142,9 +158,9 @@
                 android:layout_weight="1"
                 android:insetTop="0dp"
                 android:insetBottom="0dp"
-                android:text="MATH"
+                android:text="数学"
                 android:textColor="@color/black"
-                android:textSize="10sp"
+                android:textSize="14sp"
                 app:backgroundTint="@color/calnonechecked"
                 app:cornerRadius="2dp"
                 app:strokeColor="#60BFCC"
