@@ -9,321 +9,321 @@
 9        android:targetSdkVersion="34" />
 10
 11    <permission
-11-->[androidx.core:core:1.12.0] /home/tms/.gradle/caches/8.10.2/transforms/80a57d16dced287a18a434abccffb4dd/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
+11-->[androidx.core:core:1.12.0] /home/tts/.gradle/caches/8.10.2/transforms/80a57d16dced287a18a434abccffb4dd/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
 12        android:name="com.duckgo.medtools.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-12-->[androidx.core:core:1.12.0] /home/tms/.gradle/caches/8.10.2/transforms/80a57d16dced287a18a434abccffb4dd/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
+12-->[androidx.core:core:1.12.0] /home/tts/.gradle/caches/8.10.2/transforms/80a57d16dced287a18a434abccffb4dd/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
 13        android:protectionLevel="signature" />
-13-->[androidx.core:core:1.12.0] /home/tms/.gradle/caches/8.10.2/transforms/80a57d16dced287a18a434abccffb4dd/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
+13-->[androidx.core:core:1.12.0] /home/tts/.gradle/caches/8.10.2/transforms/80a57d16dced287a18a434abccffb4dd/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
 14
 15    <uses-permission android:name="com.duckgo.medtools.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-15-->[androidx.core:core:1.12.0] /home/tms/.gradle/caches/8.10.2/transforms/80a57d16dced287a18a434abccffb4dd/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
-15-->[androidx.core:core:1.12.0] /home/tms/.gradle/caches/8.10.2/transforms/80a57d16dced287a18a434abccffb4dd/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
+15-->[androidx.core:core:1.12.0] /home/tts/.gradle/caches/8.10.2/transforms/80a57d16dced287a18a434abccffb4dd/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
+15-->[androidx.core:core:1.12.0] /home/tts/.gradle/caches/8.10.2/transforms/80a57d16dced287a18a434abccffb4dd/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
 16
 17    <application
-17-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:5:5-107:19
+17-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:5:5-107:19
 18        android:allowBackup="true"
-18-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:6:9-35
+18-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:6:9-35
 19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-19-->[androidx.core:core:1.12.0] /home/tms/.gradle/caches/8.10.2/transforms/80a57d16dced287a18a434abccffb4dd/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
+19-->[androidx.core:core:1.12.0] /home/tts/.gradle/caches/8.10.2/transforms/80a57d16dced287a18a434abccffb4dd/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
 20        android:dataExtractionRules="@xml/data_extraction_rules"
-20-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:7:9-65
+20-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:7:9-65
 21        android:debuggable="true"
 22        android:extractNativeLibs="false"
 23        android:fullBackupContent="@xml/backup_rules"
-23-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:8:9-54
+23-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:8:9-54
 24        android:icon="@mipmap/calcu_icon"
-24-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:9:9-42
+24-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:9:9-42
 25        android:label="@string/app_name"
-25-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:10:9-41
+25-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:10:9-41
 26        android:roundIcon="@mipmap/calcu_icon"
-26-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:11:9-47
+26-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:11:9-47
 27        android:supportsRtl="true"
-27-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:12:9-35
+27-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:12:9-35
 28        android:testOnly="true"
 29        android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" >
-29-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:13:9-74
+29-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:13:9-74
 30        <activity
-30-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:15:9-17:40
+30-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:15:9-17:40
 31            android:name="com.duckgo.medtools.test.MenuTest"
-31-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:16:13-42
+31-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:16:13-42
 32            android:exported="false" />
-32-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:17:13-37
+32-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:17:13-37
 33        <activity
-33-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:18:9-20:40
+33-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:18:9-20:40
 34            android:name="com.duckgo.medtools.medicaltools.Other.Reproductive_Medicine.Precocious_Puberty_Auxiliary_Examination"
-34-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:19:13-110
+34-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:19:13-110
 35            android:exported="false" />
-35-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:20:13-37
+35-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:20:13-37
 36        <activity
-36-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:21:9-23:40
+36-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:21:9-23:40
 37            android:name="com.duckgo.medtools.medicaltools.Other.Reproductive_Medicine.Tanner_Stage"
-37-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:22:13-82
+37-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:22:13-82
 38            android:exported="false" />
-38-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:23:13-37
+38-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:23:13-37
 39        <activity
-39-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:24:9-26:40
+39-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:24:9-26:40
 40            android:name="com.duckgo.medtools.medicaltools.Other.Reproductive_Medicine.Semen_reference_values"
-40-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:25:13-92
+40-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:25:13-92
 41            android:exported="false" />
-41-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:26:13-37
+41-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:26:13-37
 42        <activity
-42-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:27:9-29:40
+42-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:27:9-29:40
 43            android:name="com.duckgo.medtools.medicaltools.Internal_Medicine.Nephrology.Chronic_Kidney_Disease_Staging"
-43-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:28:13-101
+43-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:28:13-101
 44            android:exported="false" />
-44-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:29:13-37
+44-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:29:13-37
 45        <activity
-45-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:30:9-32:40
+45-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:30:9-32:40
 46            android:name="com.duckgo.medtools.medicaltools.Internal_Medicine.Nephrology.Glomerular_Filtration_Rate_CKD_EPI"
-46-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:31:13-105
+46-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:31:13-105
 47            android:exported="false" />
-47-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:32:13-37
+47-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:32:13-37
 48        <activity
-48-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:33:9-35:40
+48-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:33:9-35:40
 49            android:name="com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Diagnosis_Postnatal_Depression"
-49-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:34:13-98
+49-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:34:13-98
 50            android:exported="false" />
-50-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:35:13-37
+50-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:35:13-37
 51        <activity
-51-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:36:9-38:40
+51-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:36:9-38:40
 52            android:name="com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Edinburgh_Postnatal_Depression_Scale"
-52-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:37:13-104
+52-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:37:13-104
 53            android:exported="false" />
-53-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:38:13-37
+53-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:38:13-37
 54        <activity
-54-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:39:9-41:40
+54-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:39:9-41:40
 55            android:name="com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Hyperthyroidism_Medication_During_Pregnancy"
-55-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:40:13-111
+55-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:40:13-111
 56            android:exported="false" />
-56-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:41:13-37
+56-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:41:13-37
 57        <activity
-57-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:42:9-44:40
+57-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:42:9-44:40
 58            android:name="com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.RH_And_ABO_Hemolysis_Comparison"
-58-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:43:13-99
+58-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:43:13-99
 59            android:exported="false" />
-59-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:44:13-37
+59-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:44:13-37
 60        <activity
-60-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:45:9-47:40
+60-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:45:9-47:40
 61            android:name="com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Thyroid_Function_Of_Pregnancy"
-61-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:46:13-97
+61-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:46:13-97
 62            android:exported="false" />
-62-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:47:13-37
+62-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:47:13-37
 63        <activity
-63-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:48:9-50:40
+63-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:48:9-50:40
 64            android:name="com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.GDM_Grading_And_Staging"
-64-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:49:13-91
+64-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:49:13-91
 65            android:exported="false" />
-65-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:50:13-37
+65-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:50:13-37
 66        <activity
-66-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:51:9-53:40
+66-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:51:9-53:40
 67            android:name="com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Manning_Score"
-67-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:52:13-81
+67-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:52:13-81
 68            android:exported="false" />
-68-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:53:13-37
+68-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:53:13-37
 69        <activity
-69-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:54:9-56:40
+69-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:54:9-56:40
 70            android:name="com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Indications_For_Pregnancy_Termination_Of_Gestational_Hypertension"
-70-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:55:13-133
+70-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:55:13-133
 71            android:exported="false" />
-71-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:56:13-37
+71-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:56:13-37
 72        <activity
-72-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:57:9-59:40
+72-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:57:9-59:40
 73            android:name="com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Severe_Preeclampsia_Diagnosis"
-73-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:58:13-97
+73-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:58:13-97
 74            android:exported="false" />
-74-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:59:13-37
+74-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:59:13-37
 75        <activity
-75-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:60:9-62:40
+75-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:60:9-62:40
 76            android:name="com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Diagnostic_Criteria_For_GDM"
-76-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:61:13-95
+76-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:61:13-95
 77            android:exported="false" />
-77-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:62:13-37
+77-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:62:13-37
 78        <activity
-78-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:63:9-65:40
+78-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:63:9-65:40
 79            android:name="com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Classification_Of_Hypertension_During_Pregnancy"
-79-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:64:13-115
+79-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:64:13-115
 80            android:exported="false" />
-80-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:65:13-37
+80-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:65:13-37
 81        <activity
-81-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:66:9-68:40
+81-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:66:9-68:40
 82            android:name="com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Fetal_Maturity"
-82-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:67:13-82
+82-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:67:13-82
 83            android:exported="false" />
-83-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:68:13-37
+83-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:68:13-37
 84        <activity
-84-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:69:9-71:40
+84-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:69:9-71:40
 85            android:name="com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Uterine_Height_Gestational_Age"
-85-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:70:13-98
+85-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:70:13-98
 86            android:exported="false" />
-86-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:71:13-37
+86-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:71:13-37
 87        <activity
-87-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:72:9-74:40
+87-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:72:9-74:40
 88            android:name="com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.DrugToFetus"
-88-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:73:13-79
+88-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:73:13-79
 89            android:exported="false" />
-89-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:74:13-37
+89-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:74:13-37
 90        <activity
-90-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:75:9-77:40
+90-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:75:9-77:40
 91            android:name="com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Normal_Lochia"
-91-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:76:13-81
+91-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:76:13-81
 92            android:exported="false" />
-92-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:77:13-37
+92-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:77:13-37
 93        <activity
-93-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:78:9-80:40
+93-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:78:9-80:40
 94            android:name="com.duckgo.medtools.medicaltools.Internal_Medicine.Endocrinology.HbA1cValuesBloodGlucose"
-94-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:79:13-97
+94-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:79:13-97
 95            android:exported="false" />
-95-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:80:13-37
+95-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:80:13-37
 96        <activity
-96-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:81:9-83:40
+96-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:81:9-83:40
 97            android:name="com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Bishop"
-97-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:82:13-74
+97-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:82:13-74
 98            android:exported="false" />
-98-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:83:13-37
+98-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:83:13-37
 99        <activity
-99-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:84:9-86:40
+99-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:84:9-86:40
 100            android:name="com.duckgo.medtools.medicaltools.Internal_Medicine.Nephrology.SodiumDeficitInHyponatremia"
-100-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:85:13-98
+100-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:85:13-98
 101            android:exported="false" />
-101-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:86:13-37
+101-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:86:13-37
 102        <activity
-102-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:87:9-89:40
+102-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:87:9-89:40
 103            android:name="com.duckgo.medtools.medicaltools.Internal_Medicine.Nephrology.AmountOfHydration"
-103-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:88:13-88
+103-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:88:13-88
 104            android:exported="false" />
-104-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:89:13-37
+104-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:89:13-37
 105        <activity
-105-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:90:9-94:81
+105-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:90:9-94:81
 106            android:name="com.duckgo.medtools.medicaltools.Internal_Medicine.Nephrology.Creatinine_Clearance_Cockcroft_Gault"
-106-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:91:13-107
+106-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:91:13-107
 107            android:exported="false"
-107-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:92:13-37
+107-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:92:13-37
 108            android:label="@string/title_activity_medi_cal_tool"
-108-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:93:13-65
+108-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:93:13-65
 109            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
-109-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:94:13-78
+109-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:94:13-78
 110        <activity
-110-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:95:9-103:20
+110-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:95:9-103:20
 111            android:name="com.duckgo.medtools.MainActivity"
-111-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:96:13-41
+111-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:96:13-41
 112            android:exported="true" >
-112-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:97:13-36
+112-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:97:13-36
 113            <intent-filter>
-113-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:98:13-102:29
+113-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:98:13-102:29
 114                <action android:name="android.intent.action.MAIN" />
-114-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:99:17-69
-114-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:99:25-66
+114-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:99:17-69
+114-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:99:25-66
 115
 116                <category android:name="android.intent.category.LAUNCHER" />
-116-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:101:17-77
-116-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:101:27-74
+116-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:101:17-77
+116-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:101:27-74
 117            </intent-filter>
 118        </activity>
 119        <activity
-119-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:104:9-106:39
+119-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:104:9-106:39
 120            android:name="com.duckgo.medtools.babyweight.AddValue"
-120-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:105:13-48
+120-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:105:13-48
 121            android:exported="true" />
-121-->/home/tms/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:106:13-36
+121-->/home/tts/AndroidStudioProjects/medtools/app/src/main/AndroidManifest.xml:106:13-36
 122        <activity
-122-->[androidx.compose.ui:ui-tooling-android:1.6.6] /home/tms/.gradle/caches/8.10.2/transforms/a4f3af26e640c7a50ef85594ff1d3d0d/transformed/ui-tooling-release/AndroidManifest.xml:23:9-25:39
+122-->[androidx.compose.ui:ui-tooling-android:1.6.6] /home/tts/.gradle/caches/8.10.2/transforms/a4f3af26e640c7a50ef85594ff1d3d0d/transformed/ui-tooling-release/AndroidManifest.xml:23:9-25:39
 123            android:name="androidx.compose.ui.tooling.PreviewActivity"
-123-->[androidx.compose.ui:ui-tooling-android:1.6.6] /home/tms/.gradle/caches/8.10.2/transforms/a4f3af26e640c7a50ef85594ff1d3d0d/transformed/ui-tooling-release/AndroidManifest.xml:24:13-71
+123-->[androidx.compose.ui:ui-tooling-android:1.6.6] /home/tts/.gradle/caches/8.10.2/transforms/a4f3af26e640c7a50ef85594ff1d3d0d/transformed/ui-tooling-release/AndroidManifest.xml:24:13-71
 124            android:exported="true" />
-124-->[androidx.compose.ui:ui-tooling-android:1.6.6] /home/tms/.gradle/caches/8.10.2/transforms/a4f3af26e640c7a50ef85594ff1d3d0d/transformed/ui-tooling-release/AndroidManifest.xml:25:13-36
+124-->[androidx.compose.ui:ui-tooling-android:1.6.6] /home/tts/.gradle/caches/8.10.2/transforms/a4f3af26e640c7a50ef85594ff1d3d0d/transformed/ui-tooling-release/AndroidManifest.xml:25:13-36
 125
 126        <uses-library
-126-->[androidx.window:window:1.0.0] /home/tms/.gradle/caches/8.10.2/transforms/1fe2b42da97528a9bae6b2da62014f0c/transformed/window-1.0.0/AndroidManifest.xml:25:9-27:40
+126-->[androidx.window:window:1.0.0] /home/tts/.gradle/caches/8.10.2/transforms/1fe2b42da97528a9bae6b2da62014f0c/transformed/window-1.0.0/AndroidManifest.xml:25:9-27:40
 127            android:name="androidx.window.extensions"
-127-->[androidx.window:window:1.0.0] /home/tms/.gradle/caches/8.10.2/transforms/1fe2b42da97528a9bae6b2da62014f0c/transformed/window-1.0.0/AndroidManifest.xml:26:13-54
+127-->[androidx.window:window:1.0.0] /home/tts/.gradle/caches/8.10.2/transforms/1fe2b42da97528a9bae6b2da62014f0c/transformed/window-1.0.0/AndroidManifest.xml:26:13-54
 128            android:required="false" />
-128-->[androidx.window:window:1.0.0] /home/tms/.gradle/caches/8.10.2/transforms/1fe2b42da97528a9bae6b2da62014f0c/transformed/window-1.0.0/AndroidManifest.xml:27:13-37
+128-->[androidx.window:window:1.0.0] /home/tts/.gradle/caches/8.10.2/transforms/1fe2b42da97528a9bae6b2da62014f0c/transformed/window-1.0.0/AndroidManifest.xml:27:13-37
 129        <uses-library
-129-->[androidx.window:window:1.0.0] /home/tms/.gradle/caches/8.10.2/transforms/1fe2b42da97528a9bae6b2da62014f0c/transformed/window-1.0.0/AndroidManifest.xml:28:9-30:40
+129-->[androidx.window:window:1.0.0] /home/tts/.gradle/caches/8.10.2/transforms/1fe2b42da97528a9bae6b2da62014f0c/transformed/window-1.0.0/AndroidManifest.xml:28:9-30:40
 130            android:name="androidx.window.sidecar"
-130-->[androidx.window:window:1.0.0] /home/tms/.gradle/caches/8.10.2/transforms/1fe2b42da97528a9bae6b2da62014f0c/transformed/window-1.0.0/AndroidManifest.xml:29:13-51
+130-->[androidx.window:window:1.0.0] /home/tts/.gradle/caches/8.10.2/transforms/1fe2b42da97528a9bae6b2da62014f0c/transformed/window-1.0.0/AndroidManifest.xml:29:13-51
 131            android:required="false" />
-131-->[androidx.window:window:1.0.0] /home/tms/.gradle/caches/8.10.2/transforms/1fe2b42da97528a9bae6b2da62014f0c/transformed/window-1.0.0/AndroidManifest.xml:30:13-37
+131-->[androidx.window:window:1.0.0] /home/tts/.gradle/caches/8.10.2/transforms/1fe2b42da97528a9bae6b2da62014f0c/transformed/window-1.0.0/AndroidManifest.xml:30:13-37
 132
 133        <provider
-133-->[androidx.emoji2:emoji2:1.3.0] /home/tms/.gradle/caches/8.10.2/transforms/704d170ecbee50f619a11e7285a22938/transformed/emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
+133-->[androidx.emoji2:emoji2:1.3.0] /home/tts/.gradle/caches/8.10.2/transforms/704d170ecbee50f619a11e7285a22938/transformed/emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
 134            android:name="androidx.startup.InitializationProvider"
-134-->[androidx.emoji2:emoji2:1.3.0] /home/tms/.gradle/caches/8.10.2/transforms/704d170ecbee50f619a11e7285a22938/transformed/emoji2-1.3.0/AndroidManifest.xml:25:13-67
+134-->[androidx.emoji2:emoji2:1.3.0] /home/tts/.gradle/caches/8.10.2/transforms/704d170ecbee50f619a11e7285a22938/transformed/emoji2-1.3.0/AndroidManifest.xml:25:13-67
 135            android:authorities="com.duckgo.medtools.androidx-startup"
-135-->[androidx.emoji2:emoji2:1.3.0] /home/tms/.gradle/caches/8.10.2/transforms/704d170ecbee50f619a11e7285a22938/transformed/emoji2-1.3.0/AndroidManifest.xml:26:13-68
+135-->[androidx.emoji2:emoji2:1.3.0] /home/tts/.gradle/caches/8.10.2/transforms/704d170ecbee50f619a11e7285a22938/transformed/emoji2-1.3.0/AndroidManifest.xml:26:13-68
 136            android:exported="false" >
-136-->[androidx.emoji2:emoji2:1.3.0] /home/tms/.gradle/caches/8.10.2/transforms/704d170ecbee50f619a11e7285a22938/transformed/emoji2-1.3.0/AndroidManifest.xml:27:13-37
+136-->[androidx.emoji2:emoji2:1.3.0] /home/tts/.gradle/caches/8.10.2/transforms/704d170ecbee50f619a11e7285a22938/transformed/emoji2-1.3.0/AndroidManifest.xml:27:13-37
 137            <meta-data
-137-->[androidx.emoji2:emoji2:1.3.0] /home/tms/.gradle/caches/8.10.2/transforms/704d170ecbee50f619a11e7285a22938/transformed/emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
+137-->[androidx.emoji2:emoji2:1.3.0] /home/tts/.gradle/caches/8.10.2/transforms/704d170ecbee50f619a11e7285a22938/transformed/emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
 138                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-138-->[androidx.emoji2:emoji2:1.3.0] /home/tms/.gradle/caches/8.10.2/transforms/704d170ecbee50f619a11e7285a22938/transformed/emoji2-1.3.0/AndroidManifest.xml:30:17-75
+138-->[androidx.emoji2:emoji2:1.3.0] /home/tts/.gradle/caches/8.10.2/transforms/704d170ecbee50f619a11e7285a22938/transformed/emoji2-1.3.0/AndroidManifest.xml:30:17-75
 139                android:value="androidx.startup" />
-139-->[androidx.emoji2:emoji2:1.3.0] /home/tms/.gradle/caches/8.10.2/transforms/704d170ecbee50f619a11e7285a22938/transformed/emoji2-1.3.0/AndroidManifest.xml:31:17-49
+139-->[androidx.emoji2:emoji2:1.3.0] /home/tts/.gradle/caches/8.10.2/transforms/704d170ecbee50f619a11e7285a22938/transformed/emoji2-1.3.0/AndroidManifest.xml:31:17-49
 140            <meta-data
-140-->[androidx.lifecycle:lifecycle-process:2.8.6] /home/tms/.gradle/caches/8.10.2/transforms/3487df6ca6cd57a4130ec1ca5c06e507/transformed/lifecycle-process-2.8.6/AndroidManifest.xml:29:13-31:52
+140-->[androidx.lifecycle:lifecycle-process:2.8.6] /home/tts/.gradle/caches/8.10.2/transforms/3487df6ca6cd57a4130ec1ca5c06e507/transformed/lifecycle-process-2.8.6/AndroidManifest.xml:29:13-31:52
 141                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-141-->[androidx.lifecycle:lifecycle-process:2.8.6] /home/tms/.gradle/caches/8.10.2/transforms/3487df6ca6cd57a4130ec1ca5c06e507/transformed/lifecycle-process-2.8.6/AndroidManifest.xml:30:17-78
+141-->[androidx.lifecycle:lifecycle-process:2.8.6] /home/tts/.gradle/caches/8.10.2/transforms/3487df6ca6cd57a4130ec1ca5c06e507/transformed/lifecycle-process-2.8.6/AndroidManifest.xml:30:17-78
 142                android:value="androidx.startup" />
-142-->[androidx.lifecycle:lifecycle-process:2.8.6] /home/tms/.gradle/caches/8.10.2/transforms/3487df6ca6cd57a4130ec1ca5c06e507/transformed/lifecycle-process-2.8.6/AndroidManifest.xml:31:17-49
+142-->[androidx.lifecycle:lifecycle-process:2.8.6] /home/tts/.gradle/caches/8.10.2/transforms/3487df6ca6cd57a4130ec1ca5c06e507/transformed/lifecycle-process-2.8.6/AndroidManifest.xml:31:17-49
 143            <meta-data
-143-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/tms/.gradle/caches/8.10.2/transforms/ad02e55b2845864cb74ec537c5eccf19/transformed/profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
+143-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/tts/.gradle/caches/8.10.2/transforms/ad02e55b2845864cb74ec537c5eccf19/transformed/profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
 144                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-144-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/tms/.gradle/caches/8.10.2/transforms/ad02e55b2845864cb74ec537c5eccf19/transformed/profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
+144-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/tts/.gradle/caches/8.10.2/transforms/ad02e55b2845864cb74ec537c5eccf19/transformed/profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
 145                android:value="androidx.startup" />
-145-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/tms/.gradle/caches/8.10.2/transforms/ad02e55b2845864cb74ec537c5eccf19/transformed/profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
+145-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/tts/.gradle/caches/8.10.2/transforms/ad02e55b2845864cb74ec537c5eccf19/transformed/profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
 146        </provider>
 147
 148        <activity
-148-->[androidx.compose.ui:ui-test-manifest:1.6.6] /home/tms/.gradle/caches/8.10.2/transforms/d1b8e3fdfc9cce5b5147b62d63cb5ef1/transformed/ui-test-manifest-1.6.6/AndroidManifest.xml:23:9-25:39
+148-->[androidx.compose.ui:ui-test-manifest:1.6.6] /home/tts/.gradle/caches/8.10.2/transforms/d1b8e3fdfc9cce5b5147b62d63cb5ef1/transformed/ui-test-manifest-1.6.6/AndroidManifest.xml:23:9-25:39
 149            android:name="androidx.activity.ComponentActivity"
-149-->[androidx.compose.ui:ui-test-manifest:1.6.6] /home/tms/.gradle/caches/8.10.2/transforms/d1b8e3fdfc9cce5b5147b62d63cb5ef1/transformed/ui-test-manifest-1.6.6/AndroidManifest.xml:24:13-63
+149-->[androidx.compose.ui:ui-test-manifest:1.6.6] /home/tts/.gradle/caches/8.10.2/transforms/d1b8e3fdfc9cce5b5147b62d63cb5ef1/transformed/ui-test-manifest-1.6.6/AndroidManifest.xml:24:13-63
 150            android:exported="true" />
-150-->[androidx.compose.ui:ui-test-manifest:1.6.6] /home/tms/.gradle/caches/8.10.2/transforms/d1b8e3fdfc9cce5b5147b62d63cb5ef1/transformed/ui-test-manifest-1.6.6/AndroidManifest.xml:25:13-36
+150-->[androidx.compose.ui:ui-test-manifest:1.6.6] /home/tts/.gradle/caches/8.10.2/transforms/d1b8e3fdfc9cce5b5147b62d63cb5ef1/transformed/ui-test-manifest-1.6.6/AndroidManifest.xml:25:13-36
 151
 152        <service
-152-->[androidx.room:room-runtime:2.6.1] /home/tms/.gradle/caches/8.10.2/transforms/d8c2a9fbdf29c9e0f83c7d6bbafd6def/transformed/room-runtime-2.6.1/AndroidManifest.xml:24:9-28:63
+152-->[androidx.room:room-runtime:2.6.1] /home/tts/.gradle/caches/8.10.2/transforms/d8c2a9fbdf29c9e0f83c7d6bbafd6def/transformed/room-runtime-2.6.1/AndroidManifest.xml:24:9-28:63
 153            android:name="androidx.room.MultiInstanceInvalidationService"
-153-->[androidx.room:room-runtime:2.6.1] /home/tms/.gradle/caches/8.10.2/transforms/d8c2a9fbdf29c9e0f83c7d6bbafd6def/transformed/room-runtime-2.6.1/AndroidManifest.xml:25:13-74
+153-->[androidx.room:room-runtime:2.6.1] /home/tts/.gradle/caches/8.10.2/transforms/d8c2a9fbdf29c9e0f83c7d6bbafd6def/transformed/room-runtime-2.6.1/AndroidManifest.xml:25:13-74
 154            android:directBootAware="true"
-154-->[androidx.room:room-runtime:2.6.1] /home/tms/.gradle/caches/8.10.2/transforms/d8c2a9fbdf29c9e0f83c7d6bbafd6def/transformed/room-runtime-2.6.1/AndroidManifest.xml:26:13-43
+154-->[androidx.room:room-runtime:2.6.1] /home/tts/.gradle/caches/8.10.2/transforms/d8c2a9fbdf29c9e0f83c7d6bbafd6def/transformed/room-runtime-2.6.1/AndroidManifest.xml:26:13-43
 155            android:exported="false" />
-155-->[androidx.room:room-runtime:2.6.1] /home/tms/.gradle/caches/8.10.2/transforms/d8c2a9fbdf29c9e0f83c7d6bbafd6def/transformed/room-runtime-2.6.1/AndroidManifest.xml:27:13-37
+155-->[androidx.room:room-runtime:2.6.1] /home/tts/.gradle/caches/8.10.2/transforms/d8c2a9fbdf29c9e0f83c7d6bbafd6def/transformed/room-runtime-2.6.1/AndroidManifest.xml:27:13-37
 156
 157        <receiver
-157-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/tms/.gradle/caches/8.10.2/transforms/ad02e55b2845864cb74ec537c5eccf19/transformed/profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
+157-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/tts/.gradle/caches/8.10.2/transforms/ad02e55b2845864cb74ec537c5eccf19/transformed/profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
 158            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-158-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/tms/.gradle/caches/8.10.2/transforms/ad02e55b2845864cb74ec537c5eccf19/transformed/profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
+158-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/tts/.gradle/caches/8.10.2/transforms/ad02e55b2845864cb74ec537c5eccf19/transformed/profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
 159            android:directBootAware="false"
-159-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/tms/.gradle/caches/8.10.2/transforms/ad02e55b2845864cb74ec537c5eccf19/transformed/profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
+159-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/tts/.gradle/caches/8.10.2/transforms/ad02e55b2845864cb74ec537c5eccf19/transformed/profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
 160            android:enabled="true"
-160-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/tms/.gradle/caches/8.10.2/transforms/ad02e55b2845864cb74ec537c5eccf19/transformed/profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
+160-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/tts/.gradle/caches/8.10.2/transforms/ad02e55b2845864cb74ec537c5eccf19/transformed/profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
 161            android:exported="true"
-161-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/tms/.gradle/caches/8.10.2/transforms/ad02e55b2845864cb74ec537c5eccf19/transformed/profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
+161-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/tts/.gradle/caches/8.10.2/transforms/ad02e55b2845864cb74ec537c5eccf19/transformed/profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
 162            android:permission="android.permission.DUMP" >
-162-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/tms/.gradle/caches/8.10.2/transforms/ad02e55b2845864cb74ec537c5eccf19/transformed/profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
+162-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/tts/.gradle/caches/8.10.2/transforms/ad02e55b2845864cb74ec537c5eccf19/transformed/profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
 163            <intent-filter>
-163-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/tms/.gradle/caches/8.10.2/transforms/ad02e55b2845864cb74ec537c5eccf19/transformed/profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
+163-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/tts/.gradle/caches/8.10.2/transforms/ad02e55b2845864cb74ec537c5eccf19/transformed/profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
 164                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-164-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/tms/.gradle/caches/8.10.2/transforms/ad02e55b2845864cb74ec537c5eccf19/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
-164-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/tms/.gradle/caches/8.10.2/transforms/ad02e55b2845864cb74ec537c5eccf19/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
+164-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/tts/.gradle/caches/8.10.2/transforms/ad02e55b2845864cb74ec537c5eccf19/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
+164-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/tts/.gradle/caches/8.10.2/transforms/ad02e55b2845864cb74ec537c5eccf19/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
 165            </intent-filter>
 166            <intent-filter>
-166-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/tms/.gradle/caches/8.10.2/transforms/ad02e55b2845864cb74ec537c5eccf19/transformed/profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
+166-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/tts/.gradle/caches/8.10.2/transforms/ad02e55b2845864cb74ec537c5eccf19/transformed/profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
 167                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-167-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/tms/.gradle/caches/8.10.2/transforms/ad02e55b2845864cb74ec537c5eccf19/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
-167-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/tms/.gradle/caches/8.10.2/transforms/ad02e55b2845864cb74ec537c5eccf19/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
+167-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/tts/.gradle/caches/8.10.2/transforms/ad02e55b2845864cb74ec537c5eccf19/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
+167-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/tts/.gradle/caches/8.10.2/transforms/ad02e55b2845864cb74ec537c5eccf19/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
 168            </intent-filter>
 169            <intent-filter>
-169-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/tms/.gradle/caches/8.10.2/transforms/ad02e55b2845864cb74ec537c5eccf19/transformed/profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
+169-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/tts/.gradle/caches/8.10.2/transforms/ad02e55b2845864cb74ec537c5eccf19/transformed/profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
 170                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-170-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/tms/.gradle/caches/8.10.2/transforms/ad02e55b2845864cb74ec537c5eccf19/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
-170-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/tms/.gradle/caches/8.10.2/transforms/ad02e55b2845864cb74ec537c5eccf19/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
+170-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/tts/.gradle/caches/8.10.2/transforms/ad02e55b2845864cb74ec537c5eccf19/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
+170-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/tts/.gradle/caches/8.10.2/transforms/ad02e55b2845864cb74ec537c5eccf19/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
 171            </intent-filter>
 172            <intent-filter>
-172-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/tms/.gradle/caches/8.10.2/transforms/ad02e55b2845864cb74ec537c5eccf19/transformed/profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
+172-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/tts/.gradle/caches/8.10.2/transforms/ad02e55b2845864cb74ec537c5eccf19/transformed/profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
 173                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-173-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/tms/.gradle/caches/8.10.2/transforms/ad02e55b2845864cb74ec537c5eccf19/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
-173-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/tms/.gradle/caches/8.10.2/transforms/ad02e55b2845864cb74ec537c5eccf19/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:25-92
+173-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/tts/.gradle/caches/8.10.2/transforms/ad02e55b2845864cb74ec537c5eccf19/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
+173-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/tts/.gradle/caches/8.10.2/transforms/ad02e55b2845864cb74ec537c5eccf19/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:25-92
 174            </intent-filter>
 175        </receiver>
 176    </application>

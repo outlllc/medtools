@@ -4,17 +4,7 @@
             "outputFile": "com.duckgo.medtools.app-mergeDebugResources-76:/values-land/values-land.xml",
             "map": [
                 {
-                    "source": "/home/tms/.gradle/caches/8.10.2/transforms/093039b11388342cec69831f533c3642/transformed/appcompat-1.6.1/res/values-land/values-land.xml",
-                    "from": {
-                        "startLines": "2,3,4",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "55,125,196",
-                        "endColumns": "69,70,67",
-                        "endOffsets": "120,191,259"
-                    }
-                },
-                {
-                    "source": "/home/tms/.gradle/caches/8.10.2/transforms/4baced8398efe981bd563dfbe491a1ed/transformed/material-1.10.0/res/values-land/values-land.xml",
+                    "source": "/home/tts/.gradle/caches/8.10.2/transforms/4baced8398efe981bd563dfbe491a1ed/transformed/material-1.10.0/res/values-land/values-land.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,26,35,40",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -33,7 +23,17 @@
                     }
                 },
                 {
-                    "source": "/home/tms/AndroidStudioProjects/medtools/app/src/main/res/values-land/dimens.xml",
+                    "source": "/home/tts/.gradle/caches/8.10.2/transforms/093039b11388342cec69831f533c3642/transformed/appcompat-1.6.1/res/values-land/values-land.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,125,196",
+                        "endColumns": "69,70,67",
+                        "endOffsets": "120,191,259"
+                    }
+                },
+                {
+                    "source": "/home/tts/AndroidStudioProjects/medtools/app/src/main/res/values-land/dimens.xml",
                     "from": {
                         "startLines": "1",
                         "startColumns": "4",
