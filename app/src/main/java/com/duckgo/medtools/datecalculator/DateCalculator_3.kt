@@ -69,20 +69,39 @@ class DateCalculator_3 : BaseFragmentDataBinding<FragmentDateCalculator3Binding>
         when(v?.id){
             R.id.buttonAdd -> {
                 operator = inpuntText
-                showInputText(showText + operator)
-
+                if (showText.endsWith("+") or showText.endsWith("-") or showText.endsWith("*") or showText.endsWith("÷")) {
+                    showText = showText.substring(0, showText.length - 1)
+                    showInputText(showText + operator)
+                }else{
+                    showInputText(showText + operator)
+                }
             }
             R.id.buttonSubtract -> {
                 operator = inpuntText
-                showInputText(showText + operator)
+                if (showText.endsWith("+") or showText.endsWith("-") or showText.endsWith("*") or showText.endsWith("÷")) {
+                    showText = showText.substring(0, showText.length - 1)
+                    showInputText(showText + operator)
+                }else{
+                    showInputText(showText + operator)
+                }
             }
             R.id.buttonDivide -> {
                 operator = inpuntText
-                showInputText(showText + operator)
+                if (showText.endsWith("+") or showText.endsWith("-") or showText.endsWith("*") or showText.endsWith("÷")) {
+                    showText = showText.substring(0, showText.length - 1)
+                    showInputText(showText + operator)
+                }else{
+                    showInputText(showText + operator)
+                }
             }
             R.id.buttonMultiply -> {
                 operator = inpuntText
-                showInputText(showText + operator)
+                if (showText.endsWith("+") or showText.endsWith("-") or showText.endsWith("*") or showText.endsWith("÷")) {
+                    showText = showText.substring(0, showText.length - 1)
+                    showInputText(showText + operator)
+                }else{
+                    showInputText(showText + operator)
+                }
             }
             R.id.buttonEqual -> {
                 var new_result = calculate().replace(Regex("\\.0$"), "")
@@ -413,7 +432,12 @@ class DateCalculator_3 : BaseFragmentDataBinding<FragmentDateCalculator3Binding>
                 binding.tvInput.setText(showText.substring(0, showText.length - 1))
                 if (operator != "") {
                     showText = showText.substring(0, showText.length - 1)
-                    secondNumber= secondNumber.substring(0, secondNumber.length - 1)
+                    if (secondNumber == "") {
+//                        showText = showText.substring(0, showText.length - 1)
+                        operator = ""
+                    }else{
+                        secondNumber = secondNumber.substring(0, secondNumber.length - 1)
+                    }
                 }else{
                     showText = showText.substring(0, showText.length - 1)
                     firstNumber = firstNumber.substring(0, firstNumber.length - 1)

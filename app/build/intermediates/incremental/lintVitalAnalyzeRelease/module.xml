@@ -1,12 +1,12 @@
 <lint-module
     format="1"
-    dir="/home/tms/AndroidStudioProjects/medtools/app"
+    dir="/home/tts/AndroidStudioProjects/medtools/app"
     name=":app"
     type="APP"
     maven="medtools:app:unspecified"
-    agpVersion="8.7.1"
+    agpVersion="8.7.2"
     buildFolder="build"
-    bootClassPath="/home/tms/Android/Sdk/platforms/android-34/android.jar:/home/tms/Android/Sdk/build-tools/34.0.0/core-lambda-stubs.jar"
+    bootClassPath="/home/tts/Android/Sdk/platforms/android-34/android.jar:/home/tts/Android/Sdk/build-tools/34.0.0/core-lambda-stubs.jar"
     javaSourceLevel="11"
     compileTarget="android-34"
     neverShrinking="true">

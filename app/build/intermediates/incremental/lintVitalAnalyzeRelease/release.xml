@@ -4,9 +4,9 @@
     minSdkVersion="29"
     targetSdkVersion="34"
     mergedManifest="build/intermediates/merged_manifest/release/processReleaseMainManifest/AndroidManifest.xml"
-    proguardFiles="build/intermediates/default_proguard_files/global/proguard-android-optimize.txt-8.7.1:proguard-rules.pro"
+    proguardFiles="build/intermediates/default_proguard_files/global/proguard-android-optimize.txt-8.7.2:proguard-rules.pro"
     partialResultsDir="build/intermediates/lint_vital_partial_results/release/lintVitalAnalyzeRelease/out"
-    desugaredMethodsFiles="/home/tms/.gradle/caches/8.10.2/transforms/b8cf470276f61821b8ab4cdfe58823c4/transformed/D8BackportedDesugaredMethods.txt">
+    desugaredMethodsFiles="/home/tts/.gradle/caches/8.10.2/transforms/aff243366f10d094a2f15425ad467d22/transformed/D8BackportedDesugaredMethods.txt">
   <buildFeatures
       viewBinding="true"
       namespacing="REQUIRED"/>
@@ -27,6 +27,6 @@
       applicationId="com.duckgo.medtools"
       generatedSourceFolders="build/generated/ksp/release/java:build/generated/ksp/release/kotlin:build/generated/ap_generated_sources/release/out:build/generated/data_binding_base_class_source_out/release/out"
       generatedResourceFolders="build/generated/res/resValues/release"
-      desugaredMethodsFiles="/home/tms/.gradle/caches/8.10.2/transforms/b8cf470276f61821b8ab4cdfe58823c4/transformed/D8BackportedDesugaredMethods.txt">
+      desugaredMethodsFiles="/home/tts/.gradle/caches/8.10.2/transforms/aff243366f10d094a2f15425ad467d22/transformed/D8BackportedDesugaredMethods.txt">
   </artifact>
 </variant>
