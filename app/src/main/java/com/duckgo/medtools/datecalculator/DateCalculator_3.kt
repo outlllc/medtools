@@ -13,7 +13,10 @@ import com.duckgo.medtools.databinding.FragmentDateCalculator3Binding
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.button.MaterialButtonToggleGroup
 import java.util.Calendar
+import kotlin.div
+import kotlin.text.set
 import kotlin.text.toInt
+import kotlin.toString
 
 class DateCalculator_3 : BaseFragmentDataBinding<FragmentDateCalculator3Binding>(), View.OnClickListener {
 
@@ -176,8 +179,11 @@ class DateCalculator_3 : BaseFragmentDataBinding<FragmentDateCalculator3Binding>
         var in_result = ""
         when(operator){
             "+" -> {
-                var caltime = cal_time()
-                if (caltime == Date(-1,-1,-1)){
+                val caltime = cal_time()
+                if (caltime.year == -2) {
+                    // cal_time 用 year=-2 来表示返回的是天数，存在 caltime.month 中
+                    in_result = caltime.month.toString()
+                } else if (caltime == Date(-1,-1,-1)){
                     if (firstNumber.toDoubleOrNull() != null && secondNumber.toDoubleOrNull() != null){
                         in_result = (firstNumber.toDouble() + secondNumber.toDouble()).toString()
                     }else{
@@ -188,8 +194,27 @@ class DateCalculator_3 : BaseFragmentDataBinding<FragmentDateCalculator3Binding>
                 }
             }
             "-" -> {
-                var caltime = cal_time()
-                if (caltime == Date(-1,-1,-1)) {
+                val caltime = cal_time()
+                if (caltime.year == -2) {
+                    when (modelSelect) {
+                        "WEEK" -> {
+                            in_result = (caltime.month.toInt() / 7).toString() + "+" + (caltime.month.toInt() % 7).toString() + "周"
+                        }
+                        "DAY" -> {
+                            in_result = caltime.month.toString() + "天"
+                        }
+                        "MONTH" -> {
+                            in_result = String.format("%.3f", (caltime.month / 30.0)) + "月"
+                        }
+                        "YEAR" -> {
+                            in_result = String.format("%.3f", caltime.month / 365.0) + "年"
+                        }
+                        else -> {
+                            in_result = caltime.month.toString()
+                        }
+
+                    }
+                } else if (caltime == Date(-1,-1,-1)) {
                     if (firstNumber.toDoubleOrNull() != null && secondNumber.toDoubleOrNull() != null) {
                         in_result = (firstNumber.toDouble() - secondNumber.toDouble()).toString()
                     }else {
@@ -235,34 +260,30 @@ class DateCalculator_3 : BaseFragmentDataBinding<FragmentDateCalculator3Binding>
             first_date.year = date1[0].toInt()
             first_date.month = date1[1].toInt() - 1
             first_date.day = date1[2].toInt()
-            time1.set(first_date.year, first_date.month, first_date.day)
+            time1.set(first_date.year, first_date.month, first_date.day, 0, 0, 0)
+            time1.set(Calendar.MILLISECOND, 0)
         }
         if (isInputIsDate(secondNumber)) {
             date2 = secondNumber.split("/")
             second_date.year = date2[0].toInt()
             second_date.month = date2[1].toInt() - 1
             second_date.day = date2[2].toInt()
-            time2.set(second_date.year, second_date.month, second_date.day)
+            time2.set(second_date.year, second_date.month, second_date.day, 0, 0, 0)
+            time2.set(Calendar.MILLISECOND, 0)
         }
         if (isInputIsDate(firstNumber) and isInputIsDate(secondNumber)) {
             if (operator == "-") {
-                time1.add(Calendar.YEAR, -second_date.year)
-                time1.add(Calendar.MONTH, -second_date.month)
-                time1.add(Calendar.DAY_OF_MONTH, -second_date.day)
-                result_date.year = time1.get(Calendar.YEAR)
-                result_date.month = time1.get(Calendar.MONTH) + 1
-                result_date.day = time1.get(Calendar.DAY_OF_MONTH)
+                // 计算两日期间的天数差（绝对值）
+                val diffMillis = time1.timeInMillis - time2.timeInMillis
+                val days = kotlin.math.abs(diffMillis) / (24L * 60L * 60L * 1000L)
+                // 使用 year = -2 作为特殊标记，month 字段放天数
+                return Date(-2, days.toInt(), 0)
+            } else if (operator == "+") {
+                // 移除两个日期相加的逻辑，提示并返回错误标记
+                binding.tvResult.text = "两个日期不支持相加"
                 return result_date
-            }else if (operator == "+") {
-                time1.add(Calendar.YEAR, second_date.year)
-                time1.add(Calendar.MONTH, second_date.month)
-                time1.add(Calendar.DAY_OF_MONTH, second_date.day)
-                result_date.year = time1.get(Calendar.YEAR)
-                result_date.month = time1.get(Calendar.MONTH) + 1
-                result_date.day = time1.get(Calendar.DAY_OF_MONTH)
-                return result_date
-            }else{
-                binding.tvResult.text = "日期仅支持+或-运算符"
+            } else {
+                binding.tvResult.text = "两个日期仅支持-运算符"
                 return result_date
             }
         }else if (isInputIsDate(firstNumber) and (secondNumber.toIntOrNull() != null)){
@@ -329,33 +350,33 @@ class DateCalculator_3 : BaseFragmentDataBinding<FragmentDateCalculator3Binding>
         }else{
             when (model) {
                 "YEAR" -> {
-                    time.add(Calendar.YEAR, intNumber.toInt())
+                    time.add(Calendar.YEAR, -intNumber.toInt())
                     date.year = time.get(Calendar.YEAR)
-                    date.month = time.get(Calendar.MONTH) - 1
+                    date.month = time.get(Calendar.MONTH) + 1
                     date.day = time.get(Calendar.DAY_OF_MONTH)
                     return date
                 }
 
                 "MONTH" -> {
-                    time.add(Calendar.MONTH, intNumber.toInt())
+                    time.add(Calendar.MONTH, -intNumber.toInt())
                     date.year = time.get(Calendar.YEAR)
-                    date.month = time.get(Calendar.MONTH) - 1
+                    date.month = time.get(Calendar.MONTH) +1
                     date.day = time.get(Calendar.DAY_OF_MONTH)
                     return date
                 }
 
                 "DAY" -> {
-                    time.add(Calendar.DAY_OF_MONTH, intNumber.toInt())
+                    time.add(Calendar.DAY_OF_MONTH, -intNumber.toInt())
                     date.year = time.get(Calendar.YEAR)
-                    date.month = time.get(Calendar.MONTH) - 1
+                    date.month = time.get(Calendar.MONTH) + 1
                     date.day = time.get(Calendar.DAY_OF_MONTH)
                     return date
                 }
 
                 "WEEK" -> {
-                    time.add(Calendar.WEDNESDAY, intNumber.toInt())
+                    time.add(Calendar.WEDNESDAY, -intNumber.toInt())
                     date.year = time.get(Calendar.YEAR)
-                    date.month = time.get(Calendar.MONTH) - 1
+                    date.month = time.get(Calendar.MONTH) + 1
                     date.day = time.get(Calendar.DAY_OF_MONTH)
                     return date
                 }
