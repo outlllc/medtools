@@ -2,12 +2,12 @@
 plugins {
     alias(libs.plugins.androidApplication) apply false
     alias(libs.plugins.jetbrainsKotlinAndroid) apply false
-    id("com.google.devtools.ksp") version "2.0.21-1.0.25" apply false
+    id("com.google.devtools.ksp") version "2.2.10-2.0.2"
     kotlin("jvm") version "2.0.21" apply false
     alias(libs.plugins.compose.compiler) apply false
 }
 buildscript {
     dependencies {
-        classpath(kotlin("gradle-plugin", version = "2.0.21"))
+        classpath(kotlin("gradle-plugin", version = "2.2.10"))
     }
 }

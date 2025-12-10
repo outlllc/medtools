@@ -1,3 +1,6 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+import org.jetbrains.kotlin.gradle.dsl.KotlinVersion
+
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
@@ -11,6 +14,12 @@ plugins {
 //        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version")
 //    }
 //}
+
+kotlin {
+    compilerOptions {
+        jvmTarget = JvmTarget.fromTarget("11")
+    }
+}
 
 android {
     namespace = "com.duckgo.medtools"
@@ -43,12 +52,9 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
-    kotlinOptions {
-        jvmTarget = "11"
-    }
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.2"
-    }
+    // composeOptions {
+    //    kotlinCompilerExtensionVersion = "1.5.2"
+    // }
     buildFeatures {
         viewBinding = true
         compose = true
@@ -85,10 +91,10 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
     ksp(libs.androidx.room.compiler)
 //    implementation("org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version")
-    implementation(kotlin("stdlib-jdk8"))
+//    implementation(kotlin("stdlib-jdk8"))
     val room_version = "2.6.1"
     implementation("androidx.room:room-runtime:$room_version")
-    annotationProcessor("androidx.room:room-compiler:$room_version")
+    // annotationProcessor("androidx.room:room-compiler:$room_version")
 
     val lifecycle_version = "2.8.6"
 

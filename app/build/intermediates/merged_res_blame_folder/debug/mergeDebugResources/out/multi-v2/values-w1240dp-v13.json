@@ -4,7 +4,7 @@
             "outputFile": "com.duckgo.medtools.app-mergeDebugResources-76:/values-w1240dp-v13/values-w1240dp-v13.xml",
             "map": [
                 {
-                    "source": "/home/tts/AndroidStudioProjects/medtools/app/src/main/res/values-w1240dp/dimens.xml",
+                    "source": "/home/tms/mgit/medtools/app/src/main/res/values-w1240dp/dimens.xml",
                     "from": {
                         "startLines": "1",
                         "startColumns": "4",
