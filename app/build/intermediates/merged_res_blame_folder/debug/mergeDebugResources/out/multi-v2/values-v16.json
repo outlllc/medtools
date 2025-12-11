@@ -4,7 +4,7 @@
             "outputFile": "com.duckgo.medtools.app-mergeDebugResources-76:/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "/home/tms/.gradle/caches/8.13/transforms/bbc88e1628d5fae26e1adc2bb14360ec/transformed/core-1.12.0/res/values-v16/values-v16.xml",
+                    "source": "/home/tms/.gradle/caches/8.13/transforms/8305aecd3b029786bc3023ae106af186/transformed/core-1.12.0/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/home/tms/.gradle/caches/8.13/transforms/a9de03fa9ba016f69143058665d3a5cd/transformed/appcompat-1.6.1/res/values-v16/values-v16.xml",
+                    "source": "/home/tms/.gradle/caches/8.13/transforms/c14541635ecc3124fb577cd645f78c47/transformed/appcompat-1.6.1/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

@@ -14,6 +14,7 @@ import com.google.android.material.button.MaterialButton
 import com.google.android.material.button.MaterialButtonToggleGroup
 import java.io.File
 import java.io.FileOutputStream
+import kotlin.text.replace
 
 class MainActivity : AppCompatActivity() {
 
@@ -45,6 +46,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun changePage() {
         tg_first_page.addOnButtonCheckedListener { group: MaterialButtonToggleGroup, checkedId, isChecked ->
+            if (!isChecked) return@addOnButtonCheckedListener
+
             val childCount = group.childCount
             var selectIndex = 0
             for (index in 0 until childCount) {
@@ -58,50 +61,23 @@ class MainActivity : AppCompatActivity() {
                     child.setBackgroundColor(getColor(R.color.lightcyan))
                 }
             }
-//            var tem_ShowFragment: Fragment = showFragment!!
+
             val fragment = when (selectIndex) {
-                0 -> {
-                    if (dateCaculatorFragment == null) {
-                        DateCalculator_3()
-                    } else {
-                        dateCaculatorFragment as DateCalculator_3
-                    }
-                }
-
-                1 -> {
-                    if (babyWeightFragment == null) {
-                        BabyWeight()
-                    } else {
-                        babyWeightFragment as BabyWeight
-                    }
-                }
-                2 -> {
-                    if (menuFragment == null) {
-                        MenuFragment()
-                    } else {
-                        menuFragment as MenuFragment
-                    }
-                }
-                3 -> {
-                    if (minePage == null) {
-                        MinePage()
-                    } else {
-                        minePage as MinePage
-                    }
-                }
-                else ->
+                0 -> dateCaculatorFragment ?: DateCalculator_3()
+                1 -> babyWeightFragment ?: BabyWeight()
+                2 -> menuFragment ?: MenuFragment()
+                3 -> minePage ?: MinePage()
+                else -> {
                     Toast.makeText(this, "error", Toast.LENGTH_SHORT).show()
-            }?:return@addOnButtonCheckedListener
-//            if (tem_ShowFragment != showFragment) {
-                supportFragmentManager.beginTransaction()
-                    .replace(R.id.fragment_, fragment as Fragment)
-                    .addToBackStack(null)
-                    .commitAllowingStateLoss()
+                    return@addOnButtonCheckedListener
+                }
+            } ?: return@addOnButtonCheckedListener
 
-//                showFragment = tem_ShowFragment
-//            }
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.fragment_, fragment as Fragment)
+                .addToBackStack(null)
+                .commitAllowingStateLoss()
         }
-//        tg_first_page.check(R.id.calculation_button)
     }
 
     fun Activity.saveIntoFile() {

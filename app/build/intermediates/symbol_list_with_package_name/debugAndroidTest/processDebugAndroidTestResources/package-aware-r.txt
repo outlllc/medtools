@@ -1,3 +1,0 @@
-com.example.recycle.test
-style WhiteBackgroundDialogTheme
-style WhiteBackgroundTheme

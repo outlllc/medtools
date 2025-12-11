@@ -124,12 +124,12 @@
         "source": "com.duckgo.medtools.app-main-80:/layout/fragment_hyperthyroidism_medication_during_pregnancy_fm.xml"
     },
     {
-        "merged": "com.duckgo.medtools.app-mergeDebugResources-77:/layout/medcal_firstpage_fagment.xml",
-        "source": "com.duckgo.medtools.app-main-80:/layout/medcal_firstpage_fagment.xml"
-    },
-    {
         "merged": "com.duckgo.medtools.app-mergeDebugResources-77:/layout/layout_addvalue.xml",
         "source": "com.duckgo.medtools.app-main-80:/layout/layout_addvalue.xml"
+    },
+    {
+        "merged": "com.duckgo.medtools.app-mergeDebugResources-77:/layout/medcal_firstpage_fagment.xml",
+        "source": "com.duckgo.medtools.app-main-80:/layout/medcal_firstpage_fagment.xml"
     },
     {
         "merged": "com.duckgo.medtools.app-mergeDebugResources-77:/layout/list_modle_3.xml",
@@ -310,6 +310,10 @@
     {
         "merged": "com.duckgo.medtools.app-mergeDebugResources-77:/layout/fragment_date_calculator_3.xml",
         "source": "com.duckgo.medtools.app-main-80:/layout/fragment_date_calculator_3.xml"
+    },
+    {
+        "merged": "com.duckgo.medtools.app-mergeDebugResources-77:/layout/fragment_babyweight_user_item_recycleview.xml",
+        "source": "com.duckgo.medtools.app-main-80:/layout/fragment_babyweight_user_item_recycleview.xml"
     },
     {
         "merged": "com.duckgo.medtools.app-mergeDebugResources-77:/layout/test.xml",

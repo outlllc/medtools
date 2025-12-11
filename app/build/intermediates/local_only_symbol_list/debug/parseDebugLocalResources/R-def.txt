@@ -60,6 +60,7 @@ drawable ic_launcher_foreground
 drawable myradiobutton
 drawable tanner_woman
 id FirstFragment
+id LMP
 id QueryAc
 id QueryButtonConpre
 id QueryFl
@@ -82,6 +83,7 @@ id SecondFragment
 id action_FirstFragment_to_SecondFragment
 id action_SecondFragment_to_FirstFragment
 id answerEditText
+id btnCompare
 id btn_cal
 id btn_clear
 id btn_result
@@ -117,6 +119,15 @@ id datePicker
 id dummy_button
 id et1
 id et2
+id etAC
+id etBPD
+id etFL
+id etHC
+id etHL
+id etInspectionDate
+id etPregnancyWeek
+id etTibia
+id etUlna
 id et_HR
 id et_SBP
 id et_SI
@@ -366,6 +377,7 @@ id rb_other
 id rb_uc
 id rb_universal
 id rb_woman
+id recyclerView
 id rg1
 id rg10
 id rg11
@@ -459,7 +471,14 @@ id tv81
 id tv90
 id tv91
 id tvF
+id tvInterpretation
+id tvMeasureName
+id tvOriginal
+id tvP50
+id tvPredictedWeight
 id tvS
+id tvUserPercent
+id tvUserValue
 id tv_1
 id tv_2
 id tv_3
@@ -528,6 +547,7 @@ layout date_picker
 layout first_page_m_c
 layout fragment_amount_of_hydration_fm
 layout fragment_baby_weight
+layout fragment_babyweight_user_item_recycleview
 layout fragment_bishop_fm
 layout fragment_body__index_fm
 layout fragment_cervical_cancer_stage_figo2014_fm

@@ -1,20 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.duckgo.medtools.app-mergeReleaseResources-72:/values-v16/values-v16.xml",
+            "outputFile": "com.duckgo.medtools.app-mergeReleaseResources-59:/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "/home/tts/.gradle/caches/8.10.2/transforms/80a57d16dced287a18a434abccffb4dd/transformed/core-1.12.0/res/values-v16/values-v16.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "65",
-                        "endOffsets": "116"
-                    }
-                },
-                {
-                    "source": "/home/tts/.gradle/caches/8.10.2/transforms/093039b11388342cec69831f533c3642/transformed/appcompat-1.6.1/res/values-v16/values-v16.xml",
+                    "source": "/home/tms/.gradle/caches/9.0-milestone-1/transforms/27d246882f5bfcba1bbba9f20c2f0e32/transformed/appcompat-1.7.1/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -22,14 +12,6 @@
                         "endLines": "5",
                         "endColumns": "12",
                         "endOffsets": "223"
-                    },
-                    "to": {
-                        "startLines": "3",
-                        "startColumns": "4",
-                        "startOffsets": "121",
-                        "endLines": "6",
-                        "endColumns": "12",
-                        "endOffsets": "289"
                     }
                 }
             ]

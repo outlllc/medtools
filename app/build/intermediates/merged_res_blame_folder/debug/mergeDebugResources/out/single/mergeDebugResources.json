@@ -168,6 +168,10 @@
         "source": "com.duckgo.medtools.app-main-80:/layout/activity_severe_preeclampsia_diagnosis.xml"
     },
     {
+        "merged": "com.duckgo.medtools.app-debug-78:/layout_fragment_babyweight_user_item_recycleview.xml.flat",
+        "source": "com.duckgo.medtools.app-main-80:/layout/fragment_babyweight_user_item_recycleview.xml"
+    },
+    {
         "merged": "com.duckgo.medtools.app-debug-78:/layout_list_modle_2_2_databinding.xml.flat",
         "source": "com.duckgo.medtools.app-main-80:/layout/list_modle_2_2_databinding.xml"
     },

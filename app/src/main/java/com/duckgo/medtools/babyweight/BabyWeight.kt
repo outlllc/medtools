@@ -8,32 +8,90 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import androidx.lifecycle.lifecycleScope
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.duckgo.medtools.BaseFragmentDataBinding
 import com.duckgo.medtools.R
+import com.duckgo.medtools.databinding.FragmentBabyWeightBinding
+import com.duckgo.medtools.databinding.FragmentDateCalculator3Binding
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import kotlin.math.roundToInt
 
 
-class BabyWeight : Fragment() {
+class BabyWeight : BaseFragmentDataBinding<FragmentBabyWeightBinding>(), View.OnClickListener {
 
     var dbHelper: DataBaseHelper? =null
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    private lateinit var repo: PercentileRepository
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var adapter: UserCompareAdapter
 
+
+    override fun getFragmentViewBinding(): FragmentBabyWeightBinding {
+        return FragmentBabyWeightBinding.inflate(layoutInflater)
     }
 
-//    lateinit var view:View
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        var view = inflater.inflate(R.layout.fragment_baby_weight, container, false)
-        var conprehensiveButton=view.findViewById<Button>(R.id.QueryButtonConpre)
-        conprehensiveButton.setOnClickListener {
-            QueryConpre()
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        dbHelper = DataBaseHelper(context)
+        recyclerView = binding.recyclerView
+        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        adapter = UserCompareAdapter(emptyList())
+        recyclerView.adapter = adapter
+
+        binding.btnCompare.setOnClickListener { onClick(it) }
+
+        repo = PercentileRepository(requireContext())
+
+        // 建议异步加载，避免阻塞主线程
+        CoroutineScope(Dispatchers.IO).launch {
+            repo.loadFromAssets("growproperty.json")
+        }
+    }
+
+    override fun onClick(v: View?) {
+        when(v?.id){
+            R.id.btnCompare -> {
+                QueryConpre()
+                onCompareClicked()
+            }
+        }
+    }
+    private fun parseDoubleOrNull(et: EditText): Double? {
+        val s = et.text.toString().trim()
+        return s.toDoubleOrNull()
+    }
+
+    private fun onCompareClicked() {
+        val week = parseDoubleOrNull(binding.etPregnancyWeek)
+        if (week == null) {
+            binding.etPregnancyWeek.error = "请输入有效孕周（例如 20 或 20.5）"
+            return
         }
 
-        dbHelper = DataBaseHelper(context)
+        // 收集用户输入 map
+        val inputs = mapOf(
+            "BPD" to parseDoubleOrNull(binding.etBPD),
+            "HC" to parseDoubleOrNull(binding.etHC),
+            "AC" to parseDoubleOrNull(binding.etAC),
+            "FL" to parseDoubleOrNull(binding.etFL),
+            "HL" to parseDoubleOrNull(binding.etHL),
+            "Ulna" to parseDoubleOrNull(binding.etUlna),
+            "Tibia" to parseDoubleOrNull(binding.etTibia)
+        )
 
-        return view
+        // 生成报告并更新 UI（在主线程）
+        lifecycleScope.launch {
+            val reports = withContext(Dispatchers.Default) {
+                generateUserCompareReports(week, repo, inputs)
+            }
+            adapter.updateData(reports)
+            // 可在这里滚动到顶部
+            recyclerView.scrollToPosition(0)
+        }
     }
 
     fun queryFlAc(x:String,y:String):String{
@@ -115,10 +173,14 @@ class BabyWeight : Fragment() {
     }
 
     fun QueryConpre() {
-        val editText1 = requireActivity().findViewById<EditText>(R.id.QueryAc)
-        val editText2 = requireActivity().findViewById<EditText>(R.id.QueryFl)
-        val editText3 = requireActivity().findViewById<EditText>(R.id.QueryYBpd)
-        val queryResult: TextView = requireActivity().findViewById<TextView>(R.id.QueryResultConpre)
+//        val editText1 = requireActivity().findViewById<EditText>(R.id.QueryAc)
+       val editText1 = binding.etAC
+        val editText2 = binding.etFL
+        val editText3 = binding.etBPD
+        val queryResult: TextView = binding.tvPredictedWeight
+//        val editText2 = requireActivity().findViewById<EditText>(R.id.QueryFl)
+//        val editText3 = requireActivity().findViewById<EditText>(R.id.QueryYBpd)
+//        val queryResult: TextView = requireActivity().findViewById<TextView>(R.id.QueryResultConpre)
         var x = editText1.text.toString().trim()
         var y = editText2.text.toString().trim()
         val z= editText3.text.toString().trim()
@@ -155,4 +217,6 @@ class BabyWeight : Fragment() {
             }
         }
     }
+
+
 }

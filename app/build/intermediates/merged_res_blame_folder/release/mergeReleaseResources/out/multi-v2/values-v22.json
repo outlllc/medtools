@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.duckgo.medtools.app-mergeReleaseResources-72:/values-v22/values-v22.xml",
+            "outputFile": "com.duckgo.medtools.app-mergeReleaseResources-59:/values-v22/values-v22.xml",
             "map": [
                 {
-                    "source": "/home/tts/.gradle/caches/8.10.2/transforms/093039b11388342cec69831f533c3642/transformed/appcompat-1.6.1/res/values-v22/values-v22.xml",
+                    "source": "/home/tms/.gradle/caches/9.0-milestone-1/transforms/27d246882f5bfcba1bbba9f20c2f0e32/transformed/appcompat-1.7.1/res/values-v22/values-v22.xml",
                     "from": {
                         "startLines": "2,3,4,9",
                         "startColumns": "4,4,4,4",

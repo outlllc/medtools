@@ -19,7 +19,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/QueryAc"
+            android:id="@+id/etAC"
             android:inputType="numberDecimal"
             android:textSize="20sp"
             android:hint="腹围(155-400mm)"/>
@@ -37,7 +37,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/QueryFl"
+            android:id="@+id/etFL"
             android:inputType="numberDecimal"
             android:textSize="20sp"
             android:hint="股骨(40-83mm)"/>
@@ -55,7 +55,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/QueryYBpd"
+            android:id="@+id/etBPD"
             android:inputType="numberDecimal"
             android:textSize="20sp"
             android:hint="双顶径(31-100mm)" />
@@ -87,7 +87,7 @@
             android:layout_width="match_parent"
             android:layout_marginRight="2dp"
             android:layout_height="100dp"
-            android:id="@+id/QueryResultConpre"
+            android:id="@+id/tvPredictedWeight"
             android:lines="3"
             android:textStyle="bold"
             android:textSize="20sp"/>
