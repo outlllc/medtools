@@ -7,19 +7,17 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.duckgo.medtools.babyweight.BabyWeight
 import com.duckgo.medtools.datecalculator.DateCalculator
-import com.duckgo.medtools.datecalculator.DateCalculator_3
 import com.duckgo.medtools.medicaltools.MenuFragment
 import com.duckgo.medtools.mine.MinePage
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.button.MaterialButtonToggleGroup
 import java.io.File
 import java.io.FileOutputStream
-import kotlin.text.replace
 
 class MainActivity : AppCompatActivity() {
 
 //    var dateCaculatorFragment: DateCalculator? = null
-    var dateCaculatorFragment: DateCalculator_3? = null
+    var dateCaculatorFragment: DateCalculator? = null
     var babyWeightFragment: BabyWeight? = null
     var showFragment: Fragment? = null
     var medicalCalculatorFragment: MedicalCalculator? = null
@@ -33,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         saveIntoFile()
         if (dateCaculatorFragment == null) {
-            showFragment = DateCalculator_3()
+            showFragment = DateCalculator()
         }
         supportFragmentManager.beginTransaction().add(R.id.fragment_, showFragment!!).commit()
         initView()
@@ -63,7 +61,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             val fragment = when (selectIndex) {
-                0 -> dateCaculatorFragment ?: DateCalculator_3()
+                0 -> dateCaculatorFragment ?: DateCalculator()
                 1 -> babyWeightFragment ?: BabyWeight()
                 2 -> menuFragment ?: MenuFragment()
                 3 -> minePage ?: MinePage()
