@@ -79,31 +79,30 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun Activity.saveIntoFile() {
-//        val PATH = this.filesDir.absolutePath
-//        // 创建src和dst文件夹
-//        // 【注】需要有PATH目录的权限才能创建子目录
-//        // 若PATH文件夹权限为root权限，则使用adb shell chown命令修改权限
-//        val src = File(PATH + "/" + "database")
-//        // 判断文件夹是否存在，不存在就进行创建
-
-        val dst = File("data/data/com.duckgo.medtools/databases")
-        if (!dst.exists()) {
-            if (!dst.mkdirs()) {
-                Toast.makeText(this, "数据创建失败", Toast.LENGTH_SHORT).show()
+        val dbFile = getDatabasePath("weight.db")
+        val dbDir = dbFile.parentFile
+        if (dbDir != null && !dbDir.exists()) {
+            if (!dbDir.mkdirs()) {
+                Toast.makeText(this, "数据目录创建失败", Toast.LENGTH_SHORT).show()
             }
         }
-        val newFile = File("data/data/com.duckgo.medtools/databases/weight.db")
-        if (!newFile.exists()) {
-            val is1 = assets.open("weight.db")
-            val fos = FileOutputStream(newFile)
-            var len = -1
-            val buffer = ByteArray(1024)
-            while ((is1.read(buffer).also { len = it }) != -1) {
-                fos.write(buffer, 0, len)
+
+        if (!dbFile.exists()) {
+            try {
+                assets.open("weight.db").use { input ->
+                    FileOutputStream(dbFile).use { output ->
+                        val buffer = ByteArray(1024)
+                        var length: Int
+                        while (input.read(buffer).also { length = it } > 0) {
+                            output.write(buffer, 0, length)
+                        }
+                        output.flush()
+                    }
+                }
+            } catch (e: Exception) {
+                e.printStackTrace()
+                Toast.makeText(this, "数据库复制失败: ${e.message}", Toast.LENGTH_SHORT).show()
             }
-            fos.close()
-            is1.close()
         }
     }
 }
-

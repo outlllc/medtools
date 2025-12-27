@@ -111,10 +111,14 @@ class MenuFragment: Fragment(), Med_Cal_Fragment_Adaptor.onItemClickListener{
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = FragmentMedicalCalculatorBinding.inflate(inflater, container, false)
-        var mfragmentManager = childFragmentManager
-        mfragmentManager.beginTransaction().replace(R.id.fm_med_cal_firstpage, MedCal_FirstPage_fagment())
+        // 初始化类成员变量 mfragmentManager
+        mfragmentManager = childFragmentManager
+
+        mfragmentManager.beginTransaction()
+            .replace(R.id.fm_med_cal_firstpage, MedCal_FirstPage_fagment())
             .addToBackStack(null)
-            ?.commit()
+            .commit()
+
         initView(binding.root)
         return binding.root
     }
@@ -147,8 +151,10 @@ class MenuFragment: Fragment(), Med_Cal_Fragment_Adaptor.onItemClickListener{
             }
         })
     }
+
+    // 2. 在 onRefresh 中调用时传入内部容器 ID
     fun onRefresh(view: View, showText: String) {
-        expandTabView.onPressBack()
+        expandTabView.onPressBack() // 这只是收回下拉菜单
         var position = getPositon(view)
         if (position >= 0 && !expandTabView.getTitle(position).equals(showText)) {
             expandTabView.setTitle(showText, position)
@@ -157,7 +163,8 @@ class MenuFragment: Fragment(), Med_Cal_Fragment_Adaptor.onItemClickListener{
         when(positionTitle){
             "妇产科综合" -> {
                 val fragment = Obstetrics_and_Gynecology_Menu()
-                add_hide_fragment(mfragmentManager, fragment)
+                // 使用 childFragmentManager 和 内部容器 ID
+                add_hide_fragment(mfragmentManager, fragment, R.id.fm_med_cal_firstpage)
             }
             "妇科" -> {
                 val fragment = Gynecology_Menu()

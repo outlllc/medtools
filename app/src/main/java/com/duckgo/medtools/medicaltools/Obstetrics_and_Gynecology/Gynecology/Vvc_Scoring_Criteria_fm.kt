@@ -53,7 +53,7 @@ class Vvc_Scoring_Criteria_fm : BaseFragmentDataBinding<FragmentVvcScoringCriter
     var group3_checked = 0
     var group4_checked = 0
     var group5_checked = 0
-    override fun onCheckedChanged(group: RadioGroup?, checkedId: Int) {
+    override fun onCheckedChanged(group: RadioGroup, checkedId: Int) {
         when (group?.id) {
             R.id.Rgroup1 -> {
                 group1_checked = -1

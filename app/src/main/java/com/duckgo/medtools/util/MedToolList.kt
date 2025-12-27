@@ -4,13 +4,17 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.duckgo.medtools.R
 
-fun add_hide_fragment(fm: FragmentManager,newFragment: Fragment){
-    var transaction = fm.beginTransaction()
-    transaction?.add(R.id.fragment_, newFragment)
-    transaction?.show(newFragment)
-    transaction?.addToBackStack(null)
-    if (fm.findFragmentById(R.id.fragment_) != null) {
-        transaction?.hide(fm.findFragmentById(R.id.fragment_)!!)
+fun add_hide_fragment(fm: FragmentManager, newFragment: Fragment, containerId: Int = R.id.fragment_) {
+    val transaction = fm.beginTransaction()
+    // 获取当前在该容器中的 fragment 并隐藏它
+    val currentFragment = fm.findFragmentById(containerId)
+    if (currentFragment != null) {
+        transaction.hide(currentFragment)
     }
-    transaction?.commit()
+
+    // 添加新 fragment
+    transaction.add(containerId, newFragment)
+    transaction.show(newFragment)
+    transaction.addToBackStack(null)
+    transaction.commit()
 }

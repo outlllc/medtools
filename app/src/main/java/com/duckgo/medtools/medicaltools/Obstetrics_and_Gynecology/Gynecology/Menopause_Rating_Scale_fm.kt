@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.RadioGroup
 import android.widget.RadioGroup.OnCheckedChangeListener
-import androidx.compose.foundation.layout.Row
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.duckgo.medtools.BaseFragmentDataBinding
 import com.duckgo.medtools.R
@@ -75,8 +74,8 @@ class Menopause_Rating_Scale_fm : BaseFragmentDataBinding<FragmentMenopauseRatin
     var group10_checked = 0
     var group11_checked = 0
 
-    override fun onCheckedChanged(group: RadioGroup?, checkedId: Int) {
-        when(group?.id){
+    override fun onCheckedChanged(group: RadioGroup, checkedId: Int) {
+        when(group.id){
             R.id.Rgroup1 -> {
                 group1_checked = -1
                 when(checkedId){

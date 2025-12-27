@@ -48,8 +48,8 @@ class Insler_Cervical_Estrogen_Effect_Scale_fm:BaseFragmentDataBinding<InslerCer
     var group2_checked = 0
     var group3_checked = 0
     var group4_checked = 0
-    override fun onCheckedChanged(group: RadioGroup?, checkedId: Int) {
-        when (group?.id) {
+    override fun onCheckedChanged(group: RadioGroup, checkedId: Int) {
+        when (group.id) {
             R.id.Rgroup1 -> {
                 group1_checked = -1
                 when (checkedId) {

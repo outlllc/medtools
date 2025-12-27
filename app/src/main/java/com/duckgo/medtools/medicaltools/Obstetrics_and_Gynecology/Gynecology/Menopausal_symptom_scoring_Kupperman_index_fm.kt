@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.RadioGroup
 import android.widget.RadioGroup.OnCheckedChangeListener
-import androidx.compose.material3.RichTooltip
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.duckgo.medtools.BaseFragmentDataBinding
 import com.duckgo.medtools.R
@@ -81,8 +80,8 @@ class Menopausal_symptom_scoring_Kupperman_index_fm : BaseFragmentDataBinding<Fr
     var group12_checked = 0
     var group13_checked = 0
 
-    override fun onCheckedChanged(group: RadioGroup?, checkedId: Int) {
-        when(group?.id){
+    override fun onCheckedChanged(group: RadioGroup, checkedId: Int) {
+        when(group.id){
             R.id.Rgroup1 -> {
                 group1_checked = -1
                 when(checkedId){
@@ -204,6 +203,9 @@ class Menopausal_symptom_scoring_Kupperman_index_fm : BaseFragmentDataBinding<Fr
         total_score = group1_result + group2_result + group3_result + group4_result + group5_result +
                 group6_result + group7_result + group8_result + group9_result + group10_result +
                 group11_result + group12_result + group13_result
+        uncheck_item = 13 + group1_checked + group2_checked + group3_checked + group4_checked + group5_checked +
+                group6_checked + group7_checked + group8_checked + group9_checked + group10_checked +
+                group11_checked + group12_checked + group13_checked
         binding.tv141.text = "  ${total_score}分 （您已选择${13-uncheck_item}个必选项，还有${uncheck_item}个必选项未选）"
         total_score = 0
     }

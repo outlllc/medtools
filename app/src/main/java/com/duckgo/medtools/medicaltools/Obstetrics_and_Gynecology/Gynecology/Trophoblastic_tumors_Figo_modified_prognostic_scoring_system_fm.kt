@@ -61,7 +61,7 @@ class Trophoblastic_tumors_Figo_modified_prognostic_scoring_system_fm:BaseFragme
     var group6_checked = 0
     var group7_checked = 0
     var group13_checked = 0
-    override fun onCheckedChanged(group: RadioGroup?, checkedId: Int) {
+    override fun onCheckedChanged(group: RadioGroup, checkedId: Int) {
         when (group?.id) {
             R.id.Rgroup1 -> {
                 group1_checked = -1

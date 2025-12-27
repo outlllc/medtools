@@ -44,7 +44,7 @@ class Nugent_Scoring_Criteria_fm:BaseFragmentDataBinding<NugentScoringCriteriaFm
     var group1_checked = 0
     var group2_checked = 0
     var group3_checked = 0
-    override fun onCheckedChanged(group: RadioGroup?, checkedId: Int) {
+    override fun onCheckedChanged(group: RadioGroup, checkedId: Int) {
         when (group?.id) {
             R.id.Rgroup1 -> {
                 group1_checked = -1

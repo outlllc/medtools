@@ -75,7 +75,7 @@ class Staging_of_endometriosis_rAFS_staging_fm : BaseFragmentDataBinding<Fragmen
     var is_rg12_checked = false
     var is_rg13_checked = false
     var is_rg14_checked = false
-    override fun onCheckedChanged(group: RadioGroup?, checkedId: Int) {
+    override fun onCheckedChanged(group: RadioGroup, checkedId: Int) {
         when(group?.id){
             R.id.rg1 -> {
                 if (is_rg2_checked) {
