@@ -1,5 +1,4 @@
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
-import org.jetbrains.kotlin.gradle.dsl.KotlinVersion
 
 plugins {
     alias(libs.plugins.androidApplication)
@@ -9,13 +8,6 @@ plugins {
     alias(libs.plugins.kotlinSerialization)
 }
 
-//buildscript {
-//    extra["kotlin_version"] = "2.1.0-Beta2"
-//    dependencies {
-//        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version")
-//    }
-//}
-
 kotlin {
     compilerOptions {
         jvmTarget = JvmTarget.fromTarget("11")
@@ -24,11 +16,7 @@ kotlin {
 
 android {
     namespace = "com.duckgo.medtools"
-    compileSdk = 34
-
-//    composeOptions {
-//        kotlinCompilerExtensionVersion = "1.9.0"
-//    }
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.duckgo.medtools"
@@ -47,15 +35,19 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            versionNameSuffix = "-release"
+            isDebuggable = false
+        }
+        getByName("debug") {
+            applicationIdSuffix = ".debug"
+            versionNameSuffix = "-debug"
+            isDebuggable = true
         }
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
-    // composeOptions {
-    //    kotlinCompilerExtensionVersion = "1.5.2"
-    // }
     buildFeatures {
         viewBinding = true
         compose = true
@@ -64,11 +56,9 @@ android {
     lint {
         baseline = file("lint-baseline.xml")
     }
-
 }
-//val kotlin_version: String by rootProject.extra
-dependencies {
 
+dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -76,13 +66,32 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
+    
+    // Lifecycle
     implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
+    implementation(libs.androidx.lifecycle.livedata.ktx)
+    implementation(libs.androidx.lifecycle.runtime.compose)
+    implementation(libs.androidx.lifecycle.viewmodel.savedstate)
+
+    // Compose
     implementation(libs.androidx.activity.compose)
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.ui)
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+
+    // Room
+    implementation(libs.androidx.room.runtime)
+    ksp(libs.androidx.room.compiler)
+
+    // Kotlinx
+    implementation(libs.kotlinx.serialization.json)
+    implementation(libs.kotlinx.coroutines.android)
+
+    // Test
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -90,29 +99,4 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-    ksp(libs.androidx.room.compiler)
-//    implementation("org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version")
-//    implementation(kotlin("stdlib-jdk8"))
-    val room_version = "2.6.1"
-    implementation("androidx.room:room-runtime:$room_version")
-    // annotationProcessor("androidx.room:room-compiler:$room_version")
-
-    val lifecycle_version = "2.8.6"
-
-    // ViewModel
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version")
-    // ViewModel utilities for Compose
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:$lifecycle_version")
-    // LiveData
-    implementation("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version")
-    // Lifecycles only (without ViewModel or LiveData)
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version")
-    // Lifecycle utilities for Compose
-    implementation("androidx.lifecycle:lifecycle-runtime-compose:$lifecycle_version")
-
-    // Saved state module for ViewModel
-    implementation("androidx.lifecycle:lifecycle-viewmodel-savedstate:$lifecycle_version")
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.0")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
-
 }
