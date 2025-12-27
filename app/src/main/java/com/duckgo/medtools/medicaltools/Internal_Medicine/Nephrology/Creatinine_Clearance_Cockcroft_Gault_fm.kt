@@ -10,99 +10,61 @@ import com.duckgo.medtools.databinding.FragmentCreatinineClearanceCockcroftGault
 import com.duckgo.medtools.my_adapter.MedCalListAdapter
 
 class Creatinine_Clearance_Cockcroft_Gault_fm : Fragment() {
+    private var _binding: FragmentCreatinineClearanceCockcroftGaultFmBinding? = null
+    private val binding get() = _binding!!
 
-    lateinit var dataSet_appendix: MutableList<Array<String>>
-    lateinit var binding: FragmentCreatinineClearanceCockcroftGaultFmBinding
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        binding = FragmentCreatinineClearanceCockcroftGaultFmBinding.inflate(layoutInflater)
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+        _binding = FragmentCreatinineClearanceCockcroftGaultFmBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        initData_appendix()
-        initAdaptor()
-        binding.rgDisplay.setOnCheckedChangeListener { _, _ -> checkDisplay() }
-        calculate()
+        initView()
+        setupListeners()
     }
 
-    fun calculate() {
-        binding.btnCal.setOnClickListener {
-            var result = getInput()
-            if (result != 0.0) {
-            binding.tvResult.text= "CCrE = ${ String.format("%.2f",result) } ml/(min*1.73m2)"
-            }else{
-                binding.tvResult.text = "请输入正确数据"
-            }
+    private fun initView() {
+        val data = mutableListOf(
+            arrayOf("公式英文名称", "Creatinine Clearance Estimate by Cockcroft-Gault Equation, CCrE"),
+            arrayOf("计算公式", "CCrE (女性×0.85) = (140-年龄) × 体重 × 1.23 / 血肌酐浓度 (SI)"),
+            arrayOf("结果正常值", "成人 80～120 mL/(min*1.73m2)"),
+            arrayOf("说明", "CCr 常用来对肾功能进行分期以指导治疗。"),
+            arrayOf("参考文献", "1. Cockcroft DW, et al. Nephron. 1976;16(1):31-42.\n2. Winter MA, et al. Pharmacotherapy. 2012;32(7):604-12.")
+        )
+        binding.rvContentAppendix.apply {
+            layoutManager = LinearLayoutManager(requireContext())
+            adapter = MedCalListAdapter(data, "20")
+            overScrollMode = View.OVER_SCROLL_NEVER
         }
     }
-    fun checkDisplay(){
-        val dialysis = if (binding.rbCommon.isChecked) "common" else "universal"
-        if (dialysis == "common"){
-            binding.tvUniversal.text = "血肌酐浓度(mg/dL):"
-        }else if (dialysis == "universal"){
-            binding.tvUniversal.text = "血肌酐浓度(mmol/L):"
+
+    private fun setupListeners() {
+        binding.btnCal.setOnClickListener { calculate() }
+        binding.rgDisplay.setOnCheckedChangeListener { _, _ ->
+            binding.tvUniversal.text = if (binding.rbCommon.isChecked) "血肌酐浓度(mg/dL):" else "血肌酐浓度(mmol/L):"
         }
     }
-    fun getInput() :Double{
+
+    private fun calculate() {
         val age = binding.etAge.text.toString().toIntOrNull()
         val weight = binding.etBodyWeight.text.toString().toDoubleOrNull()
-        val cr = binding.etCr.text.toString().toDoubleOrNull()
-        val gender = if (binding.rbMan.isChecked) "man" else "woman"
-        val unit = if (binding.rbCommon.isChecked) "common" else "universal"
-        var result = if( (gender == "man") and (unit == "universal") and (age != null) and (weight != null) and (cr != null)){
-            (140 - age!!) * weight!! * 1.23 / cr!!
-        }else if ((gender == "man") and (unit == "common") and (age != null) and (weight != null) and (cr != null)){
-            (140-age!!)*weight!!*1.23/(cr!!*88.402)
-        } else if ((gender == "woman") and (unit == "universal") and (age != null) and (weight != null) and (cr != null)){
-            0.85*(140 - age!!) * weight!! * 1.23 / cr!!
-        } else if ((gender == "woman") and (unit == "common") and (age != null) and (weight != null) and (cr != null)){
-            0.85*(140 - age!!) * weight!! * 1.23 / (cr!! * 88.402)
-        }else{
-            0.0
+        val crInput = binding.etCr.text.toString().toDoubleOrNull()
+        
+        if (age == null || weight == null || crInput == null || crInput == 0.0) {
+            binding.tvResult.text = "请输入正确数据"
+            return
         }
-        return result
+
+        val genderFactor = if (binding.rbMan.isChecked) 1.0 else 0.85
+        val crSI = if (binding.rbCommon.isChecked) crInput * 88.402 else crInput
+        
+        val result = genderFactor * (140 - age) * weight * 1.23 / crSI
+        binding.tvResult.text = "CCrE = ${"%.2f".format(result)} ml/(min*1.73m2)"
     }
 
-    private fun initAdaptor() {
-        binding.rvContentAppendix.layoutManager = LinearLayoutManager(activity , LinearLayoutManager.VERTICAL, false)
-        binding.rvContentAppendix.adapter = MedCalListAdapter(dataSet_appendix, "20")
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
-
-    private fun initData_appendix() {
-        var subDataSet1 = arrayOf("公式英文名称", "Creatinine Clearance Estimate by Cockcroft-Gault Equation,CCrE")
-        var subDataSet2 = arrayOf("计算公式", "CCrE（女性*0.85）=(140-年龄)*体重*1.23/血肌酐浓度（国际单位,SI）")
-        var subDataSet3 = arrayOf("结果正常值", "成人80～120 mL/(min*1.73m2)")
-        var subDataSet4 = arrayOf("说明", "CCr常用来对肾功能进行分期以指导治疗，如慢性肾功能衰竭分级时结合CCr将病程分为四期，指导治疗。")
-        var subDataSet5 = arrayOf("参考文献", "1.Cockcroft DW, Gault MH. Prediction of creatinine clearance from serum creatinine. Nephron. 1976;16(1):31-42.\n" +
-                                "2. Winter MA, et al. Impact of various body weights and serum creatinine concentrations on the bias and accuracy of the Cockcroft-Gault equation. Pharmacotherapy. 2012;32(7):604-12.")
-        dataSet_appendix= ArrayList()
-        dataSet_appendix.add(subDataSet1)
-        dataSet_appendix.add(subDataSet2)
-        dataSet_appendix.add(subDataSet3)
-        dataSet_appendix.add(subDataSet4)
-        dataSet_appendix.add(subDataSet5)
-    }
-
-//    override fun onDestroy() {
-//        super.onDestroy()
-//        binding.root.setOnKeyListener { v, keyCode, event ->
-//            if (keyCode == KeyEvent.KEYCODE_BACK) {
-////                activity?.finish()
-//                val mFragmentManager = activity?.supportFragmentManager
-//                if (mFragmentManager?.findFragmentById(R.id.fragment_) != null) {
-//                    mFragmentManager!!.beginTransaction()!!.show(mFragmentManager?.findFragmentById(
-//                        R.id.fragment_)!!).commit()
-//                    return@setOnKeyListener false
-//                }
-//
-//            }
-//            return@setOnKeyListener false
-//        }
-//    }
-
 }

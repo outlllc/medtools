@@ -8,124 +8,65 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.duckgo.medtools.databinding.FragmentGlomerularFiltrationRateCkdEpiFmBinding
 import com.duckgo.medtools.my_adapter.MedCalListAdapter
+import kotlin.math.pow
 
 class Glomerular_Filtration_Rate_CKD_EPI_fm : Fragment() {
+    private var _binding: FragmentGlomerularFiltrationRateCkdEpiFmBinding? = null
+    private val binding get() = _binding!!
 
-    lateinit var dataSet_appendix: MutableList<Array<String>>
-    lateinit var binding: FragmentGlomerularFiltrationRateCkdEpiFmBinding
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        binding = FragmentGlomerularFiltrationRateCkdEpiFmBinding.inflate(layoutInflater)
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+        _binding = FragmentGlomerularFiltrationRateCkdEpiFmBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        initData_appendix()
-        initAdaptor()
-        calculate()
-        binding.rgDisplay.setOnCheckedChangeListener { _, _ -> checkDisplay() }
+        initView()
+        setupListeners()
     }
 
-    fun getInput() :Double{
+    private fun initView() {
+        val data = mutableListOf(
+            arrayOf("计算公式", "GFR＝a×(血肌酐浓度/b)c×(0.993)年龄\na值：黑人(女166, 男163); 其他(女144, 男141)\nb值：女0.7, 男0.9\nc值：女(≤0.7为-0.329, >0.7为-1.209); 男(≤0.9为-0.411, >0.9为-1.209)"),
+            arrayOf("结果正常值范围", "120~138mL/(min*1.73m2)"),
+            arrayOf("说明", "2009年发表的CKD-EPI公式较MDRD公式更为精确，尤其当GFR > 60ml/min时。"),
+            arrayOf("参考文献", "Levey AS, et al. Ann Intern Med. 2009 May 5;150(9):604-12.")
+        )
+        binding.rvContentAppendix.apply {
+            layoutManager = LinearLayoutManager(requireContext())
+            adapter = MedCalListAdapter(data, "20")
+            overScrollMode = View.OVER_SCROLL_NEVER
+        }
+    }
+
+    private fun setupListeners() {
+        binding.btnCal.setOnClickListener { calculate() }
+        binding.rgDisplay.setOnCheckedChangeListener { _, _ ->
+            binding.tvUniversal.text = if (binding.rbCommon.isChecked) "血肌酐浓度(mg/dL):" else "血肌酐浓度(mmol/L):"
+        }
+    }
+
+    private fun calculate() {
         val age = binding.etAge.text.toString().toIntOrNull()
         val cr = binding.etCr.text.toString().toDoubleOrNull()
-        val gender = if (binding.rbMan.isChecked) "man" else "woman"
-        var race = if (binding.rbBlack.isChecked) "black" else "other"
-        var index_A = 0
-        var index_B = 0.0
-        var index_C = 0.0
-
-
-        if((age != null) and (cr != null)){
-            index_C = if(gender == "man"){
-                if (cr!! <= 0.7) -0.411 else -1.209
-            }else if (gender == "woman"){
-                if (cr!! <= 0.7) -0.329 else -1.209
-            }else{
-                0.0
-            }
-            if (race == "black"){
-                when(gender){
-                    "man" -> {
-                        index_A = 163
-                        index_B = 0.9
-                    }
-                    "woman" -> {
-                        index_A = 166
-                        index_B = 0.7
-                    }
-                    else -> { 0.0 }
-                }
-            }else if (race == "other"){
-                when(gender) {
-                    "man" -> {
-                        index_A = 141
-                        index_B = 0.9
-                    }
-                    "woman" -> {
-                        index_A = 144
-                        index_B = 0.7
-                    }
-                    else -> { 0.0 }
-                }
-            } else(
-                0.0
-            )
-        }else{
-            return 0.0
+        if (age == null || cr == null) {
+            binding.tvResult.text = "请输入正确数据"
+            return
         }
-        var result = index_A * Math.pow((cr!!/index_B), index_C) * Math.pow(0.993, age!!.toDouble())
-        return result
+
+        val isMale = binding.rbMan.isChecked
+        val isBlack = binding.rbBlack.isChecked
+        
+        val a = if (isBlack) (if (isMale) 163.0 else 166.0) else (if (isMale) 141.0 else 144.0)
+        val b = if (isMale) 0.9 else 0.7
+        val c = if (isMale) (if (cr <= 0.9) -0.411 else -1.209) else (if (cr <= 0.7) -0.329 else -1.209)
+        
+        val result = a * (cr / b).pow(c) * 0.993.pow(age.toDouble())
+        binding.tvResult.text = "肾小球滤过率 = ${"%.2f".format(result)} ml/(min*1.73m2)"
     }
 
-    fun calculate() {
-        binding.btnCal.setOnClickListener {
-            var result = getInput()
-            if (result != 0.0) {
-                binding.tvResult.text= "肾小球滤过率 = ${ String.format("%.2f",result) } ml/(min*1.73m2)"
-            }else{
-                binding.tvResult.text = "请输入正确数据"
-            }
-        }
-    }
-
-    fun checkDisplay(){
-        val dialysis = if (binding.rbCommon.isChecked) "common" else "universal"
-        if (dialysis == "common"){
-            binding.tvUniversal.text = "血肌酐浓度(mg/dL):"
-        }else if (dialysis == "universal"){
-            binding.tvUniversal.text = "血肌酐浓度(mmol/L):"
-        }
-    }
-
-    private fun initAdaptor() {
-        binding.rvContentAppendix.layoutManager = LinearLayoutManager(activity , LinearLayoutManager.VERTICAL, false)
-        binding.rvContentAppendix.adapter = MedCalListAdapter(dataSet_appendix, "20")
-    }
-
-    private fun initData_appendix() {
-        var subDataSet1 = arrayOf("计算公式", "GFR＝a×(血肌酐浓度/b)c×(0.993)年龄\n" +
-                "a值根据性别与人种分别采用如下数值：\n" +
-                "①黑人：女性 = 166； 男性 = 163\n" +
-                "②其他人种：女性 = 144； 男性 = 141\n" +
-                "\n" +
-                "b值根据性别不同分别采用如下数值：\n" +
-                "女性 = 0.7； 男性 = 0.9\n" +
-                "\n" +
-                "c值根据年龄与血清肌酐值的大小分别采用如下数值：\n" +
-                "①女性：血清肌酐 ≤ 0.7 mg/dL = -0.329； 血清肌酐 ＞ 0.7 mg/dL = -1.209\n" +
-                "②男性：血清肌酐 ≤ 0.7 mg/dL = -0.411； 血清肌酐 ＞ 0.7 mg/dL = -1.209")
-        var subDataSet2 = arrayOf("结果正常值范围", "120~138mL/(min*1.73m2)")
-        var subDataSet3 = arrayOf("说明", "2009年刚发表的慢性肾脏病流行病学合作研究(CKD-EPI)公式，较目前普遍应用的MDRD公式评估肾小球滤过率更为精确，尤其是当GFR大于60mL/(min*1.73m2)时。")
-        var subDataSet4 = arrayOf("参考文献", "Levey AS, et al. A new equation to estimate glomerular filtration rate. Ann Intern Med. 2009 May 5;150(9):604-12.")
-        dataSet_appendix= ArrayList()
-        dataSet_appendix.add(subDataSet1)
-        dataSet_appendix.add(subDataSet2)
-        dataSet_appendix.add(subDataSet3)
-        dataSet_appendix.add(subDataSet4)
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }

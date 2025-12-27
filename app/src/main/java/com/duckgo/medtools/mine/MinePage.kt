@@ -6,13 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.viewpager.widget.ViewPager
-import androidx.viewpager2.widget.ViewPager2
 import com.duckgo.medtools.R
 import com.duckgo.medtools.databinding.FragmentMinePageBinding
-import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Bishop_fm
-import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Fetal_Maturity_fm
-import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Normal_Lochia_fm
-import com.duckgo.medtools.my_adapter.Pager2Adapter
 import com.duckgo.medtools.my_adapter.Pager2FragmentAdapter
 import com.duckgo.medtools.my_adapter.ViewPageAdapter
 import com.google.android.material.tabs.TabLayout
@@ -24,7 +19,8 @@ private const val ARG_PARAM2 = "param2"
 class MinePage : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
-    lateinit var binding: FragmentMinePageBinding
+    private var _binding: FragmentMinePageBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,9 +33,52 @@ class MinePage : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        binding = FragmentMinePageBinding.inflate(inflater, container, false)
+    ): View {
+        _binding = FragmentMinePageBinding.inflate(inflater, container, false)
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        
+        setupViewPager1()
+        setupViewPager2()
+    }
+
+    private fun setupViewPager1() {
+        val dataSet2 = mutableListOf<View>(
+            LayoutInflater.from(requireContext()).inflate(R.layout.activity_drug_to_fetus, null, false),
+            LayoutInflater.from(requireContext()).inflate(R.layout.activity_amount_of_hydration, null, false),
+            LayoutInflater.from(requireContext()).inflate(R.layout.activity_bishop, null, false),
+            LayoutInflater.from(requireContext()).inflate(R.layout.activity_classification_of_hypertension_during_pregnancy, null, false)
+        )
+        binding.viewPager.adapter = ViewPageAdapter(requireContext(), dataSet2)
+        binding.viewPager.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(binding.tabLayout1))
+        binding.viewPager.addOnPageChangeListener(PageChangeListener())
+        binding.tabLayout1.setupWithViewPager(binding.viewPager)
+    }
+
+    private fun setupViewPager2() {
+        // Disable save enabled to prevent IllegalStateException: Fragment no longer exists for key f#0
+        // which occurs during state restoration when ViewPager2 tries to restore fragments that are no longer in FragmentManager.
+        binding.viewPager2.isSaveEnabled = false
+        binding.viewPager2.adapter = Pager2FragmentAdapter(childFragmentManager, viewLifecycleOwner.lifecycle)
+        
+        TabLayoutMediator(binding.tabLayout, binding.viewPager2) { tab, position ->
+            tab.text = "S标签 ${position + 1}"
+        }.attach()
+    }
+
+    class PageChangeListener : ViewPager.OnPageChangeListener {
+        override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {}
+        override fun onPageSelected(position: Int) {}
+        override fun onPageScrollStateChanged(state: Int) {}
+    }
+
+    override fun onDestroyView() {
+        _binding?.viewPager2?.adapter = null
+        super.onDestroyView()
+        _binding = null
     }
 
     companion object {
@@ -51,87 +90,5 @@ class MinePage : Fragment() {
                     putString(ARG_PARAM2, param2)
                 }
             }
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        binding.tabLayout1.addTab(binding.tabLayout1.newTab().setText("Tab 1"))
-
-        binding.tabLayout1.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
-            override fun onTabSelected(tab: TabLayout.Tab?) {
-                // Do something when tab is selected
-            }
-
-            override fun onTabUnselected(tab: TabLayout.Tab?) {
-
-            }
-
-            override fun onTabReselected(tab: TabLayout.Tab?) {
-
-            }
-        })
-        var dataSet =mutableListOf<String>("1", "2", "3")
-        var dataSet2 =mutableListOf<View>(LayoutInflater.from(requireContext()).inflate(R.layout.activity_drug_to_fetus,null,false), LayoutInflater.from(requireContext()).inflate(R.layout.activity_amount_of_hydration,null,false), LayoutInflater.from(requireContext()).inflate(R.layout.activity_bishop,null,false), LayoutInflater.from(requireContext()).inflate(R.layout.activity_classification_of_hypertension_during_pregnancy,null,false))
-        binding.viewPager.adapter = ViewPageAdapter(requireContext(), dataSet2)
-        binding.viewPager.addOnPageChangeListener( TabLayout.TabLayoutOnPageChangeListener(binding.tabLayout1))
-        binding.viewPager.addOnPageChangeListener(PageChangeListener())
-        binding.tabLayout1.setupWithViewPager(binding.viewPager)
-
-
-        binding.viewPager2.registerOnPageChangeCallback(PageChangeCallBack())
-//        binding.viewPager2.setPageTransformer()   设置动画效果，同样需要实现相应的class
-        binding.viewPager2.adapter = Pager2Adapter(requireContext(), dataSet)
-        TabLayoutMediator(binding.tabLayout, binding.viewPager2) { tab, position ->
-            tab.text = "S标签 ${position + 1}"
-        }.attach()
-
-        //pager2+fragment
-        var fragments = listOf<Fragment>(Bishop_fm(), Fetal_Maturity_fm(), Normal_Lochia_fm())
-        binding.viewPager2.adapter = Pager2FragmentAdapter(childFragmentManager = childFragmentManager, lifecycle = lifecycle, fragments)
-        binding.viewPager2.adapter?.notifyDataSetChanged()
-    }
-
-    //viewpager的方法
-    class PageChangeListener: ViewPager.OnPageChangeListener{
-        override fun onPageScrolled(
-            position: Int,
-            positionOffset: Float,
-            positionOffsetPixels: Int
-        ) {
-
-        }
-
-        override fun onPageSelected(position: Int) {
-            // Do something when page is selected
-        }
-
-        override fun onPageScrollStateChanged(state: Int) {
-
-        }
-
-    }
-
-    //viewpager2的方法
-    class PageChangeCallBack: ViewPager2.OnPageChangeCallback(){
-        override fun onPageSelected(position: Int) {
-            super.onPageSelected(position)
-        }
-
-        override fun onPageScrolled(
-            position: Int,
-            positionOffset: Float,
-            positionOffsetPixels: Int
-        ) {
-            super.onPageScrolled(position, positionOffset, positionOffsetPixels)
-        }
-
-        override fun onPageScrollStateChanged(state: Int) {
-            super.onPageScrollStateChanged(state)
-        }
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        binding.viewPager2.unregisterOnPageChangeCallback(PageChangeCallBack())
     }
 }

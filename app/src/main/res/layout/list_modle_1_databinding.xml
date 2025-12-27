@@ -25,6 +25,11 @@
             android:layout_height="wrap_content"
             android:id="@+id/tv_content_title"
             android:text="标题"
+            android:gravity="center"
+            android:textColor="@color/green700"
+            android:textStyle="bold"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/v1"
             app:layout_constraintBottom_toTopOf="@+id/v2"/>

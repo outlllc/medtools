@@ -7,180 +7,137 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.duckgo.medtools.R
 
-class MedCalListAdapter(var dataSet: MutableList<Array<String>>, var subType:String) :RecyclerView.Adapter<RecyclerView.ViewHolder>(){
+class MedCalListAdapter(var dataSet: MutableList<Array<String>>, var subType: String) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
-    var mViewType = 0
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        when(viewType){
-            10 -> {
-                mViewType = viewType
-                var itemView = LayoutInflater.from(parent.context).inflate(R.layout.list_modle_1,parent,false)
-                return ViewHolder10(itemView)
-            }
-            20 -> {
-                mViewType = viewType
-                var itemView = LayoutInflater.from(parent.context).inflate(R.layout.list_modle_2,parent,false)
-                return ViewHolder20(itemView)
-            }
-            21 -> {
-                mViewType = viewType
-                var itemView = LayoutInflater.from(parent.context).inflate(R.layout.list_modle_2_1,parent,false)
-                return ViewHolder21(itemView)
-            }
-            30 -> {
-                mViewType = viewType
-                var itemView = LayoutInflater.from(parent.context).inflate(R.layout.list_modle_3,parent,false)
-                return ViewHolder30(itemView)
-            }
-            31 -> {
-                mViewType = viewType
-                var itemView = LayoutInflater.from(parent.context).inflate(R.layout.list_modle_3_1, parent, false)
-                return ViewHolder31(itemView)
-            }
-            32 -> {
-                mViewType = viewType
-                var itemView = LayoutInflater.from(parent.context).inflate(R.layout.list_modle_3_2, parent, false)
-                return ViewHolder32(itemView)
-            }
-            40 -> {
-                mViewType = viewType
-                var itemView = LayoutInflater.from(parent.context).inflate(R.layout.list_modle_4,parent,false)
-                return ViewHolder40(itemView)
-            }
-            70 -> {
-                mViewType = viewType
-                var itemView = LayoutInflater.from(parent.context).inflate(R.layout.list_modle_7,parent,false)
-                return ViewHolder70(itemView)
-            }
+        val layoutRes = when (viewType) {
+            10 -> R.layout.list_modle_1
+            20 -> R.layout.list_modle_2
+            21 -> R.layout.list_modle_2_1
+            30 -> R.layout.list_modle_3
+            31 -> R.layout.list_modle_3_1
+            32 -> R.layout.list_modle_3_2
+            40 -> R.layout.list_modle_4
+            70 -> R.layout.list_modle_7
+            else -> R.layout.list_modle_2
         }
-
-        var itemView = LayoutInflater.from(parent.context).inflate(R.layout.list_modle_2,parent,false)
-        return ViewHolder21(itemView)
+        val itemView = LayoutInflater.from(parent.context).inflate(layoutRes, parent, false)
+        return when (viewType) {
+            10 -> ViewHolder10(itemView)
+            20 -> ViewHolder20(itemView)
+            21 -> ViewHolder21(itemView)
+            30 -> ViewHolder30(itemView)
+            31 -> ViewHolder31(itemView)
+            32 -> ViewHolder32(itemView)
+            40 -> ViewHolder40(itemView)
+            70 -> ViewHolder70(itemView)
+            else -> ViewHolder21(itemView)
+        }
     }
 
-    override fun getItemCount(): Int {
-        return dataSet.size
-    }
+    override fun getItemCount() = dataSet.size
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        when (mViewType){
-            10 -> {
-                (holder as ViewHolder10).tv_content_title.text = dataSet[position][0]
+        val data = dataSet[position]
+        when (holder) {
+            is ViewHolder10 -> holder.tv_content_title.text = data[0]
+            is ViewHolder20 -> {
+                holder.tv_content_title.text = data[0]
+                holder.tv_content.text = if (data.size > 1) data[1] else ""
             }
-            20 -> {
-                (holder as ViewHolder20).tv_content_title.text = dataSet[position][0]
-                holder.tv_content.text = dataSet[position][1]
+            is ViewHolder21 -> {
+                holder.tv_content_title.text = data[0]
+                holder.tv_content.text = if (data.size > 1) data[1] else ""
             }
-            21 -> {
-                (holder as ViewHolder21).tv_content_title.text = dataSet[position][0]
-                holder.tv_content.text = dataSet[position][1]
+            is ViewHolder30 -> {
+                holder.tv_content_title.text = data[0]
+                holder.tv_content1.text = if (data.size > 1) data[1] else ""
+                holder.tv_content2.text = if (data.size > 2) data[2] else ""
             }
-            30 -> {
-                (holder as ViewHolder30).tv_content_title.text = dataSet[position][0]
-                holder.tv_content1.text = dataSet[position][1]
-                holder.tv_content2.text = dataSet[position][2]
+            is ViewHolder31 -> {
+                holder.tv_content_title.text = data[0]
+                holder.tv_content1.text = if (data.size > 1) data[1] else ""
+                holder.tv_content2.text = if (data.size > 2) data[2] else ""
             }
-            31 -> {
-                (holder as ViewHolder31).tv_content_title.text = dataSet[position][0]
-                holder.tv_content1.text = dataSet[position][1]
-                holder.tv_content2.text = dataSet[position][2]
+            is ViewHolder32 -> {
+                holder.tv_content_title.text = data[0]
+                holder.tv_content1.text = if (data.size > 1) data[1] else ""
+                holder.tv_content2.text = if (data.size > 2) data[2] else ""
             }
-            32 -> {
-                (holder as ViewHolder32).tv_content_title.text = dataSet[position][0]
-                holder.tv_content1.text = dataSet[position][1]
-                holder.tv_content2.text = dataSet[position][2]
+            is ViewHolder40 -> {
+                holder.tv_content_title.text = data[0]
+                holder.tv_content1.text = if (data.size > 1) data[1] else ""
+                holder.tv_content2.text = if (data.size > 2) data[2] else ""
+                holder.tv_content3.text = if (data.size > 3) data[3] else ""
             }
-            40 -> {
-                (holder as ViewHolder40).tv_content_title.text = dataSet[position][0]
-                holder.tv_content1.text = dataSet[position][1]
-                holder.tv_content2.text = dataSet[position][2]
-                holder.tv_content3.text = dataSet[position][3]
+            is ViewHolder70 -> {
+                holder.tv_content_title.text = data[0]
+                holder.tv_content1.text = if (data.size > 1) data[1] else ""
+                holder.tv_content2.text = if (data.size > 2) data[2] else ""
+                holder.tv_content3.text = if (data.size > 3) data[3] else ""
+                holder.tv_content4.text = if (data.size > 4) data[4] else ""
+                holder.tv_content5.text = if (data.size > 5) data[5] else ""
+                holder.tv_content6.text = if (data.size > 6) data[6] else ""
             }
-            70 -> {
-                (holder as ViewHolder70).tv_content_title.text = dataSet[position][0]
-                holder.tv_content1.text = dataSet[position][1]
-                holder.tv_content2.text = dataSet[position][2]
-                holder.tv_content3.text = dataSet[position][3]
-                holder.tv_content4.text = dataSet[position][4]
-                holder.tv_content5.text = dataSet[position][5]
-                holder.tv_content6.text = dataSet[position][6]
-            }
-            else ->{}
         }
     }
 
     override fun getItemViewType(position: Int): Int {
-        when (dataSet[0].size) {
-            1 -> {
-                if (subType == "10") {
-                    return 10
-                } else if (subType == "11") {
-                    return 11
-                }
+        val size = dataSet[position].size
+        return when (size) {
+            1 -> if (subType == "10") 10 else 11
+            2 -> if (subType == "20") 20 else 21
+            3 -> when (subType) {
+                "30" -> 30
+                "31" -> 31
+                "32" -> 32
+                else -> 30
             }
-            2 -> {
-                if (subType == "20") {
-                    return 20
-                } else if (subType == "21") {
-                    return 21
-                }
-            }
-            3 -> {
-                if (subType == "30") {
-                    return 30
-                } else if (subType == "31") {
-                    return 31
-                } else if (subType == "32"){
-                    return 32
-                }
-            }
-            4 -> return 40
-            5 -> return 50
-            6 -> return 60
-            7 -> return 70
-            else -> return 0
+            4 -> 40
+            7 -> 70
+            else -> 0
         }
-        return 0
     }
-    class ViewHolder20(itemView: View): RecyclerView.ViewHolder(itemView){
-        var tv_content_title = itemView.findViewById<TextView>(R.id.tv_content_title)
-        var tv_content = itemView.findViewById<TextView>(R.id.tv_content)
+
+    class ViewHolder10(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val tv_content_title: TextView = itemView.findViewById(R.id.tv_content_title)
     }
-    class ViewHolder21(itemView: View): RecyclerView.ViewHolder(itemView){
-        var tv_content_title = itemView.findViewById<TextView>(R.id.tv_content_title)
-        var tv_content = itemView.findViewById<TextView>(R.id.tv_content)
+    class ViewHolder20(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val tv_content_title: TextView = itemView.findViewById(R.id.tv_content_title)
+        val tv_content: TextView = itemView.findViewById(R.id.tv_content)
     }
-    class ViewHolder30(val view: View) : RecyclerView.ViewHolder(view){
-        var tv_content_title: TextView = view.findViewById(R.id.tv_content_title)
-        var tv_content1: TextView = view.findViewById(R.id.tv_content1)
-        var tv_content2: TextView = view.findViewById(R.id.tv_content2)
+    class ViewHolder21(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val tv_content_title: TextView = itemView.findViewById(R.id.tv_content_title)
+        val tv_content: TextView = itemView.findViewById(R.id.tv_content)
     }
-    class ViewHolder31(val view: View) : RecyclerView.ViewHolder(view){
-        var tv_content_title: TextView = view.findViewById(R.id.tv_content_title)
-        var tv_content1: TextView = view.findViewById(R.id.tv_content1)
-        var tv_content2: TextView = view.findViewById(R.id.tv_content2)
+    class ViewHolder30(view: View) : RecyclerView.ViewHolder(view) {
+        val tv_content_title: TextView = view.findViewById(R.id.tv_content_title)
+        val tv_content1: TextView = view.findViewById(R.id.tv_content1)
+        val tv_content2: TextView = view.findViewById(R.id.tv_content2)
     }
-    class ViewHolder32(val view: View) : RecyclerView.ViewHolder(view){
-        var tv_content_title: TextView = view.findViewById(R.id.tv_content_title)
-        var tv_content1: TextView = view.findViewById(R.id.tv_content1)
-        var tv_content2: TextView = view.findViewById(R.id.tv_content2)
+    class ViewHolder31(view: View) : RecyclerView.ViewHolder(view) {
+        val tv_content_title: TextView = view.findViewById(R.id.tv_content_title)
+        val tv_content1: TextView = view.findViewById(R.id.tv_content1)
+        val tv_content2: TextView = view.findViewById(R.id.tv_content2)
     }
-    class ViewHolder40(val view: View) : RecyclerView.ViewHolder(view){
-        var tv_content_title: TextView = view.findViewById(R.id.tv_content_title)
-        var tv_content1: TextView = view.findViewById(R.id.tv_content1)
-        var tv_content2: TextView = view.findViewById(R.id.tv_content2)
-        var tv_content3: TextView = view.findViewById(R.id.tv_content3)
+    class ViewHolder32(view: View) : RecyclerView.ViewHolder(view) {
+        val tv_content_title: TextView = view.findViewById(R.id.tv_content_title)
+        val tv_content1: TextView = view.findViewById(R.id.tv_content1)
+        val tv_content2: TextView = view.findViewById(R.id.tv_content2)
     }
-    class ViewHolder70(val view: View) : RecyclerView.ViewHolder(view){
-        var tv_content_title: TextView = view.findViewById(R.id.tv_content_title)
-        var tv_content1: TextView = view.findViewById(R.id.tv_content1)
-        var tv_content2: TextView = view.findViewById(R.id.tv_content2)
-        var tv_content3: TextView = view.findViewById(R.id.tv_content3)
-        var tv_content4: TextView = view.findViewById(R.id.tv_content4)
-        var tv_content5: TextView = view.findViewById(R.id.tv_content5)
-        var tv_content6: TextView = view.findViewById(R.id.tv_content6)
+    class ViewHolder40(view: View) : RecyclerView.ViewHolder(view) {
+        val tv_content_title: TextView = view.findViewById(R.id.tv_content_title)
+        val tv_content1: TextView = view.findViewById(R.id.tv_content1)
+        val tv_content2: TextView = view.findViewById(R.id.tv_content2)
+        val tv_content3: TextView = view.findViewById(R.id.tv_content3)
     }
-    class ViewHolder10(itemView: View): RecyclerView.ViewHolder(itemView){
-        var tv_content_title: TextView = itemView.findViewById(R.id.tv_content_title)
+    class ViewHolder70(view: View) : RecyclerView.ViewHolder(view) {
+        val tv_content_title: TextView = view.findViewById(R.id.tv_content_title)
+        val tv_content1: TextView = view.findViewById(R.id.tv_content1)
+        val tv_content2: TextView = view.findViewById(R.id.tv_content2)
+        val tv_content3: TextView = view.findViewById(R.id.tv_content3)
+        val tv_content4: TextView = view.findViewById(R.id.tv_content4)
+        val tv_content5: TextView = view.findViewById(R.id.tv_content5)
+        val tv_content6: TextView = view.findViewById(R.id.tv_content6)
     }
 }

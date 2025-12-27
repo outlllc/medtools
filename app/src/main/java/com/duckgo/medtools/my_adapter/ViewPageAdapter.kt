@@ -15,7 +15,8 @@ class ViewPageAdapter( var mContext: Context, var dataSet: MutableList<View>): P
     }
 
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
-        var view = dataSet[position]
+        val view = dataSet[position]
+        (view.parent as? ViewGroup)?.removeView(view)
         container.addView(view)
         return view
     }

@@ -6,6 +6,7 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.PopupWindow.OnDismissListener;
@@ -84,6 +85,15 @@ import java.util.ArrayList;
 		if (mContext == null) {
 			return;
 		}
+
+		removeAllViews();
+		mViewList.clear();
+		mToggleList.clear();
+		if (popupWindow != null) {
+			popupWindow.dismiss();
+			popupWindow = null;
+		}
+
 		LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
 		mTextList = textArray;
@@ -95,7 +105,11 @@ import java.util.ArrayList;
 			
 			
 			RelativeLayout.LayoutParams rl = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, maxHeight);
-			r.addView(viewArray.get(i), rl);  //在布局中添加View并指定参数
+			View view = viewArray.get(i);
+			if (view.getParent() != null) {
+				((ViewGroup) view.getParent()).removeView(view);
+			}
+			r.addView(view, rl);  //在布局中添加View并指定参数
 			
 			
 			mViewList.add(r);
@@ -106,7 +120,9 @@ import java.util.ArrayList;
 			addView(tButton);
 			mToggleList.add(tButton);
 			tButton.setTag(i);
-			tButton.setText(mTextList.get(i));
+			if (mTextList != null && i < mTextList.size()) {
+				tButton.setText(mTextList.get(i));
+			}
 			
 			//用于实现当PopWindow显示时.再次点击收回PopWindow
 			r.setOnClickListener(new OnClickListener() {

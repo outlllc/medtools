@@ -15,29 +15,28 @@ import com.duckgo.medtools.medicaltools.Internal_Medicine.Nephrology.Chronic_Kid
 import com.duckgo.medtools.medicaltools.Internal_Medicine.Nephrology.Creatinine_Clearance_Cockcroft_Gault_fm
 import com.duckgo.medtools.medicaltools.Internal_Medicine.Nephrology.Glomerular_Filtration_Rate_CKD_EPI_fm
 import com.duckgo.medtools.medicaltools.Internal_Medicine.Nephrology.SodiumDeficitInHyponatremia_fm
-import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Bishop_fm
-import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Classification_Of_Hypertension_During_Pregnancy_fm
-import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Diagnosis_Postnatal_Depression_fm
-import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Diagnostic_Criteria_For_GDM_fm
-import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.DrugToFetus_fm
-import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Edinburgh_Postnatal_Depression_Scale_fm
-import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Fetal_Maturity_fm
-import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.GDM_Grading_And_Staging_fm
+import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Obstetrics.Bishop_fm
+import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Obstetrics.Classification_Of_Hypertension_During_Pregnancy_fm
+import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Obstetrics.Diagnosis_Postnatal_Depression_fm
+import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Obstetrics.Diagnostic_Criteria_For_GDM_fm
+import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Obstetrics.DrugToFetus_fm
+import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Obstetrics.Edinburgh_Postnatal_Depression_Scale_fm
+import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Obstetrics.Fetal_Maturity_fm
+import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Obstetrics.GDM_Grading_And_Staging_fm
 import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Gynecology.POPQStage
-import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Hyperthyroidism_Medication_During_Pregnancy_fm
-import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Indications_For_Pregnancy_Termination_Of_Gestational_Hypertension_fm
-import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Manning_Score_fm
-import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Normal_Lochia_fm
-import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.RH_And_ABO_Hemolysis_Comparison_fm
-import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Severe_Preeclampsia_Diagnosis_fm
-import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Thyroid_Function_Of_Pregnancy_fm
-import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Uterine_Height_Gestational_Age_fm
+import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Obstetrics.Hyperthyroidism_Medication_During_Pregnancy_fm
+import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Obstetrics.Indications_For_Pregnancy_Termination_Of_Gestational_Hypertension_fm
+import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Obstetrics.Manning_Score_fm
+import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Obstetrics.Normal_Lochia_fm
+import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Obstetrics.RH_And_ABO_Hemolysis_Comparison_fm
+import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Obstetrics.Severe_Preeclampsia_Diagnosis_fm
+import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Obstetrics.Thyroid_Function_Of_Pregnancy_fm
+import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Obstetrics.Uterine_Height_Gestational_Age_fm
 import com.duckgo.medtools.medicaltools.Other.Reproductive_Medicine.Precocious_Puberty_Auxiliary_Examination_fm
 import com.duckgo.medtools.medicaltools.Other.Reproductive_Medicine.Semen_reference_values_fm
 import com.duckgo.medtools.medicaltools.Other.Reproductive_Medicine.Tanner_Stage_fm
 import com.duckgo.medtools.medicaltools.comprehensive.BodySurfaceArea_fm
 import com.duckgo.medtools.medicaltools.comprehensive.Unit_Conversion_fm
-import com.duckgo.medtools.test.TestBaseFragment
 import com.duckgo.medtools.util.add_hide_fragment
 
 class MedCal_FirstPage_fagment: Fragment(), Med_Cal_Fragment_Adaptor.onItemClickListener {
@@ -56,7 +55,7 @@ class MedCal_FirstPage_fagment: Fragment(), Med_Cal_Fragment_Adaptor.onItemClick
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val dataset = arrayOf("综合", "肌酐清除率(Cockcroft-Gault)", "体表面积", "补水量", "低钠血症补钠量",
+        val dataset = arrayOf("综合[暂不知道放什么]", "肌酐清除率(Cockcroft-Gault)", "体表面积", "补水量", "低钠血症补钠量",
             "肾小球滤过率CKD-EPI", "慢性肾病CKD分期", "糖化血红蛋白评估平均血糖", "BISHOP评分", "妊娠期高血压分类",
             "重度子痫前期诊断", "妊娠期高血糖诊断标准（GDM）", "妊娠期糖尿病分级分期", "妊娠高血压终止妊娠的指征", "妊娠期甲状腺功能实验室检查",
             "胎儿生物物理监测Manning评分","正常恶露性状", "孕期用药对胎儿的影响","胎儿成熟度监测", "Rh 和 ABO 溶血病的比较",
@@ -71,7 +70,7 @@ class MedCal_FirstPage_fagment: Fragment(), Med_Cal_Fragment_Adaptor.onItemClick
 
     override fun onItemClick(position: Int) {
         val fragment: Fragment = when(position) {
-            0 -> TestBaseFragment()
+            0 -> BodySurfaceArea_fm()
             1 -> Creatinine_Clearance_Cockcroft_Gault_fm()
             2 -> BodySurfaceArea_fm()
             3 -> AmountOfHydration_fm()

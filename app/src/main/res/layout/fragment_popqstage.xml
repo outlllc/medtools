@@ -17,40 +17,28 @@
             android:background="@color/green700"
             app:constraint_referenced_ids="ftitle"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/rv_content"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/ftitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
             android:text="盆腔器官脱垂分期（POP-Q分期法）"
             android:textSize="20dp"
-            app:layout_constraintBottom_toTopOf="@+id/rv_content"
+            android:textColor="@color/white"
+            android:gravity="center_vertical"
+            android:paddingStart="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/layer"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toTopOf="@+id/layer" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_content"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toTopOf="@+id/rv_content_appendix"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/layer"
-            app:layout_constraintVertical_bias="0.146" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_content_appendix"
-            android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginTop="20dp"
-            app:layout_constraintVertical_weight="1"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/rv_content"
-            app:layout_constraintStart_toStartOf="parent" />
-
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layer" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

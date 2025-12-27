@@ -4,17 +4,20 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Obstetrics.Bishop_fm
+import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Obstetrics.Fetal_Maturity_fm
+import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Obstetrics.Normal_Lochia_fm
 
-class Pager2FragmentAdapter(
-    val childFragmentManager: FragmentManager, val lifecycle: Lifecycle, var list: List<Fragment>
-) : FragmentStateAdapter(
-    childFragmentManager, lifecycle
-) {
+class Pager2FragmentAdapter(fragmentManager: FragmentManager, lifecycle: Lifecycle) : FragmentStateAdapter(fragmentManager, lifecycle) {
+
+    override fun getItemCount(): Int = 3
+
     override fun createFragment(position: Int): Fragment {
-        return list[position]
-    }
-
-    override fun getItemCount(): Int {
-        return list.size
+        return when (position) {
+            0 -> Bishop_fm()
+            1 -> Fetal_Maturity_fm()
+            2 -> Normal_Lochia_fm()
+            else -> throw IllegalArgumentException("Invalid position $position")
+        }
     }
 }

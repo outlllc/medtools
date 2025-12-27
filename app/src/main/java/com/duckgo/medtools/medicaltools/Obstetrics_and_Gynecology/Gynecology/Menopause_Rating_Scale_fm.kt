@@ -1,12 +1,8 @@
 package com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Gynecology
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.RadioGroup
-import android.widget.RadioGroup.OnCheckedChangeListener
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.duckgo.medtools.BaseFragmentDataBinding
 import com.duckgo.medtools.R
@@ -14,187 +10,51 @@ import com.duckgo.medtools.databean.MedCalDataBean
 import com.duckgo.medtools.databinding.FragmentMenopauseRatingScaleFmBinding
 import com.duckgo.medtools.my_adapter.MedCalAdapterDatabean
 
-class Menopause_Rating_Scale_fm : BaseFragmentDataBinding<FragmentMenopauseRatingScaleFmBinding>(),
-    OnCheckedChangeListener {
-    override fun getFragmentViewBinding(): FragmentMenopauseRatingScaleFmBinding {
-        return FragmentMenopauseRatingScaleFmBinding.inflate(layoutInflater)
-    }
-    override fun initAdaptor() {
-        binding.rvContentAppendix.layoutManager = LinearLayoutManager(activity , LinearLayoutManager.VERTICAL, false)
-        binding.rvContentAppendix.adapter = MedCalAdapterDatabean(initData_appendix(), 20)
-    }
+class Menopause_Rating_Scale_fm : BaseFragmentDataBinding<FragmentMenopauseRatingScaleFmBinding>(), RadioGroup.OnCheckedChangeListener {
+    
+    private val scores = mutableMapOf<Int, Int>()
+    private val totalItems = 11
 
-    override fun initData_appendix(): List<MedCalDataBean> {
-        var medCalDataBean1 = MedCalDataBean("结果解读", "轻度（0-4分）；中度（5-8分）；重度（9-15分）；非常严重（＞16分）")
-        var medCalDataBean2 = MedCalDataBean("参考来源", "Health Qual Life Outcomes.2003 Jul 30；1:28.\n" +
-                "http://www.doc88.com/p-650228973149.html")
-        data_appendix = listOf(medCalDataBean1, medCalDataBean2)
-        return data_appendix
-    }
+    override fun getFragmentViewBinding() = FragmentMenopauseRatingScaleFmBinding.inflate(layoutInflater)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.Rgroup1.setOnCheckedChangeListener(this)
-        binding.Rgroup2.setOnCheckedChangeListener(this)
-        binding.Rgroup3.setOnCheckedChangeListener(this)
-        binding.Rgroup4.setOnCheckedChangeListener(this)
-        binding.Rgroup5.setOnCheckedChangeListener(this)
-        binding.Rgroup6.setOnCheckedChangeListener(this)
-        binding.Rgroup7.setOnCheckedChangeListener(this)
-        binding.Rgroup8.setOnCheckedChangeListener(this)
-        binding.Rgroup9.setOnCheckedChangeListener(this)
-        binding.Rgroup10.setOnCheckedChangeListener(this)
-        binding.Rgroup11.setOnCheckedChangeListener(this)
-
+        listOf(
+            binding.Rgroup1, binding.Rgroup2, binding.Rgroup3, binding.Rgroup4,
+            binding.Rgroup5, binding.Rgroup6, binding.Rgroup7, binding.Rgroup8,
+            binding.Rgroup9, binding.Rgroup10, binding.Rgroup11
+        ).forEach { it.setOnCheckedChangeListener(this) }
     }
 
-    var total_score = 0
-    var uncheck_item = 11
-    var group1_result = 0
-    var group2_result = 0
-    var group3_result = 0
-    var group4_result = 0
-    var group5_result = 0
-    var group6_result = 0
-    var group7_result = 0
-    var group8_result = 0
-    var group9_result = 0
-    var group10_result = 0
-    var group11_result = 0
+    override fun initAdaptor() {
+        binding.rvContentAppendix.apply {
+            layoutManager = LinearLayoutManager(activity)
+            adapter = MedCalAdapterDatabean(initData_appendix(), 20)
+            overScrollMode = View.OVER_SCROLL_NEVER
+        }
+    }
 
-    var group1_checked = 0
-    var group2_checked = 0
-    var group3_checked = 0
-    var group4_checked = 0
-    var group5_checked = 0
-    var group6_checked = 0
-    var group7_checked = 0
-    var group8_checked = 0
-    var group9_checked = 0
-    var group10_checked = 0
-    var group11_checked = 0
+    override fun initData_appendix() = listOf(
+        MedCalDataBean("结果解读", "轻度（0-4分）；中度（5-8分）；重度（9-15分）；非常严重（＞16分）"),
+        MedCalDataBean("参考来源", "Health Qual Life Outcomes.2003 Jul 30；1:28.")
+    )
 
     override fun onCheckedChanged(group: RadioGroup, checkedId: Int) {
-        when(group.id){
-            R.id.Rgroup1 -> {
-                group1_checked = -1
-                when(checkedId){
-                    R.id.rb10 -> group1_result = 0
-                    R.id.rb11 -> group1_result = 1
-                    R.id.rb12 -> group1_result = 2
-                    R.id.rb13 -> group1_result = 3
-                    R.id.rb14 -> group1_result = 4
-                }
-            }
-            R.id.Rgroup2 -> {
-                group2_checked = -1
-                when(checkedId){
-                    R.id.rb20 -> group2_result = 0
-                    R.id.rb21 -> group2_result = 1
-                    R.id.rb22 -> group2_result = 2
-                    R.id.rb23 -> group2_result = 3
-                    R.id.rb24 -> group2_result = 4
-                }
-            }
-            R.id.Rgroup3 -> {
-                group3_checked = -1
-                when(checkedId){
-                    R.id.rb30 -> group3_result = 0
-                    R.id.rb31 -> group3_result = 1
-                    R.id.rb32 -> group3_result = 2
-                    R.id.rb33 -> group3_result = 3
-                    R.id.rb34 -> group3_result = 4
-                }
-            }
-            R.id.Rgroup4 -> {
-                group4_checked = -1
-                when(checkedId){
-                    R.id.rb40 -> group4_result = 0
-                    R.id.rb41 -> group4_result = 1
-                    R.id.rb42 -> group4_result = 2
-                    R.id.rb43 -> group4_result = 3
-                    R.id.rb44 -> group4_result = 4
-                }
-            }
-            R.id.Rgroup5 -> {
-                group5_checked = -1
-                when(checkedId){
-                    R.id.rb50 -> group5_result = 0
-                    R.id.rb51 -> group5_result = 1
-                    R.id.rb52 -> group5_result = 2
-                    R.id.rb53 -> group5_result = 3
-                    R.id.rb54 -> group5_result = 4
-                }
-            }
-            R.id.Rgroup6 -> {
-                group6_checked = -1
-                when(checkedId){
-                    R.id.rb60 -> group6_result = 0
-                    R.id.rb61 -> group6_result = 1
-                    R.id.rb62 -> group6_result = 2
-                    R.id.rb63 -> group6_result = 3
-                    R.id.rb64 -> group6_result = 4
-                }
-            }
-            R.id.Rgroup7 -> {
-                group7_checked = -1
-                when(checkedId){
-                    R.id.rb70 -> group7_result = 0
-                    R.id.rb71 -> group7_result = 1
-                    R.id.rb72 -> group7_result = 2
-                    R.id.rb73 -> group7_result = 3
-                    R.id.rb74 -> group7_result = 4
-                }
-            }
-            R.id.Rgroup8 -> {
-                group8_checked = -1
-                when(checkedId){
-                    R.id.rb80 -> group8_result = 0
-                    R.id.rb81 -> group8_result = 1
-                    R.id.rb82 -> group8_result = 2
-                    R.id.rb83 -> group8_result = 3
-                    R.id.rb84 -> group8_result = 4
-                }
-            }
-            R.id.Rgroup9 -> {
-                group9_checked = -1
-                when(checkedId){
-                    R.id.rb90 -> group9_result = 0
-                    R.id.rb91 -> group9_result = 1
-                    R.id.rb92 -> group9_result = 2
-                    R.id.rb93 -> group9_result = 3
-                    R.id.rb94 -> group9_result = 4
-                }
-            }
-            R.id.Rgroup10 -> {
-                group10_checked = -1
-                when(checkedId){
-                    R.id.rb100 -> group10_result = 0
-                    R.id.rb101 -> group10_result = 1
-                    R.id.rb102 -> group10_result = 2
-                    R.id.rb103 -> group10_result = 3
-                    R.id.rb104 -> group10_result = 4
-                }
-            }
-            R.id.Rgroup11 -> {
-                group11_checked = -1
-                when(checkedId){
-                    R.id.rb110 -> group11_result = 0
-                    R.id.rb111 -> group11_result = 1
-                    R.id.rb112 -> group11_result = 2
-                    R.id.rb113 -> group11_result = 3
-                    R.id.rb114 -> group11_result = 4
-                }
-            }
+        val score = when (checkedId) {
+            R.id.rb10, R.id.rb20, R.id.rb30, R.id.rb40, R.id.rb50, R.id.rb60, R.id.rb70, R.id.rb80, R.id.rb90, R.id.rb100, R.id.rb110 -> 0
+            R.id.rb11, R.id.rb21, R.id.rb31, R.id.rb41, R.id.rb51, R.id.rb61, R.id.rb71, R.id.rb81, R.id.rb91, R.id.rb101, R.id.rb111 -> 1
+            R.id.rb12, R.id.rb22, R.id.rb32, R.id.rb42, R.id.rb52, R.id.rb62, R.id.rb72, R.id.rb82, R.id.rb92, R.id.rb102, R.id.rb112 -> 2
+            R.id.rb13, R.id.rb23, R.id.rb33, R.id.rb43, R.id.rb53, R.id.rb63, R.id.rb73, R.id.rb83, R.id.rb93, R.id.rb103, R.id.rb113 -> 3
+            R.id.rb14, R.id.rb24, R.id.rb34, R.id.rb44, R.id.rb54, R.id.rb64, R.id.rb74, R.id.rb84, R.id.rb94, R.id.rb104, R.id.rb114 -> 4
+            else -> 0
         }
-        total_score = group1_result + group2_result + group3_result + group4_result + group5_result +
-                group6_result + group7_result + group8_result + group9_result + group10_result +
-                group11_result
-        uncheck_item = 11 + (group1_checked + group2_checked + group3_checked + group4_checked + group5_checked +
-                group6_checked + group7_checked + group8_checked + group9_checked + group10_checked +
-                group11_checked)
-        binding.tv141.text = "  ${total_score}分 （您已选择${11-uncheck_item}个必选项，还有${uncheck_item}个必选项未选）"
-        total_score = 0
-        uncheck_item = 11
+        scores[group.id] = score
+        updateResult()
+    }
+
+    private fun updateResult() {
+        val totalScore = scores.values.sum()
+        val checkedCount = scores.size
+        binding.tv141.text = "$totalScore 分（已选 $checkedCount 个，还剩 ${totalItems - checkedCount} 个未选）"
     }
 }

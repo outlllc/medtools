@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".medicaltools.Obstetrics_and_Gynecology.RH_And_ABO_Hemolysis_Comparison_fm">
+    tools:context=".medicaltools.Obstetrics_and_Gynecology.Obstetrics.RH_And_ABO_Hemolysis_Comparison_fm">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
