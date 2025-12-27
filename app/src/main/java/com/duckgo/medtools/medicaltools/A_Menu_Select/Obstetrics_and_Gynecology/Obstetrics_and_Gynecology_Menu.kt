@@ -30,6 +30,7 @@ import com.duckgo.medtools.medicaltools.Obstetrics_and_Gynecology.Uterine_Height
 import com.duckgo.medtools.medicaltools.Other.Reproductive_Medicine.Precocious_Puberty_Auxiliary_Examination
 import com.duckgo.medtools.medicaltools.Other.Reproductive_Medicine.Semen_reference_values
 import com.duckgo.medtools.medicaltools.Other.Reproductive_Medicine.Tanner_Stage
+import com.duckgo.medtools.util.add_hide_fragment
 
 class Obstetrics_and_Gynecology_Menu: Fragment(), MenuSelectAdapter.OnItemClickListener {
 
@@ -174,9 +175,8 @@ class Obstetrics_and_Gynecology_Menu: Fragment(), MenuSelectAdapter.OnItemClickL
         }
     }
     private fun inflateFragment(fragment: Fragment){
-        val transaction = activity?.supportFragmentManager?.beginTransaction()
-        transaction?.replace(R.id.fragment_, fragment)
-        transaction?.addToBackStack(null)
-        transaction?.commit()
+        // 使用 parentFragmentManager (即 MenuFragment 的 childFragmentManager)
+        // 并且将目标容器指定为 fm_med_cal_firstpage
+        add_hide_fragment(parentFragmentManager, fragment, R.id.fm_med_cal_firstpage)
     }
 }

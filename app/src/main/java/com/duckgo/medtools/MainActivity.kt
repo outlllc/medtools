@@ -16,21 +16,18 @@ import java.io.FileOutputStream
 
 class MainActivity : AppCompatActivity() {
 
-//    var dateCaculatorFragment: DateCalculator? = null
     var dateCaculatorFragment: DateCalculator? = null
     var babyWeightFragment: BabyWeight? = null
     var showFragment: Fragment? = null
-    var medicalCalculatorFragment: MedicalCalculator? = null
     var menuFragment: MenuFragment? = null
     var minePage: MinePage ? = null
     lateinit var tg_first_page: MaterialButtonToggleGroup
-    var selectIndex = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         saveIntoFile()
-        if (dateCaculatorFragment == null) {
+        if (showFragment == null) {
             showFragment = DateCalculator()
         }
         supportFragmentManager.beginTransaction().add(R.id.fragment_, showFragment!!).commit()
@@ -61,19 +58,16 @@ class MainActivity : AppCompatActivity() {
             }
 
             val fragment = when (selectIndex) {
-                0 -> dateCaculatorFragment ?: DateCalculator()
-                1 -> babyWeightFragment ?: BabyWeight()
-                2 -> menuFragment ?: MenuFragment()
-                3 -> minePage ?: MinePage()
-                else -> {
-                    Toast.makeText(this, "error", Toast.LENGTH_SHORT).show()
-                    return@addOnButtonCheckedListener
-                }
+                0 -> { if (dateCaculatorFragment == null) dateCaculatorFragment = DateCalculator(); dateCaculatorFragment }
+                1 -> { if (babyWeightFragment == null) babyWeightFragment = BabyWeight(); babyWeightFragment }
+                2 -> { if (menuFragment == null) menuFragment = MenuFragment(); menuFragment }
+                3 -> { if (minePage == null) minePage = MinePage(); minePage }
+                else -> null
             } ?: return@addOnButtonCheckedListener
 
+            // 修改点：主导航切换不应加入回退栈，防止返回逻辑混乱
             supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment_, fragment as Fragment)
-                .addToBackStack(null)
+                .replace(R.id.fragment_, fragment)
                 .commitAllowingStateLoss()
         }
     }
