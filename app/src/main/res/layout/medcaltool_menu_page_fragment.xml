@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".medicaltools.A_Menu_Select.Other.Reproductive_Medicine.Reproductive_Medicine_Menu">
+    tools:context=".medicaltools.expandtabviewmenu.Other.Reproductive_Medicine.Reproductive_Medicine_Menu">
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_medical_calculator"
         android:layout_width="match_parent"

@@ -1,20 +1,15 @@
 package com.duckgo.medtools.babyweight
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.duckgo.medtools.BaseFragmentDataBinding
+import com.duckgo.medtools.medicaltools.BaseFragmentDataBinding
 import com.duckgo.medtools.R
 import com.duckgo.medtools.databinding.FragmentBabyWeightBinding
-import com.duckgo.medtools.databinding.FragmentDateCalculator3Binding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".medicaltools.Internal_Medicine.Endocrinology.HbA1cValuesBloodGlucose_fm">
+    tools:context=".medicaltools.functions.Internal_Medicine.Endocrinology.HbA1cValuesBloodGlucose_fm">
 
     <LinearLayout
         android:layout_width="match_parent"

@@ -4,7 +4,7 @@ import android.graphics.Color
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
-import com.duckgo.medtools.BaseFragmentDataBinding
+import com.duckgo.medtools.medicaltools.BaseFragmentDataBinding
 import com.duckgo.medtools.R
 import com.duckgo.medtools.databinding.FragmentDateCalculator3Binding
 import com.google.android.material.button.MaterialButton

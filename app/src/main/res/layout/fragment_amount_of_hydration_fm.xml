@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".medicaltools.Internal_Medicine.Nephrology.AmountOfHydration_fm">
+    tools:context=".medicaltools.functions.Internal_Medicine.Nephrology.AmountOfHydration_fm">
 
     <LinearLayout
         android:id="@+id/linearLayout"

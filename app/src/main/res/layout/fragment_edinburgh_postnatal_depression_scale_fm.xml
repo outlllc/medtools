@@ -10,7 +10,7 @@
         android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".medicaltools.Obstetrics_and_Gynecology.Obstetrics.Edinburgh_Postnatal_Depression_Scale_fm">
+        tools:context=".medicaltools.functions.Obstetrics_and_Gynecology.Obstetrics.Edinburgh_Postnatal_Depression_Scale_fm">
 
         <LinearLayout
             android:layout_width="match_parent"
