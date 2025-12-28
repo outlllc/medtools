@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import android.widget.Filter
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import com.duckgo.medtools.MedCal_FirstPage_fagment
@@ -126,7 +127,34 @@ class MenuFragment : Fragment() {
     }
 
     private fun setupSearch() {
-        val adapter = ArrayAdapter(requireContext(), android.R.layout.simple_dropdown_item_1line, searchEntries.keys.toList())
+        val allTitles = searchEntries.keys.toList()
+        val adapter = object : ArrayAdapter<String>(requireContext(), android.R.layout.simple_dropdown_item_1line, ArrayList(allTitles)) {
+            override fun getFilter(): Filter {
+                return object : Filter() {
+                    override fun performFiltering(constraint: CharSequence?): FilterResults {
+                        val results = FilterResults()
+                        val suggestions = if (constraint.isNullOrEmpty()) {
+                            allTitles
+                        } else {
+                            allTitles.filter { it.contains(constraint, ignoreCase = true) }
+                        }
+                        results.values = suggestions
+                        results.count = suggestions.size
+                        return results
+                    }
+
+                    @Suppress("UNCHECKED_CAST")
+                    override fun publishResults(constraint: CharSequence?, results: FilterResults?) {
+                        clear()
+                        if (results != null && results.count > 0) {
+                            addAll(results.values as List<String>)
+                        }
+                        notifyDataSetChanged()
+                    }
+                }
+            }
+        }
+
         binding.etSearch.setAdapter(adapter)
         binding.etSearch.setOnItemClickListener { parent, _, position, _ ->
             val selectedTitle = parent.getItemAtPosition(position) as String
