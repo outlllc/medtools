@@ -12,9 +12,9 @@ class Vaginal_Cancer_Staging_Figo_Uicc_fm : BaseMedListFragment() {
 
     override fun getAdapters(): List<RecyclerView.Adapter<out RecyclerView.ViewHolder>> {
         return listOf(
-            MedCalAdapterDatabean(initData(), 30),
+            MedCalAdapterDatabean(initData(), floatArrayOf(1f, 2f, 2f)),
             GapAdapter(40),
-            MedCalAdapterDatabean(initData_appendix(), 20)
+            MedCalAdapterDatabean(initData_appendix(), floatArrayOf(1f, 3f))
         )
     }
 

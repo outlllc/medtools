@@ -30,7 +30,7 @@ class standard_weight_fm : BaseFragmentDataBinding<FragmentStandardWeightFmBindi
     override fun initAdaptor() {
         binding.rvContentAppendix.apply {
             layoutManager = LinearLayoutManager(context)
-            adapter = MedCalAdapterDatabean(initData_appendix(), 10)
+            adapter = MedCalAdapterDatabean(initData_appendix())
             overScrollMode = View.OVER_SCROLL_NEVER
         }
     }

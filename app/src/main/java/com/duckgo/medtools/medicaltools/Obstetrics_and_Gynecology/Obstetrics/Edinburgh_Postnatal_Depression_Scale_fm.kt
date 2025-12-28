@@ -8,8 +8,9 @@ import android.widget.RadioGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.duckgo.medtools.R
+import com.duckgo.medtools.databean.MedCalDataBean
 import com.duckgo.medtools.databinding.FragmentEdinburghPostnatalDepressionScaleFmBinding
-import com.duckgo.medtools.my_adapter.MedCalListAdapter
+import com.duckgo.medtools.my_adapter.MedCalAdapterDatabean
 
 class Edinburgh_Postnatal_Depression_Scale_fm : Fragment(), RadioGroup.OnCheckedChangeListener {
 
@@ -44,59 +45,48 @@ class Edinburgh_Postnatal_Depression_Scale_fm : Fragment(), RadioGroup.OnChecked
     }
 
     override fun onCheckedChanged(group: RadioGroup, checkedId: Int) {
-        // 核心修复逻辑：精确匹配 RadioButton 的 ID 资源。
         val score = when (checkedId) {
-            // 第1题
             R.id.rb_1_3 -> 3
             R.id.rb_1_2 -> 2
             R.id.rb_1_1 -> 1
             R.id.rb_1_0 -> 0
-            // 第2题
             R.id.rb_2_3 -> 3
             R.id.rb_2_2 -> 2
             R.id.rb_2_1 -> 1
             R.id.rb_2_0 -> 0
-            // 第3题
             R.id.rb_3_3 -> 3
             R.id.rb_3_2 -> 2
             R.id.rb_3_1 -> 1
             R.id.rb_3_0 -> 0
-            // 第4题
             R.id.rb_4_3 -> 3
             R.id.rb_4_2 -> 2
             R.id.rb_4_1 -> 1
             R.id.rb_4_0 -> 0
-            // 第5题
             R.id.rb_5_3 -> 3
             R.id.rb_5_2 -> 2
             R.id.rb_5_1 -> 1
             R.id.rb_5_0 -> 0
-            // 第6题
             R.id.rb_6_3 -> 3
             R.id.rb_6_2 -> 2
             R.id.rb_6_1 -> 1
             R.id.rb_6_0 -> 0
-            // 第7题
             R.id.rb_7_3 -> 3
             R.id.rb_7_2 -> 2
             R.id.rb_7_1 -> 1
             R.id.rb_7_0 -> 0
-            // 第8题
             R.id.rb_8_3 -> 3
             R.id.rb_8_2 -> 2
             R.id.rb_8_1 -> 1
             R.id.rb_8_0 -> 0
-            // 第9题
             R.id.rb_9_3 -> 3
             R.id.rb_9_2 -> 2
             R.id.rb_9_1 -> 1
             R.id.rb_9_0 -> 0
-            // 第10题
             R.id.rb_10_3 -> 3
             R.id.rb_10_2 -> 2
             R.id.rb_10_1 -> 1
             R.id.rb_10_0 -> 0
-            else -> null // 如果没有选中任何项（例如调用了 clearCheck()），则从 map 中移除该组得分
+            else -> null
         }
         
         if (score != null) {
@@ -114,13 +104,13 @@ class Edinburgh_Postnatal_Depression_Scale_fm : Fragment(), RadioGroup.OnChecked
     }
 
     private fun initAdaptor() {
-        val data = mutableListOf(
-            arrayOf("结果解读", "总分 ≥13 分者可诊断为产褥期抑郁症。"),
-            arrayOf("参考来源", "Cox JL, et al. Br J Psychiatry. 1987;150:782-6.")
+        val data = listOf(
+            MedCalDataBean("结果解读", "总分 ≥13 分者可诊断为产褥期抑郁症。"),
+            MedCalDataBean("参考来源", "Cox JL, et al. Br J Psychiatry. 1987;150:782-6.")
         )
         binding.rvContentAppendix.apply {
             layoutManager = LinearLayoutManager(activity)
-            adapter = MedCalListAdapter(data, "20")
+            adapter = MedCalAdapterDatabean(data, columnWeights = floatArrayOf(1f, 3f))
             overScrollMode = View.OVER_SCROLL_NEVER
         }
     }

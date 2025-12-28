@@ -6,8 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.duckgo.medtools.databean.MedCalDataBean
 import com.duckgo.medtools.databinding.FragmentHbA1cValuesBloodGlucoseFmBinding
-import com.duckgo.medtools.my_adapter.MedCalListAdapter
+import com.duckgo.medtools.my_adapter.MedCalAdapterDatabean
 
 class HbA1cValuesBloodGlucose_fm : Fragment() {
     private var _binding: FragmentHbA1cValuesBloodGlucoseFmBinding? = null
@@ -46,7 +47,10 @@ class HbA1cValuesBloodGlucose_fm : Fragment() {
 
         binding.rvContentAppendix.apply {
             layoutManager = LinearLayoutManager(requireContext())
-            adapter = MedCalListAdapter(data.toMutableList(), "20")
+            adapter = MedCalAdapterDatabean(
+                data.map { MedCalDataBean(*it) },
+                columnWeights = floatArrayOf(1f, 3f)
+            )
             overScrollMode = View.OVER_SCROLL_NEVER
         }
     }

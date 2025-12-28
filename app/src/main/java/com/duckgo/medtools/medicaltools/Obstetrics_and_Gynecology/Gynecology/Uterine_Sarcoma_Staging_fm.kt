@@ -11,9 +11,9 @@ class Uterine_Sarcoma_Staging_fm : BaseMedListFragment() {
 
     override fun getAdapters(): List<RecyclerView.Adapter<out RecyclerView.ViewHolder>> {
         return listOf(
-            MedCalAdapterDatabean(initData(), 22),
+            MedCalAdapterDatabean(initData(), floatArrayOf(1f, 4f)),
             GapAdapter(40),
-            MedCalAdapterDatabean(initData_appendix(), 20)
+            MedCalAdapterDatabean(initData_appendix(), floatArrayOf(1f, 3f))
         )
     }
 

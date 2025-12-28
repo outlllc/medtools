@@ -28,7 +28,7 @@ class Fetal_developmental_index_fm : BaseFragmentDataBinding<FragmentFetalDevelo
     override fun initAdaptor() {
         binding.rvContentAppendix.apply {
             layoutManager = LinearLayoutManager(activity)
-            adapter = MedCalAdapterDatabean(data_appendix, 10)
+            adapter = MedCalAdapterDatabean(data_appendix)
             overScrollMode = View.OVER_SCROLL_NEVER
         }
     }

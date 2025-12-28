@@ -6,8 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.duckgo.medtools.databean.MedCalDataBean
 import com.duckgo.medtools.databinding.FragmentCreatinineClearanceCockcroftGaultFmBinding
-import com.duckgo.medtools.my_adapter.MedCalListAdapter
+import com.duckgo.medtools.my_adapter.MedCalAdapterDatabean
 
 class Creatinine_Clearance_Cockcroft_Gault_fm : Fragment() {
     private var _binding: FragmentCreatinineClearanceCockcroftGaultFmBinding? = null
@@ -25,16 +26,16 @@ class Creatinine_Clearance_Cockcroft_Gault_fm : Fragment() {
     }
 
     private fun initView() {
-        val data = mutableListOf(
-            arrayOf("公式英文名称", "Creatinine Clearance Estimate by Cockcroft-Gault Equation, CCrE"),
-            arrayOf("计算公式", "CCrE (女性×0.85) = (140-年龄) × 体重 × 1.23 / 血肌酐浓度 (SI)"),
-            arrayOf("结果正常值", "成人 80～120 mL/(min*1.73m2)"),
-            arrayOf("说明", "CCr 常用来对肾功能进行分期以指导治疗。"),
-            arrayOf("参考文献", "1. Cockcroft DW, et al. Nephron. 1976;16(1):31-42.\n2. Winter MA, et al. Pharmacotherapy. 2012;32(7):604-12.")
+        val data = listOf(
+            MedCalDataBean("公式英文名称", "Creatinine Clearance Estimate by Cockcroft-Gault Equation, CCrE"),
+            MedCalDataBean("计算公式", "CCrE (女性×0.85) = (140-年龄) × 体重 × 1.23 / 血肌酐浓度 (SI)"),
+            MedCalDataBean("结果正常值", "成人 80～120 mL/(min*1.73m2)"),
+            MedCalDataBean("说明", "CCr 常用来对肾功能进行分期以指导治疗。"),
+            MedCalDataBean("参考文献", "1. Cockcroft DW, et al. Nephron. 1976;16(1):31-42.\n2. Winter MA, et al. Pharmacotherapy. 2012;32(7):604-12.")
         )
         binding.rvContentAppendix.apply {
             layoutManager = LinearLayoutManager(requireContext())
-            adapter = MedCalListAdapter(data, "20")
+            adapter = MedCalAdapterDatabean(data, floatArrayOf(1f, 3f))
             overScrollMode = View.OVER_SCROLL_NEVER
         }
     }

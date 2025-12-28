@@ -11,9 +11,9 @@ class Baden_Walker_vaginal_half_step_systematic_grading_of_pelvic_floor_fm : Bas
 
     override fun getAdapters(): List<RecyclerView.Adapter<out RecyclerView.ViewHolder>> {
         return listOf(
-            MedCalAdapterDatabean(initData(), 20),
+            MedCalAdapterDatabean(initData(), columnWeights = floatArrayOf(1f, 3f)),
             GapAdapter(40),
-            MedCalAdapterDatabean(initData_appendix(), 20)
+            MedCalAdapterDatabean(initData_appendix(), columnWeights = floatArrayOf(1f, 3f))
         )
     }
 

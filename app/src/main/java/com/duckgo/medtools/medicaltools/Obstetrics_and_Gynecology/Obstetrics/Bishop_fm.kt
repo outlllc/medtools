@@ -8,8 +8,9 @@ import android.widget.RadioGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.duckgo.medtools.R
+import com.duckgo.medtools.databean.MedCalDataBean
 import com.duckgo.medtools.databinding.FragmentBishopFmBinding
-import com.duckgo.medtools.my_adapter.MedCalListAdapter
+import com.duckgo.medtools.my_adapter.MedCalAdapterDatabean
 
 class Bishop_fm : Fragment() {
     private var _binding: FragmentBishopFmBinding? = null
@@ -47,14 +48,14 @@ class Bishop_fm : Fragment() {
     }
 
     private fun initAdaptor() {
-        val data = mutableListOf(
-            arrayOf("结果解读", "评分≤4分提示宫颈不成熟，需促宫颈成熟。评分≥7分提示宫颈成熟。"),
-            arrayOf("相关解释", "Bishop评分用于判断宫颈成熟度，以估计引产的成功率。评分越高，宫颈越成熟，引产成功率越高。"),
-            arrayOf("参考来源", "《妇产科学》（八年制）[M]. 人民卫生出版社.2010年")
+        val data = listOf(
+            MedCalDataBean("结果解读", "评分≤4分提示宫颈不成熟，需促宫颈成熟。评分≥7分提示宫颈成熟。"),
+            MedCalDataBean("相关解释", "国际上采用Bishop评分判断宫颈成熟度，以估计引产的成功率。评分越高，宫颈越成熟，引产成功率越高。0~3分引产不易成功，4~6分成功率仅50%，7~8分成功率80%，评分≥8分者，引产成功率与阴道分娩自然临产结果相似。"),
+            MedCalDataBean("参考来源", "丰有吉沈铿主编.《妇产科学》（八年制）[M]. 人民卫生出版社.2010年")
         )
         binding.rvContentAppendix.apply {
             layoutManager = LinearLayoutManager(activity)
-            adapter = MedCalListAdapter(data, "20")
+            adapter = MedCalAdapterDatabean(data, columnWeights = floatArrayOf(1f, 3f))
             overScrollMode = View.OVER_SCROLL_NEVER
         }
     }

@@ -27,7 +27,7 @@ class Vvc_Scoring_Criteria_fm : BaseFragmentDataBinding<FragmentVvcScoringCriter
     override fun initAdaptor() {
         binding.rvContentAppendix.apply {
             layoutManager = LinearLayoutManager(activity)
-            adapter = MedCalAdapterDatabean(initData_appendix(), 20)
+            adapter = MedCalAdapterDatabean(initData_appendix(), floatArrayOf(1f, 3f))
             overScrollMode = View.OVER_SCROLL_NEVER
         }
     }

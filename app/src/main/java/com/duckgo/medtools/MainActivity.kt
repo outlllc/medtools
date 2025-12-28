@@ -2,14 +2,19 @@ package com.duckgo.medtools
 
 import android.os.Bundle
 import android.widget.Toast
+import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
+import androidx.appcompat.app.AppCompatDelegate
+import androidx.core.content.ContextCompat
+import androidx.core.view.children
+import androidx.fragment.app.commit
 import com.duckgo.medtools.babyweight.BabyWeight
 import com.duckgo.medtools.databinding.ActivityMainBinding
 import com.duckgo.medtools.datecalculator.DateCalculator
 import com.duckgo.medtools.medicaltools.MenuFragment
 import com.duckgo.medtools.mine.MinePage
 import com.google.android.material.button.MaterialButton
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import java.io.FileOutputStream
 
 class MainActivity : AppCompatActivity() {
@@ -26,47 +31,48 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        // 强制设为日间模式
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+
+        binding = ActivityMainBinding.inflate(layoutInflater).also { setContentView(it.root) }
         
         saveDatabaseFile()
         initNavigation()
 
-        // 默认显示第一个页面
-        if (savedInstanceState == null) {
-            showFragment(R.id.calculation_button)
-        }
+        if (savedInstanceState == null) showFragment(R.id.calculation_button)
+
+        onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                MaterialAlertDialogBuilder(this@MainActivity)
+                    .setTitle("退出确认")
+                    .setMessage("确定要退出应用吗？")
+                    .setPositiveButton("确定") { _, _ -> finish() }
+                    .setNegativeButton("取消", null)
+                    .show()
+            }
+        })
     }
 
-    private fun initNavigation() {
-        binding.tgFirstPage.addOnButtonCheckedListener { _, checkedId, isChecked ->
-            if (isChecked) {
-                updateButtonStyles(checkedId)
-                showFragment(checkedId)
-            }
+    private fun initNavigation() = binding.tgFirstPage.addOnButtonCheckedListener { _, checkedId, isChecked ->
+        if (isChecked) {
+            updateButtonStyles(checkedId)
+            showFragment(checkedId)
         }
     }
 
     private fun updateButtonStyles(checkedId: Int) {
-        val group = binding.tgFirstPage
-        for (i in 0 until group.childCount) {
-            (group.getChildAt(i) as? MaterialButton)?.apply {
-                if (id == checkedId) {
-                    setTextColor(getColor(R.color.white))
-                    setBackgroundColor(getColor(R.color.green_kuan))
-                } else {
-                    setTextColor(getColor(R.color.black))
-                    setBackgroundColor(getColor(R.color.lightcyan))
-                }
-            }
+        binding.tgFirstPage.children.filterIsInstance<MaterialButton>().forEach { button ->
+            val isChecked = button.id == checkedId
+            button.setTextColor(ContextCompat.getColor(this, if (isChecked) R.color.white else R.color.black))
+            button.setBackgroundColor(ContextCompat.getColor(this, if (isChecked) R.color.green_kuan else R.color.lightcyan))
         }
     }
 
     private fun showFragment(checkedId: Int) {
         fragments[checkedId]?.let { fragment ->
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment_, fragment)
-                .commitAllowingStateLoss()
+            supportFragmentManager.commit(allowStateLoss = true) {
+                replace(R.id.fragment_, fragment)
+            }
         }
     }
 
@@ -74,16 +80,13 @@ class MainActivity : AppCompatActivity() {
         val dbFile = getDatabasePath("weight.db")
         if (dbFile.exists()) return
 
-        dbFile.parentFile?.let { if (!it.exists()) it.mkdirs() }
-
-        try {
+        dbFile.parentFile?.mkdirs()
+        runCatching {
             assets.open("weight.db").use { input ->
-                FileOutputStream(dbFile).use { output ->
-                    input.copyTo(output)
-                }
+                FileOutputStream(dbFile).use { input.copyTo(it) }
             }
-        } catch (e: Exception) {
-            e.printStackTrace()
+        }.onFailure {
+            it.printStackTrace()
             Toast.makeText(this, "数据库加载失败", Toast.LENGTH_SHORT).show()
         }
     }

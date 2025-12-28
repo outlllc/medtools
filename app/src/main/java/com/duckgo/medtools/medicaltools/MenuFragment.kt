@@ -8,7 +8,7 @@ import android.widget.ArrayAdapter
 import android.widget.Filter
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
-import com.duckgo.medtools.MedCal_FirstPage_fagment
+import com.duckgo.medtools.medicaltools.MedCal_FirstPage_fagment
 import com.duckgo.medtools.R
 import com.duckgo.medtools.databinding.FragmentMedicalCalculatorBinding
 import com.duckgo.medtools.medicaltools.A_Menu_Select.Anesthesia_Department.Anesthesia_Department_Menu

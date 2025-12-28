@@ -8,8 +8,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.duckgo.medtools.databean.MedCalDataBean
 import com.duckgo.medtools.databinding.FragmentUnitConversionBinding
-import com.duckgo.medtools.my_adapter.MedCalListAdapter
+import com.duckgo.medtools.my_adapter.MedCalAdapterDatabean
 
 class Unit_Conversion_fm : Fragment() {
 
@@ -107,21 +108,21 @@ class Unit_Conversion_fm : Fragment() {
     }
 
     private fun initAppendix() {
-        val data = mutableListOf(
-            arrayOf("常用单位换算公式"),
-            arrayOf("血压：1kPa = 7.5mmHg"),
-            arrayOf("血糖：1mg/dL = 0.0555mmol/L"),
-            arrayOf("胆红素：1mg/dL = 17.1μmol/L"),
-            arrayOf("血肌酐：1mg/dL = 88.4μmol/L"),
-            arrayOf("血尿素氮：1mg/dL = 0.357mmol/L"),
-            arrayOf("甘油三酯：1mg/dL = 0.01129mmol/L"),
-            arrayOf("胆固醇/HDL/LDL：1mg/dL = 0.0259mmol/L"),
-            arrayOf("血尿酸：1mg/dL = 59.48μmol/L"),
-            arrayOf("血钙：1mg/dL = 0.25mmol/L")
+        val data = listOf(
+            MedCalDataBean("常用单位换算公式"),
+            MedCalDataBean("血压：1kPa = 7.5mmHg"),
+            MedCalDataBean("血糖：1mg/dL = 0.0555mmol/L"),
+            MedCalDataBean("胆红素：1mg/dL = 17.1μmol/L"),
+            MedCalDataBean("血肌酐：1mg/dL = 88.4μmol/L"),
+            MedCalDataBean("血尿素氮：1mg/dL = 0.357mmol/L"),
+            MedCalDataBean("甘油三酯：1mg/dL = 0.01129mmol/L"),
+            MedCalDataBean("胆固醇/HDL/LDL：1mg/dL = 0.0259mmol/L"),
+            MedCalDataBean("血尿酸：1mg/dL = 59.48μmol/L"),
+            MedCalDataBean("血钙：1mg/dL = 0.25mmol/L")
         )
         binding.rvContentAppendix.apply {
             layoutManager = LinearLayoutManager(context)
-            adapter = MedCalListAdapter(data, "10")
+            adapter = MedCalAdapterDatabean(data)
             overScrollMode = View.OVER_SCROLL_NEVER
         }
     }

@@ -30,7 +30,7 @@ class Body_Index_fm : BaseFragmentDataBinding<FragmentBodyIndexFmBinding>() {
 
     override fun initAdaptor() {
         binding.rvContentAppendix.layoutManager = LinearLayoutManager(requireContext())
-        binding.rvContentAppendix.adapter = MedCalAdapterDatabean(initData_appendix(), 10)
+        binding.rvContentAppendix.adapter = MedCalAdapterDatabean(initData_appendix())
     }
 
     override fun initData_appendix(): List<MedCalDataBean> {

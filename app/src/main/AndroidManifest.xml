@@ -13,26 +13,6 @@
         android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
         tools:targetApi="31">
         <activity
-            android:name=".medicaltools.Internal_Medicine.Nephrology.Chronic_Kidney_Disease_Staging"
-            android:exported="false" />
-        <activity
-            android:name=".medicaltools.Internal_Medicine.Nephrology.Glomerular_Filtration_Rate_CKD_EPI"
-            android:exported="false" />
-        <activity
-            android:name=".medicaltools.Internal_Medicine.Endocrinology.HbA1cValuesBloodGlucose"
-            android:exported="false" />
-        <activity
-            android:name=".medicaltools.Internal_Medicine.Nephrology.SodiumDeficitInHyponatremia"
-            android:exported="false" />
-        <activity
-            android:name=".medicaltools.Internal_Medicine.Nephrology.AmountOfHydration"
-            android:exported="false" />
-        <activity
-            android:name=".medicaltools.Internal_Medicine.Nephrology.Creatinine_Clearance_Cockcroft_Gault"
-            android:exported="false"
-            android:label="@string/title_activity_medi_cal_tool"
-            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
-        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

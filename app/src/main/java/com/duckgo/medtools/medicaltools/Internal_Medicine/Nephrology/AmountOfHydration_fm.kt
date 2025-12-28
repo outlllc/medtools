@@ -6,8 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.duckgo.medtools.databean.MedCalDataBean
 import com.duckgo.medtools.databinding.FragmentAmountOfHydrationFmBinding
-import com.duckgo.medtools.my_adapter.MedCalListAdapter
+import com.duckgo.medtools.my_adapter.MedCalAdapterDatabean
 
 class AmountOfHydration_fm : Fragment() {
 
@@ -44,7 +45,7 @@ class AmountOfHydration_fm : Fragment() {
     }
 
     private fun initView() {
-        val data = mutableListOf(
+        val data = listOf(
             arrayOf("计算公式", "补水量 = (血清钠浓度 - 142) × 体重 × 4\n注：补液时还应加上每日正常需要量 2000ml"),
             arrayOf("说明", "为避免输入过量导致血容量过分扩张及水中毒，计算所得的补水量不宜一次性输入，一般分 2 天补给。"),
             arrayOf("参考文献", "陈孝平主编. 外科学（八年制）（第 2 版）. 人民卫生出版社. 2010 年")
@@ -52,7 +53,10 @@ class AmountOfHydration_fm : Fragment() {
 
         binding.rvContentAppendix.apply {
             layoutManager = LinearLayoutManager(requireContext())
-            adapter = MedCalListAdapter(data, "20")
+            adapter = MedCalAdapterDatabean(
+                data.map { MedCalDataBean(*it) },
+                columnWeights = floatArrayOf(1f, 3f)
+            )
             overScrollMode = View.OVER_SCROLL_NEVER
         }
     }

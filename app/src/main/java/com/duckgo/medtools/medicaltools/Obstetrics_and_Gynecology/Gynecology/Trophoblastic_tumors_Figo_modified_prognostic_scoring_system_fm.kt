@@ -28,7 +28,7 @@ class Trophoblastic_tumors_Figo_modified_prognostic_scoring_system_fm : BaseFrag
     override fun initAdaptor() {
         binding.rvContentAppendix.apply {
             layoutManager = LinearLayoutManager(activity)
-            adapter = MedCalAdapterDatabean(initData_appendix(), 20)
+            adapter = MedCalAdapterDatabean(initData_appendix(), floatArrayOf(1f, 3f))
             overScrollMode = View.OVER_SCROLL_NEVER
         }
     }

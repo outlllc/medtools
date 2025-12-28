@@ -6,8 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.duckgo.medtools.databean.MedCalDataBean
 import com.duckgo.medtools.databinding.FragmentPostpartumHemorrhageEstimationByShockIndexBinding
-import com.duckgo.medtools.my_adapter.MedCalListAdapter
+import com.duckgo.medtools.my_adapter.MedCalAdapterDatabean
 
 class Postpartum_Hemorrhage_Estimation_By_Shock_Index_fm : Fragment() {
 
@@ -47,7 +48,7 @@ class Postpartum_Hemorrhage_Estimation_By_Shock_Index_fm : Fragment() {
     }
 
     private fun initView() {
-        val data = mutableListOf(
+        val data = listOf(
             arrayOf("计算公式"),
             arrayOf("休克指数=心率（次/分）/收缩压（mmHg）"),
             arrayOf("结果正常值范围："),
@@ -62,7 +63,7 @@ class Postpartum_Hemorrhage_Estimation_By_Shock_Index_fm : Fragment() {
 
         binding.rvContentAppendix.apply {
             layoutManager = LinearLayoutManager(requireContext())
-            adapter = MedCalListAdapter(data, "10")
+            adapter = MedCalAdapterDatabean(data.map { MedCalDataBean(*it) })
             overScrollMode = View.OVER_SCROLL_NEVER
         }
     }

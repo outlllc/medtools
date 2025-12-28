@@ -52,7 +52,7 @@ class Simple_gestational_age_assessment_scale_fm : Fragment(), RadioGroup.OnChec
     private fun initAdaptor() {
         binding.rvContentAppendix.apply {
             layoutManager = LinearLayoutManager(activity)
-            adapter = MedCalAdapterDatabean(initDataAppendix(), 20)
+            adapter = MedCalAdapterDatabean(initDataAppendix(), floatArrayOf(1f, 3f))
             overScrollMode = View.OVER_SCROLL_NEVER
         }
     }

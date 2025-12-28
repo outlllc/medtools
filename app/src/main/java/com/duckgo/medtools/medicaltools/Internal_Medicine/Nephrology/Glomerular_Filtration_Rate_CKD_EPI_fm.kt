@@ -6,8 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.duckgo.medtools.databean.MedCalDataBean
 import com.duckgo.medtools.databinding.FragmentGlomerularFiltrationRateCkdEpiFmBinding
-import com.duckgo.medtools.my_adapter.MedCalListAdapter
+import com.duckgo.medtools.my_adapter.MedCalAdapterDatabean
 import kotlin.math.pow
 
 class Glomerular_Filtration_Rate_CKD_EPI_fm : Fragment() {
@@ -26,15 +27,15 @@ class Glomerular_Filtration_Rate_CKD_EPI_fm : Fragment() {
     }
 
     private fun initView() {
-        val data = mutableListOf(
-            arrayOf("计算公式", "GFR＝a×(血肌酐浓度/b)c×(0.993)年龄\na值：黑人(女166, 男163); 其他(女144, 男141)\nb值：女0.7, 男0.9\nc值：女(≤0.7为-0.329, >0.7为-1.209); 男(≤0.9为-0.411, >0.9为-1.209)"),
-            arrayOf("结果正常值范围", "120~138mL/(min*1.73m2)"),
-            arrayOf("说明", "2009年发表的CKD-EPI公式较MDRD公式更为精确，尤其当GFR > 60ml/min时。"),
-            arrayOf("参考文献", "Levey AS, et al. Ann Intern Med. 2009 May 5;150(9):604-12.")
+        val data = listOf(
+            MedCalDataBean("计算公式", "GFR＝a×(血肌酐浓度/b)c×(0.993)年龄\na值：黑人(女166, 男163); 其他(女144, 男141)\nb值：女0.7, 男0.9\nc值：女(≤0.7为-0.329, >0.7为-1.209); 男(≤0.9为-0.411, >0.9为-1.209)"),
+            MedCalDataBean("结果正常值范围", "120~138mL/(min*1.73m2)"),
+            MedCalDataBean("说明", "2009年发表的CKD-EPI公式较MDRD公式更为精确，尤其当GFR > 60ml/min时。"),
+            MedCalDataBean("参考文献", "Levey AS, et al. Ann Intern Med. 2009 May 5;150(9):604-12.")
         )
         binding.rvContentAppendix.apply {
             layoutManager = LinearLayoutManager(requireContext())
-            adapter = MedCalListAdapter(data, "20")
+            adapter = MedCalAdapterDatabean(data, columnWeights = floatArrayOf(1f, 3f))
             overScrollMode = View.OVER_SCROLL_NEVER
         }
     }

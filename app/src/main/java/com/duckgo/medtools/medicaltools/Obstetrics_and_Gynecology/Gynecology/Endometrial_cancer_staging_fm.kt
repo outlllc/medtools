@@ -11,9 +11,9 @@ class Endometrial_cancer_staging_fm : BaseMedListFragment() {
 
     override fun getAdapters(): List<RecyclerView.Adapter<out RecyclerView.ViewHolder>> {
         return listOf(
-            MedCalAdapterDatabean(initData(), 20),
+            MedCalAdapterDatabean(initData(), floatArrayOf(1f, 3f)),
             GapAdapter(40),
-            MedCalAdapterDatabean(initData_appendix(), 20)
+            MedCalAdapterDatabean(initData_appendix(), floatArrayOf(1f, 3f))
         )
     }
 

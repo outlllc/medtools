@@ -10,15 +10,15 @@ class Uterine_TumorsTnmStage_fm : BaseMedListFragment() {
 
     override fun getAdapters(): List<RecyclerView.Adapter<out RecyclerView.ViewHolder>> {
         return listOf(
-            MedCalAdapterDatabean(listOf(MedCalDataBean("原发灶")), 10),
-            MedCalAdapterDatabean(initData(), 33),
-            MedCalAdapterDatabean(listOf(MedCalDataBean("区域淋巴结 (N)")), 10),
-            MedCalAdapterDatabean(initData2(), 30),
-            MedCalAdapterDatabean(listOf(MedCalDataBean("远处转移 (M)")), 10),
-            MedCalAdapterDatabean(initData3(), 30),
-            MedCalAdapterDatabean(listOf(MedCalDataBean("解剖分期/预后分组")), 10),
-            MedCalAdapterDatabean(initData4(), 40),
-            MedCalAdapterDatabean(initData_appendix(), 20)
+            MedCalAdapterDatabean(listOf(MedCalDataBean("原发灶"))),
+            MedCalAdapterDatabean(initData(), floatArrayOf(1f, 1f, 4f)),
+            MedCalAdapterDatabean(listOf(MedCalDataBean("区域淋巴结 (N)"))),
+            MedCalAdapterDatabean(initData2(), floatArrayOf(1f, 2f, 2f)),
+            MedCalAdapterDatabean(listOf(MedCalDataBean("远处转移 (M)"))),
+            MedCalAdapterDatabean(initData3(), floatArrayOf(1f, 2f, 2f)),
+            MedCalAdapterDatabean(listOf(MedCalDataBean("解剖分期/预后分组"))),
+            MedCalAdapterDatabean(initData4(), floatArrayOf(1f, 2f, 2f, 2f)),
+            MedCalAdapterDatabean(initData_appendix(), floatArrayOf(1f, 3f))
         )
     }
 

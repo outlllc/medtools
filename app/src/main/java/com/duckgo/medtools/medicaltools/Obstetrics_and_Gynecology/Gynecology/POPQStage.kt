@@ -11,9 +11,9 @@ class POPQStage : BaseMedListFragment() {
 
     override fun getAdapters(): List<RecyclerView.Adapter<out RecyclerView.ViewHolder>> {
         return listOf(
-            MedCalAdapterDatabean(provideData(), 20),
+            MedCalAdapterDatabean(provideData(), floatArrayOf(1f, 3f)),
             GapAdapter(40),
-            MedCalAdapterDatabean(provideAppendix(), 20)
+            MedCalAdapterDatabean(provideAppendix(), floatArrayOf(1f, 3f))
         )
     }
 
