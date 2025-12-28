@@ -3,66 +3,58 @@ package com.duckgo.medtools.babyweight
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
-import android.util.Log
-import androidx.core.content.contentValuesOf
 
-class DataBaseHelper(context: Context?) :SQLiteOpenHelper(context, "weight.db", null, 1) {
-    val TABLE_NAME="weight"
-    val TABLE_NAMEBPD="bpdac"
-    val sqlCreat="create table if not exists ${TABLE_NAME} (id integer primary key autoincrement,tw200 TEXT,tw205 TEXT)"
-    val sqlCreate2="create table if not exists ${TABLE_NAMEBPD} (id integer primary key autoincrement,ac155 TEXT,ac160 TEXT)"
+class DataBaseHelper(context: Context?) : SQLiteOpenHelper(context, DB_NAME, null, DB_VERSION) {
+
+    companion object {
+        private const val DB_NAME = "weight.db"
+        private const val DB_VERSION = 1
+        private const val TABLE_WEIGHT = "weight"
+        private const val TABLE_BPDAC = "bpdac"
+    }
+
     override fun onCreate(db: SQLiteDatabase?) {
-        db?.execSQL(sqlCreat)
-        db?.execSQL(sqlCreate2)
+        db?.execSQL("CREATE TABLE IF NOT EXISTS $TABLE_WEIGHT (id INTEGER PRIMARY KEY AUTOINCREMENT, tw200 TEXT, tw205 TEXT)")
+        db?.execSQL("CREATE TABLE IF NOT EXISTS $TABLE_BPDAC (id INTEGER PRIMARY KEY AUTOINCREMENT, ac155 TEXT, ac160 TEXT)")
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
-        Log.e("tag", "onUpgrade")
-        db?.execSQL("drop table if exists ${TABLE_NAME}")
+        db?.execSQL("DROP TABLE IF EXISTS $TABLE_WEIGHT")
+        db?.execSQL("DROP TABLE IF EXISTS $TABLE_BPDAC")
         onCreate(db)
-
     }
 
-    fun addValue(arr:MutableList<String>){
-//        var arr:MutableList<String>=mutableListOf(T100,T101,"T102")
-        var values= contentValuesOf()
-        values.put("T100",arr[0])
-        values.put("T101",arr[1])
-        values.put("T102",arr[2])
-        val db=this.writableDatabase
-        db.insert(TABLE_NAME,null,values)
-        db.close()
-    }
-    //databasename = getFilesDir() + "/weight.db";
-    //openOrCreateDatabase(databasename, MODE_PRIVATE, null);
-
-    fun queryAcFl(list:MutableList<String>) :MutableList<String>{
-        var result=mutableListOf<String>()
-        val db= this.readableDatabase
-//        var sqlQuery="select * from $TABLE_NAME where ${list[0]} and id=${list[1].toInt()}"
-//        var query=db.rawQuery(sqlQuery,null)
-
-
-//        var query = db.query(TABLE_NAME, null, "${list[0]} and id=${list[1].toInt()}", null, null, null, null)
-
-        var query = db.query(TABLE_NAME, arrayOf(list[0]), "id = ?", arrayOf(list[1]), null, null, null)
-        while (query.moveToNext()) {
-            result.add(query.getString(query.getColumnIndex(list[0])))
-        }
-        query.close()
-        db.close()
-        return result
-    }
-
-    fun queryAcBpd(list:MutableList<String>):String{
-        val db= this.readableDatabase
-        var result=""
-//        var sqlQuery="select * from $TABLE_NAMEBPD where ${list[0]} and id=${list[1].toInt()}"
-//        var query=db.rawQuery(sqlQuery,null)
-        var query = db.query(TABLE_NAMEBPD, arrayOf(list[0]), "id = ?", arrayOf(list[1]), null, null, null)
-        while (query.moveToNext()) {
-            result=query.getString(query.getColumnIndex(list[0]))
+    /**
+     * 查询 weight 表中的指定列
+     * @param columnName 列名
+     * @param id 行ID
+     */
+    fun queryAcFl(columnName: String, id: String): List<String> {
+        val result = mutableListOf<String>()
+        readableDatabase.query(TABLE_WEIGHT, arrayOf(columnName), "id = ?", arrayOf(id), null, null, null).use { cursor ->
+            if (cursor.moveToFirst()) {
+                result.add(cursor.getString(0))
+            }
         }
         return result
     }
+
+    /**
+     * 查询 bpdac 表中的指定列
+     * @param columnName 列名
+     * @param id 行ID
+     */
+    fun queryAcBpd(columnName: String, id: String): String {
+        var result = ""
+        readableDatabase.query(TABLE_BPDAC, arrayOf(columnName), "id = ?", arrayOf(id), null, null, null).use { cursor ->
+            if (cursor.moveToFirst()) {
+                result = cursor.getString(0)
+            }
+        }
+        return result
+    }
+
+    // 保持对旧代码参数格式的兼容（如果其他地方还在用 MutableList 传参）
+    fun queryAcFl(params: MutableList<String>): List<String> = queryAcFl(params[0], params[1])
+    fun queryAcBpd(params: MutableList<String>): String = queryAcBpd(params[0], params[1])
 }

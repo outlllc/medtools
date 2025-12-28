@@ -114,7 +114,7 @@ class MenuFragment : Fragment(), MenuSelectAdapter.OnItemClickListener {
         initValue()
         initListener()
         fillSearchEntries(searchEntries)
-        initMainPageData() // 初始化映射表
+        initMainPageData() 
         setupSearch()
         requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, onBackPressedCallback)
 
