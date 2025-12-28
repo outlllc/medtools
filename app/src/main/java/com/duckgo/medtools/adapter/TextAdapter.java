@@ -1,169 +1,118 @@
 package com.duckgo.medtools.adapter;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
 import android.widget.TextView;
-
+import androidx.core.content.ContextCompat;
 import com.duckgo.medtools.R;
-//import com.duckgo.medtools.expandtabview.*;
-
 import java.util.List;
 
-public class TextAdapter extends ArrayAdapter<String> {
+public class TextAdapter extends BaseAdapter {
 
-	private Context mContext;
-	private List<String> mListData;
-	private String[] mArrayData;
-	private int selectedPos = -1;
-	private String selectedText = "";
-	private int normalDrawbleId;
-	private Drawable selectedDrawble;
-	private float textSize;
-	private OnClickListener onClickListener;
-	private OnItemClickListener mOnItemClickListener;
+    private Context mContext;
+    private List<String> mListData;
+    private String[] mArrayData;
+    private int selectedPos = -1;
+    private int normalDrawableId;
+    private Drawable selectedDrawable;
+    private float textSize = 12;
+    private OnItemClickListener mOnItemClickListener;
 
-	@SuppressLint("ResourceType")
     public TextAdapter(Context context, List<String> listData, int sId, int nId) {
-		super(context, R.string.no_data, listData);
+        this.mContext = context;
+        this.mListData = listData;
+        this.selectedDrawable = ContextCompat.getDrawable(mContext, sId);
+        this.normalDrawableId = nId;
+    }
 
-		mContext = context;
-		mListData = listData;
-		// 被选择时的背景
-		selectedDrawble = mContext.getResources().getDrawable(sId);
-		// 普通时的背景
-		normalDrawbleId = nId;
-
-		init();
-	}
-
-	private void init() {
-		onClickListener = new OnClickListener() {
-
-			@Override
-			public void onClick(View view) {
-				selectedPos = (Integer) view.getTag();
-				setSelectedPosition(selectedPos);
-				if (mOnItemClickListener != null) {
-					mOnItemClickListener.onItemClick(view, selectedPos);
-				}
-			}
-		};
-	}
-
-	@SuppressLint("ResourceType")
     public TextAdapter(Context context, String[] arrayData, int sId, int nId) {
-		super(context, R.string.no_data, arrayData);
-		mContext = context;
-		mArrayData = arrayData;
-		selectedDrawble = mContext.getResources().getDrawable(sId);
-		normalDrawbleId = nId;
-		init();
-	}
+        this.mContext = context;
+        this.mArrayData = arrayData;
+        this.selectedDrawable = ContextCompat.getDrawable(mContext, sId);
+        this.normalDrawableId = nId;
+    }
 
-	/**
-	 * 设置选中的position,并通知列表刷新
-	 */
-	public void setSelectedPosition(int pos) {
-		if (mListData != null && pos < mListData.size()) {
-			selectedPos = pos;
-			selectedText = mListData.get(pos);
-			notifyDataSetChanged();
-		} else if (mArrayData != null && pos < mArrayData.length) {
-			selectedPos = pos;
-			selectedText = mArrayData[pos];
-			notifyDataSetChanged();
-		}
+    @Override
+    public int getCount() {
+        if (mListData != null) return mListData.size();
+        if (mArrayData != null) return mArrayData.length;
+        return 0;
+    }
 
-	}
+    @Override
+    public Object getItem(int position) {
+        if (mListData != null) return mListData.get(position);
+        if (mArrayData != null) return mArrayData[position];
+        return null;
+    }
 
-	/**
-	 * 设置选中的position,但不通知刷新
-	 */
-	public void setSelectedPositionNoNotify(int pos) {
-		selectedPos = pos;
-		if (mListData != null && pos < mListData.size()) {
-			selectedText = mListData.get(pos);
-		} else if (mArrayData != null && pos < mArrayData.length) {
-			selectedText = mArrayData[pos];
-		}
-	}
+    @Override
+    public long getItemId(int position) {
+        return position;
+    }
 
-	/**
-	 * 获取选中的position
-	 */
-	public int getSelectedPosition() {
-		if (mArrayData != null && selectedPos < mArrayData.length) {
-			return selectedPos;
-		}
-		if (mListData != null && selectedPos < mListData.size()) {
-			return selectedPos;
-		}
+    public void setSelectedPosition(int pos) {
+        selectedPos = pos;
+        notifyDataSetChanged();
+    }
 
-		return -1;
-	}
+    public void setSelectedPositionNoNotify(int pos) {
+        selectedPos = pos;
+    }
 
-	/**
-	 * 设置列表字体大小
-	 */
-	public void setTextSize(float tSize) {
-		textSize = tSize;
-	}
+    public int getSelectedPosition() {
+        return selectedPos;
+    }
 
-	@SuppressLint("ResourceAsColor")
-	@SuppressWarnings("deprecation")
-	@Override
-	public View getView(int position, View convertView, ViewGroup parent) {
+    public void setTextSize(float tSize) {
+        textSize = tSize;
+    }
 
-		// 这里的View就是一个简单的TextView..
-		TextView view;
-		if (convertView == null) {
-			view = (TextView) LayoutInflater.from(mContext).inflate(
-					R.layout.choose_item, parent, false);
-		} else {
-			view = (TextView) convertView;
-		}
-		view.setTag(position);
-		String mString = "";
-		if (mListData != null) {
-			if (position < mListData.size()) {
-				mString = mListData.get(position);
-			}
-		} else if (mArrayData != null) {
-			if (position < mArrayData.length) {
-				mString = mArrayData[position];
-			}
-		}
-		
-		view.setText(mString);
-		view.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSize);
+    @Override
+    public View getView(final int position, View convertView, ViewGroup parent) {
+        TextView view;
+        if (convertView == null) {
+            view = (TextView) LayoutInflater.from(mContext).inflate(R.layout.choose_item, parent, false);
+        } else {
+            view = (TextView) convertView;
+        }
 
-		if (selectedText != null && selectedText.equals(mString)) {
-			view.setBackgroundDrawable(selectedDrawble);// 设置选中的背景图片
-		} else {
-			view.setBackgroundDrawable(mContext.getResources().getDrawable(
-					normalDrawbleId));// 设置未选中状态背景图片
-		}
-		view.setPadding(20, 0, 0, 0);
-		view.setOnClickListener(onClickListener);
-		return view;
-	}
+        String mString = (String) getItem(position);
+        view.setText(mString);
+        view.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSize);
 
-	public void setOnItemClickListener(OnItemClickListener l) {
-		mOnItemClickListener = l;
-	}
+        if (selectedPos == position) {
+            view.setBackground(selectedDrawable);
+        } else {
+            view.setBackground(ContextCompat.getDrawable(mContext, normalDrawableId));
+        }
 
-	/**
-	 * 重新定义菜单选项单击接口
-	 */
-	public interface OnItemClickListener {
-		public void onItemClick(View view, int position);
-	}
+        int paddingLeft = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 10, mContext.getResources().getDisplayMetrics());
+        view.setPadding(paddingLeft, 0, 0, 0);
 
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                selectedPos = position;
+                notifyDataSetChanged();
+                if (mOnItemClickListener != null) {
+                    mOnItemClickListener.onItemClick(v, position);
+                }
+            }
+        });
+        return view;
+    }
+
+    public void setOnItemClickListener(OnItemClickListener l) {
+        mOnItemClickListener = l;
+    }
+
+    public interface OnItemClickListener {
+        void onItemClick(View view, int position);
+    }
 }
