@@ -1,4 +1,4 @@
-package com.duckgo.medtools.adapter;
+package com.duckgo.medtools.view.adapter;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;

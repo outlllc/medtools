@@ -9,10 +9,9 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import com.duckgo.medtools.R;
-import com.duckgo.medtools.adapter.TextAdapter;
+import com.duckgo.medtools.view.adapter.TextAdapter;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 public class ChildView extends LinearLayout {
