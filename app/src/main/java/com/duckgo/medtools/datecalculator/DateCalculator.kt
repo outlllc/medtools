@@ -2,6 +2,11 @@ package com.duckgo.medtools.datecalculator
 
 import android.graphics.Color
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
+import android.text.Spannable
+import android.text.SpannableString
+import android.text.style.ForegroundColorSpan
 import android.view.View
 import android.widget.TextView
 import com.duckgo.medtools.medicaltools.BaseFragmentDataBinding
@@ -10,7 +15,7 @@ import com.duckgo.medtools.databinding.FragmentDateCalculator3Binding
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.button.MaterialButtonToggleGroup
 import java.util.Calendar
-import kotlin.text.toInt
+import java.util.Locale
 
 class DateCalculator : BaseFragmentDataBinding<FragmentDateCalculator3Binding>(), View.OnClickListener {
 
@@ -18,466 +23,386 @@ class DateCalculator : BaseFragmentDataBinding<FragmentDateCalculator3Binding>()
         return FragmentDateCalculator3Binding.inflate(layoutInflater)
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        binding.button0.setOnClickListener(this)
-        binding.button1.setOnClickListener(this)
-        binding.button2.setOnClickListener(this)
-        binding.button3.setOnClickListener(this)
-        binding.button4.setOnClickListener(this)
-        binding.button5.setOnClickListener(this)
-        binding.button6.setOnClickListener(this)
-        binding.button7.setOnClickListener(this)
-        binding.button8.setOnClickListener(this)
-        binding.button9.setOnClickListener(this)
-        binding.localDate.setOnClickListener(this)
-        binding.buttonAdd.setOnClickListener(this)
-        binding.buttonSubtract.setOnClickListener(this)
-        binding.buttonClear.setOnClickListener(this)
-        binding.buttonDivide.setOnClickListener(this)
-        binding.buttonMultiply.setOnClickListener(this)
-        binding.buttonEqual.setOnClickListener(this)
-        binding.buttonDot.setOnClickListener(this)
-        binding.buttonPN.setOnClickListener(this)
-        binding.buttonDelete.setOnClickListener(this)
-        binding.buttonSplitDate.setOnClickListener(this)
-        modelSelcter()
-        getLocalDate()
-
-    }
-
     private var firstNumber = ""
     private var secondNumber = ""
     private var operator = ""
-    private var result = ""
-//    private var isOperatorClicked = false
-    private var isSecondNumber = false
-    private var isDotClicked = false
-    private var isNegative = false
-    private var isSplitDate = false
-    private var isDate = false
-    private var showText = ""
-    private var first_date: Date = Date(0,0, 0)
-    private var second_date: Date = Date(0,0, 0)
+    private var displayExpression = "" // 用于记录并显示在输入框的完整计算内容
+    private var isResultShown = false  // 标记是否刚刚按下“=”
     private var modelSelect = "WEEK"
+    private var isErrorShowing = false
+    private val handler = Handler(Looper.getMainLooper())
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        // 绑定所有按钮的点击事件
+        val clickIds = listOf(
+            R.id.button0, R.id.button1, R.id.button2, R.id.button3, R.id.button4,
+            R.id.button5, R.id.button6, R.id.button7, R.id.button8, R.id.button9,
+            R.id.localDate, R.id.buttonAdd, R.id.buttonSubtract, R.id.buttonClear,
+            R.id.buttonDivide, R.id.buttonMultiply, R.id.buttonEqual, R.id.buttonDot,
+            R.id.buttonPN, R.id.buttonDelete, R.id.buttonSplitDate
+        )
+        clickIds.forEach { id ->
+            binding.root.findViewById<View>(id)?.setOnClickListener(this)
+        }
+
+        setupModelSelector()
+        updateLocalDateOnButton()
+    }
 
     override fun onClick(v: View?) {
-        var inpuntText = (v as TextView).text.toString()
-        when(v?.id){
-            R.id.buttonAdd -> {
-                operator = inpuntText
-                if (showText.endsWith("+") or showText.endsWith("-") or showText.endsWith("*") or showText.endsWith("÷")) {
-                    showText = showText.substring(0, showText.length - 1)
-                    showInputText(showText + operator)
-                }else{
-                    showInputText(showText + operator)
-                }
-            }
-            R.id.buttonSubtract -> {
-                operator = inpuntText
-                if (showText.endsWith("+") or showText.endsWith("-") or showText.endsWith("*") or showText.endsWith("÷")) {
-                    showText = showText.substring(0, showText.length - 1)
-                    showInputText(showText + operator)
-                }else{
-                    showInputText(showText + operator)
-                }
-            }
-            R.id.buttonDivide -> {
-                operator = inpuntText
-                if (showText.endsWith("+") or showText.endsWith("-") or showText.endsWith("*") or showText.endsWith("÷")) {
-                    showText = showText.substring(0, showText.length - 1)
-                    showInputText(showText + operator)
-                }else{
-                    showInputText(showText + operator)
-                }
-            }
-            R.id.buttonMultiply -> {
-                operator = inpuntText
-                if (showText.endsWith("+") or showText.endsWith("-") or showText.endsWith("*") or showText.endsWith("÷")) {
-                    showText = showText.substring(0, showText.length - 1)
-                    showInputText(showText + operator)
-                }else{
-                    showInputText(showText + operator)
-                }
-            }
-            R.id.buttonEqual -> {
-                var new_result = calculate().replace(Regex("\\.0$"), "")
-                refreshOperator(new_result)
-                showResult(new_result)
-            }
-//            R.id.buttonDot -> {
-//
-//            }
-            R.id.buttonPN -> {
+        if (isErrorShowing) return
+        val inputText = (v as? TextView)?.text?.toString() ?: ""
 
+        when (v?.id) {
+            R.id.buttonClear -> clearAll()
+            R.id.buttonDelete -> deleteOneChar()
+            R.id.buttonEqual -> handleEqual()
+            R.id.buttonAdd, R.id.buttonSubtract, R.id.buttonMultiply, R.id.buttonDivide -> {
+                handleOperatorClick(v.id, inputText)
             }
-            R.id.buttonClear -> {
-                showInputText("0")
-                refreshOperator("")
-                clear()
-            }
-            R.id.buttonDelete -> {
-                delete()
-            }
-//            R.id.buttonSplitDate -> {
-//
-//            }
-            R.id.localDate -> {
-                var local_date = getLocalDate()
-                binding.tvInput.setText("${local_date.year}/${local_date.month}/${local_date.day}")
-                firstNumber = "${local_date.year}/${local_date.month}/${local_date.day}"
-                showText = firstNumber
-            }
-            else -> {
-                if (result.length > 0 && operator == ""){
-                    clear()
-                }
-
-                if (operator == ""){
-                    firstNumber += inpuntText
-                }else{
-                    secondNumber += inpuntText
-                }
-
-                if (showText == "0" && inpuntText != "."){
-                    showInputText(inpuntText)
-                }else{
-                    showInputText(showText + inpuntText)
-                }
-            }
+            R.id.buttonSplitDate -> handleInputChar("/")
+            R.id.localDate -> handleLocalDateClick()
+            R.id.buttonPN -> handlePlusMinus()
+            R.id.buttonDot -> handleNumericInput(".")
+            else -> handleNumericInput(inputText)
         }
     }
 
-    private fun clear() {
-        refreshOperator("")
-        showInputText("0")
-        showResult("")
-    }
-
-    private fun refreshOperator(new_result: String) {
-        if (new_result == "Error") {
-//            result = new_result
-            firstNumber = ""
-            operator = ""
-            secondNumber = ""
-        }else{
-            result = new_result
-            firstNumber = new_result
-            operator = ""
-            secondNumber = ""
+    private fun handleNumericInput(input: String) {
+        // 核心修正：如果刚按过“=”，且没有输入运算符，则新输入数字/符号时重置
+        if (isResultShown && operator.isEmpty()) {
+            clearAll()
         }
-
+        handleInputChar(input)
     }
 
-    private fun calculate() : String{
-        var in_result = ""
-        when(operator){
-            "+" -> {
-                val caltime = cal_time()
-                if (caltime.year == -2) {
-                    // cal_time 用 year=-2 来表示返回的是天数，存在 caltime.month 中
-                    in_result = caltime.month.toString()
-                } else if (caltime == Date(-1,-1,-1)){
-                    if (firstNumber.toDoubleOrNull() != null && secondNumber.toDoubleOrNull() != null){
-                        in_result = (firstNumber.toDouble() + secondNumber.toDouble()).toString()
-                    }else{
-                        in_result = "Error"
-                    }
-                }else{
-                    in_result = caltime.year.toString() + "/" + caltime.month + "/" + caltime.day
-                }
-            }
-            "-" -> {
-                val caltime = cal_time()
-                if (caltime.year == -2) {
-                    when (modelSelect) {
-                        "WEEK" -> {
-                            in_result = (caltime.month.toInt() / 7).toString() + "+" + (caltime.month.toInt() % 7).toString() + "周"
-                        }
-                        "DAY" -> {
-                            in_result = caltime.month.toString() + "天"
-                        }
-                        "MONTH" -> {
-                            in_result = String.format("%.3f", (caltime.month / 30.0)) + "月"
-                        }
-                        "YEAR" -> {
-                            in_result = String.format("%.3f", caltime.month / 365.0) + "年"
-                        }
-                        else -> {
-                            in_result = caltime.month.toString()
-                        }
-
-                    }
-                } else if (caltime == Date(-1,-1,-1)) {
-                    if (firstNumber.toDoubleOrNull() != null && secondNumber.toDoubleOrNull() != null) {
-                        in_result = (firstNumber.toDouble() - secondNumber.toDouble()).toString()
-                    }else {
-                        in_result = "Error"
-                    }
-                }else{
-                    in_result = caltime.year.toString() + "/" + caltime.month + "/" + caltime.day
-                }
-            }
-            "÷" -> {
-                if (firstNumber.toDoubleOrNull() != null && secondNumber.toDoubleOrNull() != null) {
-                    in_result = (firstNumber.toDouble() / secondNumber.toDouble()).toString()
-                }else{
-                    in_result = "Error"
-                }
-            }
-            "*" -> {
-                if (firstNumber.toDoubleOrNull() != null && secondNumber.toDoubleOrNull() != null) {
-                    in_result = (firstNumber.toDouble() * secondNumber.toDouble()).toString()
-                }else{
-                    in_result = "Error"
-                }
-            }
-        }
-        return in_result
-    }
-
-    private fun showInputText(input: String) {
-        showText = input
-        binding.tvInput.text = input
-    }
-    private fun showResult(result: String) {
-        binding.tvResult.text = result
-    }
-    private fun cal_time(): Date {
-        val time1 = Calendar.getInstance()
-        val time2 = Calendar.getInstance()
-        var result_date = Date(-1, -1, -1)
-        var date1 = listOf<String>()
-        var date2 = listOf<String>()
-        if (isInputIsDate(firstNumber)) {
-            date1 = firstNumber.split("/")
-            first_date.year = date1[0].toInt()
-            first_date.month = date1[1].toInt() - 1
-            first_date.day = date1[2].toInt()
-            time1.set(first_date.year, first_date.month, first_date.day, 0, 0, 0)
-            time1.set(Calendar.MILLISECOND, 0)
-        }
-        if (isInputIsDate(secondNumber)) {
-            date2 = secondNumber.split("/")
-            second_date.year = date2[0].toInt()
-            second_date.month = date2[1].toInt() - 1
-            second_date.day = date2[2].toInt()
-            time2.set(second_date.year, second_date.month, second_date.day, 0, 0, 0)
-            time2.set(Calendar.MILLISECOND, 0)
-        }
-        if (isInputIsDate(firstNumber) and isInputIsDate(secondNumber)) {
-            if (operator == "-") {
-                // 计算两日期间的天数差（绝对值）
-                val diffMillis = time1.timeInMillis - time2.timeInMillis
-                val days = kotlin.math.abs(diffMillis) / (24L * 60L * 60L * 1000L)
-                // 使用 year = -2 作为特殊标记，month 字段放天数
-                return Date(-2, days.toInt(), 0)
-            } else if (operator == "+") {
-                // 移除两个日期相加的逻辑，提示并返回错误标记
-                binding.tvResult.text = "两个日期不支持相加"
-                return result_date
+    private fun handleInputChar(char: String) {
+        val currentPart = if (operator.isEmpty()) firstNumber else secondNumber
+        if (validateChar(currentPart, char)) {
+            if (operator.isEmpty()) {
+                firstNumber += char
             } else {
-                binding.tvResult.text = "两个日期仅支持-运算符"
-                return result_date
+                secondNumber += char
             }
-        }else if (isInputIsDate(firstNumber) and (secondNumber.toIntOrNull() != null)){
-            if (operator == "+") {
-                return model_select(modelSelect, secondNumber, time1,"+")
-            }else if (operator == "-"){
-                return model_select(modelSelect, secondNumber, time1,"-")
-            }else{
-                binding.tvResult.text = "日期仅支持+或-运算符"
-                return result_date
-            }
-
-        }else if (isInputIsDate(secondNumber) and (firstNumber.toIntOrNull() != null)){
-            if (operator == "+") {
-                return model_select(modelSelect, firstNumber, time2, "+")
-            }else if (operator == "-"){
-                return model_select(modelSelect, firstNumber, time2, "-")
-            }else{
-                binding.tvResult.text = "日期仅支持+或-运算符"
-                return result_date
-            }
-        }else{
-            return result_date
+            displayExpression += char
+            isResultShown = false
+            updateInputDisplay()
+        } else {
+            showErrorFeedback(char)
         }
     }
-    fun model_select(model : String, intNumber : String, time: Calendar, operater: String):Date{
-        var date = Date(-1, -1, -1)
-        if (operater == "+") {
-            when (model) {
-                "YEAR" -> {
-                    time.add(Calendar.YEAR, intNumber.toInt())
-                    date.year = time.get(Calendar.YEAR)
-                    date.month = time.get(Calendar.MONTH) + 1
-                    date.day = time.get(Calendar.DAY_OF_MONTH)
-                    return date
-                }
 
-                "MONTH" -> {
-                    time.add(Calendar.MONTH, intNumber.toInt())
-                    date.year = time.get(Calendar.YEAR)
-                    date.month = time.get(Calendar.MONTH) + 1
-                    date.day = time.get(Calendar.DAY_OF_MONTH)
-                    return date
-                }
+    // 输入校验逻辑 (修复小数输入“/”的Bug)
+    private fun validateChar(current: String, next: String): Boolean {
+        val combined = current + next
 
-                "DAY" -> {
-                    time.add(Calendar.DAY_OF_MONTH, intNumber.toInt())
-                    date.year = time.get(Calendar.YEAR)
-                    date.month = time.get(Calendar.MONTH) + 1
-                    date.day = time.get(Calendar.DAY_OF_MONTH)
-                    return date
-                }
-
-                "WEEK" -> {
-                    time.add(Calendar.WEDNESDAY, intNumber.toInt())
-                    date.year = time.get(Calendar.YEAR)
-                    date.month = time.get(Calendar.MONTH) + 1
-                    date.day = time.get(Calendar.DAY_OF_MONTH)
-                    return date
-                }
-
-                else -> return date
-            }
-        }else{
-            when (model) {
-                "YEAR" -> {
-                    time.add(Calendar.YEAR, -intNumber.toInt())
-                    date.year = time.get(Calendar.YEAR)
-                    date.month = time.get(Calendar.MONTH) + 1
-                    date.day = time.get(Calendar.DAY_OF_MONTH)
-                    return date
-                }
-
-                "MONTH" -> {
-                    time.add(Calendar.MONTH, -intNumber.toInt())
-                    date.year = time.get(Calendar.YEAR)
-                    date.month = time.get(Calendar.MONTH) +1
-                    date.day = time.get(Calendar.DAY_OF_MONTH)
-                    return date
-                }
-
-                "DAY" -> {
-                    time.add(Calendar.DAY_OF_MONTH, -intNumber.toInt())
-                    date.year = time.get(Calendar.YEAR)
-                    date.month = time.get(Calendar.MONTH) + 1
-                    date.day = time.get(Calendar.DAY_OF_MONTH)
-                    return date
-                }
-
-                "WEEK" -> {
-                    time.add(Calendar.WEDNESDAY, -intNumber.toInt())
-                    date.year = time.get(Calendar.YEAR)
-                    date.month = time.get(Calendar.MONTH) + 1
-                    date.day = time.get(Calendar.DAY_OF_MONTH)
-                    return date
-                }
-
-                else -> return date
-            }
-        }
-    }
-    fun isInputIsDate(inp : String):Boolean{
-//      判断第一个数据输入是否错误，（比如错误提示后之间按运算符进行计算）错误返回true。
-        val regx=Regex("\\d+/\\d+/\\d+")
-        if((inp.count { it == '/' } == 2) and (inp.split('/').size >=2) and  (regx.matches(inp))){
-//            year = inp.split('/')[0].toInt()
-//            month = inp.split('/')[1].toInt()
-//            day = inp.split('/')[2].toInt()
+        if (next == ".") {
+            // 小数点校验：操作数不能已有小数点，且不能包含日期分隔符
+            if (current.contains(".") || current.contains("/")) return false
             return true
         }
-        else if(!inp.contains("/")){
-            return  false
+
+        if (next == "/") {
+            // 日期分隔符校验
+            if (current.count { it == '/' } >= 2) return false // 最多2个
+            if (current.isEmpty() || !current.last().isDigit()) return false // 必须跟在数字后
+            if (current.contains(".")) return false // 关键修复：如果当前部分是小数，不允许输入“/”
+            if (operator == "*" || operator == "÷") return false // 日期模式下禁用乘除
+            // 需求：日期加减法限制 (Requirement 3)
+            if (operator == "+" && isInputIsDate(firstNumber)) return false
+            return true
         }
-        else{
-//            answerTextView.text="输入日期有误"
-            return false
+
+        // 录入数字时的月份和日期范围验证
+        if (next.all { it.isDigit() } && current.contains("/")) {
+            val parts = combined.split("/")
+            if (parts.size == 2 && parts[1].isNotEmpty()) { // 月份
+                val m = parts[1].toIntOrNull() ?: 0
+                if (m > 12) return false
+            } else if (parts.size == 3 && parts[2].isNotEmpty()) { // 日期
+                val d = parts[2].toIntOrNull() ?: 0
+                if (d > 31) return false
+            }
+        }
+        return true
+    }
+
+    private fun handleOperatorClick(id: Int, opText: String) {
+        // 如果刚刚按下“=”，则将结果作为新的第一个操作数，并同步显示表达式
+        if (isResultShown) {
+            displayExpression = firstNumber
+            isResultShown = false
+        }
+
+        if (firstNumber == "Error") {
+            clearAll()
+            return
+        }
+
+        val currentPart = if (operator.isEmpty()) firstNumber else secondNumber
+
+        // 需求 4: 除法键在日期上下文中充当分隔符
+        val isDateContext = currentPart.contains("/") || (operator.isNotEmpty() && isInputIsDate(firstNumber))
+        if (id == R.id.buttonDivide && isDateContext) {
+            handleInputChar("/")
+            return
+        }
+
+        if (firstNumber.isEmpty()) {
+            if (opText == "-") {
+                firstNumber = "-"
+                displayExpression = "-"
+                updateInputDisplay()
+            }
+            return
+        }
+
+        // 规则：如果是日期，必须格式完整才能添加运算符
+        if (currentPart.contains("/") && !isCompleteDatePattern(currentPart)) {
+            showErrorFeedback(opText)
+            return
+        }
+
+        // 规则：日期计算不支持乘除
+        if ((isInputIsDate(firstNumber) || currentPart.contains("/")) && (opText == "*" || opText == "÷")) {
+            showErrorFeedback(opText)
+            return
+        }
+
+        if (operator.isNotEmpty() && secondNumber.isNotEmpty()) {
+            // 需求 1: 连续加减计算处理
+            val res = calculate().replace(Regex("\\.0$"), "")
+            if (res == "Error") {
+                showResultInDisplay(res)
+                return
+            }
+            // 检查中间结果（日期）是否引发非法后续运算
+            if (res.contains("/") && (opText == "*" || opText == "÷")) {
+                showErrorFeedback(opText)
+                return
+            }
+            
+            firstNumber = res
+            operator = opText
+            secondNumber = ""
+            displayExpression = res + opText
+            isResultShown = false
+            updateInputDisplay()
+            showResultInDisplay(res)
+        } else if (firstNumber != "-") {
+            // 更改或设置运算符
+            if (operator.isNotEmpty() && secondNumber.isEmpty()) {
+                if (displayExpression.isNotEmpty()) displayExpression = displayExpression.dropLast(1)
+            }
+            operator = opText
+            displayExpression += opText
+            isResultShown = false
+            updateInputDisplay()
         }
     }
-    fun modelSelcter() {
-        binding.selecToggleGroup.addOnButtonCheckedListener { group: MaterialButtonToggleGroup?, checkedId, isChecked ->
-            val childCount = group?.childCount
-            var selctIndex = 0
-            for (index in 0 until childCount!!) {
-                val child = group.getChildAt(index) as MaterialButton
+
+    private fun handleEqual() {
+        if (firstNumber.isEmpty() || operator.isEmpty() || secondNumber.isEmpty()) return
+        
+        // 校验输入完整性
+        if (firstNumber.contains("/") && !isCompleteDatePattern(firstNumber)) return
+        if (secondNumber.contains("/") && !isInputIsDate(secondNumber)) return
+
+        val res = calculate().replace(Regex("\\.0$"), "")
+        showResultInDisplay(res)
+        if (res != "Error") {
+            // 核心微调：按下“=”后不更新输入框 (displayExpression 不变)
+            // 更新内部状态以支持后续基于此结果的连续计算
+            firstNumber = res
+            operator = ""
+            secondNumber = ""
+            isResultShown = true
+        }
+    }
+
+    private fun showErrorFeedback(char: String) {
+        if (isErrorShowing) return
+        isErrorShowing = true
+        val currentText = if (displayExpression.isEmpty()) "0" else displayExpression
+        
+        // 需求 3: 标红显示错误字符
+        val spannable = SpannableString(currentText + char)
+        spannable.setSpan(
+            ForegroundColorSpan(Color.RED),
+            currentText.length,
+            spannable.length,
+            Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+        )
+        binding.tvInput.text = spannable
+
+        // 需求 3: 延迟1秒后删除该字符并恢复显示
+        handler.postDelayed({
+            isErrorShowing = false
+            updateInputDisplay()
+        }, 1000)
+    }
+
+    private fun calculate(): String {
+        val isFDate = isInputIsDate(firstNumber)
+        val isSDate = isInputIsDate(secondNumber)
+
+        if (isFDate || isSDate) {
+            // 情况 1: 两个日期相减
+            if (isFDate && isSDate) {
+                if (operator == "-") {
+                    val d1 = parseDateString(firstNumber)
+                    val d2 = parseDateString(secondNumber)
+                    val cal1 = Calendar.getInstance().apply { set(d1.year, d1.month - 1, d1.day, 0, 0, 0); set(Calendar.MILLISECOND, 0) }
+                    val cal2 = Calendar.getInstance().apply { set(d2.year, d2.month - 1, d2.day, 0, 0, 0); set(Calendar.MILLISECOND, 0) }
+                    val diff = (cal1.timeInMillis - cal2.timeInMillis) / (24L * 60L * 60L * 1000L)
+                    return formatDifference(diff.toInt())
+                } else return "Error"
+            }
+
+            // 情况 2: 一个日期 +/- 一个整数
+            val datePart = if (isFDate) firstNumber else secondNumber
+            val intPart = if (isFDate) secondNumber else firstNumber
+            val intVal = intPart.toIntOrNull() ?: return "Error"
+
+            if (operator != "+" && operator != "-") return "Error"
+            if (operator == "-" && !isFDate) return "Error"
+
+            val d = parseDateString(datePart)
+            val cal = Calendar.getInstance().apply { set(d.year, d.month - 1, d.day, 0, 0, 0); set(Calendar.MILLISECOND, 0) }
+            val amount = if (operator == "-") -intVal else intVal
+
+            when (modelSelect) {
+                "YEAR" -> cal.add(Calendar.YEAR, amount)
+                "MONTH" -> cal.add(Calendar.MONTH, amount)
+                "DAY" -> cal.add(Calendar.DAY_OF_MONTH, amount)
+                "WEEK" -> cal.add(Calendar.WEEK_OF_YEAR, amount)
+                else -> cal.add(Calendar.DAY_OF_MONTH, amount)
+            }
+            return String.format(Locale.US, "%d/%d/%d", cal.get(Calendar.YEAR), cal.get(Calendar.MONTH) + 1, cal.get(Calendar.DAY_OF_MONTH))
+        }
+
+        // 普通数学运算
+        val v1 = firstNumber.toDoubleOrNull() ?: return "Error"
+        val v2 = secondNumber.toDoubleOrNull() ?: return "Error"
+        return when (operator) {
+            "+" -> (v1 + v2).toString()
+            "-" -> (v1 - v2).toString()
+            "*" -> (v1 * v2).toString()
+            "÷" -> if (v2 != 0.0) (v1 / v2).toString() else "Error"
+            else -> "Error"
+        }
+    }
+
+    private fun formatDifference(diff: Int): String {
+        val sign = if (diff < 0) "-" else ""
+        val abs = kotlin.math.abs(diff)
+        return when (modelSelect) {
+            "WEEK" -> if (abs % 7 == 0) "$sign${abs / 7}周" else "$sign${abs / 7}周${abs % 7}天"
+            "DAY" -> "$sign${abs}天"
+            "MONTH" -> String.format(Locale.US, "%s%.3f月", sign, abs / 30.0)
+            "YEAR" -> String.format(Locale.US, "%s%.3f年", sign, abs / 365.0)
+            else -> diff.toString()
+        }
+    }
+
+    fun isInputIsDate(inp: String): Boolean = inp.contains("/")
+
+    private fun isCompleteDatePattern(inp: String): Boolean {
+        return Regex("\\d{1,4}/\\d{1,2}/\\d{1,2}").matches(inp)
+    }
+
+    private fun parseDateString(s: String): MyDateData {
+        val parts = s.split("/")
+        return MyDateData(parts[0].toInt(), parts[1].toInt(), parts[2].toInt())
+    }
+
+    private fun handlePlusMinus() {
+        if (operator.isEmpty()) {
+            if (firstNumber.isNotEmpty() && !firstNumber.contains("/")) {
+                val oldLen = firstNumber.length
+                firstNumber = if (firstNumber.startsWith("-")) firstNumber.substring(1) else "-$firstNumber"
+                if (displayExpression.length >= oldLen) displayExpression = displayExpression.dropLast(oldLen) + firstNumber
+            }
+        } else {
+            if (secondNumber.isNotEmpty() && !secondNumber.contains("/")) {
+                val oldLen = secondNumber.length
+                secondNumber = if (secondNumber.startsWith("-")) secondNumber.substring(1) else "-$secondNumber"
+                if (displayExpression.length >= oldLen) displayExpression = displayExpression.dropLast(oldLen) + secondNumber
+            }
+        }
+        updateInputDisplay()
+    }
+
+    private fun handleLocalDateClick() {
+        if (isResultShown && operator.isEmpty()) clearAll()
+        val c = Calendar.getInstance()
+        val ds = String.format(Locale.US, "%d/%d/%d", c.get(Calendar.YEAR), c.get(Calendar.MONTH) + 1, c.get(Calendar.DAY_OF_MONTH))
+        if (operator.isEmpty()) {
+            firstNumber = ds
+            displayExpression = ds
+        } else if (operator == "-" || (operator == "+" && !isInputIsDate(firstNumber))) {
+            secondNumber = ds
+            displayExpression += ds
+        } else {
+            showErrorFeedback("Date")
+            return
+        }
+        updateInputDisplay()
+    }
+
+    private fun updateInputDisplay() {
+        binding.tvInput.setTextColor(Color.parseColor("#3C4043"))
+        binding.tvInput.text = if (displayExpression.isEmpty()) "0" else displayExpression
+    }
+
+    private fun showResultInDisplay(res: String) {
+        binding.tvResult.text = res
+    }
+
+    private fun clearAll() {
+        firstNumber = ""; secondNumber = ""; operator = ""; displayExpression = ""; isResultShown = false
+        updateInputDisplay(); showResultInDisplay("")
+    }
+
+    private fun deleteOneChar() {
+        if (displayExpression.isEmpty()) return
+        displayExpression = displayExpression.dropLast(1)
+        if (secondNumber.isNotEmpty()) secondNumber = secondNumber.dropLast(1)
+        else if (operator.isNotEmpty()) operator = ""
+        else if (firstNumber.isNotEmpty()) firstNumber = firstNumber.dropLast(1)
+        updateInputDisplay()
+    }
+
+    private fun updateLocalDateOnButton() {
+        val c = Calendar.getInstance()
+        binding.localDate.text = String.format(Locale.US, "%d/%d/%d", c.get(Calendar.YEAR), c.get(Calendar.MONTH) + 1, c.get(Calendar.DAY_OF_MONTH))
+    }
+
+    fun setupModelSelector() {
+        binding.selecToggleGroup.addOnButtonCheckedListener { group, checkedId, isChecked ->
+            if (!isChecked) return@addOnButtonCheckedListener
+            val childCount = group?.childCount ?: 0
+            for (index in 0 until childCount) {
+                val child = group.getChildAt(index) as? MaterialButton ?: continue
                 if (child.id == checkedId) {
-                    selctIndex = index
-                    child.setTextColor(Color.parseColor("#FFFFFF"))
+                    child.setTextColor(Color.WHITE)
                     child.setBackgroundColor(Color.parseColor("#109D58"))
+                    when (checkedId) {
+                        R.id.modelSelect_year -> { modelSelect = "YEAR"; binding.hintTextView.text = "年" }
+                        R.id.modelSelect_month -> { modelSelect = "MONTH"; binding.hintTextView.text = "月" }
+                        R.id.modelSelect_day -> { modelSelect = "DAY"; binding.hintTextView.text = "日" }
+                        R.id.modelSelect_week -> { modelSelect = "WEEK"; binding.hintTextView.text = "周" }
+                        R.id.modelSelect_date -> { modelSelect = "MATH"; binding.hintTextView.text = "MATH" }
+                    }
                 } else {
                     child.setTextColor(Color.parseColor("#3C4043"))
-                    child.setBackgroundColor(Color.parseColor("#FFFFFF"))
-                }
-            }
-            when (selctIndex) {
-                0 -> {
-                    modelSelect = "YEAR"
-                    binding.hintTextView.setText("年")
-                }
-
-                1 -> {
-                    modelSelect = "MONTH"
-                    binding.hintTextView.setText("月")
-                }
-
-                2 -> {
-                    modelSelect = "DAY"
-                    binding.hintTextView.setText("日")
-                }
-
-                3 -> {
-                    modelSelect = "WEEK"
-                    binding.hintTextView.setText("周")
-                }
-
-                4 -> {
-                    modelSelect = "MATH"
-                    binding.hintTextView.setText(modelSelect)
+                    child.setBackgroundColor(Color.WHITE)
                 }
             }
         }
-    }
-
-    private fun delete(){
-        //逻辑有问题，待修改
-        if (showText.isNotEmpty()){
-            if (showText.length>=2) {
-                binding.tvInput.setText(showText.substring(0, showText.length - 1))
-                if (operator != "") {
-                    showText = showText.substring(0, showText.length - 1)
-                    if (secondNumber == "") {
-//                        showText = showText.substring(0, showText.length - 1)
-                        operator = ""
-                    }else{
-                        secondNumber = secondNumber.substring(0, secondNumber.length - 1)
-                    }
-                }else{
-                    showText = showText.substring(0, showText.length - 1)
-                    firstNumber = firstNumber.substring(0, firstNumber.length - 1)
-                }
-            }else{
-                if (operator != "") {
-                    showText = showText.substring(0, showText.length - 1)
-                    binding.tvInput.setText("")
-                    secondNumber= ""
-                }else{
-                    showText = showText.substring(0, showText.length - 1)
-                    binding.tvInput.setText("")
-                    firstNumber = ""
-                }
-            }
-        }
-    }
-    private fun getLocalDate(): Date{
-        var calendar = Calendar.getInstance()
-        var year = calendar.get(Calendar.YEAR)
-        var month = calendar.get(Calendar.MONTH) + 1
-        var day = calendar.get(Calendar.DAY_OF_MONTH)
-        binding.localDate.setText("${year}/${month}/${day}")
-        return Date(year, month, day)
     }
 }
 
-data class Date(var year: Int, var month: Int, var day: Int)
+data class MyDateData(var year: Int, var month: Int, var day: Int)
