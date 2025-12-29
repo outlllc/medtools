@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.content.ContextCompat
 import androidx.core.view.children
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
 import com.duckgo.medtools.babyweight.BabyWeight
 import com.duckgo.medtools.databinding.ActivityMainBinding
@@ -31,7 +32,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // 强制设为日间模式
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
 
         binding = ActivityMainBinding.inflate(layoutInflater).also { setContentView(it.root) }
@@ -39,7 +39,14 @@ class MainActivity : AppCompatActivity() {
         saveDatabaseFile()
         initNavigation()
 
-        if (savedInstanceState == null) showFragment(R.id.calculation_button)
+        // 初始化显示第一个页面
+        if (savedInstanceState == null) {
+            // check() 会触发 OnButtonCheckedListener，进而调用 showFragment
+            binding.tgFirstPage.check(R.id.calculation_button)
+        } else {
+            // 状态恢复时，确保按钮样式正确
+            updateButtonStyles(binding.tgFirstPage.checkedButtonId)
+        }
 
         onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
@@ -68,10 +75,24 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    /**
+     * 核心修复：使用 add/hide/show 替代 replace
+     * 增加 findFragmentByTag 以支持状态恢复并避免重复添加导致的 IllegalStateException
+     */
     private fun showFragment(checkedId: Int) {
-        fragments[checkedId]?.let { fragment ->
-            supportFragmentManager.commit(allowStateLoss = true) {
-                replace(R.id.fragment_, fragment)
+        val tag = checkedId.toString()
+        // 优先从 FragmentManager 中查找已存在的实例（支持 Activity 重建）
+        val target = supportFragmentManager.findFragmentByTag(tag) ?: fragments[checkedId] ?: return
+        
+        supportFragmentManager.commit(allowStateLoss = true) {
+            // 1. 隐藏管理器中所有当前已添加的 Fragment
+            supportFragmentManager.fragments.forEach { hide(it) }
+            
+            // 2. 显示或添加目标 Fragment
+            if (!target.isAdded) {
+                add(R.id.fragment_, target, tag)
+            } else {
+                show(target)
             }
         }
     }

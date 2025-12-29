@@ -26,43 +26,67 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:padding="16dp">
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btn_courses"
-                    style="@style/Widget.MaterialComponents.Button.TextButton"
-                    android:layout_width="0dp"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="课程"
-                    android:textColor="@color/black"
-                    app:icon="@drawable/baseline_arrow_downward_24"
-                    app:iconGravity="top"
-                    app:iconTint="@color/green_kuan" />
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_courses"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="课程"
+                        android:textColor="@color/black"
+                        app:icon="@drawable/baseline_arrow_downward_24"
+                        app:iconGravity="top"
+                        app:iconTint="@color/green_kuan" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_favorites"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="收藏"
+                        android:textColor="@color/black"
+                        app:icon="@drawable/baseline_arrow_downward_24"
+                        app:iconGravity="top"
+                        app:iconTint="@color/green_kuan" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_mine"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="我的"
+                        android:textColor="@color/black"
+                        app:icon="@drawable/baseline_arrow_downward_24"
+                        app:iconGravity="top"
+                        app:iconTint="@color/green_kuan" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@color/gray_f3" />
 
                 <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btn_favorites"
+                    android:id="@+id/btn_software_usage"
                     style="@style/Widget.MaterialComponents.Button.TextButton"
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="收藏"
+                    android:gravity="start|center_vertical"
+                    android:text="软件使用"
                     android:textColor="@color/black"
                     app:icon="@drawable/baseline_arrow_downward_24"
-                    app:iconGravity="top"
-                    app:iconTint="@color/green_kuan" />
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btn_mine"
-                    style="@style/Widget.MaterialComponents.Button.TextButton"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="我的"
-                    android:textColor="@color/black"
-                    app:icon="@drawable/baseline_arrow_downward_24"
-                    app:iconGravity="top"
                     app:iconTint="@color/green_kuan" />
 
             </LinearLayout>

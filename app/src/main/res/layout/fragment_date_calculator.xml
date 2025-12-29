@@ -2,10 +2,6 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <data>
-
-    </data>
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -50,148 +46,124 @@
                     android:layout_height="2dp"
                     android:background="#F1F3F4"/>
                 <TextView
+                    android:id="@+id/tv_result"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
                     android:gravity="end|center"
                     android:paddingEnd="10dp"
-                    android:id="@+id/tv_result"
                     android:textColor="#109D58"
                     android:textSize="30sp"/>
             </LinearLayout>
         </FrameLayout>
 
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="3dp"
-            android:background="#F1F3F4"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/frameLayout"
-            android:layout_marginBottom="4dp"/>
+        <!-- Mode Selection Group -->
         <com.google.android.material.button.MaterialButtonToggleGroup
             android:id="@+id/selecToggleGroup"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_marginStart="3dp"
-            android:layout_marginEnd="3dp"
-            android:layout_marginTop="3dp"
-            android:background="#F1F3F4"
-            app:checkedButton="@+id/buttonweek"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:singleSelection="true"
+            app:selectionRequired="true"
+            app:checkedButton="@+id/modelSelect_week"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/frameLayout">
+            app:layout_constraintEnd_toStartOf="@+id/btn_bracket"
+            app:layout_constraintTop_toBottomOf="@+id/frameLayout"
+            app:layout_constraintHorizontal_weight="4">
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/modelSelect_year"
+                style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_marginEnd="4dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:insetTop="0dp"
-                android:insetRight="4dp"
                 android:insetBottom="0dp"
                 android:text="年"
                 android:textColor="#3C4043"
                 android:textSize="14sp"
-                app:backgroundTint="#FFFFFF"
-                app:cornerRadius="2dp"
-                app:strokeColor="#DADCE0"
-                app:strokeWidth="1dp" />
+                app:cornerRadius="0dp" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/modelSelect_month"
+                style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_marginEnd="4dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:insetTop="0dp"
-                android:insetRight="4dp"
                 android:insetBottom="0dp"
                 android:text="月"
                 android:textColor="#3C4043"
                 android:textSize="14sp"
-                app:backgroundTint="#FFFFFF"
-                app:cornerRadius="20dp"
-                app:strokeColor="#DADCE0"
-                app:strokeWidth="1dp" />
+                app:cornerRadius="0dp" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/modelSelect_day"
                 style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_marginEnd="4dp"
-                android:layout_marginBottom="2dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:insetTop="0dp"
-                android:insetRight="4dp"
                 android:insetBottom="0dp"
                 android:text="日"
                 android:textColor="#3C4043"
                 android:textSize="14sp"
-                app:backgroundTint="#FFFFFF"
-                app:cornerRadius="20dp"
-                app:strokeColor="#DADCE0"
-                app:strokeWidth="1dp" />
+                app:cornerRadius="0dp" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/modelSelect_week"
                 style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_marginEnd="4dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:insetTop="0dp"
-                android:insetRight="4dp"
                 android:insetBottom="0dp"
                 android:text="周"
-                android:textColor="@color/white"
-                android:textSize="14sp"
-                app:backgroundTint="#109D58"
-                app:cornerRadius="20dp"
-                app:strokeColor="#109D58"
-                app:strokeWidth="0dp" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/modelSelect_date"
-                style="?attr/materialButtonOutlinedStyle"
-                android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_marginEnd="4dp"
-                android:layout_marginBottom="2dp"
-                android:layout_weight="1"
-                android:insetTop="0dp"
-                android:insetBottom="0dp"
-                android:text="数学"
                 android:textColor="#3C4043"
                 android:textSize="14sp"
-                app:backgroundTint="#FFFFFF"
-                app:cornerRadius="2dp"
-                app:strokeColor="#DADCE0"
-                app:strokeWidth="1dp" />
-
+                app:cornerRadius="0dp" />
         </com.google.android.material.button.MaterialButtonToggleGroup>
 
+        <!-- Independent Bracket Button -->
+        <Button
+            android:id="@+id/btn_bracket"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/buttonseletor"
+            android:text="( )"
+            android:textColor="#3C4043"
+            android:textSize="20sp"
+            app:backgroundTint="#FFFFFF"
+            app:layout_constraintStart_toEndOf="@+id/selecToggleGroup"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/frameLayout"
+            app:layout_constraintHorizontal_weight="1" />
 
+        <!-- Row 1 -->
         <Button
             android:id="@+id/buttonClear"
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:background="@drawable/buttonseletor"
-            android:layout_marginEnd="5dp"
-            android:layout_marginTop="5dp"
             android:layout_marginStart="5dp"
-            app:layout_constraintHorizontal_chainStyle="spread"
-            app:layout_constraintHorizontal_weight="1"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
             android:text="AC"
-            android:textSize="25sp"
             android:textColor="#D93025"
+            android:textSize="25sp"
             app:backgroundTint="#FEEBEB"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/buttonPN"
+            app:layout_constraintTop_toBottomOf="@+id/selecToggleGroup"
             app:layout_constraintBottom_toTopOf="@+id/button7"
-            app:layout_constraintTop_toBottomOf="@+id/selecToggleGroup" />
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintVertical_weight="1" />
 
         <Button
             android:id="@+id/buttonPN"
@@ -200,18 +172,15 @@
             android:layout_height="0dp"
             android:background="@drawable/buttonseletor"
             android:layout_marginEnd="5dp"
-            android:layout_marginTop="5dp"
-            android:orientation="horizontal"
             android:text="-+"
             android:textColor="#3C4043"
             android:textSize="30sp"
             app:backgroundTint="#F8F9FA"
-            app:layout_constraintEnd_toStartOf="@+id/buttonDivide"
-            app:layout_constraintHorizontal_chainStyle="spread"
-            app:layout_constraintHorizontal_weight="1"
             app:layout_constraintStart_toEndOf="@+id/buttonClear"
-            app:layout_constraintBottom_toTopOf="@+id/button8"
-            app:layout_constraintTop_toBottomOf="@+id/selecToggleGroup" />
+            app:layout_constraintEnd_toStartOf="@+id/buttonDivide"
+            app:layout_constraintTop_toTopOf="@+id/buttonClear"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonClear"
+            app:layout_constraintHorizontal_weight="1" />
 
         <Button
             android:id="@+id/buttonDivide"
@@ -220,18 +189,15 @@
             android:layout_height="0dp"
             android:background="@drawable/buttonseletor"
             android:layout_marginEnd="5dp"
-            android:layout_marginTop="5dp"
             android:text="÷"
             android:textColor="#3C4043"
             android:textSize="30sp"
             app:backgroundTint="#F8F9FA"
-            app:layout_constraintEnd_toStartOf="@+id/buttonMultiply"
-            app:layout_constraintHorizontal_chainStyle="spread"
-            app:layout_constraintHorizontal_weight="1"
-            app:layout_constraintVertical_weight="1"
             app:layout_constraintStart_toEndOf="@+id/buttonPN"
-            app:layout_constraintBottom_toTopOf="@+id/button9"
-            app:layout_constraintTop_toBottomOf="@+id/selecToggleGroup" />
+            app:layout_constraintEnd_toStartOf="@+id/buttonMultiply"
+            app:layout_constraintTop_toTopOf="@+id/buttonClear"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonClear"
+            app:layout_constraintHorizontal_weight="1" />
 
         <Button
             android:id="@+id/buttonMultiply"
@@ -239,39 +205,37 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:background="@drawable/buttonseletor"
-            android:layout_marginTop="5dp"
             android:layout_marginEnd="5dp"
-            app:layout_constraintHorizontal_chainStyle="spread"
-            app:layout_constraintHorizontal_weight="1"
-            app:layout_constraintVertical_weight="1"
             android:text="*"
             android:textColor="#3C4043"
             android:textSize="30sp"
             app:backgroundTint="#F8F9FA"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/buttonDivide"
-            app:layout_constraintBottom_toTopOf="@+id/buttonDelete"
-            app:layout_constraintTop_toBottomOf="@+id/selecToggleGroup" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/buttonClear"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonClear"
+            app:layout_constraintHorizontal_weight="1" />
 
+        <!-- Row 2 -->
         <Button
             android:id="@+id/button7"
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:background="@drawable/buttonseletor"
-            android:layout_marginEnd="5dp"
-            android:layout_marginTop="5dp"
             android:layout_marginStart="5dp"
-            app:layout_constraintHorizontal_chainStyle="spread"
-            app:layout_constraintHorizontal_weight="1"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
             android:text="7"
             android:textColor="#3C4043"
             android:textSize="30sp"
             app:backgroundTint="#FFFFFF"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/button8"
+            app:layout_constraintTop_toBottomOf="@+id/buttonClear"
             app:layout_constraintBottom_toTopOf="@+id/button4"
-            app:layout_constraintTop_toBottomOf="@+id/buttonClear" />
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintVertical_weight="1" />
 
         <Button
             android:id="@+id/button8"
@@ -280,18 +244,15 @@
             android:layout_height="0dp"
             android:background="@drawable/buttonseletor"
             android:layout_marginEnd="5dp"
-            android:layout_marginTop="5dp"
-            app:layout_constraintHorizontal_chainStyle="spread"
-            app:layout_constraintHorizontal_weight="1"
-            android:orientation="horizontal"
             android:text="8"
             android:textColor="#3C4043"
             android:textSize="30sp"
             app:backgroundTint="#FFFFFF"
             app:layout_constraintStart_toEndOf="@+id/button7"
             app:layout_constraintEnd_toStartOf="@+id/button9"
-            app:layout_constraintBottom_toTopOf="@+id/button5"
-            app:layout_constraintTop_toBottomOf="@+id/buttonPN" />
+            app:layout_constraintTop_toTopOf="@+id/button7"
+            app:layout_constraintBottom_toBottomOf="@+id/button7"
+            app:layout_constraintHorizontal_weight="1" />
 
         <Button
             android:id="@+id/button9"
@@ -300,19 +261,15 @@
             android:layout_height="0dp"
             android:background="@drawable/buttonseletor"
             android:layout_marginEnd="5dp"
-            android:layout_marginTop="5dp"
-            app:layout_constraintHorizontal_chainStyle="spread"
-            app:layout_constraintHorizontal_weight="1"
-            app:layout_constraintVertical_weight="1"
             android:text="9"
             android:textColor="#3C4043"
             android:textSize="30sp"
             app:backgroundTint="#FFFFFF"
             app:layout_constraintStart_toEndOf="@+id/button8"
             app:layout_constraintEnd_toStartOf="@+id/buttonDelete"
-            app:layout_constraintBottom_toTopOf="@+id/button6"
-            app:layout_constraintTop_toBottomOf="@+id/buttonDivide" />
-
+            app:layout_constraintTop_toTopOf="@+id/button7"
+            app:layout_constraintBottom_toBottomOf="@+id/button7"
+            app:layout_constraintHorizontal_weight="1" />
 
         <Button
             android:id="@+id/buttonDelete"
@@ -320,41 +277,38 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:background="@drawable/buttonseletor"
-            android:layout_marginTop="5dp"
             android:layout_marginEnd="5dp"
-            app:layout_constraintHorizontal_chainStyle="spread"
-            app:layout_constraintHorizontal_weight="1"
-            app:layout_constraintVertical_weight="1"
             android:text="←"
             android:textColor="#3C4043"
             android:textSize="30sp"
             android:textStyle="bold"
             app:backgroundTint="#F8F9FA"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/button9"
-            app:layout_constraintBottom_toTopOf="@+id/buttonSubtract"
-            app:layout_constraintTop_toBottomOf="@+id/buttonMultiply" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/button7"
+            app:layout_constraintBottom_toBottomOf="@+id/button7"
+            app:layout_constraintHorizontal_weight="1" />
 
+        <!-- Row 3 -->
         <Button
             android:id="@+id/button4"
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:background="@drawable/buttonseletor"
-            android:layout_marginEnd="5dp"
-            android:layout_marginTop="5dp"
             android:layout_marginStart="5dp"
-            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
             android:text="4"
             android:textColor="#3C4043"
             android:textSize="30sp"
             app:backgroundTint="#FFFFFF"
-            app:layout_constraintEnd_toStartOf="@+id/button5"
-            app:layout_constraintHorizontal_chainStyle="spread"
-            app:layout_constraintHorizontal_weight="1"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/button5"
+            app:layout_constraintTop_toBottomOf="@+id/button7"
             app:layout_constraintBottom_toTopOf="@+id/button1"
-            app:layout_constraintTop_toBottomOf="@+id/button7" />
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintVertical_weight="1" />
 
         <Button
             android:id="@+id/button5"
@@ -363,18 +317,15 @@
             android:layout_height="0dp"
             android:background="@drawable/buttonseletor"
             android:layout_marginEnd="5dp"
-            android:layout_marginTop="5dp"
-            app:layout_constraintHorizontal_chainStyle="spread"
-            app:layout_constraintHorizontal_weight="1"
-            android:orientation="horizontal"
             android:text="5"
             android:textColor="#3C4043"
             android:textSize="30sp"
             app:backgroundTint="#FFFFFF"
             app:layout_constraintStart_toEndOf="@+id/button4"
             app:layout_constraintEnd_toStartOf="@+id/button6"
-            app:layout_constraintBottom_toTopOf="@+id/button2"
-            app:layout_constraintTop_toBottomOf="@+id/button8" />
+            app:layout_constraintTop_toTopOf="@+id/button4"
+            app:layout_constraintBottom_toBottomOf="@+id/button4"
+            app:layout_constraintHorizontal_weight="1" />
 
         <Button
             android:id="@+id/button6"
@@ -383,18 +334,15 @@
             android:layout_height="0dp"
             android:background="@drawable/buttonseletor"
             android:layout_marginEnd="5dp"
-            android:layout_marginTop="5dp"
-            app:layout_constraintHorizontal_chainStyle="spread"
-            app:layout_constraintHorizontal_weight="1"
-            app:layout_constraintVertical_weight="1"
             android:text="6"
             android:textColor="#3C4043"
             android:textSize="30sp"
             app:backgroundTint="#FFFFFF"
             app:layout_constraintStart_toEndOf="@+id/button5"
             app:layout_constraintEnd_toStartOf="@+id/buttonSubtract"
-            app:layout_constraintBottom_toTopOf="@+id/button3"
-            app:layout_constraintTop_toBottomOf="@+id/button9" />
+            app:layout_constraintTop_toTopOf="@+id/button4"
+            app:layout_constraintBottom_toBottomOf="@+id/button4"
+            app:layout_constraintHorizontal_weight="1" />
 
         <Button
             android:id="@+id/buttonSubtract"
@@ -402,41 +350,37 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:background="@drawable/buttonseletor"
-            android:layout_marginTop="5dp"
             android:layout_marginEnd="5dp"
             android:text="-"
             android:textColor="#3C4043"
             android:textSize="30sp"
             app:backgroundTint="#F8F9FA"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_chainStyle="spread"
-            app:layout_constraintHorizontal_weight="1"
-            app:layout_constraintVertical_weight="1"
             app:layout_constraintStart_toEndOf="@+id/button6"
-            app:layout_constraintBottom_toTopOf="@+id/buttonAdd"
-            app:layout_constraintTop_toBottomOf="@+id/buttonDelete" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/button4"
+            app:layout_constraintBottom_toBottomOf="@+id/button4"
+            app:layout_constraintHorizontal_weight="1" />
 
-
+        <!-- Row 4 -->
         <Button
             android:id="@+id/button1"
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:background="@drawable/buttonseletor"
-            android:layout_marginEnd="5dp"
-            android:layout_marginTop="5dp"
             android:layout_marginStart="5dp"
-            app:layout_constraintHorizontal_chainStyle="spread"
-            app:layout_constraintHorizontal_weight="1"
-            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
             android:text="1"
             android:textColor="#3C4043"
             android:textSize="30sp"
             app:backgroundTint="#FFFFFF"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/button2"
+            app:layout_constraintTop_toBottomOf="@+id/button4"
             app:layout_constraintBottom_toTopOf="@+id/button0"
-            app:layout_constraintTop_toBottomOf="@+id/button4" />
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintVertical_weight="1" />
 
         <Button
             android:id="@+id/button2"
@@ -445,18 +389,15 @@
             android:layout_height="0dp"
             android:background="@drawable/buttonseletor"
             android:layout_marginEnd="5dp"
-            android:layout_marginTop="5dp"
-            app:layout_constraintHorizontal_chainStyle="spread"
-            app:layout_constraintHorizontal_weight="1"
-            android:orientation="horizontal"
             android:text="2"
             android:textColor="#3C4043"
             android:textSize="30sp"
             app:backgroundTint="#FFFFFF"
             app:layout_constraintStart_toEndOf="@+id/button1"
             app:layout_constraintEnd_toStartOf="@+id/button3"
-            app:layout_constraintBottom_toTopOf="@+id/buttonDot"
-            app:layout_constraintTop_toBottomOf="@+id/button5" />
+            app:layout_constraintTop_toTopOf="@+id/button1"
+            app:layout_constraintBottom_toBottomOf="@+id/button1"
+            app:layout_constraintHorizontal_weight="1" />
 
         <Button
             android:id="@+id/button3"
@@ -465,18 +406,15 @@
             android:layout_height="0dp"
             android:background="@drawable/buttonseletor"
             android:layout_marginEnd="5dp"
-            android:layout_marginTop="5dp"
-            app:layout_constraintHorizontal_chainStyle="spread"
-            app:layout_constraintHorizontal_weight="1"
-            app:layout_constraintVertical_weight="1"
             android:text="3"
             android:textColor="#3C4043"
             android:textSize="30sp"
             app:backgroundTint="#FFFFFF"
             app:layout_constraintStart_toEndOf="@+id/button2"
             app:layout_constraintEnd_toStartOf="@+id/buttonAdd"
-            app:layout_constraintBottom_toTopOf="@+id/buttonSplitDate"
-            app:layout_constraintTop_toBottomOf="@+id/button6" />
+            app:layout_constraintTop_toTopOf="@+id/button1"
+            app:layout_constraintBottom_toBottomOf="@+id/button1"
+            app:layout_constraintHorizontal_weight="1" />
 
         <Button
             android:id="@+id/buttonAdd"
@@ -484,41 +422,37 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:background="@drawable/buttonseletor"
-            android:layout_marginTop="5dp"
             android:layout_marginEnd="5dp"
-            app:layout_constraintHorizontal_chainStyle="spread"
-            app:layout_constraintHorizontal_weight="1"
-            app:layout_constraintVertical_weight="1"
             android:text="+"
             android:textColor="#3C4043"
             android:textSize="30sp"
             app:backgroundTint="#F8F9FA"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/button3"
-            app:layout_constraintBottom_toTopOf="@+id/buttonEqual"
-            app:layout_constraintTop_toBottomOf="@+id/buttonSubtract" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/button1"
+            app:layout_constraintBottom_toBottomOf="@+id/button1"
+            app:layout_constraintHorizontal_weight="1" />
 
-
+        <!-- Row 5: 0, . -->
         <Button
             android:id="@+id/button0"
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:background="@drawable/buttonseletor"
-            android:layout_marginEnd="5dp"
-            android:layout_marginTop="5dp"
             android:layout_marginStart="5dp"
-            app:layout_constraintHorizontal_chainStyle="spread"
-            app:layout_constraintHorizontal_weight="1"
-            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
             android:text="0"
             android:textColor="#3C4043"
             android:textSize="30sp"
             app:backgroundTint="#FFFFFF"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/buttonDot"
+            app:layout_constraintTop_toBottomOf="@+id/button1"
             app:layout_constraintBottom_toTopOf="@+id/localDate"
-            app:layout_constraintTop_toBottomOf="@+id/button1" />
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintVertical_weight="1" />
 
         <Button
             android:id="@+id/buttonDot"
@@ -527,21 +461,17 @@
             android:layout_height="0dp"
             android:background="@drawable/buttonseletor"
             android:layout_marginEnd="5dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            app:layout_constraintHorizontal_chainStyle="spread"
-            app:layout_constraintHorizontal_weight="1"
-            android:orientation="horizontal"
             android:text="."
             android:textColor="#3C4043"
             android:textSize="30sp"
             app:backgroundTint="#FFFFFF"
             app:layout_constraintStart_toEndOf="@+id/button0"
-
-            app:layout_constraintBottom_toTopOf="@+id/localDate"
             app:layout_constraintEnd_toStartOf="@+id/buttonSplitDate"
-            app:layout_constraintTop_toBottomOf="@+id/button2" />
+            app:layout_constraintTop_toTopOf="@+id/button0"
+            app:layout_constraintBottom_toBottomOf="@+id/button0"
+            app:layout_constraintHorizontal_weight="1" />
 
+        <!-- Row 5 & 6 Spanning: / and = -->
         <Button
             android:id="@+id/buttonSplitDate"
             style="?android:attr/borderlessButtonStyle"
@@ -549,20 +479,16 @@
             android:layout_height="0dp"
             android:background="@drawable/buttonseletor"
             android:layout_marginEnd="5dp"
-            android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
-            android:orientation="horizontal"
             android:text="/"
             android:textColor="#3C4043"
             android:textSize="30sp"
             app:backgroundTint="#F8F9FA"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/buttonEqual"
-            app:layout_constraintHorizontal_chainStyle="spread"
-            app:layout_constraintHorizontal_weight="1"
-            app:layout_constraintVertical_weight="2"
             app:layout_constraintStart_toEndOf="@+id/buttonDot"
-            app:layout_constraintTop_toBottomOf="@+id/button3" />
+            app:layout_constraintEnd_toStartOf="@+id/buttonEqual"
+            app:layout_constraintTop_toTopOf="@+id/button0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_weight="1" />
 
         <Button
             android:id="@+id/buttonEqual"
@@ -570,43 +496,37 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:background="@drawable/buttonseletor"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
             android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
             android:text="="
             android:textColor="@color/white"
             android:textSize="30sp"
             app:backgroundTint="#109D58"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_chainStyle="spread"
-            app:layout_constraintHorizontal_weight="1"
             app:layout_constraintStart_toEndOf="@+id/buttonSplitDate"
-            app:layout_constraintTop_toBottomOf="@+id/buttonAdd"
-            app:layout_constraintVertical_weight="2" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/button0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_weight="1" />
 
+        <!-- Row 6: localDate spans 2 columns horizontally -->
         <Button
             android:id="@+id/localDate"
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:background="@drawable/buttonseletor"
-            android:layout_marginEnd="5dp"
-            android:layout_marginTop="5dp"
             android:layout_marginStart="5dp"
-            android:paddingBottom="5dp"
-            android:orientation="horizontal"
-            android:paddingStart="10dp"
-            android:textSize="25sp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
             android:textColor="#109D58"
+            android:textSize="18sp"
             app:backgroundTint="#FFFFFF"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/buttonSplitDate"
-            app:layout_constraintHorizontal_chainStyle="spread"
-            app:layout_constraintHorizontal_weight="1"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button0" />
-
+            app:layout_constraintEnd_toStartOf="@+id/buttonSplitDate"
+            app:layout_constraintTop_toBottomOf="@+id/button0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_weight="1" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
