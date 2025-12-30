@@ -6,9 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.commit
 import com.duckgo.medtools.R
 import com.duckgo.medtools.databinding.FragmentMinePageBinding
+import com.duckgo.medtools.util.addHideFragment
 
 class MinePage : Fragment() {
     private var _binding: FragmentMinePageBinding? = null
@@ -39,10 +39,10 @@ class MinePage : Fragment() {
             Toast.makeText(context, "跳转到我的", Toast.LENGTH_SHORT).show()
         }
         binding.btnSoftwareUsage.setOnClickListener {
-            parentFragmentManager.commit {
-                replace(R.id.fragment_, SoftwareUsageFragment())
-                addToBackStack(null)
-            }
+            // 修复：使用工具类 addHideFragment 替代 replace
+            // 这样进入“软件使用”时，MinePage 只是被隐藏，不会销毁 View，
+            // 从而避免从其他 Tab 切换回来时因 View 丢失导致的空白问题。
+            parentFragmentManager.addHideFragment(SoftwareUsageFragment())
         }
     }
 

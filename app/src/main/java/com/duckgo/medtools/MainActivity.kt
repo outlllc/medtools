@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.content.ContextCompat
 import androidx.core.view.children
-import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.commit
 import com.duckgo.medtools.babyweight.BabyWeight
 import com.duckgo.medtools.databinding.ActivityMainBinding
@@ -39,31 +39,48 @@ class MainActivity : AppCompatActivity() {
         saveDatabaseFile()
         initNavigation()
 
-        // 初始化显示第一个页面
         if (savedInstanceState == null) {
-            // check() 会触发 OnButtonCheckedListener，进而调用 showFragment
             binding.tgFirstPage.check(R.id.calculation_button)
         } else {
-            // 状态恢复时，确保按钮样式正确
             updateButtonStyles(binding.tgFirstPage.checkedButtonId)
         }
 
         onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
-                MaterialAlertDialogBuilder(this@MainActivity)
-                    .setTitle("退出确认")
-                    .setMessage("确定要退出应用吗？")
-                    .setPositiveButton("确定") { _, _ -> finish() }
-                    .setNegativeButton("取消", null)
-                    .show()
+                // 如果当前有回退栈（即在子页面中），则执行回退操作
+                if (supportFragmentManager.backStackEntryCount > 0) {
+                    supportFragmentManager.popBackStack()
+                } else {
+                    // 否则弹出退出确认框
+                    MaterialAlertDialogBuilder(this@MainActivity)
+                        .setTitle("退出确认")
+                        .setMessage("确定要退出应用吗？")
+                        .setPositiveButton("确定") { _, _ -> finish() }
+                        .setNegativeButton("取消", null)
+                        .show()
+                }
             }
         })
     }
 
-    private fun initNavigation() = binding.tgFirstPage.addOnButtonCheckedListener { _, checkedId, isChecked ->
-        if (isChecked) {
-            updateButtonStyles(checkedId)
-            showFragment(checkedId)
+    private fun initNavigation() {
+        binding.tgFirstPage.addOnButtonCheckedListener { _, checkedId, isChecked ->
+            if (isChecked) {
+                updateButtonStyles(checkedId)
+                showFragment(checkedId)
+            }
+        }
+        
+        // 修复：针对 MaterialButtonToggleGroup 已经选中某个按钮时再次点击不触发 isChecked=true 的情况
+        // 显式为每个按钮添加点击事件，如果是重复点击已选中的按钮且存在回退栈，则强制清空回退栈
+        binding.tgFirstPage.children.filterIsInstance<MaterialButton>().forEach { button ->
+            button.setOnClickListener {
+                if (binding.tgFirstPage.checkedButtonId == it.id) {
+                    if (supportFragmentManager.backStackEntryCount > 0) {
+                        supportFragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE)
+                    }
+                }
+            }
         }
     }
 
@@ -75,20 +92,19 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    /**
-     * 核心修复：使用 add/hide/show 替代 replace
-     * 增加 findFragmentByTag 以支持状态恢复并避免重复添加导致的 IllegalStateException
-     */
     private fun showFragment(checkedId: Int) {
+        // 切换主 Tab 时，清空回退栈，避免子页面干扰
+        if (supportFragmentManager.backStackEntryCount > 0) {
+            supportFragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE)
+        }
+
         val tag = checkedId.toString()
-        // 优先从 FragmentManager 中查找已存在的实例（支持 Activity 重建）
         val target = supportFragmentManager.findFragmentByTag(tag) ?: fragments[checkedId] ?: return
         
         supportFragmentManager.commit(allowStateLoss = true) {
-            // 1. 隐藏管理器中所有当前已添加的 Fragment
+            // 隐藏所有当前已添加的 Fragment
             supportFragmentManager.fragments.forEach { hide(it) }
             
-            // 2. 显示或添加目标 Fragment
             if (!target.isAdded) {
                 add(R.id.fragment_, target, tag)
             } else {
