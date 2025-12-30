@@ -1,5 +1,6 @@
 package com.duckgo.medtools.medicaltools
 
+import android.view.Gravity
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AlphaAnimation
@@ -15,6 +16,13 @@ abstract class BaseMedListFragment : BaseFragmentDataBinding<FragmentTwoRecyclev
     override fun getFragmentViewBinding() = FragmentTwoRecycleviewModelFmBinding.inflate(layoutInflater)
 
     abstract fun getTitle(): String
+    
+    /**
+     * 控制列表中每一行内容的对齐方式
+     * 默认垂直居中。如果某一列内容较多撑开行高，其它列内容将在此行内纵向居中。
+     */
+    protected open val itemGravity: Int = Gravity.CENTER_VERTICAL
+
     abstract fun getAdapters(): List<RecyclerView.Adapter<out RecyclerView.ViewHolder>>
 
     override fun initView() {
@@ -32,7 +40,6 @@ abstract class BaseMedListFragment : BaseFragmentDataBinding<FragmentTwoRecyclev
 
 /**
  * 优化后的间距适配器
- * 支持动画效果和灵活的高度设置
  */
 class GapAdapter(
     private val heightDp: Int = 16,
