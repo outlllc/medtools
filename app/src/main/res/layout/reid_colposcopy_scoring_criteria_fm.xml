@@ -1,288 +1,198 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
-
-    </data>
-    <ScrollView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:background="#F5F7FA"
+        tools:context=".medicaltools.functions.Obstetrics_and_Gynecology.Gynecology.Reid_Colposcopy_Scoring_Criteria_fm">
 
-        <LinearLayout
+        <!-- Header Section -->
+        <View
+            android:id="@+id/header_bg"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="80dp"
+            android:background="@color/green_kuan"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:id="@+id/tv1"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="项目"
-                    android:layout_weight="2" />
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="0"
-                    android:gravity="center"
-                    android:layout_weight="3"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="1"
-                    android:gravity="center"
-                    android:layout_weight="3"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="2"
-                    android:gravity="center"
-                    android:layout_weight="3"/>
-            </LinearLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="@color/green_kuan"/>
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reid 阴道镜评分标准"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/header_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/header_bg" />
+
+        <!-- Main Scrollable Content -->
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nsv_content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            android:overScrollMode="never"
+            app:layout_constraintBottom_toTopOf="@id/bottom_container"
+            app:layout_constraintTop_toBottomOf="@id/header_bg">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="vertical"
+                android:paddingBottom="24dp">
+
+                <!-- Table Card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cv_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="12dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    app:strokeWidth="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <!-- Header Row -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:id="@+id/tv1"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1.5"
+                                android:gravity="center"
+                                android:text="项目"
+                                android:textColor="#333333"
+                                android:textStyle="bold"
+                                android:textSize="14sp"
+                                android:paddingVertical="12dp"/>
+
+                            <View android:layout_width="1dp" android:layout_height="match_parent" android:background="#E0E0E0" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="9"
+                                android:orientation="horizontal">
+                                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:text="0" android:gravity="center" android:layout_weight="1" android:textColor="#333333" android:textStyle="bold" android:textSize="14sp" android:paddingVertical="12dp" />
+                                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:text="1" android:gravity="center" android:layout_weight="1" android:textColor="#333333" android:textStyle="bold" android:textSize="14sp" android:paddingVertical="12dp" />
+                                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:text="2" android:gravity="center" android:layout_weight="1" android:textColor="#333333" android:textStyle="bold" android:textSize="14sp" android:paddingVertical="12dp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#E0E0E0" />
+
+                        <!-- Row 1: 边界 -->
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                            <TextView android:id="@+id/tv10" android:layout_width="0dp" android:layout_height="match_parent" android:text="边界（病变边界的特征）" android:layout_weight="1.5" android:textSize="12sp" android:textColor="#444444" android:gravity="center" android:padding="4dp"/>
+                            <View android:layout_width="1dp" android:layout_height="match_parent" android:background="#E0E0E0" />
+                            <RadioGroup android:id="@+id/Rgroup1" android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_weight="9" android:baselineAligned="false">
+                                <RadioButton android:id="@+id/rb10" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="湿疣样或小乳头样轮廓，模糊醋酸白色上皮，边缘呈云絮状或羽毛状，成角状，粗糙的病变，卫星状病变与醋酸白色上皮延伸超过移行带。" android:textSize="11sp" android:scaleX="0.8" android:scaleY="0.8" android:buttonTint="@color/green_kuan" android:gravity="center" android:paddingHorizontal="4dp" />
+                                <RadioButton android:id="@+id/rb11" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="病变轮廓光滑，直而规整，边缘锐利。" android:textSize="11sp" android:scaleX="0.8" android:scaleY="0.8" android:buttonTint="@color/green_kuan" android:gravity="center" android:paddingHorizontal="4dp" />
+                                <RadioButton android:id="@+id/rb12" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="边缘呈卷曲状，病变区域内可有上皮的剥脱及各种混合性病变。" android:textSize="11sp" android:scaleX="0.8" android:scaleY="0.8" android:buttonTint="@color/green_kuan" android:gravity="center" android:paddingHorizontal="4dp" />
+                            </RadioGroup>
+                        </LinearLayout>
+                        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#E0E0E0" />
+
+                        <!-- Row 2: 颜色 -->
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                            <TextView android:id="@+id/tv20" android:layout_width="0dp" android:layout_height="match_parent" android:text="颜色（醋酸试验后的颜色改变）" android:layout_weight="1.5" android:textSize="12sp" android:textColor="#444444" android:gravity="center" android:padding="4dp"/>
+                            <View android:layout_width="1dp" android:layout_height="match_parent" android:background="#E0E0E0" />
+                            <RadioGroup android:id="@+id/Rgroup2" android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_weight="9" android:baselineAligned="false">
+                                <RadioButton android:id="@+id/rb20" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="明亮，雪白，一过性、模糊、半透明的醋酸白色上皮。" android:textSize="11sp" android:scaleX="0.8" android:scaleY="0.8" android:buttonTint="@color/green_kuan" android:gravity="center" android:paddingHorizontal="4dp" />
+                                <RadioButton android:id="@+id/rb21" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="明亮，白色程度较差，或间断呈白色。" android:textSize="11sp" android:scaleX="0.8" android:scaleY="0.8" android:buttonTint="@color/green_kuan" android:gravity="center" android:paddingHorizontal="4dp" />
+                                <RadioButton android:id="@+id/rb22" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="污浊，呈牡蛎灰色，浓厚稍凸的醋酸白色上皮。" android:textSize="11sp" android:scaleX="0.8" android:scaleY="0.8" android:buttonTint="@color/green_kuan" android:gravity="center" android:paddingHorizontal="4dp" />
+                            </RadioGroup>
+                        </LinearLayout>
+                        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#E0E0E0" />
+
+                        <!-- Row 3: 血管 -->
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                            <TextView android:id="@+id/tv30" android:layout_width="0dp" android:layout_height="match_parent" android:text="血管（血管的类型）" android:layout_weight="1.5" android:textSize="12sp" android:textColor="#444444" android:gravity="center" android:padding="4dp"/>
+                            <View android:layout_width="1dp" android:layout_height="match_parent" android:background="#E0E0E0" />
+                            <RadioGroup android:id="@+id/Rgroup3" android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_weight="9" android:baselineAligned="false">
+                                <RadioButton android:id="@+id/rb30" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="细点状或细小镶嵌。管径细小不规则，非扩张性血管环。毛细血管间距狭窄。" android:textSize="11sp" android:scaleX="0.8" android:scaleY="0.8" android:buttonTint="@color/green_kuan" android:gravity="center" android:paddingHorizontal="4dp" />
+                                <RadioButton android:id="@+id/rb31" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="涂冰醋酸后未见血管表现。" android:textSize="11sp" android:scaleX="0.8" android:scaleY="0.8" android:buttonTint="@color/green_kuan" android:gravity="center" android:paddingHorizontal="4dp" />
+                                <RadioButton android:id="@+id/rb32" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="粗点状或大的镶嵌。个别血管扩张。毛细血管间距加宽。" android:textSize="11sp" android:scaleX="0.8" android:scaleY="0.8" android:buttonTint="@color/green_kuan" android:gravity="center" android:paddingHorizontal="4dp" />
+                            </RadioGroup>
+                        </LinearLayout>
+                        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#E0E0E0" />
+
+                        <!-- Row 4: 碘试验 -->
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                            <TextView android:id="@+id/tv40" android:layout_width="0dp" android:layout_height="match_parent" android:text="碘试验（碘试验的反应特征）" android:layout_weight="1.5" android:textSize="12sp" android:textColor="#444444" android:gravity="center" android:padding="4dp"/>
+                            <View android:layout_width="1dp" android:layout_height="match_parent" android:background="#E0E0E0" />
+                            <RadioGroup android:id="@+id/Rgroup4" android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_weight="9" android:baselineAligned="false">
+                                <RadioButton android:id="@+id/rb40" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="整个宫颈染为暗棕色，前三项≤2分，而碘试验（－），为低度病变。" android:textSize="11sp" android:scaleX="0.8" android:scaleY="0.8" android:buttonTint="@color/green_kuan" android:gravity="center" android:paddingHorizontal="4dp" />
+                                <RadioButton android:id="@+id/rb41" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="部分区域染为浅棕色，斑驳的龟背样表现。" android:textSize="11sp" android:scaleX="0.8" android:scaleY="0.8" android:buttonTint="@color/green_kuan" android:gravity="center" android:paddingHorizontal="4dp" />
+                                <RadioButton android:id="@+id/rb42" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="无染区表现，呈芥末黄色，前三项≥3分，而碘试验（－），为高度病变。" android:textSize="11sp" android:scaleX="0.8" android:scaleY="0.8" android:buttonTint="@color/green_kuan" android:gravity="center" android:paddingHorizontal="4dp" />
+                            </RadioGroup>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Appendix Section -->
                 <TextView
-                    android:id="@+id/tv10"
-                    android:layout_width="0dp"
+                    android:id="@+id/tv_appendix_title"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="边界（病变边界的特征）"
-                    android:layout_gravity="center"
-                    android:layout_weight="2"/>
+                    android:layout_marginStart="20dp"
+                    android:text="详情说明与参考"
+                    android:textColor="#666666"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
 
-                <RadioGroup
-                    android:id="@+id/Rgroup1"
-                    android:layout_width="0dp"
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_content_appendix"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:layout_weight="9">
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:nestedScrollingEnabled="false"
+                    android:overScrollMode="never"
+                    android:paddingHorizontal="16dp"
+                    android:paddingBottom="16dp" />
 
-                    <RadioButton
-                        android:id="@+id/rb10"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="湿疣样或小乳头样轮廓，模糊醋酸白色上皮，边缘呈云絮状或羽毛状，成角状，粗糙的病变，卫星状病变与醋酸白色上皮延伸超过移行带。"
-                        android:value="0"
-                        android:textSize="12sp" />
-
-                    <RadioButton
-                        android:id="@+id/rb11"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text=" 病变轮廓光滑，直而规整，边缘锐利。"
-                        android:layout_gravity="center"
-                        android:value="4"
-                        android:textSize="12sp" />
-                    <RadioButton
-                        android:id="@+id/rb12"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="边缘呈卷曲状，病变区域内可有上皮的剥脱及各种混合性病变。"
-                        android:layout_gravity="center"
-                        android:value="4"
-                        android:textSize="12sp" />
-                </RadioGroup>
             </LinearLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="@color/green_kuan"/>
+        </androidx.core.widget.NestedScrollView>
 
-            <LinearLayout
+        <!-- Fixed Bottom Result Bar -->
+        <LinearLayout
+            android:id="@+id/bottom_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:elevation="12dp"
+            android:orientation="vertical"
+            android:paddingVertical="20dp"
+            android:paddingHorizontal="16dp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:id="@+id/tv141"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:id="@+id/tv20"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="颜色（醋酸试验后的颜色改变）"
-                    android:layout_gravity="center"
-                    android:layout_weight="2"/>
-                <RadioGroup
-                    android:id="@+id/Rgroup2"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:layout_weight="9">
-
-                    <RadioButton
-                        android:id="@+id/rb20"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="明亮，雪白，一过性、模糊、半透明的醋酸白色上皮。"
-                        android:textSize="12sp" />
-
-                    <RadioButton
-                        android:id="@+id/rb21"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="明亮，白色程度较差，或间断呈白色。"
-                        android:textSize="12sp" />
-
-                    <RadioButton
-                        android:id="@+id/rb22"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="污浊，呈牡蛎灰色，浓厚稍凸的醋酸白色上皮。"
-                        android:textSize="12sp" />
-                </RadioGroup>
-            </LinearLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="@color/green_kuan"/>
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:id="@+id/tv30"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="血管（血管的类型）"
-                    android:layout_gravity="center"
-                    android:layout_weight="2"/>
-
-                <RadioGroup
-                    android:id="@+id/Rgroup3"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:layout_weight="9">
-
-                    <RadioButton
-                        android:id="@+id/rb30"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="细点状或细小镶嵌。管径细小不规则，非扩张性血管环。毛细血管间距狭窄。"
-                        android:textSize="12sp" />
-
-                    <RadioButton
-                        android:id="@+id/rb31"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="涂冰醋酸后未见血管表现。"
-                        android:textSize="12sp" />
-
-                    <RadioButton
-                        android:id="@+id/rb32"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="粗点状或大的镶嵌。个别血管扩张。毛细血管间距加宽。"
-                        android:textSize="12sp" />
-                </RadioGroup>
-            </LinearLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="@color/green_kuan"/>
-
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:id="@+id/tv40"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="碘试验（碘试验的反应特征）"
-                    android:layout_gravity="center"
-                    android:layout_weight="2"/>
-
-                <RadioGroup
-                    android:id="@+id/Rgroup4"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:layout_weight="9">
-
-                    <RadioButton
-                        android:id="@+id/rb40"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="整个宫颈染为暗棕色，前三项≤2分，而碘试验（－），为低度病变。"
-                        android:textSize="12sp" />
-
-                    <RadioButton
-                        android:id="@+id/rb41"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="部分区域染为浅棕色，斑驳的龟背样表现。"
-                        android:textSize="12sp" />
-
-                    <RadioButton
-                        android:id="@+id/rb42"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="无染区表现，呈芥末黄色，前三项≥3分，而碘试验（－），为高度病变。"
-                        android:textSize="12sp" />
-                </RadioGroup>
-            </LinearLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="@color/green_kuan"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:id="@+id/tv140"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="总分"
-                    android:layout_gravity="center"
-                    android:layout_weight="2"/>
-                <TextView
-                    android:id="@+id/tv141"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="分 （您已选择0个必选项，还有13个必选项未选）"
-                    android:layout_gravity="center"
-                    android:layout_weight="9"/>
-            </LinearLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="@color/green_kuan"/>
-            <androidx.recyclerview.widget.RecyclerView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:layout_marginBottom="80dp"
-                android:id="@+id/rv_content_appendix"/>
+                android:text="0 分 （您已选择 0 个必选项）"
+                android:textColor="#D32F2F"
+                android:textSize="16sp"
+                android:textStyle="bold" />
         </LinearLayout>
 
-    </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -1,906 +1,382 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
-
-    </data>
-
-    <ScrollView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#F5F7FA"
         tools:context=".medicaltools.functions.Obstetrics_and_Gynecology.Gynecology.Staging_of_endometriosis_rAFS_staging_fm">
 
+        <!-- Header Section -->
+        <View
+            android:id="@+id/header_bg"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:background="@color/green_kuan"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:text="内异症 r-AFS 评分"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="子宫内膜异位症分期 (修正版)"
+            android:textColor="#CCFFFFFF"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+        <!-- Main Scrollable Area -->
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nsv_content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            android:overScrollMode="never"
+            app:layout_constraintBottom_toTopOf="@id/bottom_container"
+            app:layout_constraintTop_toBottomOf="@id/tv_subtitle"
+            android:layout_marginTop="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="24dp">
+
+                <!-- Table 1 Card: Endometriosis -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cv_table1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="12dp"
+                    android:layout_marginBottom="12dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    app:strokeWidth="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <!-- Header Row -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingVertical="8dp">
+                            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.2" android:gravity="center" android:text="病灶位置" android:textStyle="bold" android:textSize="13sp" android:textColor="#333333"/>
+                            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="深度" android:textStyle="bold" android:textSize="13sp" android:textColor="#333333"/>
+                            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="4.5" android:orientation="vertical">
+                                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:text="病灶大小" android:textStyle="bold" android:textSize="13sp" android:textColor="#333333"/>
+                                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="＜1cm" android:textSize="11sp"/>
+                                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="1~3cm" android:textSize="11sp"/>
+                                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="＞3cm" android:textSize="11sp"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#E0E0E0" />
+
+                        <!-- 腹膜 Row -->
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingVertical="4dp">
+                            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.2" android:text="腹膜" android:gravity="center" android:layout_gravity="center" android:textSize="12sp" android:textColor="#444444"/>
+                            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="5.5" android:orientation="vertical">
+                                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="浅" android:gravity="center" android:layout_gravity="center" android:textSize="11sp"/>
+                                    <RadioGroup android:id="@+id/rg1" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="4.5" android:orientation="horizontal">
+                                        <RadioButton android:id="@+id/rb11" android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:text="1" android:textSize="10sp" android:scaleX="0.8" android:scaleY="0.8" android:buttonTint="@color/green_kuan"/>
+                                        <RadioButton android:id="@+id/rb12" android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:text="2" android:textSize="10sp" android:scaleX="0.8" android:scaleY="0.8" android:buttonTint="@color/green_kuan"/>
+                                        <RadioButton android:id="@+id/rb13" android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:text="4" android:textSize="10sp" android:scaleX="0.8" android:scaleY="0.8" android:buttonTint="@color/green_kuan"/>
+                                    </RadioGroup>
+                                </LinearLayout>
+                                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="深" android:gravity="center" android:layout_gravity="center" android:textSize="11sp"/>
+                                    <RadioGroup android:id="@+id/rg2" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="4.5" android:orientation="horizontal">
+                                        <RadioButton android:id="@+id/rb21" android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:text="2" android:textSize="10sp" android:scaleX="0.8" android:scaleY="0.8" android:buttonTint="@color/green_kuan"/>
+                                        <RadioButton android:id="@+id/rb22" android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:text="4" android:textSize="10sp" android:scaleX="0.8" android:scaleY="0.8" android:buttonTint="@color/green_kuan"/>
+                                        <RadioButton android:id="@+id/rb23" android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:text="6" android:textSize="10sp" android:scaleX="0.8" android:scaleY="0.8" android:buttonTint="@color/green_kuan"/>
+                                    </RadioGroup>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#F0F0F0" />
+
+                        <!-- 卵巢 Row -->
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingVertical="4dp">
+                            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.2" android:text="卵巢" android:gravity="center" android:layout_gravity="center" android:textSize="12sp" android:textColor="#444444"/>
+                            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="5.5" android:orientation="vertical">
+                                <!-- 右侧 -->
+                                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="右侧" android:gravity="center" android:layout_gravity="center" android:textSize="11sp"/>
+                                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="4.5" android:orientation="vertical">
+                                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                                            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="浅" android:textSize="10sp" android:gravity="center" android:layout_gravity="center"/>
+                                            <RadioGroup android:id="@+id/rg3" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="3.5" android:orientation="horizontal">
+                                                <RadioButton android:id="@+id/rb31" android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:text="1" android:textSize="10sp" android:scaleX="0.8" android:scaleY="0.8" android:buttonTint="@color/green_kuan"/>
+                                                <RadioButton android:id="@+id/rb32" android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:text="2" android:textSize="10sp" android:scaleX="0.8" android:scaleY="0.8" android:buttonTint="@color/green_kuan"/>
+                                                <RadioButton android:id="@+id/rb33" android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:text="4" android:textSize="10sp" android:scaleX="0.8" android:scaleY="0.8" android:buttonTint="@color/green_kuan"/>
+                                            </RadioGroup>
+                                        </LinearLayout>
+                                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                                            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="深" android:textSize="10sp" android:gravity="center" android:layout_gravity="center"/>
+                                            <RadioGroup android:id="@+id/rg4" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="3.5" android:orientation="horizontal">
+                                                <RadioButton android:id="@+id/rb41" android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:text="4" android:textSize="10sp" android:scaleX="0.8" android:scaleY="0.8" android:buttonTint="@color/green_kuan"/>
+                                                <RadioButton android:id="@+id/rb42" android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:text="16" android:textSize="10sp" android:scaleX="0.8" android:scaleY="0.8" android:buttonTint="@color/green_kuan"/>
+                                                <RadioButton android:id="@+id/rb43" android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:text="20" android:textSize="10sp" android:scaleX="0.8" android:scaleY="0.8" android:buttonTint="@color/green_kuan"/>
+                                            </RadioGroup>
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                </LinearLayout>
+                                <!-- 左侧 -->
+                                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="4dp">
+                                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="左侧" android:gravity="center" android:layout_gravity="center" android:textSize="11sp"/>
+                                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="4.5" android:orientation="vertical">
+                                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                                            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="浅" android:textSize="10sp" android:gravity="center" android:layout_gravity="center"/>
+                                            <RadioGroup android:id="@+id/rg5" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="3.5" android:orientation="horizontal">
+                                                <RadioButton android:id="@+id/rb51" android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:text="1" android:textSize="10sp" android:scaleX="0.8" android:scaleY="0.8" android:buttonTint="@color/green_kuan"/>
+                                                <RadioButton android:id="@+id/rb52" android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:text="2" android:textSize="10sp" android:scaleX="0.8" android:scaleY="0.8" android:buttonTint="@color/green_kuan"/>
+                                                <RadioButton android:id="@+id/rb53" android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:text="4" android:textSize="10sp" android:scaleX="0.8" android:scaleY="0.8" android:buttonTint="@color/green_kuan"/>
+                                            </RadioGroup>
+                                        </LinearLayout>
+                                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                                            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="深" android:textSize="10sp" android:gravity="center" android:layout_gravity="center"/>
+                                            <RadioGroup android:id="@+id/rg6" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="3.5" android:orientation="horizontal">
+                                                <RadioButton android:id="@+id/rb61" android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:text="4" android:textSize="10sp" android:scaleX="0.8" android:scaleY="0.8" android:buttonTint="@color/green_kuan"/>
+                                                <RadioButton android:id="@+id/rb62" android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:text="16" android:textSize="10sp" android:scaleX="0.8" android:scaleY="0.8" android:buttonTint="@color/green_kuan"/>
+                                                <RadioButton android:id="@+id/rb63" android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:text="20" android:textSize="10sp" android:scaleX="0.8" android:scaleY="0.8" android:buttonTint="@color/green_kuan"/>
+                                            </RadioGroup>
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Table 2 Card: Adhesions -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cv_table2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="12dp"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    app:strokeWidth="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingVertical="8dp">
+                            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.2" android:gravity="center" android:text="位置" android:textStyle="bold" android:textSize="13sp" android:textColor="#333333"/>
+                            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="性质" android:textStyle="bold" android:textSize="13sp" android:textColor="#333333"/>
+                            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="4.5" android:orientation="vertical">
+                                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:text="粘连范围" android:textStyle="bold" android:textSize="13sp" android:textColor="#333333"/>
+                                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="＜1/3" android:textSize="11sp"/>
+                                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="1/3~2/3" android:textSize="11sp"/>
+                                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="＞2/3" android:textSize="11sp"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#E0E0E0" />
+
+                        <!-- Ovary Adhesions -->
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingVertical="4dp">
+                            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.2" android:text="卵巢" android:gravity="center" android:layout_gravity="center" android:textSize="12sp" android:textColor="#444444"/>
+                            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="5.5" android:orientation="vertical">
+                                <!-- 右侧 -->
+                                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="右侧" android:gravity="center" android:layout_gravity="center" android:textSize="11sp"/>
+                                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="4.5" android:orientation="vertical">
+                                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                                            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="薄膜" android:textSize="10sp" android:gravity="center" android:layout_gravity="center"/>
+                                            <RadioGroup android:id="@+id/rg7" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="3.5" android:orientation="horizontal">
+                                                <RadioButton android:id="@+id/rb71" android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:text="1" android:scaleX="0.8" android:scaleY="0.8" android:buttonTint="@color/green_kuan"/>
+                                                <RadioButton android:id="@+id/rb72" android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:text="2" android:scaleX="0.8" android:scaleY="0.8" android:buttonTint="@color/green_kuan"/>
+                                                <RadioButton android:id="@+id/rb73" android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:text="4" android:scaleX="0.8" android:scaleY="0.8" android:buttonTint="@color/green_kuan"/>
+                                            </RadioGroup>
+                                        </LinearLayout>
+                                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                                            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="致密" android:textSize="10sp" android:gravity="center" android:layout_gravity="center"/>
+                                            <RadioGroup android:id="@+id/rg8" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="3.5" android:orientation="horizontal">
+                                                <RadioButton android:id="@+id/rb81" android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:text="4" android:scaleX="0.8" android:scaleY="0.8" android:buttonTint="@color/green_kuan"/>
+                                                <RadioButton android:id="@+id/rb82" android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:text="8" android:scaleX="0.8" android:scaleY="0.8" android:buttonTint="@color/green_kuan"/>
+                                                <RadioButton android:id="@+id/rb83" android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:text="16" android:scaleX="0.8" android:scaleY="0.8" android:buttonTint="@color/green_kuan"/>
+                                            </RadioGroup>
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                </LinearLayout>
+                                <!-- 左侧 -->
+                                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="4dp">
+                                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="左侧" android:gravity="center" android:layout_gravity="center" android:textSize="11sp"/>
+                                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="4.5" android:orientation="vertical">
+                                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                                            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="薄膜" android:textSize="10sp" android:gravity="center" android:layout_gravity="center"/>
+                                            <RadioGroup android:id="@+id/rg9" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="3.5" android:orientation="horizontal">
+                                                <RadioButton android:id="@+id/rb91" android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:text="1" android:scaleX="0.8" android:scaleY="0.8" android:buttonTint="@color/green_kuan"/>
+                                                <RadioButton android:id="@+id/rb92" android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:text="2" android:scaleX="0.8" android:scaleY="0.8" android:buttonTint="@color/green_kuan"/>
+                                                <RadioButton android:id="@+id/rb93" android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:text="4" android:scaleX="0.8" android:scaleY="0.8" android:buttonTint="@color/green_kuan"/>
+                                            </RadioGroup>
+                                        </LinearLayout>
+                                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                                            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="致密" android:textSize="10sp" android:gravity="center" android:layout_gravity="center"/>
+                                            <RadioGroup android:id="@+id/rg10" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="3.5" android:orientation="horizontal">
+                                                <RadioButton android:id="@+id/rb101" android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:text="4" android:scaleX="0.8" android:scaleY="0.8" android:buttonTint="@color/green_kuan"/>
+                                                <RadioButton android:id="@+id/rb102" android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:text="8" android:scaleX="0.8" android:scaleY="0.8" android:buttonTint="@color/green_kuan"/>
+                                                <RadioButton android:id="@+id/rb103" android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:text="16" android:scaleX="0.8" android:scaleY="0.8" android:buttonTint="@color/green_kuan"/>
+                                            </RadioGroup>
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <View style="@style/EvaluationDividerStyle" android:layout_marginVertical="4dp" />
+
+                        <!-- Fallopian Tube Adhesions -->
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingVertical="4dp">
+                            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.2" android:text="输卵管" android:gravity="center" android:layout_gravity="center" android:textSize="12sp" android:textColor="#444444"/>
+                            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="5.5" android:orientation="vertical">
+                                <!-- 右侧 -->
+                                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="右侧" android:gravity="center" android:layout_gravity="center" android:textSize="11sp"/>
+                                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="4.5" android:orientation="vertical">
+                                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                                            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="薄膜" android:textSize="10sp" android:gravity="center" android:layout_gravity="center"/>
+                                            <RadioGroup android:id="@+id/rg11" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="3.5" android:orientation="horizontal">
+                                                <RadioButton android:id="@+id/rb111" android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:text="1" android:scaleX="0.8" android:scaleY="0.8" android:buttonTint="@color/green_kuan"/>
+                                                <RadioButton android:id="@+id/rb112" android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:text="2" android:scaleX="0.8" android:scaleY="0.8" android:buttonTint="@color/green_kuan"/>
+                                                <RadioButton android:id="@+id/rb113" android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:text="4" android:scaleX="0.8" android:scaleY="0.8" android:buttonTint="@color/green_kuan"/>
+                                            </RadioGroup>
+                                        </LinearLayout>
+                                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                                            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="致密" android:textSize="10sp" android:gravity="center" android:layout_gravity="center"/>
+                                            <RadioGroup android:id="@+id/rg12" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="3.5" android:orientation="horizontal">
+                                                <RadioButton android:id="@+id/rb121" android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:text="4*" android:scaleX="0.8" android:scaleY="0.8" android:buttonTint="@color/green_kuan"/>
+                                                <RadioButton android:id="@+id/rb122" android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:text="8*" android:scaleX="0.8" android:scaleY="0.8" android:buttonTint="@color/green_kuan"/>
+                                                <RadioButton android:id="@+id/rb123" android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:text="16" android:scaleX="0.8" android:scaleY="0.8" android:buttonTint="@color/green_kuan"/>
+                                            </RadioGroup>
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                </LinearLayout>
+                                <!-- 左侧 -->
+                                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="4dp">
+                                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="左侧" android:gravity="center" android:layout_gravity="center" android:textSize="11sp"/>
+                                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="4.5" android:orientation="vertical">
+                                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                                            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="薄膜" android:textSize="10sp" android:gravity="center" android:layout_gravity="center"/>
+                                            <RadioGroup android:id="@+id/rg13" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="3.5" android:orientation="horizontal">
+                                                <RadioButton android:id="@+id/rb131" android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:text="1" android:scaleX="0.8" android:scaleY="0.8" android:buttonTint="@color/green_kuan"/>
+                                                <RadioButton android:id="@+id/rb132" android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:text="2" android:scaleX="0.8" android:scaleY="0.8" android:buttonTint="@color/green_kuan"/>
+                                                <RadioButton android:id="@+id/rb133" android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:text="4" android:scaleX="0.8" android:scaleY="0.8" android:buttonTint="@color/green_kuan"/>
+                                            </RadioGroup>
+                                        </LinearLayout>
+                                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                                            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="致密" android:textSize="10sp" android:gravity="center" android:layout_gravity="center"/>
+                                            <RadioGroup android:id="@+id/rg14" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="3.5" android:orientation="horizontal">
+                                                <RadioButton android:id="@+id/rb141" android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:text="4*" android:scaleX="0.8" android:scaleY="0.8" android:buttonTint="@color/green_kuan"/>
+                                                <RadioButton android:id="@+id/rb142" android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:text="8*" android:scaleX="0.8" android:scaleY="0.8" android:buttonTint="@color/green_kuan"/>
+                                                <RadioButton android:id="@+id/rb143" android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:text="16" android:scaleX="0.8" android:scaleY="0.8" android:buttonTint="@color/green_kuan"/>
+                                            </RadioGroup>
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <View style="@style/EvaluationDividerStyle" android:layout_marginVertical="4dp" />
+
+                        <!-- Rectum Pouch Closure Row -->
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingVertical="4dp">
+                            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.2" android:text="直肠子宫\n凹陷封闭" android:gravity="center" android:layout_gravity="center" android:textSize="11sp" android:textColor="#444444"/>
+                            <RadioGroup android:id="@+id/rg15" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="5.5" android:orientation="horizontal" android:gravity="center_vertical">
+                                <RadioButton android:id="@+id/rb151" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="部分(4)" android:textSize="10sp" android:scaleX="0.9" android:scaleY="0.9" android:buttonTint="@color/green_kuan"/>
+                                <RadioButton android:id="@+id/rb152" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="完全(40)" android:textSize="10sp" android:scaleX="0.9" android:scaleY="0.9" android:buttonTint="@color/green_kuan"/>
+                            </RadioGroup>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Details/Appendix Section -->
+                <TextView
+                    android:id="@+id/tv_appendix_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="详情说明与参考"
+                    android:textColor="#666666"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_content_appendix"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:nestedScrollingEnabled="false"
+                    android:overScrollMode="never"
+                    android:paddingHorizontal="16dp"
+                    android:paddingBottom="16dp" />
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <!-- Fixed Bottom Result Bar (Standard EPDS Style) -->
         <LinearLayout
+            android:id="@+id/bottom_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/tv1"
-                    android:layout_weight="2"
-                    android:layout_gravity="center"
-                    android:text="病灶位置"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/tv2"
-                    android:layout_weight="1"
-                    android:layout_gravity="center"
-                    android:text="病灶深度"/>
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:orientation="vertical">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="病灶大小"/>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="＜1cm"/>
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="1~3cm"/>
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="＞3cm"/>
-                    </LinearLayout>
-                </LinearLayout>
-            </LinearLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="@color/green_kuan"/>
+            android:background="@color/white"
+            android:elevation="12dp"
+            android:orientation="vertical"
+            android:paddingVertical="16dp"
+            android:paddingHorizontal="16dp"
+            app:layout_constraintBottom_toBottomOf="parent">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:layout_gravity="center"
-                    android:text="腹膜"/>
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_weight="4">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_weight="1"
-                            android:text="浅"/>
-                        <RadioGroup
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="3"
-                            android:id="@+id/rg1"
-                            android:orientation="horizontal">
-                            <RadioButton
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:text="1"
-                                android:id="@+id/rb11"/>
-                            <RadioButton
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:text="2"
-                                android:id="@+id/rb12"/>
-                            <RadioButton
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:text="4"
-                                android:id="@+id/rb13"/>
-                        </RadioGroup>
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_weight="1"
-                            android:text="深"/>
-                        <RadioGroup
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="3"
-                            android:id="@+id/rg2"
-                            android:orientation="horizontal">
-                            <RadioButton
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:text="2"
-                                android:id="@+id/rb21"/>
-                            <RadioButton
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:text="4"
-                                android:id="@+id/rb22"/>
-                            <RadioButton
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:text="6"
-                                android:id="@+id/rb23"/>
-                        </RadioGroup>
-                    </LinearLayout>
-                </LinearLayout>
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="总评分：" android:textColor="#333333" android:textStyle="bold" android:textSize="16sp"/>
+                <TextView android:id="@+id/tv161" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="#D32F2F" android:textSize="20sp" android:textStyle="bold" tools:text="0"/>
             </LinearLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="@color/green_kuan"/>
 
-            <LinearLayout
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_clear"
+                style="@style/Widget.Material3.Button.TonalButton"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_gravity="center"
-                    android:text="卵巢"/>
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="5"
-                    android:orientation="vertical">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:layout_gravity="center"
-                            android:text="右侧"/>
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="4"
-                            android:orientation="vertical">
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal">
-                                <TextView
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center"
-                                    android:layout_weight="1"
-                                    android:text="浅"/>
-                                <RadioGroup
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="3"
-                                    android:id="@+id/rg3"
-                                    android:orientation="horizontal">
-                                    <RadioButton
-                                        android:layout_width="0dp"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        android:text="1"
-                                        android:id="@+id/rb31"/>
-                                    <RadioButton
-                                        android:layout_width="0dp"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        android:text="2"
-                                        android:id="@+id/rb32"/>
-                                    <RadioButton
-                                        android:layout_width="0dp"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        android:text="4"
-                                        android:id="@+id/rb33"/>
-                                </RadioGroup>
-                            </LinearLayout>
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal">
-                                <TextView
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center"
-                                    android:layout_weight="1"
-                                    android:text="深"/>
-                                <RadioGroup
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="3"
-                                    android:id="@+id/rg4"
-                                    android:orientation="horizontal">
-                                    <RadioButton
-                                        android:layout_width="0dp"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        android:text="4"
-                                        android:id="@+id/rb41"/>
-                                    <RadioButton
-                                        android:layout_width="0dp"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        android:text="16"
-                                        android:id="@+id/rb42"/>
-                                    <RadioButton
-                                        android:layout_width="0dp"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        android:text="20"
-                                        android:id="@+id/rb43"/>
-                                </RadioGroup>
-                            </LinearLayout>
-                        </LinearLayout>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_weight="1"
-                            android:text="左侧"/>
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="4"
-                            android:orientation="vertical">
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal">
-                                <TextView
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center"
-                                    android:layout_weight="1"
-                                    android:text="浅"/>
-                                <RadioGroup
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="3"
-                                    android:id="@+id/rg5"
-                                    android:orientation="horizontal">
-                                    <RadioButton
-                                        android:layout_width="0dp"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        android:text="1"
-                                        android:id="@+id/rb51"/>
-                                    <RadioButton
-                                        android:layout_width="0dp"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        android:text="2"
-                                        android:id="@+id/rb52"/>
-                                    <RadioButton
-                                        android:layout_width="0dp"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        android:text="4"
-                                        android:id="@+id/rb53"/>
-                                </RadioGroup>
-                            </LinearLayout>
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal">
-                                <TextView
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:layout_gravity="center"
-                                    android:text="深"/>
-                                <RadioGroup
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="3"
-                                    android:id="@+id/rg6"
-                                    android:orientation="horizontal">
-                                    <RadioButton
-                                        android:layout_width="0dp"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        android:text="4"
-                                        android:id="@+id/rb61"/>
-                                    <RadioButton
-                                        android:layout_width="0dp"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        android:text="16"
-                                        android:id="@+id/rb62"/>
-                                    <RadioButton
-                                        android:layout_width="0dp"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        android:text="20"
-                                        android:id="@+id/rb63"/>
-                                </RadioGroup>
-                            </LinearLayout>
-                        </LinearLayout>
-                    </LinearLayout>
-                </LinearLayout>
-            </LinearLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="@color/green_kuan"/>
-
-
-<!--            表2-->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:layout_gravity="center"
-                    android:text="病灶位置"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_gravity="center"
-                    android:text="粘连程度"/>
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:orientation="vertical">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="粘连范围"/>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="＜1/3包入"/>
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="1/3~2/3包入"/>
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="＞2/3包入"/>
-                    </LinearLayout>
-                </LinearLayout>
-            </LinearLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="@color/green_kuan"/>
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_gravity="center"
-                    android:text="卵巢"/>
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="5"
-                    android:orientation="vertical">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:layout_gravity="center"
-                            android:text="右侧"/>
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="4"
-                            android:orientation="vertical">
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal">
-                                <TextView
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center"
-                                    android:layout_weight="1"
-                                    android:text="薄膜"/>
-                                <RadioGroup
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="3"
-                                    android:id="@+id/rg7"
-                                    android:orientation="horizontal">
-                                    <RadioButton
-                                        android:layout_width="0dp"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        android:text="1"
-                                        android:id="@+id/rb71"
-                                        tools:ignore="DuplicateIds" />
-                                    <RadioButton
-                                        android:layout_width="0dp"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        android:text="2"
-                                        android:id="@+id/rb72"/>
-                                    <RadioButton
-                                        android:layout_width="0dp"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        android:text="4"
-                                        android:id="@+id/rb73"/>
-                                </RadioGroup>
-                            </LinearLayout>
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal">
-                                <TextView
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center"
-                                    android:layout_weight="1"
-                                    android:text="致密"/>
-                                <RadioGroup
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="3"
-                                    android:id="@+id/rg8"
-                                    android:orientation="horizontal">
-                                    <RadioButton
-                                        android:layout_width="0dp"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        android:text="4"
-                                        android:id="@+id/rb81"/>
-                                    <RadioButton
-                                        android:layout_width="0dp"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        android:text="8"
-                                        android:id="@+id/rb82"/>
-                                    <RadioButton
-                                        android:layout_width="0dp"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        android:text="16"
-                                        android:id="@+id/rb83"/>
-                                </RadioGroup>
-                            </LinearLayout>
-                        </LinearLayout>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_weight="1"
-                            android:text="左侧"/>
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="4"
-                            android:orientation="vertical">
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal">
-                                <TextView
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center"
-                                    android:layout_weight="1"
-                                    android:text="薄膜"/>
-                                <RadioGroup
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="3"
-                                    android:id="@+id/rg9"
-                                    android:orientation="horizontal">
-                                    <RadioButton
-                                        android:layout_width="0dp"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        android:text="1"
-                                        android:id="@+id/rb91"/>
-                                    <RadioButton
-                                        android:layout_width="0dp"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        android:text="2"
-                                        android:id="@+id/rb92"/>
-                                    <RadioButton
-                                        android:layout_width="0dp"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        android:text="4"
-                                        android:id="@+id/rb93"/>
-                                </RadioGroup>
-                            </LinearLayout>
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal">
-                                <TextView
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:layout_gravity="center"
-                                    android:text="致密"/>
-                                <RadioGroup
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="3"
-                                    android:id="@+id/rg10"
-                                    android:orientation="horizontal">
-                                    <RadioButton
-                                        android:layout_width="0dp"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        android:text="4"
-                                        android:id="@+id/rb101"/>
-                                    <RadioButton
-                                        android:layout_width="0dp"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        android:text="8"
-                                        android:id="@+id/rb102"/>
-                                    <RadioButton
-                                        android:layout_width="0dp"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        android:text="16"
-                                        android:id="@+id/rb103"/>
-                                </RadioGroup>
-                            </LinearLayout>
-                        </LinearLayout>
-                    </LinearLayout>
-                </LinearLayout>
-            </LinearLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="@color/green_kuan"/>
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_gravity="center"
-                    android:text="输卵管"/>
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="5"
-                    android:orientation="vertical">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:layout_gravity="center"
-                            android:text="右侧"/>
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="4"
-                            android:orientation="vertical">
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal">
-                                <TextView
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center"
-                                    android:layout_weight="1"
-                                    android:text="薄膜"/>
-                                <RadioGroup
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="3"
-                                    android:id="@+id/rg11"
-                                    android:orientation="horizontal">
-                                    <RadioButton
-                                        android:layout_width="0dp"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        android:text="1"
-                                        android:id="@+id/rb111"/>
-                                    <RadioButton
-                                        android:layout_width="0dp"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        android:text="2"
-                                        android:id="@+id/rb112"/>
-                                    <RadioButton
-                                        android:layout_width="0dp"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        android:text="4"
-                                        android:id="@+id/rb113"/>
-                                </RadioGroup>
-                            </LinearLayout>
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal">
-                                <TextView
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center"
-                                    android:layout_weight="1"
-                                    android:text="致密"/>
-                                <RadioGroup
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="3"
-                                    android:id="@+id/rg12"
-                                    android:orientation="horizontal">
-                                    <RadioButton
-                                        android:layout_width="0dp"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        android:text="4*"
-                                        android:id="@+id/rb121"/>
-                                    <RadioButton
-                                        android:layout_width="0dp"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        android:text="8*"
-                                        android:id="@+id/rb122"/>
-                                    <RadioButton
-                                        android:layout_width="0dp"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        android:text="16"
-                                        android:id="@+id/rb123"/>
-                                </RadioGroup>
-                            </LinearLayout>
-                        </LinearLayout>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_weight="1"
-                            android:text="左侧"/>
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="4"
-                            android:orientation="vertical">
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal">
-                                <TextView
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center"
-                                    android:layout_weight="1"
-                                    android:text="薄膜"/>
-                                <RadioGroup
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="3"
-                                    android:id="@+id/rg13"
-                                    android:orientation="horizontal">
-                                    <RadioButton
-                                        android:layout_width="0dp"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        android:text="1"
-                                        android:id="@+id/rb131"/>
-                                    <RadioButton
-                                        android:layout_width="0dp"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        android:text="2"
-                                        android:id="@+id/rb132"/>
-                                    <RadioButton
-                                        android:layout_width="0dp"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        android:text="4"
-                                        android:id="@+id/rb133"/>
-                                </RadioGroup>
-                            </LinearLayout>
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal">
-                                <TextView
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:layout_gravity="center"
-                                    android:text="致密"/>
-                                <RadioGroup
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="3"
-                                    android:id="@+id/rg14"
-                                    android:orientation="horizontal">
-                                    <RadioButton
-                                        android:layout_width="0dp"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        android:text="4*"
-                                        android:id="@+id/rb141"/>
-                                    <RadioButton
-                                        android:layout_width="0dp"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        android:text="8*"
-                                        android:id="@+id/rb142"/>
-                                    <RadioButton
-                                        android:layout_width="0dp"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        android:text="16"
-                                        android:id="@+id/rb143"/>
-                                </RadioGroup>
-                            </LinearLayout>
-                        </LinearLayout>
-                    </LinearLayout>
-                </LinearLayout>
-            </LinearLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="@color/green_kuan"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:text="直肠子宫凹陷封闭"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_gravity="center"
-                    android:text="部分封闭"/>
-                <RadioGroup
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:id="@+id/rg15"
-                    android:orientation="horizontal">
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="4"
-                        android:id="@+id/rb151"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="完全封闭"/>
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="40"
-                        android:id="@+id/rb152"/>
-                </RadioGroup>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="评分"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/tv161"/>
-            </LinearLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="@color/green_kuan"/>
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:text="清除输入"
-                android:id="@+id/btn_clear"/>
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_content_appendix"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"/>
-
-
-
-
-
-
-
-
-
+                app:cornerRadius="12dp" />
         </LinearLayout>
 
-    </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

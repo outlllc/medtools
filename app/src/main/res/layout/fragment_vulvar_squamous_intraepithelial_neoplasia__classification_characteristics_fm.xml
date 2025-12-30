@@ -1,241 +1,200 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
-
-    </data>
-
-    <ScrollView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#F5F7FA"
         tools:context=".medicaltools.functions.Obstetrics_and_Gynecology.Gynecology.Vulvar_squamous_intraepithelial_neoplasia_Classification_characteristics_fm">
 
-        <LinearLayout
+        <!-- Header Section -->
+        <View
+            android:id="@+id/header_bg"
             android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@color/green_kuan"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:layout_weight="2"
-                    android:text="分类"/>
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:orientation="vertical">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="特征"/>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:gravity="center"
-                            android:layout_weight="1"
-                            android:text="肉眼"/>
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:gravity="center"
-                            android:layout_weight="2"
-                            android:text="镜下"/>
-                    </LinearLayout>
-                </LinearLayout>
-            </LinearLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="@color/green_kuan"/>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:gravity="center"
-                    android:text="普通型VIN(VIN,usual type)"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:text="皮肤病损界限清晰"/>
-            </LinearLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="@color/green_kuan"/>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="疣型VIN (VIN, warty type)"
-                    android:gravity="center"
-                    android:layout_gravity="center"
-                    android:layout_weight="2"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="呈湿疣样外观"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="见挖空细胞、角化不全及角化过度细胞，上皮棘层肥厚，细胞异型性明显"
-                    android:layout_weight="2"/>
-            </LinearLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="@color/green_kuan"/>
+            android:text="VIN 分类及临床特征"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/header_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/header_bg" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="基底细胞型VIN (VIN, basaloid type) "
-                    android:gravity="center"
-                    android:layout_gravity="center"
-                    android:layout_weight="2"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="呈扁平样增生改变或非乳头瘤病变"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="上皮层增厚，表皮内见大量增殖的、呈基底细胞样的未分化细胞从基底层向上扩展，挖空细胞少于疣型VIN"
-                    android:layout_weight="2"/>
-            </LinearLayout>
-            <View
+        <!-- Main Scrollable Area -->
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nsv_content"
             android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="@color/green_kuan"/>
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            android:overScrollMode="never"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/header_bg">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:gravity="center"
-                    android:text="混合型VIN[VIN, mixed(warty/basaloid) type]"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:text="兼有疣型和基底细胞型VIN两种表现"/>
-            </LinearLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="@color/green_kuan"/>
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="24dp">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:layout_width="0dp"
+                <!-- Content Card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="分化型VIN(VIN, differentiated type)"
-                    android:gravity="center"
-                    android:layout_gravity="center"
-                    android:layout_weight="2"/>
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:orientation="vertical">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="与HPV感染无关"/>
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="2dp"
-                        android:background="@color/green_kuan"/>
+                    android:layout_marginHorizontal="12dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    app:strokeWidth="0dp">
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-                        <TextView
-                            android:layout_width="0dp"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <!-- Table Header -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="局部隆起、溃疡、疣状丘疹或过度角化斑片"
-                            android:layout_gravity="center"
-                            android:layout_weight="1"/>
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:text="细胞分化好，细胞异型性局限于上皮基底层基底细胞角化不良，表皮网脊内常有角蛋白形成"
-                            android:layout_weight="2"/>
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="分类"
+                                android:textColor="#333333"
+                                android:textStyle="bold"
+                                android:textSize="14sp"
+                                android:paddingVertical="8dp"/>
+
+                            <View android:layout_width="1dp" android:layout_height="match_parent" android:background="#E0E0E0" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="特征"
+                                    android:textColor="#333333"
+                                    android:textStyle="bold"
+                                    android:textSize="14sp"
+                                    android:paddingVertical="4dp"/>
+                                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#E0E0E0" />
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+                                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="肉眼" android:textSize="12sp" android:textColor="#666666" android:paddingVertical="4dp"/>
+                                    <View android:layout_width="1dp" android:layout_height="match_parent" android:background="#E0E0E0" />
+                                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2" android:gravity="center" android:text="镜下" android:textSize="12sp" android:textColor="#666666" android:paddingVertical="4dp"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#E0E0E0" />
+
+                        <!-- Row 1: 普通型VIN -->
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                            <TextView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:text="普通型VIN\n(VIN, usual type)" android:textColor="#444444" android:textSize="12sp" android:padding="4dp"/>
+                            <View android:layout_width="1dp" android:layout_height="match_parent" android:background="#E0E0E0" />
+                            <TextView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="3" android:gravity="center" android:text="皮肤病损界限清晰" android:textColor="#666666" android:textSize="12sp" android:padding="4dp"/>
+                        </LinearLayout>
+                        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#E0E0E0" />
+
+                        <!-- Row 2: 疣型VIN -->
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                            <TextView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:text="疣型VIN\n(VIN, warty type)" android:textColor="#444444" android:textSize="12sp" android:padding="4dp"/>
+                            <View android:layout_width="1dp" android:layout_height="match_parent" android:background="#E0E0E0" />
+                            <TextView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:text="呈湿疣样外观" android:textColor="#666666" android:textSize="11sp" android:padding="4dp"/>
+                            <View android:layout_width="1dp" android:layout_height="match_parent" android:background="#E0E0E0" />
+                            <TextView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="2" android:gravity="center" android:text="见挖空细胞、角化不全及角化过度细胞，上皮棘层肥厚，细胞异型性明显" android:textColor="#666666" android:textSize="11sp" android:padding="4dp"/>
+                        </LinearLayout>
+                        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#E0E0E0" />
+
+                        <!-- Row 3: 基底细胞型VIN -->
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                            <TextView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:text="基底细胞型VIN\n(basaloid type)" android:textColor="#444444" android:textSize="12sp" android:padding="4dp"/>
+                            <View android:layout_width="1dp" android:layout_height="match_parent" android:background="#E0E0E0" />
+                            <TextView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:text="呈扁平样增生改变或非乳头瘤病变" android:textColor="#666666" android:textSize="11sp" android:padding="4dp"/>
+                            <View android:layout_width="1dp" android:layout_height="match_parent" android:background="#E0E0E0" />
+                            <TextView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="2" android:gravity="center" android:text="上皮层增厚，表皮内见大量增殖的、呈基底细胞样的未分化细胞从基底层向上扩展，挖空细胞少于疣型VIN" android:textColor="#666666" android:textSize="11sp" android:padding="4dp"/>
+                        </LinearLayout>
+                        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#E0E0E0" />
+
+                        <!-- Row 4: 混合型VIN -->
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                            <TextView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:text="混合型VIN\n(mixed type)" android:textColor="#444444" android:textSize="12sp" android:padding="4dp"/>
+                            <View android:layout_width="1dp" android:layout_height="match_parent" android:background="#E0E0E0" />
+                            <TextView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="3" android:gravity="center" android:text="兼有疣型和基底细胞型VIN两种表现" android:textColor="#666666" android:textSize="12sp" android:padding="4dp"/>
+                        </LinearLayout>
+                        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#E0E0E0" />
+
+                        <!-- Row 5: 分化型VIN -->
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                            <TextView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:text="分化型VIN\n(differentiated)" android:textColor="#444444" android:textSize="12sp" android:padding="4dp"/>
+                            <View android:layout_width="1dp" android:layout_height="match_parent" android:background="#E0E0E0" />
+                            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="3" android:orientation="vertical">
+                                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:text="与HPV感染无关" android:textColor="#D32F2F" android:textSize="11sp" android:textStyle="bold" android:paddingVertical="4dp"/>
+                                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#E0E0E0" />
+                                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="局部隆起、溃疡、疣状丘疹或过度角化斑片" android:textColor="#666666" android:textSize="11sp" android:gravity="center" android:padding="4dp"/>
+                                    <View android:layout_width="1dp" android:layout_height="match_parent" android:background="#E0E0E0" />
+                                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2" android:text="细胞分化好，异型性局限于上皮基底层基底细胞角化不良，表皮网脊内常有角蛋白形成" android:textColor="#666666" android:textSize="11sp" android:gravity="center" android:padding="4dp"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#E0E0E0" />
+
+                        <!-- Row 6: 未分类型VIN -->
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                            <TextView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:text="未分类型VIN\n(unclassified)" android:textColor="#444444" android:textSize="12sp" android:padding="4dp"/>
+                            <View android:layout_width="1dp" android:layout_height="match_parent" android:background="#E0E0E0" />
+                            <TextView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="3" android:gravity="center" android:text="其他不能归入普通型或分化型的VIN" android:textColor="#666666" android:textSize="12sp" android:padding="4dp"/>
+                        </LinearLayout>
+
                     </LinearLayout>
-                </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Appendix Section -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="详情说明与参考"
+                    android:textColor="#666666"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_content_appendix"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:nestedScrollingEnabled="false"
+                    android:overScrollMode="never"
+                    android:paddingHorizontal="16dp"
+                    android:paddingBottom="16dp" />
 
             </LinearLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="@color/green_kuan"/>
+        </androidx.core.widget.NestedScrollView>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:gravity="center"
-                    android:text="未分类型VIN(VIN, unclassified type)"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:text="其他不能归入普通型或分化型的VIN"/>
-            </LinearLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="@color/green_kuan"/>
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_content_appendix"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp" />
-
-        </LinearLayout>
-
-    </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

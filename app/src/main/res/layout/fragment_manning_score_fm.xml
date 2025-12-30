@@ -1,144 +1,242 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
-
-    </data>
-
-    <ScrollView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fillViewport="true">
+        android:background="#F5F7FA"
+        tools:context=".medicaltools.functions.Obstetrics_and_Gynecology.Obstetrics.Manning_Score_fm">
 
-        <LinearLayout
+        <!-- 顶部页眉 -->
+        <View
+            android:id="@+id/header_bg"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="140dp"
+            android:background="@color/green_kuan"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:background="@color/green700"
-                android:paddingStart="10dp"
-                android:gravity="bottom">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:textColor="@color/white"
-                    android:text="胎儿生物物理监测Manning评分"/>
-            </LinearLayout>
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:text="Manning 评分"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Biophysical Profile Score (BPP)"
+            android:textColor="#CCFFFFFF"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+        <!-- 中间可滑动区域 -->
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nsv_content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            android:overScrollMode="never"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_subtitle"
+            android:layout_marginTop="20dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="8dp">
-                <TextView
-                    android:layout_width="80dp"
-                    android:layout_height="wrap_content"
-                    android:textSize="18sp"
-                    android:text="项目"
-                    android:gravity="center"/>
-                <LinearLayout
+                android:orientation="vertical"
+                android:paddingBottom="24dp">
+
+                <!-- 评估卡片 -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cv_input"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="分数"/>
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    app:strokeWidth="0dp">
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-                        <TextView
-                            android:layout_width="0dp"
+                        android:orientation="vertical"
+                        android:padding="12dp">
+
+                        <!-- 表头标题布局 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:text="2"/>
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:text="0"/>
+                            android:orientation="horizontal"
+                            android:paddingVertical="8dp">
+
+                            <TextView
+                                android:layout_width="80dp"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="项目"
+                                android:textColor="#333333"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="分数"
+                                    android:textColor="#333333"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="4dp"
+                                    android:orientation="horizontal">
+
+                                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="2" android:textColor="#666666" />
+                                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="0" android:textColor="#666666" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#E0E0E0" />
+
+                        <!-- NST -->
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp">
+                            <TextView android:layout_width="80dp" android:layout_height="wrap_content" android:text="NST\n(20-40min)" android:textColor="#444444" android:textSize="13sp" android:gravity="center"/>
+                            <RadioGroup android:id="@+id/rg_cer1" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                                <RadioButton android:id="@+id/rb_cer1_2" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="≥2次" android:textSize="12sp" android:buttonTint="@color/green_kuan"/>
+                                <RadioButton android:id="@+id/rb_cer1_0" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="&lt;2次" android:textSize="12sp" android:buttonTint="@color/green_kuan"/>
+                            </RadioGroup>
+                        </LinearLayout>
+
+                        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#F0F0F0" android:layout_marginVertical="4dp"/>
+
+                        <!-- FBM -->
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <TextView android:layout_width="80dp" android:layout_height="wrap_content" android:text="FBM\n(30min)" android:textColor="#444444" android:textSize="13sp" android:gravity="center"/>
+                            <RadioGroup android:id="@+id/rg_cer2" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                                <RadioButton android:id="@+id/rb_cer2_2" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="≥1次,≥30s" android:textSize="12sp" android:buttonTint="@color/green_kuan"/>
+                                <RadioButton android:id="@+id/rb_cer2_0" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="无或&lt;30s" android:textSize="12sp" android:buttonTint="@color/green_kuan"/>
+                            </RadioGroup>
+                        </LinearLayout>
+
+                        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#F0F0F0" android:layout_marginVertical="4dp"/>
+
+                        <!-- FM -->
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <TextView android:layout_width="80dp" android:layout_height="wrap_content" android:text="FM\n(30min)" android:textColor="#444444" android:textSize="13sp" android:gravity="center"/>
+                            <RadioGroup android:id="@+id/rg_cer3" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                                <RadioButton android:id="@+id/rb_cer3_2" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="≥3次" android:textSize="12sp" android:buttonTint="@color/green_kuan"/>
+                                <RadioButton android:id="@+id/rb_cer3_0" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="≤2次" android:textSize="12sp" android:buttonTint="@color/green_kuan"/>
+                            </RadioGroup>
+                        </LinearLayout>
+
+                        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#F0F0F0" android:layout_marginVertical="4dp"/>
+
+                        <!-- FT -->
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <TextView android:layout_width="80dp" android:layout_height="wrap_content" android:text="FT\n(30min)" android:textColor="#444444" android:textSize="13sp" android:gravity="center"/>
+                            <RadioGroup android:id="@+id/rg_cer4" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                                <RadioButton android:id="@+id/rb_cer4_2" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="≥1次屈伸" android:textSize="12sp" android:buttonTint="@color/green_kuan"/>
+                                <RadioButton android:id="@+id/rb_cer4_0" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="完全伸展" android:textSize="12sp" android:buttonTint="@color/green_kuan"/>
+                            </RadioGroup>
+                        </LinearLayout>
+
+                        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#F0F0F0" android:layout_marginVertical="4dp"/>
+
+                        <!-- AFV -->
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <TextView android:layout_width="80dp" android:layout_height="wrap_content" android:text="AFV" android:textColor="#444444" android:textSize="13sp" android:gravity="center"/>
+                            <RadioGroup android:id="@+id/rg_cer5" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                                <RadioButton android:id="@+id/rb_cer5_2" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="直径≥2cm" android:textSize="12sp" android:buttonTint="@color/green_kuan"/>
+                                <RadioButton android:id="@+id/rb_cer5_0" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="直径&lt;2cm" android:textSize="12sp" android:buttonTint="@color/green_kuan"/>
+                            </RadioGroup>
+                        </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
-            </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
 
-            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/gray_f3"/>
-
-            <!-- RadioGroups for Scoring -->
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="8dp">
-                <TextView android:layout_width="80dp" android:layout_height="wrap_content" android:text="NST\n(20-40min)"/>
-                <RadioGroup android:id="@+id/rg_cer1" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
-                    <RadioButton android:id="@+id/rb_cer1_2" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="≥2次"/>
-                    <RadioButton android:id="@+id/rb_cer1_0" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="&lt;2次"/>
-                </RadioGroup>
-            </LinearLayout>
-
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="8dp">
-                <TextView android:layout_width="80dp" android:layout_height="wrap_content" android:text="FBM\n(30min)"/>
-                <RadioGroup android:id="@+id/rg_cer2" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
-                    <RadioButton android:id="@+id/rb_cer2_2" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="≥1次,≥30s"/>
-                    <RadioButton android:id="@+id/rb_cer2_0" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="无或&lt;30s"/>
-                </RadioGroup>
-            </LinearLayout>
-
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="8dp">
-                <TextView android:layout_width="80dp" android:layout_height="wrap_content" android:text="FM\n(30min)"/>
-                <RadioGroup android:id="@+id/rg_cer3" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
-                    <RadioButton android:id="@+id/rb_cer3_2" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="≥3次"/>
-                    <RadioButton android:id="@+id/rb_cer3_0" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="≤2次"/>
-                </RadioGroup>
-            </LinearLayout>
-
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="8dp">
-                <TextView android:layout_width="80dp" android:layout_height="wrap_content" android:text="FT\n(30min)"/>
-                <RadioGroup android:id="@+id/rg_cer4" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
-                    <RadioButton android:id="@+id/rb_cer4_2" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="≥1次屈伸"/>
-                    <RadioButton android:id="@+id/rb_cer4_0" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="完全伸展"/>
-                </RadioGroup>
-            </LinearLayout>
-
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="8dp">
-                <TextView android:layout_width="80dp" android:layout_height="wrap_content" android:text="AFV"/>
-                <RadioGroup android:id="@+id/rg_cer5" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
-                    <RadioButton android:id="@+id/rb_cer5_2" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="直径≥2cm"/>
-                    <RadioButton android:id="@+id/rb_cer5_0" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="直径&lt;2cm"/>
-                </RadioGroup>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="16dp"
-                android:background="@color/lightcyan">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="总分:"
-                    android:textSize="24sp"
-                    android:textStyle="bold"/>
-                <TextView
-                    android:id="@+id/tv_total_score"
+                <!-- 结果栏 -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cv_result_container"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:text="0 分"
-                    android:textSize="18sp" />
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp"
+                    app:strokeColor="#E0E0E0"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#F9FFF9"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="评估结果 (总分)"
+                            android:textColor="@color/green_kuan"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_total_score"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="0 分"
+                            android:textColor="#1B5E20"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- 详情列表区域 -->
+                <TextView
+                    android:id="@+id/tv_appendix_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="8dp"
+                    android:text="详情说明与参考"
+                    android:textColor="#666666"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_combined"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/white"
+                    android:nestedScrollingEnabled="false"
+                    android:overScrollMode="never"
+                    android:paddingHorizontal="16dp"
+                    android:paddingBottom="16dp" />
+
             </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_combined"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:nestedScrollingEnabled="false"/>
-
-        </LinearLayout>
-    </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -1,12 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white">
+        android:background="#F5F7FA">
 
+        <!-- Header Section -->
+        <View
+            android:id="@+id/header_bg"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@color/green_kuan"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:text="胎儿体重计算"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fetal Weight Estimation"
+            android:textColor="#CCFFFFFF"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+        <!-- Main Content -->
         <androidx.core.widget.NestedScrollView
             android:id="@+id/main_scroll_view"
             android:layout_width="match_parent"
@@ -14,169 +47,354 @@
             android:fillViewport="true"
             android:overScrollMode="never"
             app:layout_constraintBottom_toTopOf="@+id/bottom_container"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toBottomOf="@id/tv_subtitle"
+            android:layout_marginTop="15dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="16dp">
+                android:paddingBottom="16dp">
 
-                <EditText
-                    android:id="@+id/etPregnancyWeek"
+                <!-- Biometric Inputs Card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cv_biometrics"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="孕周 (优先手动输入, 例如 20.5)"
-                    android:inputType="numberDecimal" />
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginBottom="12dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp"
+                    app:strokeWidth="0dp">
 
-                <EditText
-                    android:id="@+id/etBPD"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:hint="BPD (双顶径，mm)(31-100mm)"
-                    android:inputType="numberDecimal" />
-
-                <EditText
-                    android:id="@+id/etHC"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:hint="HC (头围，mm)"
-                    android:inputType="numberDecimal" />
-
-                <EditText
-                    android:id="@+id/etAC"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:hint="AC (腹围，mm)(200-400mm)"
-                    android:inputType="numberDecimal" />
-
-                <EditText
-                    android:id="@+id/etFL"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:hint="FL (股骨，mm)(40-83mm)"
-                    android:inputType="numberDecimal" />
-
-                <EditText
-                    android:id="@+id/etHL"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:hint="HL (肱骨, mm)"
-                    android:inputType="numberDecimal" />
-
-                <EditText
-                    android:id="@+id/etUlna"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:hint="尺骨长 (mm)"
-                    android:inputType="numberDecimal" />
-
-                <EditText
-                    android:id="@+id/etTibia"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:hint="胫骨长 (mm)"
-                    android:inputType="numberDecimal" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="末次月经：" />
+                        android:orientation="vertical"
+                        android:padding="12dp">
 
-                    <EditText
-                        android:id="@+id/LMP"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:hint="如20251201"
-                        android:inputType="number" />
-                </LinearLayout>
+                        <!-- Pregnancy Week & BPD -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="65dp"
+                                android:layout_height="wrap_content"
+                                android:text="孕周(周)"
+                                android:textColor="#444444"
+                                android:textSize="13sp" />
+                            <EditText
+                                android:id="@+id/etPregnancyWeek"
+                                android:layout_width="0dp"
+                                android:layout_height="32dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/edittext_border_frame"
+                                android:hint="手动输入"
+                                android:inputType="numberDecimal"
+                                android:paddingHorizontal="8dp"
+                                android:textSize="13sp" />
+                            <View android:layout_width="16dp" android:layout_height="0dp" />
+                            <TextView
+                                android:layout_width="65dp"
+                                android:layout_height="wrap_content"
+                                android:text="双顶径(mm)"
+                                android:textColor="#444444"
+                                android:textSize="13sp" />
+                            <EditText
+                                android:id="@+id/etBPD"
+                                android:layout_width="0dp"
+                                android:layout_height="32dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/edittext_border_frame"
+                                android:hint="31-100"
+                                android:inputType="numberDecimal"
+                                android:paddingHorizontal="8dp"
+                                android:textSize="13sp" />
+                        </LinearLayout>
 
-                <LinearLayout
+                        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#F5F5F5" android:layout_marginVertical="6dp" />
+
+                        <!-- HC & AC -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="65dp"
+                                android:layout_height="wrap_content"
+                                android:text="头围(mm)"
+                                android:textColor="#444444"
+                                android:textSize="13sp" />
+                            <EditText
+                                android:id="@+id/etHC"
+                                android:layout_width="0dp"
+                                android:layout_height="32dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/edittext_border_frame"
+                                android:hint="请输入"
+                                android:inputType="numberDecimal"
+                                android:paddingHorizontal="8dp"
+                                android:textSize="13sp" />
+                            <View android:layout_width="16dp" android:layout_height="0dp" />
+                            <TextView
+                                android:layout_width="65dp"
+                                android:layout_height="wrap_content"
+                                android:text="腹围(mm)"
+                                android:textColor="#444444"
+                                android:textSize="13sp" />
+                            <EditText
+                                android:id="@+id/etAC"
+                                android:layout_width="0dp"
+                                android:layout_height="32dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/edittext_border_frame"
+                                android:hint="200-400"
+                                android:inputType="numberDecimal"
+                                android:paddingHorizontal="8dp"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+
+                        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#F5F5F5" android:layout_marginVertical="6dp" />
+
+                        <!-- FL & HL -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="65dp"
+                                android:layout_height="wrap_content"
+                                android:text="股骨(mm)"
+                                android:textColor="#444444"
+                                android:textSize="13sp" />
+                            <EditText
+                                android:id="@+id/etFL"
+                                android:layout_width="0dp"
+                                android:layout_height="32dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/edittext_border_frame"
+                                android:hint="40-83"
+                                android:inputType="numberDecimal"
+                                android:paddingHorizontal="8dp"
+                                android:textSize="13sp" />
+                            <View android:layout_width="16dp" android:layout_height="0dp" />
+                            <TextView
+                                android:layout_width="65dp"
+                                android:layout_height="wrap_content"
+                                android:text="肱骨(mm)"
+                                android:textColor="#444444"
+                                android:textSize="13sp" />
+                            <EditText
+                                android:id="@+id/etHL"
+                                android:layout_width="0dp"
+                                android:layout_height="32dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/edittext_border_frame"
+                                android:hint="请输入"
+                                android:inputType="numberDecimal"
+                                android:paddingHorizontal="8dp"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+
+                        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#F5F5F5" android:layout_marginVertical="6dp" />
+
+                        <!-- Ulna & Tibia -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="65dp"
+                                android:layout_height="wrap_content"
+                                android:text="尺骨(mm)"
+                                android:textColor="#444444"
+                                android:textSize="13sp" />
+                            <EditText
+                                android:id="@+id/etUlna"
+                                android:layout_width="0dp"
+                                android:layout_height="32dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/edittext_border_frame"
+                                android:hint="请输入"
+                                android:inputType="numberDecimal"
+                                android:paddingHorizontal="8dp"
+                                android:textSize="13sp" />
+                            <View android:layout_width="16dp" android:layout_height="0dp" />
+                            <TextView
+                                android:layout_width="65dp"
+                                android:layout_height="wrap_content"
+                                android:text="胫骨(mm)"
+                                android:textColor="#444444"
+                                android:textSize="13sp" />
+                            <EditText
+                                android:id="@+id/etTibia"
+                                android:layout_width="0dp"
+                                android:layout_height="32dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/edittext_border_frame"
+                                android:hint="请输入"
+                                android:inputType="numberDecimal"
+                                android:paddingHorizontal="8dp"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Dates Card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cv_dates"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginBottom="12dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp"
+                    app:strokeColor="#E0E0E0"
+                    app:strokeWidth="1dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="12dp">
+                        <TextView
+                            android:layout_width="65dp"
+                            android:layout_height="wrap_content"
+                            android:text="末次月经"
+                            android:textColor="#444444"
+                            android:textSize="13sp" />
+                        <EditText
+                            android:id="@+id/LMP"
+                            android:layout_width="0dp"
+                            android:layout_height="32dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_border_frame"
+                            android:hint="20251201"
+                            android:inputType="number"
+                            android:paddingHorizontal="8dp"
+                            android:textSize="11sp" />
+                        <View android:layout_width="16dp" android:layout_height="0dp" />
+                        <TextView
+                            android:layout_width="65dp"
+                            android:layout_height="wrap_content"
+                            android:text="检查日期"
+                            android:textColor="#444444"
+                            android:textSize="13sp" />
+                        <EditText
+                            android:id="@+id/etInspectionDate"
+                            android:layout_width="0dp"
+                            android:layout_height="32dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_border_frame"
+                            android:hint="20260401"
+                            android:inputType="number"
+                            android:paddingHorizontal="8dp"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Result Card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cv_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginBottom="12dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp"
+                    app:strokeColor="#C8E6C9"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="检查日期：" />
+                        android:background="#F9FFF9"
+                        android:orientation="vertical"
+                        android:padding="12dp">
 
-                    <EditText
-                        android:id="@+id/etInspectionDate"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:hint="如20260401"
-                        android:inputType="number" />
-                </LinearLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="预测体重"
+                            android:textColor="#2E7D32"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
 
+                        <TextView
+                            android:id="@+id/tvPredictedWeight"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="等待计算..."
+                            android:textColor="#1B5E20"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Details/Report RecyclerView -->
                 <TextView
-                    android:id="@+id/tvPredictedWeight"
-                    android:layout_width="match_parent"
+                    android:id="@+id/tv_report_title"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:hint="预测体重（g）"
-                    android:textColor="@color/black"
-                    android:textSize="18sp"
+                    android:layout_marginStart="20dp"
+                    android:text="计算详情报告"
+                    android:textColor="#666666"
+                    android:textSize="14sp"
                     android:textStyle="bold" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:nestedScrollingEnabled="false" />
+                    android:layout_marginTop="8dp"
+                    android:background="@color/white"
+                    android:nestedScrollingEnabled="false"
+                    android:overScrollMode="never"
+                    android:paddingHorizontal="16dp"
+                    android:paddingBottom="16dp" />
+
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
 
+        <!-- Bottom Buttons -->
         <LinearLayout
             android:id="@+id/bottom_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/white"
-            android:elevation="8dp"
+            android:elevation="12dp"
             android:orientation="horizontal"
             android:padding="12dp"
             app:layout_constraintBottom_toBottomOf="parent">
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnClear"
+                style="@style/Widget.Material3.Button.TonalButton"
                 android:layout_width="0dp"
-                android:layout_height="56dp"
+                android:layout_height="48dp"
                 android:layout_marginEnd="8dp"
                 android:layout_weight="1"
-                android:background="@drawable/buttonseletor"
-                android:backgroundTint="#BDBDBD"
-                android:text="清除"
-                android:textColor="@color/white"
-                android:textSize="16sp" />
+                android:text="清除数据"
+                android:textColor="#666666"
+                app:cornerRadius="12dp" />
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnCompare"
                 android:layout_width="0dp"
-                android:layout_height="56dp"
+                android:layout_height="48dp"
                 android:layout_weight="2"
-                android:background="@drawable/buttonseletor"
-                android:backgroundTint="@null"
-                android:text="计算报告"
-                android:textColor="@color/white"
-                android:textSize="16sp" />
+                android:text="生成计算报告"
+                android:textStyle="bold"
+                app:backgroundTint="@color/green_kuan"
+                app:cornerRadius="12dp" />
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

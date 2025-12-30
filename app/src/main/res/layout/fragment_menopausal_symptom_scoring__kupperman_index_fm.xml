@@ -1,938 +1,335 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
-
-    </data>
-<ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:background="#F5F7FA"
+        tools:context=".medicaltools.functions.Obstetrics_and_Gynecology.Gynecology.Menopausal_symptom_scoring_Kupperman_index_fm">
 
-
-        <LinearLayout
+        <!-- Header Section -->
+        <View
+            android:id="@+id/header_bg"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TextView
-                android:id="@+id/tv1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="症状"
-                android:layout_weight="2" />
+            android:layout_height="140dp"
+            android:background="@color/green_kuan"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/tv2"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="基本分" />
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:text="改良 Kupperman 评分"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="更年期症状评估"
+            android:textColor="#CCFFFFFF"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+        <!-- Main Scroll Content -->
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nsv_content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            android:overScrollMode="never"
+            app:layout_constraintBottom_toTopOf="@id/bottom_container"
+            app:layout_constraintTop_toBottomOf="@id/tv_subtitle"
+            android:layout_marginTop="20dp">
 
             <LinearLayout
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="10"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:paddingBottom="24dp">
+
+                <!-- Table Card (Maintains original layout structure) -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cv_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    app:strokeWidth="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="12dp">
+
+                        <!-- Header Row -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:id="@+id/tv1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="症状"
+                                android:textColor="#333333"
+                                android:textStyle="bold"
+                                android:layout_weight="2" />
+                            <TextView
+                                android:id="@+id/tv2"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="基本分"
+                                android:textColor="#333333"
+                                android:textSize="12sp" />
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="10"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:id="@+id/tv3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="程度评分"
+                                    android:textColor="#333333"
+                                    android:textSize="12sp" />
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+                                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:text="0" android:gravity="center" android:layout_weight="1"/>
+                                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:text="1" android:gravity="center" android:layout_weight="1"/>
+                                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:text="2" android:gravity="center" android:layout_weight="1"/>
+                                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:text="3" android:gravity="center" android:layout_weight="1"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#E0E0E0" android:layout_marginVertical="8dp"/>
+
+                        <!-- Item Rows (All Original Logic and Text Maintained) -->
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingVertical="4dp">
+                            <TextView android:id="@+id/tv10" android:layout_width="0dp" android:layout_height="wrap_content" android:text="潮热出汗" android:layout_gravity="center" android:layout_weight="2" android:textSize="12sp"/>
+                            <TextView android:id="@+id/tv11" android:layout_width="0dp" android:layout_height="wrap_content" android:text="4" android:gravity="center" android:layout_gravity="center" android:layout_weight="1"/>
+                            <RadioGroup android:id="@+id/Rgroup1" android:layout_width="0dp" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal" android:layout_weight="10">
+                                <RadioButton android:id="@+id/rb10" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="无" android:textSize="11sp" android:buttonTint="@color/green_kuan" />
+                                <RadioButton android:id="@+id/rb11" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="1~3次/天" android:textSize="11sp" android:buttonTint="@color/green_kuan" />
+                                <RadioButton android:id="@+id/rb12" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="3-9次/天" android:textSize="11sp" android:buttonTint="@color/green_kuan" />
+                                <RadioButton android:id="@+id/rb13" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text=">10次/天" android:textSize="11sp" android:buttonTint="@color/green_kuan" />
+                            </RadioGroup>
+                        </LinearLayout>
+                        <View style="@style/EvaluationDividerStyle" android:layout_marginVertical="4dp" />
+
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingVertical="4dp">
+                            <TextView android:id="@+id/tv130" android:layout_width="0dp" android:layout_height="wrap_content" android:text="感觉障碍" android:layout_gravity="center" android:layout_weight="2" android:textSize="12sp"/>
+                            <TextView android:id="@+id/tv131" android:layout_width="0dp" android:layout_height="wrap_content" android:text="2" android:layout_gravity="center" android:gravity="center" android:layout_weight="1" />
+                            <RadioGroup android:id="@+id/Rgroup13" android:layout_width="0dp" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal" android:layout_weight="10">
+                                <RadioButton android:id="@+id/rb130" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="无" android:textSize="11sp" android:buttonTint="@color/green_kuan" />
+                                <RadioButton android:id="@+id/rb131" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="偶尔" android:textSize="11sp" android:buttonTint="@color/green_kuan" />
+                                <RadioButton android:id="@+id/rb132" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="经常" android:textSize="11sp" android:buttonTint="@color/green_kuan" />
+                                <RadioButton android:id="@+id/rb133" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="需治疗" android:textSize="11sp" android:buttonTint="@color/green_kuan" />
+                            </RadioGroup>
+                        </LinearLayout>
+                        <View style="@style/EvaluationDividerStyle" android:layout_marginVertical="4dp" />
+
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingVertical="4dp">
+                            <TextView android:id="@+id/tv20" android:layout_width="0dp" android:layout_height="wrap_content" android:text="失眠" android:layout_gravity="center" android:layout_weight="2" android:textSize="12sp"/>
+                            <TextView android:id="@+id/tv21" android:layout_width="0dp" android:layout_height="wrap_content" android:text="2" android:gravity="center" android:layout_gravity="center" android:layout_weight="1"/>
+                            <RadioGroup android:id="@+id/Rgroup2" android:layout_width="0dp" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal" android:layout_weight="10">
+                                <RadioButton android:id="@+id/rb20" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="无" android:textSize="11sp" android:buttonTint="@color/green_kuan" />
+                                <RadioButton android:id="@+id/rb21" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="偶尔" android:textSize="11sp" android:buttonTint="@color/green_kuan" />
+                                <RadioButton android:id="@+id/rb22" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="经常" android:textSize="11sp" android:buttonTint="@color/green_kuan" />
+                                <RadioButton android:id="@+id/rb23" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="影响生活" android:textSize="11sp" android:buttonTint="@color/green_kuan" />
+                            </RadioGroup>
+                        </LinearLayout>
+                        <View style="@style/EvaluationDividerStyle" android:layout_marginVertical="4dp" />
+
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingVertical="4dp">
+                            <TextView android:id="@+id/tv30" android:layout_width="0dp" android:layout_height="wrap_content" android:text="易激动" android:layout_gravity="center" android:layout_weight="2" android:textSize="12sp"/>
+                            <TextView android:id="@+id/tv31" android:layout_width="0dp" android:layout_height="wrap_content" android:text="2" android:gravity="center" android:layout_gravity="center" android:layout_weight="1"/>
+                            <RadioGroup android:id="@+id/Rgroup3" android:layout_width="0dp" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal" android:layout_weight="10">
+                                <RadioButton android:id="@+id/rb30" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="无" android:textSize="11sp" android:buttonTint="@color/green_kuan" />
+                                <RadioButton android:id="@+id/rb31" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="偶尔" android:textSize="11sp" android:buttonTint="@color/green_kuan" />
+                                <RadioButton android:id="@+id/rb32" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="克制" android:textSize="11sp" android:buttonTint="@color/green_kuan" />
+                                <RadioButton android:id="@+id/rb33" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="不控" android:textSize="11sp" android:buttonTint="@color/green_kuan" />
+                            </RadioGroup>
+                        </LinearLayout>
+                        <View style="@style/EvaluationDividerStyle" android:layout_marginVertical="4dp" />
+
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingVertical="4dp">
+                            <TextView android:id="@+id/tv40" android:layout_width="0dp" android:layout_height="wrap_content" android:text="抑郁疑心" android:layout_gravity="center" android:layout_weight="2" android:textSize="12sp"/>
+                            <TextView android:id="@+id/tv41" android:layout_width="0dp" android:layout_height="wrap_content" android:text="1" android:gravity="center" android:layout_gravity="center" android:layout_weight="1"/>
+                            <RadioGroup android:id="@+id/Rgroup4" android:layout_width="0dp" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal" android:layout_weight="10">
+                                <RadioButton android:id="@+id/rb40" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="无" android:textSize="11sp" android:buttonTint="@color/green_kuan" />
+                                <RadioButton android:id="@+id/rb41" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="偶尔" android:textSize="11sp" android:buttonTint="@color/green_kuan" />
+                                <RadioButton android:id="@+id/rb42" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="自控" android:textSize="11sp" android:buttonTint="@color/green_kuan" />
+                                <RadioButton android:id="@+id/rb43" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="失去信念" android:textSize="11sp" android:buttonTint="@color/green_kuan" />
+                            </RadioGroup>
+                        </LinearLayout>
+                        <View style="@style/EvaluationDividerStyle" android:layout_marginVertical="4dp" />
+
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingVertical="4dp">
+                            <TextView android:id="@+id/tv50" android:layout_width="0dp" android:layout_height="wrap_content" android:text="眩晕" android:layout_gravity="center" android:layout_weight="2" android:textSize="12sp"/>
+                            <TextView android:id="@+id/tv51" android:layout_width="0dp" android:layout_height="wrap_content" android:text="1" android:gravity="center" android:layout_gravity="center" android:layout_weight="1"/>
+                            <RadioGroup android:id="@+id/Rgroup5" android:layout_width="0dp" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal" android:layout_weight="10">
+                                <RadioButton android:id="@+id/rb50" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="无" android:textSize="11sp" android:buttonTint="@color/green_kuan" />
+                                <RadioButton android:id="@+id/rb51" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="偶尔" android:textSize="11sp" android:buttonTint="@color/green_kuan" />
+                                <RadioButton android:id="@+id/rb52" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="经常" android:textSize="11sp" android:buttonTint="@color/green_kuan" />
+                                <RadioButton android:id="@+id/rb53" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="影响生活" android:textSize="11sp" android:buttonTint="@color/green_kuan" />
+                            </RadioGroup>
+                        </LinearLayout>
+                        <View style="@style/EvaluationDividerStyle" android:layout_marginVertical="4dp" />
+
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingVertical="4dp">
+                            <TextView android:id="@+id/tv60" android:layout_width="0dp" android:layout_height="wrap_content" android:text="疲乏" android:layout_gravity="center" android:layout_weight="2" android:textSize="12sp"/>
+                            <TextView android:id="@+id/tv61" android:layout_width="0dp" android:layout_height="wrap_content" android:text="1" android:gravity="center" android:layout_gravity="center" android:layout_weight="1"/>
+                            <RadioGroup android:id="@+id/Rgroup6" android:layout_width="0dp" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal" android:layout_weight="10">
+                                <RadioButton android:id="@+id/rb60" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="无" android:textSize="11sp" android:buttonTint="@color/green_kuan" />
+                                <RadioButton android:id="@+id/rb61" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="偶尔" android:textSize="11sp" android:buttonTint="@color/green_kuan" />
+                                <RadioButton android:id="@+id/rb62" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="上四楼" android:textSize="11sp" android:buttonTint="@color/green_kuan" />
+                                <RadioButton android:id="@+id/rb63" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="活动受限" android:textSize="11sp" android:buttonTint="@color/green_kuan" />
+                            </RadioGroup>
+                        </LinearLayout>
+                        <View style="@style/EvaluationDividerStyle" android:layout_marginVertical="4dp" />
+
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingVertical="4dp">
+                            <TextView android:id="@+id/tv70" android:layout_width="0dp" android:layout_height="wrap_content" android:text="骨关节痛" android:layout_gravity="center" android:layout_weight="2" android:textSize="12sp"/>
+                            <TextView android:id="@+id/tv71" android:layout_width="0dp" android:layout_height="wrap_content" android:text="1" android:gravity="center" android:layout_gravity="center" android:layout_weight="1"/>
+                            <RadioGroup android:id="@+id/Rgroup7" android:layout_width="0dp" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal" android:layout_weight="10">
+                                <RadioButton android:id="@+id/rb70" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="无" android:textSize="11sp" android:buttonTint="@color/green_kuan" />
+                                <RadioButton android:id="@+id/rb71" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="偶尔" android:textSize="11sp" android:buttonTint="@color/green_kuan" />
+                                <RadioButton android:id="@+id/rb72" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="经常" android:textSize="11sp" android:buttonTint="@color/green_kuan" />
+                                <RadioButton android:id="@+id/rb73" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="功能障碍" android:textSize="11sp" android:buttonTint="@color/green_kuan" />
+                            </RadioGroup>
+                        </LinearLayout>
+                        <View style="@style/EvaluationDividerStyle" android:layout_marginVertical="4dp" />
+
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingVertical="4dp">
+                            <TextView android:id="@+id/tv80" android:layout_width="0dp" android:layout_height="wrap_content" android:text="头痛" android:layout_gravity="center" android:layout_weight="2" android:textSize="12sp"/>
+                            <TextView android:id="@+id/tv81" android:layout_width="0dp" android:layout_height="wrap_content" android:text="1" android:gravity="center" android:layout_gravity="center" android:layout_weight="1"/>
+                            <RadioGroup android:id="@+id/Rgroup8" android:layout_width="0dp" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal" android:layout_weight="10">
+                                <RadioButton android:id="@+id/rb80" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="无" android:textSize="11sp" android:buttonTint="@color/green_kuan" />
+                                <RadioButton android:id="@+id/rb81" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="偶尔" android:textSize="11sp" android:buttonTint="@color/green_kuan" />
+                                <RadioButton android:id="@+id/rb82" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="忍受" android:textSize="11sp" android:buttonTint="@color/green_kuan" />
+                                <RadioButton android:id="@+id/rb83" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="服药" android:textSize="11sp" android:buttonTint="@color/green_kuan" />
+                            </RadioGroup>
+                        </LinearLayout>
+                        <View style="@style/EvaluationDividerStyle" android:layout_marginVertical="4dp" />
+
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingVertical="4dp">
+                            <TextView android:id="@+id/tv90" android:layout_width="0dp" android:layout_height="wrap_content" android:text="心悸" android:layout_gravity="center" android:layout_weight="2" android:textSize="12sp"/>
+                            <TextView android:id="@+id/tv91" android:layout_width="0dp" android:layout_height="wrap_content" android:text="1" android:gravity="center" android:layout_gravity="center" android:layout_weight="1"/>
+                            <RadioGroup android:id="@+id/Rgroup9" android:layout_width="0dp" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal" android:layout_weight="10">
+                                <RadioButton android:id="@+id/rb90" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="无" android:textSize="11sp" android:buttonTint="@color/green_kuan" />
+                                <RadioButton android:id="@+id/rb91" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="偶尔" android:textSize="11sp" android:buttonTint="@color/green_kuan" />
+                                <RadioButton android:id="@+id/rb92" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="经常" android:textSize="11sp" android:buttonTint="@color/green_kuan" />
+                                <RadioButton android:id="@+id/rb93" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="需治疗" android:textSize="11sp" android:buttonTint="@color/green_kuan" />
+                            </RadioGroup>
+                        </LinearLayout>
+                        <View style="@style/EvaluationDividerStyle" android:layout_marginVertical="4dp" />
+
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingVertical="4dp">
+                            <TextView android:id="@+id/tv100" android:layout_width="0dp" android:layout_height="wrap_content" android:text="皮肤蚁走" android:layout_gravity="center" android:layout_weight="2" android:textSize="12sp"/>
+                            <TextView android:id="@+id/tv101" android:layout_width="0dp" android:layout_height="wrap_content" android:text="1" android:gravity="center" android:layout_gravity="center" android:layout_weight="1"/>
+                            <RadioGroup android:id="@+id/Rgroup10" android:layout_width="0dp" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal" android:layout_weight="10">
+                                <RadioButton android:id="@+id/rb100" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="无" android:textSize="11sp" android:buttonTint="@color/green_kuan" />
+                                <RadioButton android:id="@+id/rb101" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="偶尔" android:textSize="11sp" android:buttonTint="@color/green_kuan" />
+                                <RadioButton android:id="@+id/rb102" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="经常" android:textSize="11sp" android:buttonTint="@color/green_kuan" />
+                                <RadioButton android:id="@+id/rb103" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="需治疗" android:textSize="11sp" android:buttonTint="@color/green_kuan" />
+                            </RadioGroup>
+                        </LinearLayout>
+                        <View style="@style/EvaluationDividerStyle" android:layout_marginVertical="4dp" />
+
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingVertical="4dp">
+                            <TextView android:id="@+id/tv110" android:layout_width="0dp" android:layout_height="wrap_content" android:text="性生活" android:layout_gravity="center" android:layout_weight="2" android:textSize="12sp"/>
+                            <TextView android:id="@+id/tv111" android:layout_width="0dp" android:layout_height="wrap_content" android:text="1" android:gravity="center" android:layout_gravity="center" android:layout_weight="1"/>
+                            <RadioGroup android:id="@+id/Rgroup11" android:layout_width="0dp" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal" android:layout_weight="10">
+                                <RadioButton android:id="@+id/rb110" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="无" android:textSize="11sp" android:buttonTint="@color/green_kuan" />
+                                <RadioButton android:id="@+id/rb111" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="偶尔" android:textSize="11sp" android:buttonTint="@color/green_kuan" />
+                                <RadioButton android:id="@+id/rb112" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="经常" android:textSize="11sp" android:buttonTint="@color/green_kuan" />
+                                <RadioButton android:id="@+id/rb113" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="需治疗" android:textSize="11sp" android:buttonTint="@color/green_kuan" />
+                            </RadioGroup>
+                        </LinearLayout>
+                        <View style="@style/EvaluationDividerStyle" android:layout_marginVertical="4dp" />
+
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingVertical="4dp">
+                            <TextView android:id="@+id/tv120" android:layout_width="0dp" android:layout_height="wrap_content" android:text="尿路感染" android:layout_gravity="center" android:layout_weight="2" android:textSize="12sp"/>
+                            <TextView android:id="@+id/tv121" android:layout_width="0dp" android:layout_height="wrap_content" android:text="1" android:gravity="center" android:layout_gravity="center" android:layout_weight="1"/>
+                            <RadioGroup android:id="@+id/Rgroup12" android:layout_width="0dp" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal" android:layout_weight="10">
+                                <RadioButton android:id="@+id/rb120" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="无" android:textSize="11sp" android:buttonTint="@color/green_kuan" />
+                                <RadioButton android:id="@+id/rb121" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="偶尔" android:textSize="11sp" android:buttonTint="@color/green_kuan" />
+                                <RadioButton android:id="@+id/rb122" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="经常" android:textSize="11sp" android:buttonTint="@color/green_kuan" />
+                                <RadioButton android:id="@+id/rb123" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="需治疗" android:textSize="11sp" android:buttonTint="@color/green_kuan" />
+                            </RadioGroup>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Appendix Section -->
                 <TextView
-                    android:id="@+id/tv3"
+                    android:id="@+id/tv_appendix_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="详情说明与参考"
+                    android:textColor="#666666"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_content_appendix"
                     android:layout_width="match_parent"
-                    android:layout_height="20dp"
-                    android:gravity="center"
-                    android:text="程度评分"
-                    android:layout_weight="10"/>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:text="0"
-                        android:gravity="center"
-                        android:layout_weight="1"/>
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:text="1"
-                        android:gravity="center"
-                        android:layout_weight="1"/>
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:text="2"
-                        android:gravity="center"
-                        android:layout_weight="1"/>
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:text="3"
-                        android:gravity="center"
-                        android:layout_weight="1"/>
-                </LinearLayout>
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:nestedScrollingEnabled="false"
+                    android:overScrollMode="never"
+                    android:paddingHorizontal="16dp"
+                    android:paddingBottom="16dp" />
 
             </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
 
-        </LinearLayout>
-
+        <!-- Fixed Bottom Result Bar (Standard EPDS/Bishop Style) -->
         <LinearLayout
+            android:id="@+id/bottom_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:id="@+id/tv10"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="潮热出汗"
-                android:layout_gravity="center"
-                android:layout_weight="2"/>
+            android:background="@color/white"
+            android:elevation="12dp"
+            android:orientation="vertical"
+            android:paddingVertical="24dp"
+            android:paddingHorizontal="16dp"
+            app:layout_constraintBottom_toBottomOf="parent">
 
             <TextView
-                android:id="@+id/tv11"
-                android:layout_width="0dp"
+                android:id="@+id/tv141"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="4"
-                android:gravity="center"
-                android:layout_gravity="center"
-                android:layout_weight="1"/>
-
-            <RadioGroup
-                android:id="@+id/Rgroup1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:layout_weight="10">
-
-                <RadioButton
-                    android:id="@+id/rb10"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="无"
-                    android:value="0"
-                    android:textSize="12sp" />
-
-                <RadioButton
-                    android:id="@+id/rb11"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="1~3次/天"
-                    android:value="4"
-                    android:textSize="12sp" />
-
-                <RadioButton
-                    android:id="@+id/rb12"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="3-9次/天"
-                    android:value="8"
-                    android:textSize="12sp" />
-
-                <RadioButton
-                    android:id="@+id/rb13"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="多于10次/天"
-                    android:value="12"
-                    android:textSize="12sp" />
-            </RadioGroup>
+                android:text="0 分 （您已选择 0 个必选项）"
+                android:textColor="#D32F2F"
+                android:textSize="16sp"
+                android:textStyle="bold" />
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:id="@+id/tv130"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="感觉障碍"
-                android:layout_gravity="center"
-                android:layout_weight="2"/>
-            <TextView
-                android:id="@+id/tv131"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="2"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:layout_weight="1" />
-
-            <RadioGroup
-                android:id="@+id/Rgroup13"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:layout_weight="10">
-
-                <RadioButton
-                    android:id="@+id/rb130"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:value="0"
-                    android:text="无"
-                    android:textSize="12sp" />
-
-                <RadioButton
-                    android:id="@+id/rb131"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="偶尔"
-                    android:textSize="12sp" />
-
-                <RadioButton
-                    android:id="@+id/rb132"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="经常，能忍受"
-                    android:textSize="12sp" />
-
-                <RadioButton
-                    android:id="@+id/rb133"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="需治疗"
-                    android:textSize="12sp" />
-            </RadioGroup>
-        </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:id="@+id/tv20"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="失眠"
-            android:layout_gravity="center"
-            android:layout_weight="2"/>
-        <TextView
-            android:id="@+id/tv21"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="2"
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:layout_weight="1"/>
-        <RadioGroup
-            android:id="@+id/Rgroup2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:layout_weight="10">
-
-            <RadioButton
-                android:id="@+id/rb20"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="无"
-                android:textSize="12sp" />
-
-            <RadioButton
-                android:id="@+id/rb21"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="偶尔"
-                android:textSize="12sp" />
-
-            <RadioButton
-                android:id="@+id/rb22"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="经常，安眠药有效"
-                android:textSize="12sp" />
-
-            <RadioButton
-                android:id="@+id/rb23"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="影响工作、生活"
-                android:textSize="12sp" />
-        </RadioGroup>
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:id="@+id/tv30"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="易激动"
-            android:layout_gravity="center"
-            android:layout_weight="2"/>
-        <TextView
-            android:id="@+id/tv31"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="2"
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:layout_weight="1"/>
-
-        <RadioGroup
-            android:id="@+id/Rgroup3"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:layout_weight="10">
-
-            <RadioButton
-                android:id="@+id/rb30"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="无"
-                android:textSize="12sp" />
-
-            <RadioButton
-                android:id="@+id/rb31"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="偶尔"
-                android:textSize="12sp" />
-
-            <RadioButton
-                android:id="@+id/rb32"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="经常，能克制"
-                android:textSize="12sp" />
-
-            <RadioButton
-                android:id="@+id/rb33"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="经常，不能克制"
-                android:textSize="12sp" />
-        </RadioGroup>
-    </LinearLayout>
-
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:id="@+id/tv40"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="抑郁，疑心"
-            android:layout_gravity="center"
-            android:layout_weight="2"/>
-        <TextView
-            android:id="@+id/tv41"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="1"
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:layout_weight="1"/>
-
-        <RadioGroup
-            android:id="@+id/Rgroup4"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:layout_weight="10">
-
-            <RadioButton
-                android:id="@+id/rb40"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="无"
-                android:textSize="12sp" />
-
-            <RadioButton
-                android:id="@+id/rb41"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="偶尔"
-                android:textSize="12sp" />
-
-            <RadioButton
-                android:id="@+id/rb42"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="经常，能自控"
-                android:textSize="12sp" />
-
-            <RadioButton
-                android:id="@+id/rb43"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="失去生活信念"
-                android:textSize="12sp" />
-        </RadioGroup>
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:id="@+id/tv50"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="眩晕"
-            android:layout_gravity="center"
-            android:layout_weight="2"/>
-        <TextView
-            android:id="@+id/tv51"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="1"
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:layout_weight="1"/>
-
-        <RadioGroup
-            android:id="@+id/Rgroup5"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:layout_weight="10">
-
-            <RadioButton
-                android:id="@+id/rb50"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="无"
-                android:textSize="12sp" />
-
-            <RadioButton
-                android:id="@+id/rb51"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="偶尔"
-                android:textSize="12sp" />
-
-            <RadioButton
-                android:id="@+id/rb52"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="经常，不影响生活"
-                android:textSize="12sp" />
-
-            <RadioButton
-                android:id="@+id/rb53"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="影响生活"
-                android:textSize="12sp" />
-        </RadioGroup>
-    </LinearLayout>
-
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:id="@+id/tv60"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="疲乏"
-            android:layout_gravity="center"
-            android:layout_weight="2"/>
-        <TextView
-            android:id="@+id/tv61"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="1"
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:layout_weight="1"/>
-
-        <RadioGroup
-            android:id="@+id/Rgroup6"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:layout_weight="10">
-
-            <RadioButton
-                android:id="@+id/rb60"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="无"
-                android:textSize="12sp" />
-
-            <RadioButton
-                android:id="@+id/rb61"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="偶尔"
-                android:textSize="12sp" />
-
-            <RadioButton
-                android:id="@+id/rb62"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="上四楼困难"
-                android:textSize="12sp" />
-
-            <RadioButton
-                android:id="@+id/rb63"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="日常活动受限"
-                android:textSize="12sp" />
-        </RadioGroup>
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:id="@+id/tv70"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="骨关节痛"
-            android:layout_gravity="center"
-            android:layout_weight="2"/>
-        <TextView
-            android:id="@+id/tv71"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="1"
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:layout_weight="1"/>
-
-        <RadioGroup
-            android:id="@+id/Rgroup7"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:layout_weight="10">
-
-            <RadioButton
-                android:id="@+id/rb70"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="无"
-                android:textSize="12sp" />
-
-            <RadioButton
-                android:id="@+id/rb71"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="偶尔"
-                android:textSize="12sp" />
-
-            <RadioButton
-                android:id="@+id/rb72"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="经常，不影响功能"
-                android:textSize="12sp" />
-
-            <RadioButton
-                android:id="@+id/rb73"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="功能障碍"
-                android:textSize="12sp" />
-        </RadioGroup>
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:id="@+id/tv80"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="头痛"
-            android:layout_gravity="center"
-            android:layout_weight="2"/>
-        <TextView
-            android:id="@+id/tv81"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="1"
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:layout_weight="1"/>
-
-        <RadioGroup
-            android:id="@+id/Rgroup8"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:layout_weight="10">
-
-            <RadioButton
-                android:id="@+id/rb80"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:value="0"
-                android:text="无"
-                android:textSize="12sp" />
-
-            <RadioButton
-                android:id="@+id/rb81"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="偶尔"
-                android:textSize="12sp" />
-
-            <RadioButton
-                android:id="@+id/rb82"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="经常，能忍受"
-                android:textSize="12sp" />
-
-            <RadioButton
-                android:id="@+id/rb83"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="需服药"
-                android:textSize="12sp" />
-        </RadioGroup>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:id="@+id/tv90"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="心悸"
-            android:layout_gravity="center"
-            android:layout_weight="2"/>
-        <TextView
-            android:id="@+id/tv91"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="1"
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:layout_weight="1"/>
-
-        <RadioGroup
-            android:id="@+id/Rgroup9"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:layout_weight="10">
-
-            <RadioButton
-                android:id="@+id/rb90"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:value="0"
-                android:text="无"
-                android:textSize="12sp" />
-
-            <RadioButton
-                android:id="@+id/rb91"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="偶尔"
-                android:textSize="12sp" />
-
-            <RadioButton
-                android:id="@+id/rb92"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="经常，不影响生活"
-                android:textSize="12sp" />
-
-            <RadioButton
-                android:id="@+id/rb93"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="需治疗"
-                android:textSize="12sp" />
-        </RadioGroup>
-    </LinearLayout>
-
-     <LinearLayout
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         android:orientation="horizontal">
-         <TextView
-             android:id="@+id/tv100"
-             android:layout_width="0dp"
-             android:layout_height="wrap_content"
-             android:text="皮肤蚁走感"
-             android:layout_gravity="center"
-             android:layout_weight="2"/>
-         <TextView
-             android:id="@+id/tv101"
-             android:layout_width="0dp"
-             android:layout_height="wrap_content"
-             android:text="1"
-             android:gravity="center"
-             android:layout_gravity="center"
-             android:layout_weight="1"/>
-
-         <RadioGroup
-             android:id="@+id/Rgroup10"
-             android:layout_width="0dp"
-             android:layout_height="wrap_content"
-             android:gravity="center_vertical"
-             android:orientation="horizontal"
-             android:layout_weight="10">
-
-             <RadioButton
-                 android:id="@+id/rb100"
-                 android:layout_width="0dp"
-                 android:layout_height="wrap_content"
-                 android:layout_weight="1"
-                 android:value="0"
-                 android:text="无"
-                 android:textSize="12sp" />
-
-             <RadioButton
-                 android:id="@+id/rb101"
-                 android:layout_width="0dp"
-                 android:layout_height="wrap_content"
-                 android:layout_weight="1"
-                 android:text="偶尔"
-                 android:textSize="12sp" />
-
-             <RadioButton
-                 android:id="@+id/rb102"
-                 android:layout_width="0dp"
-                 android:layout_height="wrap_content"
-                 android:layout_weight="1"
-                 android:text="经常，能忍受"
-                 android:textSize="12sp" />
-
-             <RadioButton
-                 android:id="@+id/rb103"
-                 android:layout_width="0dp"
-                 android:layout_height="wrap_content"
-                 android:layout_weight="1"
-                 android:text="需治疗"
-                 android:textSize="12sp" />
-         </RadioGroup>
-     </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:id="@+id/tv110"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="性生活"
-            android:layout_gravity="center"
-            android:layout_weight="2"/>
-        <TextView
-            android:id="@+id/tv111"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="1"
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:layout_weight="1"/>
-        <RadioGroup
-            android:id="@+id/Rgroup11"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:layout_weight="10">
-
-            <RadioButton
-                android:id="@+id/rb110"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:value="0"
-                android:text="无"
-                android:textSize="12sp" />
-
-            <RadioButton
-                android:id="@+id/rb111"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="偶尔"
-                android:textSize="12sp" />
-
-            <RadioButton
-                android:id="@+id/rb112"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="经常，能忍受"
-                android:textSize="12sp" />
-
-            <RadioButton
-                android:id="@+id/rb113"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="需治疗"
-                android:textSize="12sp" />
-        </RadioGroup>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:id="@+id/tv120"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="泌尿系感染"
-            android:layout_gravity="center"
-            android:layout_weight="2"/>
-        <TextView
-            android:id="@+id/tv121"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="1"
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:layout_weight="1"/>
-
-        <RadioGroup
-            android:id="@+id/Rgroup12"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:layout_weight="10">
-
-            <RadioButton
-                android:id="@+id/rb120"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:value="0"
-                android:text="无"
-                android:textSize="12sp" />
-
-            <RadioButton
-                android:id="@+id/rb121"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="偶尔"
-                android:textSize="12sp" />
-
-            <RadioButton
-                android:id="@+id/rb122"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="经常，能忍受"
-                android:textSize="12sp" />
-
-            <RadioButton
-                android:id="@+id/rb123"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="需治疗"
-                android:textSize="12sp" />
-        </RadioGroup>
-    </LinearLayout>
-
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:id="@+id/tv140"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="总分"
-            android:layout_gravity="center"
-            android:layout_weight="2"/>
-        <TextView
-            android:id="@+id/tv141"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:layout_constraintVertical_weight="1"
-            android:text="分 （您已选择0个必选项，还有13个必选项未选）"
-            android:layout_gravity="center"
-            android:layout_weight="11"/>
-    </LinearLayout>
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="80dp"
-            android:id="@+id/rv_content_appendix"/>
-    </LinearLayout>
-
-</ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -43,7 +43,7 @@ class Creatinine_Clearance_Cockcroft_Gault_fm : Fragment() {
     private fun setupListeners() {
         binding.btnCal.setOnClickListener { calculate() }
         binding.rgDisplay.setOnCheckedChangeListener { _, _ ->
-            binding.tvUniversal.text = if (binding.rbCommon.isChecked) "血肌酐浓度(mg/dL):" else "血肌酐浓度(mmol/L):"
+            binding.tvUnit.text = if (binding.rbCommon.isChecked) "mg/dL" else "umol/L"
         }
     }
 

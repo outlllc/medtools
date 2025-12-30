@@ -1,35 +1,16 @@
 package com.duckgo.medtools.medicaltools.functions.Internal_Medicine.Nephrology
 
-import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.ConcatAdapter
-import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.duckgo.medtools.databean.MedCalDataBean
-import com.duckgo.medtools.databinding.FragmentChronicKidneyDiseaseStagingFmBinding
+import com.duckgo.medtools.medicaltools.BaseMedListFragment
+import com.duckgo.medtools.medicaltools.GapAdapter
 import com.duckgo.medtools.my_adapter.MedCalAdapterDatabean
 
-class Chronic_Kidney_Disease_Staging_fm : Fragment() {
-    private var _binding: FragmentChronicKidneyDiseaseStagingFmBinding? = null
-    private val binding get() = _binding!!
+class Chronic_Kidney_Disease_Staging_fm : BaseMedListFragment() {
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        _binding = FragmentChronicKidneyDiseaseStagingFmBinding.inflate(inflater, container, false)
-        return binding.root
-    }
+    override fun getTitle(): String = "慢性肾脏病 (CKD) 分期"
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        initAdaptor()
-    }
-
-    private fun initAdaptor() {
+    override fun getAdapters(): List<RecyclerView.Adapter<out RecyclerView.ViewHolder>> {
         val dataSet = listOf(
             arrayOf("分期", "特征", "GFR水平(ml/min)"),
             arrayOf("1期", "已有肾病", "GFR正常 >90"),
@@ -45,27 +26,16 @@ class Chronic_Kidney_Disease_Staging_fm : Fragment() {
             arrayOf("参考来源", "National Kidney Foundation (2002). \"K/DOQI clinical practice guidelines for chronic kidney disease\". Retrieved 2008-06-29.")
         )
 
-        val mainAdapter = MedCalAdapterDatabean(
-            dataSet.map { MedCalDataBean(*it) },
-            columnWeights = floatArrayOf(1f, 2f, 2f)
+        return listOf(
+            MedCalAdapterDatabean(
+                dataSet.map { MedCalDataBean(*it) },
+                columnWeights = floatArrayOf(1f, 2f, 2f)
+            ),
+            GapAdapter(20), // 添加间距
+            MedCalAdapterDatabean(
+                dataSetAppendix.map { MedCalDataBean(*it) },
+                columnWeights = floatArrayOf(1f, 3f)
+            )
         )
-        val appendixAdapter = MedCalAdapterDatabean(
-            dataSetAppendix.map { MedCalDataBean(*it) },
-            columnWeights = floatArrayOf(1f, 3f)
-        )
-        
-        // 使用 ConcatAdapter 将两个 Adapter 合并
-        val concatAdapter = ConcatAdapter(mainAdapter, appendixAdapter)
-
-        binding.rvContent.apply {
-            layoutManager = LinearLayoutManager(requireContext())
-            adapter = concatAdapter
-            overScrollMode = View.OVER_SCROLL_NEVER
-        }
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
 }
